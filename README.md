@@ -1,12 +1,12 @@
-# <span style="color: #FB6376">Proyecto integrador - Grupo 3</span> 
+# Proyecto integrador - Grupo 3
 
-## <span style="color: #FB6376"> Vinoteca "El cáliz" </span>
+##  Vinoteca "El cáliz"
 
 
 #### Link a este repositorio : https://github.com/mnabarro/grupo_3_elCaliz/
 <br>
 
-## <span style="color: #FB6376">Lo que vendemos :</span>
+## Lo que vendemos :
  
  **"El Cáliz"** pone a disposición de su clientela las siguientes líneas de productos:
  
@@ -25,13 +25,13 @@
     * Gin
     * Vodka
     
-## <span style="color: #FB6376">Público al que apuntamos:</span>
+## Público al que apuntamos :
 
 **"El Cáliz"** apunta a hombres y mujeres de entre 30 a 50 años que buscan tener una experiencia unica con las diferentes lineas de productos.
 
 <br>
 
-## <span style="color: #FB6376">Equipo de desarrollo</span>
+## Equipo de desarrollo :
 
 * **Gonzalo De Curtis :**
     <br>Desarrollador web en proceso.
