@@ -30,7 +30,7 @@
 ## <span style="color: #FB6376">Equipo de desarrollo</span>
 
 * **Gonzalo De Curtis :**
-    <br>...
+    <br>Desarrollador web en proceso.
 
 * **Heidi Dubois :**
     <br>...
