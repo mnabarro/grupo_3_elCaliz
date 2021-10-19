@@ -43,4 +43,4 @@
    <br> Desarrollador web en proceso, en aprendizaje continuo.
 
 * **Mariana Perez :**
-    <br>Desarrolladora Full Stack Trainee
+    <br>Estudiante de Desarrollo Web Full Stack
