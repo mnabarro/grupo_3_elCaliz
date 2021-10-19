@@ -24,6 +24,10 @@
 * Otras bebidas blancas
     * Gin
     * Vodka
+    
+## <span style="color: #FB6376">Público al que apuntamos:</span>
+
+**"El Cáliz"** apunta a hombres y mujeres de entre 30 a 50 años que buscan tener una experiencia unica con las diferentes lineas de productos.
 
 <br>
 
