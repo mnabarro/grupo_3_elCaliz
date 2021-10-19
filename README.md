@@ -38,5 +38,5 @@
 * **Matias Nabarro :**
    <br> Desarrollador web en proceso, en aprendizaje continuo.
 
-* **María Perez :**
-    <br>...
+* **Mariana Perez :**
+    <br>Desarrolladora Full Stack Trainee
