@@ -17,13 +17,6 @@
     * De cosecha tardía
     * Especiales (Mistela por ejemplo)
 
-* Licores
-
-* Whisky
-
-* Otras bebidas blancas
-    * Gin
-    * Vodka
     
 ## Público al que apuntamos :
 
@@ -33,14 +26,11 @@
 
 ## Sitios web de referencia :
 
-* https://vinotecaligier.com/    
-* https://www.enotek.com.ar/
-* https://frappe.com.ar/
-* https://www.grandcru.com.ar/
-* https://lamasiavinoteca.com/
-* https://www.ellagarwineshop.com.ar/
-* https://www.vinotecacampos.com.ar/
-* https://www.inter-vino.com/
+*
+*
+*
+*
+*
 
 <br>
 
