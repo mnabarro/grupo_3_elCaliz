@@ -40,7 +40,7 @@
     <br>Desarrollador web en proceso.
 
 * **Heidi Dubois :**
-    <br> Desarrolloador web en proceso.
+    <br> Desarrollador web en proceso.
 
 * **Matias Nabarro :**
    <br> Desarrollador web en proceso, en aprendizaje continuo.
