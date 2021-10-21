@@ -17,7 +17,14 @@
     * De cosecha tardía
     * Especiales (Mistela por ejemplo)
 
-    
+ * Accesorios
+    * Decantadores
+    * Copas
+    * Sacacorchos
+    * Termómetros
+    * Estuches
+
+
 ## Público al que apuntamos :
 
 **"El Cáliz"** apunta a hombres y mujeres de entre 30 a 50 años que buscan tener una experiencia unica con las diferentes lineas de productos.
