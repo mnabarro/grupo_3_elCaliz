@@ -33,11 +33,13 @@
 
 ## Sitios web de referencia :
 
-*
-*
-*
-*
-*
+Referencias seleccionadas:
+
+* https://tienda.familiaschroeder.com/
+* https://www.dafiti.com.ar/
+* https://www.walmart.com.ar/
+* https://frappe.com.ar/
+* https://www.bonvivir.com/
 
 <br>
 
