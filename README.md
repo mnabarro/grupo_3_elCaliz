@@ -35,11 +35,11 @@
 
 Referencias seleccionadas:
 
-* https://tienda.familiaschroeder.com/
-* https://www.dafiti.com.ar/
-* https://www.walmart.com.ar/
-* https://frappe.com.ar/
-* https://www.grandcru.com.ar/
+* https://tienda.familiaschroeder.com/ >>> Slider de producto y footer
+* https://www.dafiti.com.ar/ >>> Sección de categorías y banner secundario
+* https://www.walmart.com.ar/ >>> Header
+* https://frappe.com.ar/ >>> Banner principal
+* https://www.grandcru.com.ar/ >>> Formulario de registro
 
 <br>
 
