@@ -255,7 +255,28 @@ footer {
 
 .winec img{
     width: 200px;
-    height: 250px;
+    height: 265px;
     padding: 40px;
     margin: 0px 0px 13px 50px;
+}
+
+article h4{
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+article h5{
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+article p{
+    text-align: center;
+    background-color: rgb(163, 163, 163);
+    padding: 15px;
+    margin: 0px 15px 20px 15px
+}
+
+.price{
+    margin: 0px 0px 0px 100px;
 }
