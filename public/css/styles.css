@@ -250,3 +250,12 @@ footer {
       display: none;
     }
 }
+
+/*PRODUCT DETAIL */
+
+.winec img{
+    width: 200px;
+    height: 250px;
+    padding: 40px;
+    margin: 0px 0px 13px 50px;
+}
