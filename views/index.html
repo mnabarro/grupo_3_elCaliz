@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Fira+Sans&family=Fira+Sans+Condensed&family=Fira+Sans+Extra+Condensed&display=swap"
+        rel="stylesheet">
+    <title>Home - El Cáliz</title>
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar">
+            <div><a onclick="openNav()" class="btn-menu" href="#"><i class="fas fa-bars"></i></a></div>
+            <div class="logo"><a href="/"><img src="img/logo.svg" alt=""></a></div>
+            <div class="logo-texto"><a href="/">El Cáliz</a></div>
+            <div class="search-box">
+                <input type="input" name="" id="" placeholder="Buscar...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="btn-user"><a href="/login"><i class="fas fa-user"></i></a></div>
+            <div class="btn-cart"><a href="/cart"><i class="fas fa-shopping-cart"></i></a></div>
+        </nav>
+        <nav>
+            <ul class="categories">
+                <li><a href="#">BLANCOS</a></li>
+                <li><a href="#">TINTOS</a></li>
+                <li><a href="#">ESPUMANTES</a></li>
+                <li><a href="#">COSECHA TARDÍA</a></li>
+                <li><a href="#">ESPECIALES</a></li>
+                <li><a href="#">ACCESORIOS</a></li>
+                <li><a href="#">OFERTAS</a></li>
+            </ul>
+        </nav>
+
+        <nav id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">BLANCOS</a>
+            <a href="#">TINTOS</a>
+            <a href="#">ESPUMANTES</a>
+            <a href="#">COSECHA TARDÍA</a>
+            <a href="#">ESPECIALES</a>
+            <a href="#">ACCESORIOS</a>
+            <a href="#">OFERTAS</a>
+        </nav>
+    </header>
+    <main>
+        <section class="banner">
+            <h4>Un banner por aquí</h4>
+        </section>
+
+        <section class="secondary-links">
+
+            <div><i class="fas fa-sync"></i></div>
+            <div>
+                <h5>CAMBIO Y DEVOLUCIÓN</h5>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+
+            <div><i class="fas fa-money-check-alt"></i></div>
+            <div>
+                <h5>FORMAS DE PAGO</h5>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div><i class="fas fa-shipping-fast"></i></div>
+            <div>
+                <h5>ENVÍOS</h5>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+        </section>
+
+        <section class="featured">
+            <h2 class="featured-title">DESTACADOS</h2>
+            <h4>Por aquí el carrousel de productos destacados</h4>
+        </section>
+
+        <section class="newsletter">
+            <h4>Invitación a suscribirse al newsletter.</h4>
+        </section>
+    </main>
+    <footer>
+        <h4>Por aquí ponemos el footer</h4>
+    </footer>
+
+    <script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "55vw";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+</body>
+
+</html>
