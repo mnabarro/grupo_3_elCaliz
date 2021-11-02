@@ -281,19 +281,14 @@ article p{
     color: black;
 }
 
-.fa-cart-plus{
-    color: black;
-}
-
 .add-button button {
     margin: 22px 0px 0px 111px;
-    padding: 4px 13px 4px 42px;
+    padding: 4px 13px 4px 12px;
     background-color: #a4161a;
     color: white;
     border-radius: 10px;
     font-size: 23px;
 }
-
 
 /*------FOOTER------*/
 /*bloque newsletter*/
