@@ -222,6 +222,81 @@ header {
     padding:10px;
 }
 
+/*PRODUCT DETAIL */
+
+.winec img{
+    width: 200px;
+    height: 265px;
+    padding: 40px;
+    margin: 0px 0px 13px 50px;
+}
+
+article h4{
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+article h5{
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+article p{
+    text-align: center;
+    background-color: rgb(163, 163, 163);
+    padding: 15px;
+    margin: 0px 15px 20px 15px
+}
+
+.price{
+    margin: 0px 0px 0px 100px;
+}
+
+/*------FOOTER------*/
+/*bloque newsletter*/
+.newsletter-box {
+    background-color: #F0F1F2;
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px 0px 10px;
+}
+h2{
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 1rem;
+}
+/*barra tu mail*/
+.mail-box { 
+    margin-top: 1rem;
+    margin-right: 0rem;
+}
+/*barra por dentro*/
+.mail-box input {
+    height: 2rem;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 1rem;
+    padding-left: 4px;
+    width: 50%;
+}
+/*boton suscribirse*/
+.mail-button button {
+    margin-left: -3rem;
+    padding: 10px;
+    background-color: #a4161a;
+    color: white;
+    border-radius: 10px;
+    font-size: 1rem;
+
+}
+
+
+
+
+
+
+
+/*------MEDIA QUERIES------*/
 @media (max-width: 768px) {
     .categories {
       display: none;
