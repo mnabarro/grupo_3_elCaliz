@@ -104,7 +104,7 @@ header {
     border-radius: 5px;
     margin: 5px 10px;
     padding: 5px 10px;
-    display:inline-flex;
+    display:flex;
     flex-grow: 1;
     background-color: #F0F1F2;
 }
@@ -176,7 +176,7 @@ header {
 }
 
 .banner {
-    height: 20vh;
+    height: auto;
     background-color: #F0F1F2;
 }
 
@@ -220,16 +220,6 @@ header {
     height: 20vh;
     background-color: #F0F1F2;
     padding:10px;
-}
-
-.newsletter {
-    height: 30vh;
-    background-color: #F0F1F2;
-}
-
-footer {
-    height: 50vh;
-    background-color: #F0F1F2;
 }
 
 @media (max-width: 768px) {
