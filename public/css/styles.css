@@ -219,7 +219,86 @@ header {
 .featured {
     height: 20vh;
     background-color: #F0F1F2;
-    padding:10px;
+    padding: 0px 0px 236px 0px;
+}
+
+/*-----DESTACADOS------*/
+
+.carrusel{
+    display: flex;
+    justify-content: space-around;
+}
+
+.foto1{
+    display: flex;
+    width: 43px;
+    height: 184px;
+}
+
+.foto2{
+    display: flex;
+    width: 80px;
+    height: 184px;
+}
+
+#nombre1{
+    margin: 195px 0px 0px -91px;
+}
+
+#nombre2{
+    margin: 195px 0px 0px -82px;
+}
+
+.precio{
+    margin: 269px 0px 0px -75px;
+}
+
+.add-buttonn button{
+    margin: 308px 0px 0px -89px;
+    padding: 4px 13px 7px 6px;
+    background-color: #a4161a;
+    color: white;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+
+/*------FOOTER------*/
+/*bloque newsletter*/
+.newsletter-box {
+    background-color: #F0F1F2;
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px 0px 10px;
+}
+h2{
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 1rem;
+}
+/*barra tu mail*/
+.mail-box { 
+    margin-top: 1rem;
+    margin-right: 0rem;
+}
+/*barra por dentro*/
+.mail-box input {
+    height: 2rem;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 1rem;
+    padding-left: 4px;
+    width: 50%;
+}
+/*boton suscribirse*/
+.mail-button button {
+    margin-left: -3rem;
+    padding: 10px;
+    background-color: #a4161a;
+    color: white;
+    border-radius: 10px;
+    font-size: 1rem;
+
 }
 
 /*------PRODUCT DETAIL------ */
@@ -293,50 +372,6 @@ article p{
     border-radius: 10px;
     font-size: 23px;
 }
-
-/*------FOOTER------*/
-/*bloque newsletter*/
-.newsletter-box {
-    background-color: #F0F1F2;
-    text-align: center;
-    border: 1px solid black;
-    padding: 10px 0px 10px;
-}
-h2{
-    text-align: center;
-    font-size: 1.3rem;
-    margin: 1rem;
-}
-/*barra tu mail*/
-.mail-box { 
-    margin-top: 1rem;
-    margin-right: 0rem;
-}
-/*barra por dentro*/
-.mail-box input {
-    height: 2rem;
-    border-radius: 10px;
-    text-align: left;
-    font-size: 1rem;
-    padding-left: 4px;
-    width: 50%;
-}
-/*boton suscribirse*/
-.mail-button button {
-    margin-left: -3rem;
-    padding: 10px;
-    background-color: #a4161a;
-    color: white;
-    border-radius: 10px;
-    font-size: 1rem;
-
-}
-
-
-
-
-
-
 
 /*------MEDIA QUERIES------*/
 @media (max-width: 768px) {
