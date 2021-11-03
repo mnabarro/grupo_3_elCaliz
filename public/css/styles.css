@@ -241,6 +241,18 @@ header {
     height: 184px;
 }
 
+.foto3{
+    display: flex;
+    width: 120px;
+    height: 215px;
+}
+
+.foto4{
+    display: flex;
+    width: 118px;
+    height: 215px;
+}
+
 #nombre1{
     margin: 195px 0px 0px -91px;
 }
@@ -383,6 +395,9 @@ article p{
     }
     .secondary-links h5,
     .secondary-links p {
+        display: none;
+    }
+    .foto3, .foto4{
         display: none;
     }
 }
