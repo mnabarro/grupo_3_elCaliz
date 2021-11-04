@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Sans';
+}
+
+body {
+    padding: 0vh 0vw;
+    
+}
+
+main {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+}
+
+/**********************************************************************/
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #444444; 
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.3s; /* 0.5 second transition effect to slide in the sidenav */
+    opacity: 90%;
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color:#F0F1F2;
+    display: block;
+    transition: 0.3s;
+  }
+
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color:#A78A7F;
+    font-size: 1.6rem;
+    transition-duration: 0.1s;
+  }
+
+  .sidenav .closebtn:hover {
+    color:#A78A7F;
+    font-size: 3.3rem;
+    transition-duration: 0.1s;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 3rem;
+    margin-left: 50px;
+  }
+/**********************************************************************/
+  
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap : 5px;
+    padding : 5px;
+    background-color: #A4161A;
+    color: white;
+    height: 5vh;
+    font-size: 1.5rem;
+}
+
+.btn-menu {
+    width: 30px;
+    text-align: center;
+    flex-shrink: 1;
+}
+
+.logo-texto a{
+    color: white;
+    font-family: 'Crete Round', serif;
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+
+.logo img{
+    padding-left: 5px;
+    height: 1.6rem;
+}
+
+.search-box {
+    border-radius: 5px;
+    margin: 5px 10px;
+    padding: 5px 10px;
+    display:flex;
+    flex-grow: 1;
+    background-color: #F0F1F2;
+}
+
+.search-box input{
+    background-color: #F0F1F2;
+    border: none;
+    width: 100%;
+    font-family: 'Fira Sans Extra Condensed', serif;
+    font-size: 1rem;    
+}
+
+/* Quito el recuadro del input al recibir el enfoque */
+.search-box input:focus{
+    outline: 0;
+}
+
+.search-box button {
+    border: none;
+    background: transparent;
+}
+
+.search-box button i {
+    color: #7c7c7c;    
+    font-size: 1rem;
+    cursor:pointer;
+}
+
+.btn-user {
+    width: 30px;    
+    text-align: center;
+    flex-shrink: 1;
+}
+
+.btn-cart {
+    width: 30px;
+    text-align: center;
+    flex-shrink: 1;
+}
+
+.fas {
+    color: white;
+}
+
+.fas:hover {
+    transform: scale(1.08);
+    transition-duration: 0.1s;    
+}
+
+.categories {
+    padding: 5px;
+    font-weight:700;
+    background-color:#F0F1F2;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.categories li a{
+    color: #6b6b6b;
+    margin-left: 5px;
+    text-decoration: none;
+}
+
+.categories li a:hover {
+    color: #A4161A;
+    border-bottom: #A4161A 2px solid;
+    transition-duration: 0.1s;
+}
+
+.banner {
+    height: auto;
+    background-color: #F0F1F2;
+}
+
+.secondary-links {
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    height: 8vh;
+    background-color: #F0F1F2;
+    border: #A78A7F solid 1px;
+}
+
+.secondary-links div {
+    display: flex;
+    flex-direction: column;
+}
+
+.secondary-links div i {
+    color: #A78A7F;
+    font-size: 6vh;
+    padding-right: 2vw;
+    border-right: #A78A7F solid 1px;
+}
+
+.secondary-links h5,
+.secondary-links p {
+    margin-left: 1vw;
+    font-family: 'Fira Sans Condensed', serif;
+    text-align: left;
+    color: #444444;
+    font-size: 1rem;
+}
+
+
+.featured-title {
+    color: #444444;
+    text-align: center;
+}
+
+.featured {
+    height: 20vh;
+    background-color: #F0F1F2;
+    padding: 0px 0px 236px 0px;
+}
+
+/*------PRODUCT DETAIL------ */
+
+.winec img{
+    width: 200px;
+    height: 265px;
+    padding: 40px;
+    margin: 0px 0px 13px 50px;
+}
+
+article h4{
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+article h5{
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+article p{
+    text-align: center;
+    background-color: rgb(207, 207, 207);
+    padding: 15px;
+    margin: 0px 15px 20px 15px;
+    border-radius: 12px;
+}
+
+.price-box{
+    display: flex;
+    justify-content: space-around;
+}
+
+.price{
+    margin-right: -130px;
+    font-size: 30px;
+}
+
+.cash{
+    font-size: 30px;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    padding-top: 14px;
+}
+
+.fa-square{
+    font-size: 30px;
+}
+
+.fa-minus-circle{
+    font-size: 30px;
+    color: black;
+    padding: 0px 10px 0px 0px;
+}
+
+.fa-plus-circle{
+    font-size: 30px;
+    color: black;
+    padding: 0px 0px 0px 10px;
+}
+
+.add-button button {
+    margin: 22px 0px 0px 111px;
+    padding: 4px 13px 4px 12px;
+    background-color: #a4161a;
+    color: white;
+    border-radius: 10px;
+    font-size: 23px;
+}

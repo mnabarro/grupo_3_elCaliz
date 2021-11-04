@@ -229,51 +229,85 @@ header {
     justify-content: space-around;
 }
 
-.foto1{
+.articulo1{
     display: flex;
-    width: 43px;
-    height: 184px;
+    flex-direction: column;
+    align-items: center;
 }
 
-.foto2{
-    display: flex;
-    width: 80px;
-    height: 184px;
-}
-
-.foto3{
-    display: flex;
-    width: 120px;
-    height: 215px;
-}
-
-.foto4{
-    display: flex;
-    width: 118px;
-    height: 215px;
-}
-
-#nombre1{
-    margin: 195px 0px 0px -91px;
-}
-
-#nombre2{
-    margin: 195px 0px 0px -82px;
-}
-
-.precio{
-    margin: 269px 0px 0px -75px;
+.articulo1 img{
+    width: 86px;
+    height: 167px;
 }
 
 .add-buttonn button{
-    margin: 308px 0px 0px -89px;
-    padding: 4px 13px 7px 6px;
+    margin: -16px 0px 0px 0px;
+    padding: 10px;
     background-color: #a4161a;
     color: white;
     border-radius: 10px;
-    font-size: 15px;
+    font-size: 1rem;
 }
 
+.articulo2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.articulo2 img{
+    width: 86px;
+    height: 167px;
+}
+
+.add-buttonn button{
+    margin: -16px 0px 0px 0px;
+    padding: 10px;
+    background-color: #a4161a;
+    color: white;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.articulo3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.articulo3 img{
+    width: 86px;
+    height: 167px;
+}
+
+.add-buttonn button{
+    margin: -16px 0px 0px 0px;
+    padding: 10px;
+    background-color: #a4161a;
+    color: white;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.articulo4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.articulo4 img{
+    width: 86px;
+    height: 167px;
+}
+
+.add-buttonn button{
+    margin: -16px 0px 0px 0px;
+    padding: 10px;
+    background-color: #a4161a;
+    color: white;
+    border-radius: 10px;
+    font-size: 1rem;
+}
 
 /*------FOOTER------*/
 /*bloque newsletter*/
@@ -310,79 +344,6 @@ h2{
     color: white;
     border-radius: 10px;
     font-size: 1rem;
-
-}
-
-/*------PRODUCT DETAIL------ */
-
-.winec img{
-    width: 200px;
-    height: 265px;
-    padding: 40px;
-    margin: 0px 0px 13px 50px;
-}
-
-article h4{
-    text-align: center;
-    padding-bottom: 15px;
-}
-
-article h5{
-    text-align: center;
-    padding-bottom: 15px;
-}
-
-article p{
-    text-align: center;
-    background-color: rgb(207, 207, 207);
-    padding: 15px;
-    margin: 0px 15px 20px 15px;
-    border-radius: 12px;
-}
-
-.price-box{
-    display: flex;
-    justify-content: space-around;
-}
-
-.price{
-    margin-right: -130px;
-    font-size: 30px;
-}
-
-.cash{
-    font-size: 30px;
-}
-
-.icons{
-    display: flex;
-    justify-content: center;
-    padding-top: 14px;
-}
-
-.fa-square{
-    font-size: 30px;
-}
-
-.fa-minus-circle{
-    font-size: 30px;
-    color: black;
-    padding: 0px 10px 0px 0px;
-}
-
-.fa-plus-circle{
-    font-size: 30px;
-    color: black;
-    padding: 0px 0px 0px 10px;
-}
-
-.add-button button {
-    margin: 22px 0px 0px 111px;
-    padding: 4px 13px 4px 12px;
-    background-color: #a4161a;
-    color: white;
-    border-radius: 10px;
-    font-size: 23px;
 }
 
 /*------MEDIA QUERIES------*/
@@ -395,9 +356,6 @@ article p{
     }
     .secondary-links h5,
     .secondary-links p {
-        display: none;
-    }
-    .foto3, .foto4{
         display: none;
     }
 }
