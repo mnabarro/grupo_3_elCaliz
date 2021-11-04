@@ -1,7 +1,7 @@
 # Retrospectiva
 
 
-## Tomando en cuenta el metodo de estrella de mar como equipo llegamos a las siguientes conclusiones:##
+## Tomando en cuenta el metodo de estrella de mar como equipo llegamos a las siguientes conclusiones:
 
 
 
