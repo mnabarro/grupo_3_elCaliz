@@ -219,7 +219,7 @@ header {
 .featured {
     height: 20vh;
     background-color: #F0F1F2;
-    padding: 0px 0px 236px 0px;
+    padding: 0px 0px 245px 0px;
 }
 
 /*-----DESTACADOS------*/
@@ -229,15 +229,32 @@ header {
     justify-content: space-around;
 }
 
+.arrow{
+    margin: 0px 0px 0px 0px;
+}
+
 .articulo1{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #cccc;
+    padding: 12px 15px 12px 15px;
+    border-radius: 10px;
+    width: 145px;
 }
 
-.articulo1 img{
-    width: 86px;
-    height: 167px;
+.imagen-vino{
+    width: 80px;
+    height: 150px;
+}
+
+.nombre-vino{
+    text-align: center;
+    margin-top: 5px;
+}
+
+.precio-vino{
+    margin-top: 5px;
 }
 
 .add-buttonn button{
@@ -253,12 +270,13 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #cccc;
+    padding: 12px 15px 12px 15px;
+    border-radius: 10px;
+    width: 145px;
 }
 
-.articulo2 img{
-    width: 86px;
-    height: 167px;
-}
+
 
 .add-buttonn button{
     margin: 12px 0px 0px 0px;
@@ -273,12 +291,13 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #cccc;
+    padding: 12px 15px 12px 15px;
+    border-radius: 10px;
+    width: 145px;
 }
 
-.articulo3 img{
-    width: 86px;
-    height: 167px;
-}
+
 
 .add-buttonn button{
     margin: 12px 0px 0px 0px;
@@ -293,12 +312,12 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #cccc;
+    padding: 12px 15px 12px 15px;
+    border-radius: 10px;
+    width: 145px;
 }
 
-.articulo4 img{
-    width: 86px;
-    height: 167px;
-}
 
 .add-buttonn button{
     margin: 12px 0px 0px 0px;
