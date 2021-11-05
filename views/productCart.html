@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <!-- <link rel="stylesheet" href="css/productCart.css"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +26,7 @@
             <div class="logo-texto"><a href="/">El Cáliz</a></div>
             <div class="search-box">
                 <input type="input" name="" id="" placeholder="Buscar...">
-                <button><i class="fas fa-search"></i></button>
+                <button class="button-search"><i class="fas fa-search"></i></button>
             </div>
             <div class="btn-user"><a href="/login"><i class="fas fa-user"></i></a></div>
             <div class="btn-cart"><a href="/cart"><i class="fas fa-shopping-cart"></i></a></div>
@@ -52,8 +53,94 @@
             <a href="#">OFERTAS</a>
         </nav>
     </header>
+
     <main>
-    </main>
+
+        <section class="cart-header">
+            <p class="cart-title">SU COMPRA</p>
+        </section>
+
+        <section class="cart">
+
+            <article class="cart-item">
+                <div class="cart-product-name"><a href="#">SAURUS ESTATE MERLOT - 750CL</a></div>
+                <div class="cart-item-inner">
+                    <div class="cart-product-img"><a href="#"><img src="img/homeParte2/DanteRobinoChardonnay.png" alt=""></a></div>
+                    <div class="price-qty">
+                        <div class="unit-price"><p class="price">$1000</p></div>
+                        <div class="qty-selector">
+                            <div class="qty-minus"><i class="fas fa-minus-circle"></i></div>
+                            <div class="qty">44</div>
+                            <div class="qty-plus"><i class="fas fa-plus-circle"></i></div>
+                        </div>
+                        <div class="qty-subtotal"><p class="subtotal">$2000</p></div>
+                    </div>
+                    <div class="trash"><i class="fas fa-trash"></i></div>
+                </div>
+            </article>
+
+            <article class="cart-item">
+                <div class="cart-product-name"><a href="#">SAURUS ESTATE MERLOT - 750CL</a></div>
+                <div class="cart-item-inner">
+                    <div class="cart-product-img"><a href="#"><img src="img/homeParte2/DanteRobinoExtraBrut.png" alt=""></a></div>
+                    <div class="price-qty">
+                        <div class="unit-price"><p class="price">$1000</p></div>
+                        <div class="qty-selector">
+                            <div class="qty-minus"><i class="fas fa-minus-circle"></i></div>
+                            <div class="qty">1</div>
+                            <div class="qty-plus"><i class="fas fa-plus-circle"></i></div>
+                        </div>
+                        <div class="qty-subtotal"><p class="subtotal">$2000</p></div>
+                    </div>
+                    <div class="trash"><i class="fas fa-trash"></i></div>
+                </div>
+            </article>
+            <article class="cart-item">
+                <div class="cart-product-name"><a href="#">SAURUS ESTATE MERLOT - 750CL</a></div>
+                <div class="cart-item-inner">
+                    <div class="cart-product-img"><a href="#"><img src="img/homeParte2/DRReservaMalbec.png" alt=""></a></div>
+                    <div class="price-qty">
+                        <div class="unit-price"><p class="price">$1000</p></div>
+                        <div class="qty-selector">
+                            <div class="qty-minus"><i class="fas fa-minus-circle"></i></div>
+                            <div class="qty">1</div>
+                            <div class="qty-plus"><i class="fas fa-plus-circle"></i></div>
+                        </div>
+                        <div class="qty-subtotal"><p class="subtotal">$2000</p></div>
+                    </div>
+                    <div class="trash"><i class="fas fa-trash"></i></div>
+                </div>
+            </article>
+            <article class="cart-item">
+                <div class="cart-product-name"><a href="#">SAURUS ESTATE MERLOT - 750CL</a></div>
+                <div class="cart-item-inner">
+                    <div class="cart-product-img"><a href="#"><img src="img/homeParte2/NovecentoRosado.png" alt=""></a></div>
+                    <div class="price-qty">
+                        <div class="unit-price"><p class="price">$1000</p></div>
+                        <div class="qty-selector">
+                            <div class="qty-minus"><i class="fas fa-minus-circle"></i></div>
+                            <div class="qty">1</div>
+                            <div class="qty-plus"><i class="fas fa-plus-circle"></i></div>
+                        </div>
+                        <div class="qty-subtotal"><p class="subtotal">$2000</p></div>
+                    </div>
+                    <div class="trash"><i class="fas fa-trash"></i></div>
+                </div>
+            </article>
+        </section>
+
+        <section class="cart-footer">
+        <div class="cart-footer-total">
+            <p>TOTAL : </p>
+            <p class="cart-total">$5802,32</p>
+        </div>
+        <div class="cart-buttons">
+            <button type="button" class="cart-button btn-finish button button-primary">COMPRAR CARRITO</button>
+            <button type="button" class="cart-button btn-back button button-secondary">VOLVER AL LISTADO</button>
+        </div>
+    </section>
+
+</main>
     <footer>
     </footer>
 
