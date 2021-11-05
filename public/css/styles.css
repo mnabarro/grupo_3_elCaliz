@@ -242,7 +242,7 @@ header {
 }
 
 .add-buttonn button{
-    margin: -16px 0px 0px 0px;
+    margin: 12px 0px 0px 0px;
     padding: 10px;
     background-color: #a4161a;
     color: white;
@@ -262,7 +262,7 @@ header {
 }
 
 .add-buttonn button{
-    margin: -16px 0px 0px 0px;
+    margin: 12px 0px 0px 0px;
     padding: 10px;
     background-color: #a4161a;
     color: white;
@@ -282,7 +282,7 @@ header {
 }
 
 .add-buttonn button{
-    margin: -16px 0px 0px 0px;
+    margin: 12px 0px 0px 0px;
     padding: 10px;
     background-color: #a4161a;
     color: white;
@@ -302,7 +302,7 @@ header {
 }
 
 .add-buttonn button{
-    margin: -16px 0px 0px 0px;
+    margin: 12px 0px 0px 0px;
     padding: 10px;
     background-color: #a4161a;
     color: white;
@@ -554,7 +554,6 @@ h2{
     font-weight: 700;
 }
 
-
 @media (min-width: 768px) {
     .categories {
         display: flex;
@@ -571,6 +570,9 @@ h2{
     .secondary-links h5,
     .secondary-links p {
         display: flex;
+    }
+    .articulo4{
+        display: none;
     }
 
     .price-qty {
@@ -610,3 +612,11 @@ h2{
         align-items: center;
     }
 }
+
+@media (max-width: 469px){
+    .articulo3{
+        display: none;
+    }
+}
+
+ 
