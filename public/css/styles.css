@@ -230,18 +230,21 @@ header {
     justify-content: space-around;
 }
 
-.arrow{
-    margin: 0px 0px 0px 0px;
+.fondo{
+    background-color: white;
+    padding: 0px 25px 0px 25px;
+    border: 1px solid #bebebe;
+    border-radius: 10px;
 }
 
-.articulo{
+.articulo1, .articulo2, .articulo3, .articulo4{
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #cccc;
     padding: 12px 15px 12px 15px;
     border-radius: 10px;
-    width: 200px;
+    width: 180px;
 }
 
 .imagen-vino{
@@ -252,10 +255,12 @@ header {
 .nombre-vino{
     text-align: center;
     margin-top: 5px;
+    color: #444444;
 }
 
 .precio-vino{
     margin-top: 5px;
+    font-weight: bold;
 }
 
 .add-buttonn button{
