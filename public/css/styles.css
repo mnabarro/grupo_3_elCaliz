@@ -220,7 +220,7 @@ header {
 .featured {
     height: 20vh;
     background-color: #F0F1F2;
-    padding: 0px 0px 245px 0px;
+    padding: 0px 0px 375px 0px;
 }
 
 /*-----DESTACADOS------*/
@@ -241,7 +241,7 @@ header {
     background-color: #cccc;
     padding: 12px 15px 12px 15px;
     border-radius: 10px;
-    width: 145px;
+    width: 200px;
 }
 
 .imagen-vino{
@@ -274,7 +274,7 @@ header {
     background-color: #cccc;
     padding: 12px 15px 12px 15px;
     border-radius: 10px;
-    width: 145px;
+    width: 200px;
 }
 
 
@@ -295,7 +295,7 @@ header {
     background-color: #cccc;
     padding: 12px 15px 12px 15px;
     border-radius: 10px;
-    width: 145px;
+    width: 200px;
 }
 
 
@@ -316,7 +316,7 @@ header {
     background-color: #cccc;
     padding: 12px 15px 12px 15px;
     border-radius: 10px;
-    width: 145px;
+    width: 200px;
 }
 
 
@@ -590,9 +590,6 @@ h2{
     .secondary-links p {
         display: flex;
     }
-    .articulo4{
-        display: none;
-    }
 
     .price-qty {
         flex-direction: row;
@@ -632,10 +629,9 @@ h2{
     }
 }
 
-@media (max-width: 469px){
-    .articulo3{
+@media (max-width: 950px){
+    .articulo3, .articulo4{
         display: none;
     }
 }
 
- 
