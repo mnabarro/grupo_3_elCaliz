@@ -52,7 +52,7 @@ Referencias seleccionadas:
     <br> Desarrollador web en proceso.
 
 * **Matias Nabarro :**
-   <br> Desarrollador web en proceso, en aprendizaje continuo.
+    <br> Desarrollador web en proceso, en aprendizaje continuo.
 
 * **Mariana Perez :**
     <br>Estudiante de Desarrollo Web Full Stack
