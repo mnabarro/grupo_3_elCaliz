@@ -245,6 +245,8 @@ header {
     padding: 12px 15px 12px 15px;
     border-radius: 10px;
     width: 180px;
+    border: solid 1px #bebebe;
+    box-shadow: 2px 2px 3px 0px rgb(68 68 68 / 40%);
 }
 
 .imagen-vino{
