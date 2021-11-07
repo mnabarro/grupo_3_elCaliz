@@ -629,6 +629,10 @@ header {
     font-size: 1.3rem;
     font-weight: lighter;
 }
+.contact,
+.company {
+    margin: 2rem 0;
+}
 .social-icons {
     display:flex;
     flex-direction: row;
@@ -644,7 +648,7 @@ header {
     flex-direction: column;
     align-items: center;
     list-style: none;
-    margin: 1rem 0rem;
+    margin: 0.5rem 0rem;
 }
 .address,
 .whatsapp,
@@ -759,6 +763,10 @@ header {
     .footer-box1 {
         order:1;
     }
+    .contact,
+    .company {
+    margin: 0rem;
+}
 
 }
 
