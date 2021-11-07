@@ -628,7 +628,6 @@ header {
     text-align: center;
     font-size: 1.3rem;
     font-weight: lighter;
-    margin-top: 3rem;
 }
 .social-icons {
     display:flex;
@@ -667,13 +666,13 @@ header {
     margin: 0.2rem;
     
 }
+
 .scrollup-icon {
     font-weight: 400px;
 }
 
 .regret-button button {
     background-color: #E7D7C1;
-    margin: 12px 0px 12px -15px;
     padding: 10px;
     border-radius: 10px;
     font-size: 1rem;
@@ -749,6 +748,18 @@ header {
     .cart-footer-total {
         align-items: center;
     }
+    .footer-boxes {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin: 0 3rem;
+    }
+    .footer-box1 {
+        order:1;
+    }
+
 }
 
 @media (max-width: 950px){
@@ -764,5 +775,6 @@ header {
     }
 
 }*/
+
 	
 
