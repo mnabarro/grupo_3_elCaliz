@@ -402,13 +402,28 @@ header {
     margin: 0rem;
 }
 
-.imagenes-chicas, .fa-arrow-circle-left, .fa-arrow-circle-right{
+/*---PRODUCT DETAIL MEDIA QUERIES---*/
+
+.articulo{
+    display: flex;
+    flex-direction: row;
+}
+
+.imagenes-chicas{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+}
+
+.info-vino{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
 }
 
 }
+
+/*--CIERRE PRODUCT DETAIL MEDIA QUERIES--*/
 
 @media (max-width: 950px){
     .articulo3, .articulo4{
