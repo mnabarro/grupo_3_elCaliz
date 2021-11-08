@@ -393,6 +393,23 @@ header {
     margin: 0rem;
 }
 
+.articulo{
+    display: flex;
+    flex-direction: row;
+}
+
+.imagen-vino{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nombre{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+
 }
 
 @media (max-width: 950px){
