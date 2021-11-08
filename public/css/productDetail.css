@@ -412,6 +412,7 @@ header {
 .imagenes-chicas{
     display: flex;
     flex-direction: column;
+    order: -1
 }
 
 .info-vino{
@@ -419,6 +420,16 @@ header {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-around;
+}
+
+.carrito{
+    display: flex;
+    align-self: flex-end;
+}
+
+.add-buttonn{
+    display: flex;
+    align-self: flex-end;
 }
 
 }
