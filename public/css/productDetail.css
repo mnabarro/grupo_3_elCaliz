@@ -423,80 +423,14 @@ header {
 
 /*---PRODUCT DETAIL MEDIA QUERIES---*/
 
-/*.articulo{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    height: 683px;
-}
-
-.imagenes-chicas{
-    display: flex;
-    flex-direction: column;
-    order: -1;
-    align-self: flex-start;
-    justify-content: space-around;
-    position: absolute;
-    width: 162px;
-    left: 43px;
-    top: 107px;
-}
-
-.vinitos{
-    display: flex;
-    flex-direction: column;
-    width: 75%;
-    position: relative;
-    right: 5px;
-}
-
-.fondo-imagen{
-    display: flex;
-   flex-direction: column;
-    align-self: flex-start;
-    justify-content: space-around;
-    position: relative;
-    left: 120px;
-    top: 14px;
-    height: 415px; 
-}
-
-.imagen-vino{
-    width: 215px;
-    height: 400px;
-
-}
-
-.info-vino{
-    display: flex;
-    flex-direction: column;
-    align-self: flex-start;
-    position: relative;
-    left: 200px;
-}
-
-.nombre{
-    display: flex;
-    flex-direction: row;
-}
-
-
-.carrito{
-    display: flex;
-    align-self: flex-end;
-}
-
-.add-buttonn{
-    display: flex;
-    align-self: flex-end;
-}
-
-}
-*/
 .articulo{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+}
+
+.fondo-imagen{
+    margin-top: 26px;
 }
 
 .imagenes-chicas{
@@ -510,8 +444,14 @@ header {
     width: 100px;
 }
 
-.imagen-vino{
-    
+.fa-arrow-circle-left{
+    transform: rotate(90deg);
+    margin-left: 30px;
+}
+
+.fa-arrow-circle-right{
+    transform: rotate(90deg);
+    margin-left: 30px;
 }
 
 .info-vino{
