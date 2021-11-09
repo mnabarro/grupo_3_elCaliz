@@ -525,16 +525,29 @@ header {
 
 .form-login h1 {
     margin: 0;
-    text-align: center;
+    text-align: justify;
     height: 40px;
     margin-bottom: 30px;
     font-size: 20px; 
     border-radius: 10px;
 
 }
+.form-login h3 {
+    margin: 0;
+    text-align: justify;
+    height: 10px;
+    margin-bottom: 10px;
+    font-size: 15px; 
+}
+
+
+
+
+
+
 
 .controls{
-    width: 80%;
+    width: 65%;
     border: 1px solid #A4161A;
     margin-bottom: 30px;
     padding: 11px 10px;
@@ -543,18 +556,21 @@ header {
     font-weight: bold;
     border-radius: 10px;
     
+
+    
     
 }
 
 .buttons{
-    width: 100%;
+    width: 65%;
     height: 40px;
     background: #A4161A;
     border: none;
     color: white;
     margin-bottom: 30px;
     font-size: 14px;
-    border-radius: 5px;
+    border-radius: 10px;
+    
 
     
 }
