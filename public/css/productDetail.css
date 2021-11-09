@@ -409,6 +409,10 @@ header {
     flex-direction: row;
 }
 
+.imagen-vino{
+    display: flex;
+}
+
 .imagenes-chicas{
     display: flex;
     flex-direction: column;
