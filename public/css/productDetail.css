@@ -234,6 +234,10 @@ header {
     border: solid yellow;
 }
 
+.contenedor{
+    border: orange solid;
+}
+
 .fondo-imagen{
     border:turquoise solid;
     display: flex;
@@ -431,23 +435,35 @@ header {
     flex-direction: column;
     order: -1;
     align-self: flex-start;
+    justify-content: space-around;
+    position: absolute;
+    width: 162px;
+    left: 43px;
+    top: 107px;
 }
 
 .vinitos{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 75%;
+    position: relative;
+    right: 5px;
 }
 
 .fondo-imagen{
     display: flex;
-    flex-direction: column;
-    align-self: flex-start;   
+   flex-direction: column;
+    align-self: flex-start;
+    justify-content: space-around;
+    position: relative;
+    left: 120px;
+    top: 14px;
+    height: 415px; 
 }
 
 .imagen-vino{
-    display: flex;
-    flex-direction: column;
+    width: 215px;
+    height: 400px;
 
 }
 
@@ -455,6 +471,8 @@ header {
     display: flex;
     flex-direction: column;
     align-self: flex-start;
+    position: relative;
+    left: 200px;
 }
 
 .nombre{
