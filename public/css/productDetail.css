@@ -423,7 +423,7 @@ header {
 
 /*---PRODUCT DETAIL MEDIA QUERIES---*/
 
-.articulo{
+/*.articulo{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -492,7 +492,36 @@ header {
 }
 
 }
+*/
+.articulo{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
 
+.imagenes-chicas{
+    display: flex;
+    flex-direction: column;
+    order: -1;
+    align-items: flex-start;
+    
+}
+.vinitos{
+    width: 100px;
+}
+
+.imagen-vino{
+    
+}
+
+.info-vino{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    height: 350px;
+}
+
+}
 /*--CIERRE PRODUCT DETAIL MEDIA QUERIES--*/
 
 @media (max-width: 950px){
