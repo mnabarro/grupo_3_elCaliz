@@ -492,60 +492,39 @@ header {
   
 
 /* css login */
-.form-login p{
-    height: 40px;
-    text-align: left;
-    
-}
-
-
-.form-login a{
-    color: black;
-    text-decoration: none;
-    font-size: 14px;
-       
-}
 
 .form-login a :hover{
     text-decoration: underline;
 }
 
-
 .form-login {
     width: 500px;
     height: 440px;
-    background: white;
     margin: auto;
-    margin-top: 180;
     padding: 20px 40px;
     color: black;
     border-radius: 10px;
-
 }
 
+/*titulo  tu cuenta */
 .form-login h1 {
-    margin: 0;
-    text-align: justify;
+    margin: 0 auto;
     height: 40px;
-    margin-bottom: 30px;
     font-size: 20px; 
-    border-radius: 10px;
+
 
 }
+ /*texto EMAIL y CONTRASEÑA*/
 .form-login h3 {
     margin: 0;
+    padding: 20;
     text-align: justify;
     height: 10px;
     margin-bottom: 10px;
-    font-size: 15px; 
+    font-size: 10px; 
 }
 
-
-
-
-
-
-
+/*Campos para colocar email y contraseña*/
 .controls{
     width: 65%;
     border: 1px solid #A4161A;
@@ -553,14 +532,12 @@ header {
     padding: 11px 10px;
     background:white;
     font-size: 14px;
-    font-weight: bold;
     border-radius: 10px;
-    
-
-    
-    
+    display: flex;
+    flex-direction: column;
 }
 
+/*boton de ingresar*/
 .buttons{
     width: 65%;
     height: 40px;
