@@ -588,7 +588,7 @@ header {
 
 /*boton suscribirse*/
 .mail-button button {
-    margin: 12px 0px 12px -15px;
+    margin: 5px 0px 5px -15px;
     padding: 10px;
     background-color: #a4161a;
     color: white;
@@ -604,10 +604,18 @@ header {
 .footer {
     background-color:#444444;
 }
+.footer-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
 .footer-icons {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .whatsapp-icon, .scrollup-icon {
     color: white;
@@ -698,7 +706,7 @@ header {
 }
 
 
-/*------FINAL FOOTER------*/
+/*------END FOOTER------*/
 /*-----MEDIAS QUERIES----*/
 
 @media (min-width: 768px) {
@@ -755,17 +763,6 @@ header {
     .cart-footer-total {
         align-items: center;
     }
-    .footer-boxes {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin: 0 3rem;
-    }
-    .footer-box1 {
-        order:1;
-    }
     .contact,
     .company {
     margin: 0rem;
@@ -777,15 +774,44 @@ header {
         display: none;
     }
 }
-
-/*@media (min-width:481PX) {
+/*-----medias footer-----*/
+@media (min-width:481PX) {
+    .mail-box {
+        display: flex;
+        width: 50vw;
+        justify-content: center;
+        align-items: center;
+    }
     .newsletter-form {
         width: 100VW;
         flex-direction: row;
-        margin: 10px;
+        margin-bottom: 0.5rem;
+        justify-content: center;
+        align-items: center;
     }
-
-}*/
+    .footer-icons {
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-top: -3rem;
+    }
+    .footer {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .footer-boxes {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin: 2rem;
+    }
+    .footer-box1 {
+        order:1;
+        align-self: flex-start;
+    }
+}
+/*-----end medias footer-----*/
 
 	
 
