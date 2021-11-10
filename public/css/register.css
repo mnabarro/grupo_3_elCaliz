@@ -254,7 +254,7 @@ header {
 
 
 
-/*------FOOTER-----*/
+/*------FOOTER------*/
 /*bloque newsletter*/
 .newsletter-box {
     width: 100vw;
@@ -288,7 +288,7 @@ header {
 
 /*boton suscribirse*/
 .mail-button button {
-    margin: 12px 0px 12px -15px;
+    margin: 5px 0px 5px -15px;
     padding: 10px;
     background-color: #a4161a;
     color: white;
@@ -304,10 +304,18 @@ header {
 .footer {
     background-color:#444444;
 }
+.footer-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
 .footer-icons {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .whatsapp-icon, .scrollup-icon {
     color: white;
@@ -398,7 +406,7 @@ header {
 }
 
 
-/*------FINAL FOOTER------*/
+/*------END FOOTER------*/
 /*-----MEDIAS QUERIES----*/
 
 @media (min-width: 768px) {
