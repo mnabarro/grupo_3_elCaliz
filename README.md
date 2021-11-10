@@ -56,3 +56,8 @@ Referencias seleccionadas:
 
 * **Mariana Perez :**
     <br>Estudiante de Desarrollo Web Full Stack
+
+    <br>
+    ##  Segundo Sprint Proyecto Integrador - Grupo 3
+
+    ### Link del tablero de trabajo:  https://trello.com/b/LSPYpAhz/proyecto-integrador-ecommerce-el-c%C3%A1liz
