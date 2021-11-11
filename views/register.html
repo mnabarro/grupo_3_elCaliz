@@ -20,15 +20,21 @@
     <header>
 
         <nav class="navbar">
-            <div><a onclick="openNav()" class="btn-menu" href="#"><i class="fas fa-bars"></i></a></div>
-            <div class="logo"><a href="/"><img src="img/logo.svg" alt=""></a></div>
-            <div class="logo-texto"><a href="/">El Cáliz</a></div>
-            <div class="search-box">
-                <input type="input" name="" id="" placeholder="Buscar...">
-                <button class="button-search"><i class="fas fa-search"></i></button>
+            <nav class="navbar-left">
+                <div><a onclick="openNav()" class="btn-menu" href="#"><i class="fas fa-bars"></i></a></div>
+                <div class="logo"><a href="/"><img src="img/logo.svg" alt=""></a></div>
+                <div class="logo-texto"><a href="/">El Cáliz</a></div>
+            </nav>
+            <div class="search-box-container">
+                <div class="search-box">
+                    <input type="input" name="" id="" placeholder="Buscar...">
+                    <button class="button-search"><i class="fas fa-search"></i></button>
+                </div>
             </div>
-            <div class="btn-user"><a href="/login"><i class="fas fa-user"></i></a></div>
-            <div class="btn-cart"><a href="/cart"><i class="fas fa-shopping-cart"></i></a></div>
+            <nav class="navbar-right">
+                <div class="btn-user"><a href="/login"><i class="fas fa-user"></i></a></div>
+                <div class="btn-cart"><a href="/cart"><i class="fas fa-shopping-cart"></i></a></div>
+            </nav>
         </nav>
     </header>
 
@@ -46,44 +52,38 @@
                     <div>
                         <input class="field" name="name" type="text" placeholder="Ej: Mariana">
                     </div>
-                </div>
-                <div class="fields">
                     <div class="field-lastname">
                         <h5>APELLIDO</h5>
                     </div>    
                     <div>
                         <input class="field" name="name" type="text" placeholder="Ej: Perez">
                     </div>
-                </div>
-                <div class="fields">
                     <div class="field-email">
                         <h5>EMAIL</h5>
                     </div>    
                     <div>
                         <input class="field" name="name" type="text" placeholder="Ej: hola@gmail.com">
                     </div>
-                </div>
-                <div class="fields">
                     <div class="field-password">
                         <h5>CONTRASEÑA</h5>
                     </div>    
-                    <div>
-                        <input class="field" name="name" type="text">
+                    <div class="add-eye">
+                        <input class="field" name="name" type="text"><i class="fas fa-eye"></i>
                     </div>
-                </div>
-                <div class="fields">
                     <div class="field-repeat-password">
                         <h5>REPETIR CONTRASEÑA</h5>
                     </div>    
-                    <div>
-                        <input class="field" name="name" type="text">
+                    <div class="add-eye2">
+                        <input class="field" name="name" type="text"><i class="fas fa-eye"></i>
                     </div>
+                    <img class="captcha" src="/img/png/captcha.png" alt="">
+                    <div class="create-account-button">
+                        <button>CREAR CUENTA</button> 
+                    </div>
+                    <a class="account" href="/login">¿Ya ténes una cuenta? Iniciá sesión</a>
                 </div>
-            </article>    
+            </article>
         </section>
-      
-
-
     </main>
 
     <footer>

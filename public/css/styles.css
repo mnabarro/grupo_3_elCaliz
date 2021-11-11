@@ -71,8 +71,8 @@ header {
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap : 5px;
+    /* align-items: center; */
+    /* gap : 5px; */
     padding : 5px;
     background-color: #A4161A;
     color: white;
@@ -80,10 +80,24 @@ header {
     font-size: 1.5rem;
 }
 
+.navbar-left {
+    display: flex;
+    align-items:center;
+    justify-content: flex-start;
+    width: 20%;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 20%;
+    
+}
+
 .btn-menu {
-    width: 30px;
     text-align: center;
-    flex-shrink: 1;
+    margin-right: 10px;
 }
 
 .logo-texto a{
@@ -94,18 +108,29 @@ header {
     text-decoration: none;
 }
 
+.logo{
+    margin-right: 10px;
+}
+
 .logo img{
-    padding-left: 5px;
+    padding: 10px, 0px;
     height: 1.6rem;
+}
+
+.search-box-container {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
 }
 
 .search-box {
     display:flex;
+    justify-content: flex-end;
     border-radius: 10px;
     margin: 5px 5px;
     padding: 5px 5px;
     flex-grow: 1;
-    background-color: #F0F1F2;
+    background-color: #F0F1F2;    
 }
 
 .search-box input{
@@ -135,13 +160,11 @@ header {
 .btn-user {
     width: 30px;    
     text-align: center;
-    flex-shrink: 1;
 }
 
 .btn-cart {
     width: 30px;
     text-align: center;
-    flex-shrink: 1;
 }
 
 .navbar .fas {
@@ -591,7 +614,7 @@ header {
 
 /*boton suscribirse*/
 .mail-button button {
-    margin: 12px 0px 12px -15px;
+    margin: 5px 0px 5px -15px;
     padding: 10px;
     background-color: #a4161a;
     color: white;
@@ -607,10 +630,18 @@ header {
 .footer {
     background-color:#444444;
 }
+.footer-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
 .footer-icons {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .whatsapp-icon, .scrollup-icon {
     color: white;
@@ -701,7 +732,7 @@ header {
 }
 
 
-/*------FINAL FOOTER------*/
+/*------END FOOTER------*/
 /*-----MEDIAS QUERIES----*/
 
 @media (min-width: 768px) {
@@ -758,17 +789,6 @@ header {
     .cart-footer-total {
         align-items: center;
     }
-    .footer-boxes {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin: 0 3rem;
-    }
-    .footer-box1 {
-        order:1;
-    }
     .contact,
     .company {
     margin: 0rem;
@@ -781,14 +801,70 @@ header {
     }
 }
 
-/*@media (min-width:481PX) {
+/* Media query para suavizar el cambio de tamaño de la search-box */
+@media (max-width:482PX) {
+
+    .navbar-right {
+        width: 20%;
+        transition-duration: 500ms;
+    }
+
+}
+
+
+/*-----medias footer-----*/
+@media (min-width:481PX) {
+
+/* Media query para suavizar el cambio de tamaño de la search-box */
+.navbar-right {
+        width: 12%;
+        transition-duration: 500ms;
+    }
+
+    .search-box{
+        max-width: 250px;
+    }
+
+    .search-box-container {
+        justify-content: flex-end;
+    }
+    
+    .mail-box {
+        display: flex;
+        width: 50vw;
+        justify-content: center;
+        align-items: center;
+    }
     .newsletter-form {
         width: 100VW;
         flex-direction: row;
-        margin: 10px;
+        margin-bottom: 0.5rem;
+        justify-content: center;
+        align-items: center;
     }
-
-}*/
+    .footer-icons {
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-top: -3rem;
+    }
+    .footer {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .footer-boxes {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin: 2rem;
+    }
+    .footer-box1 {
+        order:1;
+        align-self: flex-start;
+    }
+}
+/*-----end medias footer-----*/
 
 	
 

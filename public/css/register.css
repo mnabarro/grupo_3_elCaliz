@@ -235,26 +235,64 @@ header {
     background-color: #A78A7F;
     margin: 0.3rem 1rem 1rem;
 }
-
+h5 {
+    padding: 0.3rem 0 0 0.3rem;
+}
+.fa-eye {
+    font-size: 1.2rem;
+    position: absolute;
+    right: 1rem;
+    top: 7px;
+}
+.add-eye {
+    position:relative;
+}
+.add-eye2 {
+    position:relative;
+}
 .fields {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
     margin: 0rem 1rem;
-    border: 2px solid orangered;
     font-size: 12px;
+
 }
 
-.field-name {
-    border: 2px solid green;
-}
 .field {
     border-radius: 5px;
-    padding-right: 6.7rem;
-    border: 2px solid blue;
+    padding: 0.2rem 6.7rem 0.2rem 0.2rem;
+    border: 0.5px solid #A4161A;
+    margin: 0.3rem;
 }
 
+.captcha {
+    width: 50vw;
+    float: right;
+    margin: 1rem 0rem;
+    place-self: end;
+}
+.create-account-button {
+    display: flex;
+    justify-content: center;
+}
+.create-account-button button {
+    padding: 0.5rem;
+    background-color: #a4161a;
+    color: white;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.account {
+    text-align: center;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: black;
+}
+/*------END MAIN------*/
 
-
-
-/*------FOOTER-----*/
+/*------FOOTER------*/
 /*bloque newsletter*/
 .newsletter-box {
     width: 100vw;
@@ -288,7 +326,7 @@ header {
 
 /*boton suscribirse*/
 .mail-button button {
-    margin: 12px 0px 12px -15px;
+    margin: 5px 0px 5px -15px;
     padding: 10px;
     background-color: #a4161a;
     color: white;
@@ -304,10 +342,18 @@ header {
 .footer {
     background-color:#444444;
 }
+.footer-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
 .footer-icons {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .whatsapp-icon, .scrollup-icon {
     color: white;
@@ -398,7 +444,7 @@ header {
 }
 
 
-/*------FINAL FOOTER------*/
+/*------END FOOTER------*/
 /*-----MEDIAS QUERIES----*/
 
 @media (min-width: 768px) {
