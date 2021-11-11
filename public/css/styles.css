@@ -518,6 +518,7 @@ header {
 
 .form-login a :hover{
     text-decoration: underline;
+    
 }
 
 .form-login {
@@ -534,6 +535,7 @@ header {
     margin: 0 auto;
     height: 40px;
     font-size: 20px; 
+    
 
 
 }
@@ -545,6 +547,7 @@ header {
     height: 10px;
     margin-bottom: 10px;
     font-size: 10px; 
+    
 }
 
 /*Campos para colocar email y contraseña*/
@@ -556,8 +559,7 @@ header {
     background:white;
     font-size: 14px;
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
+       
 }
 
 /*boton de ingresar*/
@@ -565,14 +567,15 @@ header {
     width: 65%;
     height: 40px;
     background: #A4161A;
-    border: none;
+    border: 1px solid black;
     color: white;
     margin-bottom: 30px;
     font-size: 14px;
     border-radius: 10px;
-    
-
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      
 }
 
 /*final css login */
