@@ -235,20 +235,35 @@ header {
     background-color: #A78A7F;
     margin: 0.3rem 1rem 1rem;
 }
-
+h5 {
+    padding: 0.3rem 0 0 0.3rem;
+}
+.fa-eye {
+    font-size: 1.2rem;
+    position: absolute;
+    right: 1rem;
+    top: 7px;
+}
+.add-eye {
+    position:relative;
+}
+.add-eye2 {
+    position:relative;
+}
 .fields {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
     margin: 0rem 1rem;
-    border: 2px solid orangered;
     font-size: 12px;
+
 }
 
-.field-name {
-    border: 2px solid green;
-}
 .field {
     border-radius: 5px;
-    padding-right: 6.7rem;
-    border: 2px solid blue;
+    padding: 0.2rem 6.7rem 0.2rem 0rem;
+    border: 0.5px solid #A4161A;
+    margin: 0.3rem;
 }
 
 
