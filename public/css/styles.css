@@ -552,12 +552,17 @@ header {
 }
 
 .form-login {
-  width: 500px;
-  height: 440px;
+  display: flex;
+  width: 100%;
+  /* height: 440px; */
   margin: auto;
-  padding: 20px 40px;
+  padding: 21px;
   color: black;
+  flex-direction: column;
   border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  
 }
 
 /*titulo  tu cuenta */
@@ -578,13 +583,14 @@ header {
 
 /*Campos para colocar email y contraseña*/
 .controls {
-  width: 65%;
-  border: 1px solid #a4161a;
-  margin-bottom: 30px;
-  padding: 11px 10px;
-  background: white;
-  font-size: 14px;
-  border-radius: 10px;
+  width: 80%;
+    max-width: 400px;
+    border: 1px solid #A4161A;
+    margin-bottom: 30px;
+    padding: 11px 10px;
+    background: white;
+    font-size: 14px;
+    border-radius: 10px;
 }
 
 /*boton de ingresar*/
