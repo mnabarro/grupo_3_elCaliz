@@ -564,6 +564,10 @@ header {
   align-items: center;
   
 }
+ 
+.form-login p{
+  color: black;
+}
 
 /*titulo  tu cuenta */
 .form-login h1 {
@@ -575,7 +579,9 @@ header {
 .form-login h3 {
   margin: 0;
   padding: 20;
-  text-align: justify;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
   height: 10px;
   margin-bottom: 10px;
   font-size: 10px;
@@ -601,12 +607,15 @@ header {
   border: 1px solid black;
   color: white;
   margin-bottom: 30px;
-  font-size: 14px;
+  font-size: 20px;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  
+
 }
+
 
 /*final css login */
 
