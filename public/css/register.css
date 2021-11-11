@@ -250,12 +250,7 @@ h5 {
     right: 1rem;
     top: 7px;
 }
-.add-eye {
-    position:relative;
-}
-.add-eye2 {
-    position:relative;
-}
+
 .fields {
     display:flex;
     flex-direction: column;
@@ -263,7 +258,6 @@ h5 {
     justify-content: flex-start;
     margin: 0rem 1rem;
     font-size: 12px;
-
 }
 
 .field {
@@ -274,10 +268,9 @@ h5 {
 }
 
 .captcha {
-    width: 50vw;
-    float: right;
+    width: 200px;
     margin: 1rem 0rem;
-    place-self: end;
+    place-self: center;
 }
 .create-account-button {
     display: flex;

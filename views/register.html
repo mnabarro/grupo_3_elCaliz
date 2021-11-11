@@ -48,43 +48,30 @@
                     <h2>CREAR CUENTA</h2>
                     <div class="line"></div>
                 </div>
-                <div class="fields">
-                    <div class="field-name">
-                        <h5>NOMBRE</h5>
-                    </div>    
-                    <div>
-                        <input class="field" name="name" type="text" placeholder="Ej: Mariana">
-                    </div>
-                    <div class="field-lastname">
-                        <h5>APELLIDO</h5>
-                    </div>    
-                    <div>
-                        <input class="field" name="name" type="text" placeholder="Ej: Perez">
-                    </div>
-                    <div class="field-email">
-                        <h5>EMAIL</h5>
-                    </div>    
-                    <div>
-                        <input class="field" name="name" type="text" placeholder="Ej: hola@gmail.com">
-                    </div>
-                    <div class="field-password">
-                        <h5>CONTRASEÑA</h5>
-                    </div>    
-                    <div class="add-eye">
-                        <input class="field" name="name" type="text"><i class="fas fa-eye"></i>
-                    </div>
-                    <div class="field-repeat-password">
-                        <h5>REPETIR CONTRASEÑA</h5>
-                    </div>    
-                    <div class="add-eye2">
-                        <input class="field" name="name" type="text"><i class="fas fa-eye"></i>
-                    </div>
+                <form action="" method="POST" class="fields">
+                    <label for="name" class="field-name">Nombre:</label>
+                    <input type="text" class="field" name="name" id="name" placeholder="Ej: Mariana" required>
+
+                    <label for="apellido" class="field-name">Apellido:</label>
+                    <input type="text" class="field" name="lastname" id="apellido" placeholder="Ej: Perez" required>
+
+                    <label for="e-mail" class="field-name">Email:</label>
+                    <input type="email" class="field" name="email" id="e-mail" placeholder="Ej: hola@gmail.com" required>
+                    
+                    <label for="contraseña" class="field-name">Contraseña:</label>
+                    <input type="text" class="field" name="password" id="contraseña" required>
+                    <!--No pude sumar el ojito <i class="fas fa-eye"></i> (Maru)-->
+                    
+                    <label for="repetirContraseña" class="field-name">Repetir Contraseña:</label>
+                    <input type="text" class="field" name="repeatPassword" id="repetirContraseña" required>
+                    <!--No pude sumar el ojito <i class="fas fa-eye"></i> (Maru)-->
+                    
                     <img class="captcha" src="/img/png/captcha.png" alt="">
+
                     <div class="create-account-button">
-                        <button>CREAR CUENTA</button> 
+                        <button type="submit">CREAR CUENTA</button> 
                     </div>
-                    <a class="account" href="/login">¿Ya ténes una cuenta? Iniciá sesión</a>
-                </div>
+                </form>
             </article>
         </section>
     </main>
