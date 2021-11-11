@@ -302,6 +302,14 @@ header {
     box-shadow: 2px 2px 3px 0px rgb(68 68 68 / 40%);
 }
 
+.articulo3{
+    display: none;
+}
+
+.articulo4{
+    display: none;
+}
+
 .imagen-vino{
     width: 80px;
     height: 150px;
@@ -822,14 +830,21 @@ header {
     .contact,
     .company {
     margin: 0rem;
-}
-}
-
-@media (max-width: 950px){
-    .articulo3, .articulo4{
-        display: none;
+    }
+    .articulo4{
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #cccc;
+    padding: 12px 15px 12px 15px;
+    border-radius: 10px;
+    width: 180px;
+    border: solid 1px #bebebe;
+    box-shadow: 2px 2px 3px 0px rgb(68 68 68 / 40%);
     }
 }
+
 
 /* Media query para suavizar el cambio de tamaño de la search-box */
 @media (max-width:482PX) {
@@ -843,7 +858,20 @@ header {
 
 
 /*-----medias footer-----*/
-@media (min-width:481PX) {
+@media (min-width:481PX){
+    .articulo3{
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #cccc;
+    padding: 12px 15px 12px 15px;
+    border-radius: 10px;
+    width: 180px;
+    border: solid 1px #bebebe;
+    box-shadow: 2px 2px 3px 0px rgb(68 68 68 / 40%);
+    }
+}
 
 /* Media query para suavizar el cambio de tamaño de la search-box */
 .navbar-right {
