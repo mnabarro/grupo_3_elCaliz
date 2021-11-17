@@ -338,6 +338,10 @@ h5 {
     text-decoration: none;
     color: black;
 }
+.login {
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
 /*------END MAIN------*/
 
 /*------FOOTER------*/
