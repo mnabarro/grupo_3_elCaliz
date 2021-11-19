@@ -48,27 +48,34 @@
                     <h2>CREAR CUENTA</h2>
                     <div class="line"></div>
                 </div>
-                <form action="" method="POST" class="fields">
-                    <label for="name" class="field-name">Nombre:</label>
-                    <input type="text" class="field" name="name" id="name" placeholder="Ej: Mariana" required>
-
-                    <label for="apellido" class="field-name">Apellido:</label>
-                    <input type="text" class="field" name="lastname" id="apellido" placeholder="Ej: Perez" required>
-
-                    <label for="e-mail" class="field-name">Email:</label>
-                    <input type="email" class="field" name="email" id="e-mail" placeholder="Ej: hola@gmail.com" required>
-                    
-                    <label for="contraseña" class="field-name">Contraseña:</label>
-                    <input type="text" class="field" name="password" id="contraseña" required>
-                    <!--No pude sumar el ojito <i class="fas fa-eye"></i> (Maru)-->
-                    
+            <div class="register-main">
+                <form action="/register" method="POST" class="create-form">
+                    <div class="control-form">
+                        <label for="name">Nombre:<input type="text" class="control" name="name" id="name" placeholder="Ej: Mariana" required></label>
+                    </div>
+                    <div class="control-form">
+                        <label for="last-name">Apellido:<input type="text" class="control" name="lastname" id="last-name" placeholder="Ej: Perez" required></label>
+                    </div>
+                    <div class="control-form">
+                        <label for="e-mail">Email:<input type="email" class="control" name="email" id="e-mail" placeholder="Ej: hola@gmail.com" required></label>
+                    </div>
+                    <div class="control-form">
+                        <label for="password">Contraseña:<input  type="text" class="control" name="password" id="password" required><i class="fas fa-eye-slash"></i></label>
+                        <div class="remember-password">
+                            <input type="checkbox">
+                            <label>Recordar contraseña</label>
+                        </div>
+                    </div>
                     <img class="captcha" src="/img/png/captcha.png" alt="">
 
                     <div class="create-account-button">
                         <button type="submit">CREAR CUENTA</button> 
                     </div>
-                    <a class="login" href="/login">¿Ya tenés una cuenta? Inicia sesión</a>
                   </form>
+                  <div class="login">
+                    <a href="/login">¿Ya tenés una cuenta? Inicia sesión</a>
+                  </div>
+            </div>
             </article>
         </section>
     </main>
