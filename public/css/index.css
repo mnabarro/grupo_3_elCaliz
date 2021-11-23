@@ -1,0 +1,126 @@
+
+/****** BANNER ********/
+
+.banner {
+    height: auto;
+    background-color: #f0f1f2;
+}
+
+/****** BANNER ********/
+
+/****** SECONDARY LINKS ********/
+  .secondary-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: fit-content;
+    background-color: #f0f1f2;
+    border: #a78a7f solid 1px;
+    padding: 5px;
+  }
+  
+  .secondary-links div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .secondary-links div i {
+    color: #a78a7f;
+    font-size: 6vh;
+    padding-right: 2vw;
+    border-right: #a78a7f solid 1px;
+  }
+  
+  .secondary-links h5,
+  .secondary-links p {
+    display: none;
+    margin-left: 1vw;
+    font-family: "Fira Sans Condensed", serif;
+    text-align: left;
+    color: #444444;
+    font-size: 1rem;
+  }
+  
+  .featured-title {
+    color: #444444;
+    text-align: center;
+  }
+  
+  .featured {
+    height: 20vh;
+    background-color: #f0f1f2;
+    padding: 0px 0px 375px 0px;
+  }
+  
+  /****** SECONDARY LINKS ********/
+
+  /*-----DESTACADOS------*/
+  
+  .carrusel {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .fondo {
+    background-color: white;
+    padding: 0px 25px 0px 25px;
+    border: 1px solid #bebebe;
+    border-radius: 10px;
+  }
+  
+  .articulo1,
+  .articulo2,
+  .articulo3,
+  .articulo4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #cccc;
+    padding: 12px 15px 12px 15px;
+    border-radius: 10px;
+    width: 180px;
+    border: solid 1px #bebebe;
+    box-shadow: 2px 2px 3px 0px rgb(68 68 68 / 40%);
+  }
+  
+  .articulo3 {
+    display: none;
+  }
+  
+  .articulo4 {
+    display: none;
+  }
+  
+  .imagen-vino {
+    width: 80px;
+    height: 150px;
+  }
+  
+  .nombre-vino {
+    text-align: center;
+    margin-top: 5px;
+    color: #444444;
+  }
+  
+  .precio-vino {
+    margin-top: 5px;
+    font-weight: bold;
+  }
+  
+  .add-buttonn button {
+    margin: 12px 0px 0px 0px;
+    padding: 10px;
+    background-color: #a4161a;
+    color: white;
+    border-radius: 10px;
+    font-size: 1rem;
+  }
+  
+  .fa-arrow-circle-right,
+  .fa-arrow-circle-left {
+    font-size: 30px;
+    margin-top: 127px;
+    color: #a78a7f;
+  }
+  
+  /*---FINAL DESTACADOS---*/
