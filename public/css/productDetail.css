@@ -1,3 +1,14 @@
+.featured-title {
+    color: #444444;
+    text-align: center;
+}
+
+.featured {
+    height: 20vh;
+    background-color: #F0F1F2;
+    padding: 0px 0px 375px 0px;
+    display: none;
+}
 
 /*---------PRODUCT DETAIL---------*/
 
