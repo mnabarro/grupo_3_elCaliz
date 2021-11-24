@@ -2,29 +2,65 @@ const path = require ('path');
 const express = require('express');
 
 const app = express();
+app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
 
-app.get('/', ( req, res) => {
-    res.sendFile( path.join(__dirname, '/views/index.html'));
-});
+const mainRouter = require('./routes/mainRouter');
+app.use('/', mainRouter);
 
-app.get('/login', ( req, res) => {
-    res.sendFile( path.join(__dirname, '/views/login.html'));
-});
+const usersRouter = require('./routes/usersRouter');
+app.use('/users', usersRouter);
 
-app.get('/register', ( req, res) => {
-    res.sendFile( path.join(__dirname, '/views/register.html'));
-});
+const ordersRouter = require('./routes/ordersRouter');
+app.use('/orders', ordersRouter);
 
-app.get('/cart', ( req, res) => {
-    res.sendFile( path.join(__dirname, '/views/productCart.html'));
-});
+const productsRouter = require('./routes/productsRouter');
+app.use('/products', productsRouter);
 
-app.get('/product-detail', ( req, res) => {
-    res.sendFile( path.join(__dirname, '/views/productDetail.html'));
-});
+const adminRouter = require('./routes/adminRouter');
+app.use('/admin', adminRouter);
+
 
 app.listen(3000, () => {
-    console.log('Server listening on port 3000')
+    console.log('Server listening on port 3000');
 });
+
+
+/*
+rutas
+
+{mainRouter = OK}
+/
+/arrpentimiento
+/faq
+/mapa-sitio
+/suscribe
+/tyc
+
+{usersRouter = OK}
+/users/login
+/users/register
+/users/forgotPassword
+/users/profile/:userId
+
+{ordersRouter OK}
+/orders/cart
+/orders/checkout
+/orders/history
+
+{productsRouter OK}
+/products/
+/products/cat/:category
+/products/search/:criterio
+/products/add
+/products/detail/:id
+/products/edit/:id
+/products/delete/:id
+
+
+{adminRouter OK}
+/admin/dashboard
+/admin/crudUsers
+
+*/
