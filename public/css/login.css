@@ -1,19 +1,18 @@
 
   /*------MAIN-----*/
-  .login-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-  }
   .login-top {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 70px;
+    margin-top: 30px;
   }
   .login-top h2 {
     font-weight: lighter;
+  }
+  .login-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .line {
