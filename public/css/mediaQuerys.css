@@ -36,20 +36,8 @@
       .captcha {
       width: 40vw;
       }
-      .newsletter-form {
-        flex-direction: row;
-        margin-bottom: 0.5rem;
-        justify-content: center;
-        align-items: center;
-      }
-      .mail-button {
-        margin-left: -15px;
-      }
       .mail-box {
-        display: flex;
-        width: 30vw;
-        justify-content: center;
-        align-items: center;
+        width: 50vw;
       }
     }
     
@@ -146,23 +134,8 @@
         justify-content: flex-end;
         margin-top: -3rem;
       }
-      .footer {
-        display: flex;
-        flex-direction: column-reverse;
-      }
-      .footer-boxes {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin: 2rem;
-      }
-      .footer-box1 {
-        order: 1;
-        align-self: flex-start;
-      }
-      /*---PRODUCT DETAIL MEDIA QUERIES---*/
+
+/*---PRODUCT DETAIL MEDIA QUERIES---*/
 
 .articulo{
   display: flex;
@@ -213,7 +186,7 @@
 }
 /*--CIERRE PRODUCT DETAIL MEDIA QUERIES--*/
 
-}
+
     
     /*----LARGE DESKTOP----*/
     @media (min-width: 1200px) {
