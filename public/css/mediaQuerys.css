@@ -20,6 +20,11 @@
       width: 180px;
       border: solid 1px #bebebe;
       box-shadow: 2px 2px 3px 0px rgb(68 68 68 / 40%);
+
+    }
+    .mail-box {
+      width: 70vw;
+
     }
     
     /* Media query para suavizar el cambio de tamaño de la search-box */
@@ -36,8 +41,10 @@
       .captcha {
       width: 40vw;
       }
+
       .mail-box {
-        width: 50vw;
+        width: 70vw;
+
       }
     }
     
@@ -129,13 +136,21 @@
       .captcha {
         width: 30vw;
       }
-      .footer-icons {
-        flex-direction: row;
-        justify-content: flex-end;
-        margin-top: -3rem;
+      .mail-box {
+        width: 40vw;
       }
-
-/*---PRODUCT DETAIL MEDIA QUERIES---*/
+      .newsletter-box {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      .footer-parts {
+        display: flex;
+        justify-content: space-between;
+      }
+      .regret-button {
+        margin-right: 2rem;
+      }
+      /*---PRODUCT DETAIL MEDIA QUERIES---*/
 
 .articulo{
   display: flex;
@@ -186,7 +201,7 @@
 }
 /*--CIERRE PRODUCT DETAIL MEDIA QUERIES--*/
 
-
+}
     
     /*----LARGE DESKTOP----*/
     @media (min-width: 1200px) {
@@ -199,5 +214,6 @@
     .captcha {
       width: 20vw;
     }
+
     }
     /*-----END MEDIAS QUERIES----*/

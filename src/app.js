@@ -29,7 +29,6 @@ app.listen(3000, () => {
 
 /*
 rutas
-
 {mainRouter = OK}
 /
 /arrpentimiento
@@ -37,18 +36,15 @@ rutas
 /mapa-sitio
 /suscribe
 /tyc
-
 {usersRouter = OK}
 /users/login
 /users/register
 /users/forgotPassword
 /users/profile/:userId
-
 {ordersRouter OK}
 /orders/cart
 /orders/checkout
 /orders/history
-
 {productsRouter OK}
 /products/
 /products/cat/:category
@@ -57,10 +53,7 @@ rutas
 /products/detail/:id
 /products/edit/:id
 /products/delete/:id
-
-
 {adminRouter OK}
 /admin/dashboard
 /admin/crudUsers
-
 */

@@ -309,7 +309,7 @@ header {
   height: 40px;
   display: block;
   position: fixed;
-  right: 40px;
+  right: 20px;
   bottom: 90px;
 }
 
@@ -319,7 +319,7 @@ header {
   display: block;
   text-align: center;
   position: fixed;
-  right: 60px;
+  right: 40px;
   bottom: 110px;
 }
 
@@ -371,8 +371,8 @@ header {
   color:white;
   margin-top: 1.5rem;
 }
-.qr-icon,
-.ssl-icon {
+.qr-icon i,
+.ssl-icon i {
   padding: 0.2rem;
   margin-bottom: 1rem;
 }

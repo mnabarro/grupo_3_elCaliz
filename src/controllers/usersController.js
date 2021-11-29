@@ -1,11 +1,11 @@
 const usersController = {
 
     login: (req, res) => {
-        res.render('users/login', {path: '/users/login'});
+        res.render('login', {path: '/users/login'});
     },
 
     register: (req, res) => {
-        res.render('users/register',{path: '/users/register'});
+        res.render('register',{path: '/users/register'});
     },
 
     forgotPassword: (req, res) => {
