@@ -4,7 +4,7 @@ const ordersController = {
     history: (req, res) => {res.send( 'Histórico de pedidos');},
 
     cart: (req, res) => {
-        res.render('productCart', {path: '/orders/cart'});
+        res.render('products/productCart', {path: '/orders/cart'});
     }
 };
 

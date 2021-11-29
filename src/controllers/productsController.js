@@ -7,7 +7,7 @@ const productsController = {
     add: (req, res) => {res.send(`Agregar producto`);},
     
     detail: (req, res) => {
-                res.render('productDetail', {path : '/products/detail'});
+                res.render('products/productDetail', {path : '/products/detail'});
     },
 
     edit: (req, res) => {res.send(`Editar producto :${req.params.id}`);},
