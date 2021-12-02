@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('../partials/head')%>
+
+<body>
+    
+    <%- include('../partials/header')%>
+
+    <main>
+        <article>
+            <div>
+                <div class="category">
+                    <a class="category-top" href="/blancos/">Blancos</a>                           
+                </div>
+                    <div class="subcategories">
+                        <a class="sub" href="/blancos/chardonnay/">Chardonnay</a>
+                        <a class="sub" href="/blancos/chenninBlanc/">Chennin Blanc</a>
+                        <a class="sub" href="/blancos/torrontes/">Torrontes</a>
+                        <a class="sub" href="/blancos/sauvignonBlanc/">Sauvignon Blanc</a>                      
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="filter">
+                    <div class="qtyProducts">50 productos</div>
+                    <div>
+                        <button class="buttonFilter">
+                            <span>Ordenar </span><i class="fas fa-sort-amount-up"></i>
+                        </button>
+                        <button class="buttonFilter"><span>Filtrar </span><i class="fas fa-sliders-h"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!--CODIGO DE GONZA-->
+        
+        <!--TERMINA CODIGO DE GONZA-->
+    </main>
+
+    <%- include ('../partials/footer') %>
+
+    <script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "55vw";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+</body>
+
+</html>

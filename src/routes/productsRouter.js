@@ -11,4 +11,5 @@ router.get('/addProduct', productsController.addProduct);
 router.get('/editProduct/:id', productsController.editProduct);
 router.get('/deleteProduct/:id', productsController.deleteProduct);
 
+
 module.exports = router;

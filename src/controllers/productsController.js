@@ -1,7 +1,7 @@
 const productsController = {
 
     index: (req, res) => {res.send( 'Lista todos los productos?');},
-    category: (req, res) => {res.send( `Productos de la categoría :${req.params.category}`);},
+    category: (req, res) => {res.render('products/category', {path : '/products/category'});},
     search: (req, res) => {res.send(`Productos que coinciden con el criterio :${req.params.criterio}`);},
   
     addProduct: (req, res) => {res.send(`Agregar producto`);},
