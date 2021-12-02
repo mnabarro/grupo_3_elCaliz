@@ -11,10 +11,9 @@
 
 # Restrospectiva SPRINT 3
 
-* Comenzar a hacer: 
+* Comenzar a hacer: Organizarnos mejor en el tiempo de entrega del sprint.
 
-* Hacer más: Debemos enfocarnos en realizar las tareas para la fecha pautada.
+* Hacer más: Mantener actualizado el seguimiento de las tareas en trello.
 
-* Continuar haciendo: Seguir utilizando la aplicacion de Trello para manejar la organizacion del equipo, ya que nos ayuda a saber lo que estan haciendo nuestros compañeros y asi podemos revisarlo.
+* Continuar haciendo: Seguir ralizando las reuniones semanales para comentar lo que venimos haciendo y las dudas que tengamos.
 
-* Hacer menos:

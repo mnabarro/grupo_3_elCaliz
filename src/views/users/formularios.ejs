@@ -14,19 +14,30 @@
     
     <h1 class="formulario__titulo">Formulario</h1>
         <input type="text" class="formulario__input">
-     <label for="" class="formulario__label">Nombre del producto</label>
-     <input type="text" class="formulario__input">
-     <label for="" class="formulario__label">Descripcion</label>
-     <input type="text" class="formulario__input">
-     <label for="" class="formulario__label">Imagen</label>
-     <input type="text" class="formulario__input">
-     <label for="" class="formulario__label">Categoria</label>
-     <input type="text" class="formulario__input">
-     <label for="" class="formulario__label">Colores</label>
-     <input type="text" class="formulario__input">
-     <label for="" class="formulario__label">Precio</label>
+          <label for="" class="formulario__label">Nombre del producto</label>
+        <input type="text" class="formulario__input">
+           <label for="" class="formulario__label">Descripción</label>
+         <input type="text" class="formulario__input">
+           <label for="" class="formulario__label">Imagén</label>
+        <input type="text" class="formulario__input">
+           <label for="" class="formulario__label">Categoría</label>
+        <input type="text" class="formulario__input">
+           <label for="" class="formulario__label">Colores</label>
+        <input type="text" class="formulario__input">
+            <label for="" class="formulario__label">Precio</label>
 
      <input type="submit" class="formulario__submit">
+       <% var inputs = documents.getElementsByClassName("formulario__input");
+     for (var i = 0; i < inputs.length; i++) {
+         inputs[i].addEventListener("keyup", function(){
+             if(this.value.length>=1) {
+                 this.nextElementSibling.classList.add("fijar"); 
+             } else {
+                 this.nextElementSibling.classList.remove("fijar");
+             }
+              });
+            }
+        %> 
     
     </form>
  </main>
