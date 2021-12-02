@@ -46,6 +46,20 @@
         width: 70vw;
 
       }
+
+      /*---CATEGORY LIST OF PRODUCTS----*/
+
+      .carrusel{
+        display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .articulos{
+          display: 50%;
+        }
+      /*---END CATEGORY LIST OF PRODUCTS----*/
     }
     
     /*----DESKTOP----*/
@@ -201,6 +215,11 @@
 }
 /*--CIERRE PRODUCT DETAIL MEDIA QUERIES--*/
 
+/*---CATEGORY LIST OF PRODUCTS----*/
+.articulos{
+  width: 22%;
+}
+/*---END CATEGORY LIST OF PRODUCTS----*/
 }
     
     /*----LARGE DESKTOP----*/

@@ -52,3 +52,69 @@ body {
     padding: 5px;
 }
 /*-----END CATEGORY BAR------*/
+
+/*-----LIST OF PRODUCTS------*/
+
+.featured{
+    margin: 0 auto;
+      width: 90%;
+  }
+    .carrusel{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    
+    .fondo{
+      background-color: white;
+      padding: 0px 25px 0px 25px;
+      border: 1px solid #bebebe;
+      border-radius: 10px;
+    }
+    
+    .articulos{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #cccc;
+      padding: 12px 15px 12px 15px;
+      border-radius: 10px;
+      border: solid 1px #bebebe;
+      box-shadow: 2px 2px 3px 0px rgb(68 68 68 / 40%);
+      margin-bottom: 15px;
+    }
+    
+    
+    .imagen-vino {
+      width: 80px;
+      height: 150px;
+    }
+    
+    .nombre-vino{
+      text-align: center;
+      margin-top: 5px;
+      color: #444444;
+    }
+    
+    .precio-vino{
+      margin-top: 5px;
+      font-weight: bold;
+    }
+    
+    .add-buttonn button {
+      margin: 12px 0px 0px 0px;
+      padding: 10px;
+      background-color: #a4161a;
+      color: white;
+      border-radius: 10px;
+      font-size: 1rem;
+    }
+    
+    .fa-arrow-circle-right,
+    .fa-arrow-circle-left {
+      font-size: 30px;
+      margin-top: 127px;
+      color: #a78a7f;
+    }
+
+/*-----END LIST OF PRODUCTS------*/
