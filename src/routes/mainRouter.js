@@ -7,6 +7,6 @@ router.get('/regret', mainController.regret);
 router.get('/faq', mainController.faq);
 router.get('/sitemap', mainController.siteMap);
 router.get('/suscribe', mainController.suscribe);
-router.get('/tyc', mainController.tyc);
+router.get('/terms', mainController.terms);
 
 module.exports = router;

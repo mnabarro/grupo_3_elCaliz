@@ -4,11 +4,11 @@ const router = express.Router();
 const productsController = require('../controllers/productsController.js');
 
 router.get('/', productsController.index);
-router.get('/cat/:category', productsController.cat);
+router.get('/category/:category', productsController.category);
 router.get('/search/:criterio', productsController.search);
-router.get('/detail/:id', productsController.detail);
-router.get('/add', productsController.add);
-router.get('/edit/:id', productsController.edit);
-router.get('/delete/:id', productsController.delete);
+router.get('/productDetail/:id', productsController.productDetail);
+router.get('/addProduct', productsController.addProduct);
+router.get('/editProduct/:id', productsController.editProduct);
+router.get('/deleteProduct/:id', productsController.deleteProduct);
 
 module.exports = router;
