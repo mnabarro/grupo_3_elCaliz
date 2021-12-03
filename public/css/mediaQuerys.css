@@ -215,10 +215,21 @@
 }
 /*--CIERRE PRODUCT DETAIL MEDIA QUERIES--*/
 
+
 /*---CATEGORY LIST OF PRODUCTS----*/
+.category-bar {
+  display:none;
+}
+.filter {
+  margin-top: 1rem;
+}
 .articulos{
   width: 22%;
 }
+.category {
+  position:none;
+}
+
 /*---END CATEGORY LIST OF PRODUCTS----*/
 }
     
