@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('../partials/head')%>
+
+<body>
+
+    <%- include('../partials/header')%>
+
+    <main>
+        <section>
+            <article>
+                <div class="register-top">
+                    <h2>AGREGAR PRODUCTO</h2>
+                    <div class="line"></div>
+                </div>
+            <div class="register-main">
+                <form action="/products/add" method="POST" class="create-form">
+                    <div class="control-form">
+                        <label for="name">Nombre:<input type="text" class="control" name="name" id="name" placeholder="Ej: Reloj" required></label>
+                    </div>
+                    <div class="control-form">
+                        <label for="description">Descripción:<textarea class="control" name="description" id="description" placeholder="Ej:" required></textarea></label>
+                    </div>
+                    <div class="control-form">
+                        <label for="categories">Nombre:<input type="" class="control" name="name" id="name" placeholder="Ej: Reloj" required></label>
+                    </div>
+                    
+                    <div class="create-product-button">
+                        <button type="submit">AGREGAR PRODUCTO</button> 
+                    </div>
+                  </form>
+            </div>
+            </article>
+        </section>
+    </main>
+
+    <%- include ('../partials/footer') %>
+
+</body>
+
+</html>
