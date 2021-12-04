@@ -4,33 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
 
-    <% if(path == '/') { %>
-    <link rel="stylesheet" href="/css/index.css">
-    <% } %>
-
-    <% if(path == '/users/login') { %>
-    <link rel="stylesheet" href="/css/login.css">
-    <% } %>
-
-    <% if(path == '/users/register') { %>
-    <link rel="stylesheet" href="/css/register.css">
-    <% } %>
-
-    <% if(path == '/orders/cart') { %>
-    <link rel="stylesheet" href="/css/productCart.css">
-    <% } %>
-
-    <% if(path == '/products/add') { %>
-        <link rel="stylesheet" href="/css/login.css">
-        <% } %>
-
-        <% if(path=='/products/detail') { %>
-    <link rel="stylesheet" href="/css/productDetail.css">
-    <% } %>
-    
-    <% if(path=='/products/category') { %>
-    <link rel="stylesheet" href="/css/category.css">
-    <% } %>
+    <link rel="stylesheet" href="/css/<%=cssa%>">
     
     <link rel="stylesheet" href="/css/mediaQuerys.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -40,6 +14,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Fira+Sans&family=Fira+Sans+Condensed&family=Fira+Sans+Extra+Condensed&display=swap"
         rel="stylesheet">
-    <title>Home - El Cáliz</title>
+        <title><%=title%></title>
 </head>
 

@@ -4,7 +4,7 @@ const ordersController = {
     orders: (req, res) => {res.send( 'Historial de pedidos');},
 
     cart: (req, res) => {
-        res.render('products/productCart', {path: '/orders/cart'});
+        res.render('products/productCart', {cssa: 'products-cart.css', title:"El Cáliz - Carrito"});
     }
 };
 

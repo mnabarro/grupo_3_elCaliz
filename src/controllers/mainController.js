@@ -1,7 +1,7 @@
 const mainController = {
 
     index: (req, res) => {
-        res.render( 'index', {path: '/'});
+        res.render( 'index', {cssa: 'index.css', title:"El Cáliz - Home"});
     },
 
     regret: (req, res) => {res.send( 'Arrepentimiento');},

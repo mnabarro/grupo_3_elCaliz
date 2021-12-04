@@ -1,38 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include('../partials/head')%>
+<%- include('../partials/head',{title:'Agregar producto'})%>
 
 <body>
 
     <%- include('../partials/header')%>
 
     <main>
-        <section>
-            <article>
-                <div class="register-top">
-                    <h2>AGREGAR PRODUCTO</h2>
-                    <div class="line"></div>
+        <div class="products-add-top">
+            <h2>AGREGAR PRODUCTO</h2>
+        </div>
+        <div class="products-add-main">
+            <div class="title-line"></div>
+
+            <form action="/products" method="POST" class="products-add-form">
+
+                <div class="form-element">
+                    <label for="name">Nombre:</label>
+                    <input type="text" name="name" id="name" placeholder="Ej: Reloj" required>
                 </div>
-            <div class="register-main">
-                <form action="/products/add" method="POST" class="create-form">
-                    <div class="control-form">
-                        <label for="name">Nombre:<input type="text" class="control" name="name" id="name" placeholder="Ej: Reloj" required></label>
+
+                <div class="form-element">
+                    <label for="description">Descripción:</label>
+                    <textarea name="description" id="description" placeholder="Ej:" required></textarea>
+                </div>
+
+                <h4>IMÁGENES</h4>
+
+                <div class="form-element-group">
+                    <div class="flex-group">
+                        <label for="image-cover">Principal</label>
+                        <input type="file" name="image-cover" accept="image/png, image/jpeg">
                     </div>
-                    <div class="control-form">
-                        <label for="description">Descripción:<textarea class="control" name="description" id="description" placeholder="Ej:" required></textarea></label>
+                    <div class="flex-group">
+                        <label for="images">Adicionales</label>
+                        <input type="file" name="images" accept="image/png, image/jpeg" multiple>
                     </div>
-                    <div class="control-form">
-                        <label for="categories">Nombre:<input type="" class="control" name="name" id="name" placeholder="Ej: Reloj" required></label>
-                    </div>
-                    
-                    <div class="create-product-button">
-                        <button type="submit">AGREGAR PRODUCTO</button> 
-                    </div>
-                  </form>
-            </div>
-            </article>
-        </section>
+                </div>
+
+                <div class="form-element">
+                    <label for="sku">Código / SKU:</label>
+                    <input type="text" class="control" name="sku" id="sku">
+                </div>
+
+                <div class="form-element">
+                    <label for="price">Precio:</label>
+                    <input type="number" name="price" id="price" value=0 required>
+                </div>
+
+                <div class="form-element">
+                    <label for="discount">Descuento:</label>
+                    <input type="number" name="discount" id="discount" value=0>
+                </div>
+
+                <h4>CATEGORÍAS</h4>
+
+                <div class="form-element-group">
+                    <% for (let category of categories) {%>
+                        <label for="<%=category.name%>"><input type="checkbox" name="<%=category.name%>">
+                            <%=category.label%>
+                        </label>
+                        <% } %>
+                </div>
+
+                <button type="submit" class="form-button form-button-primary">AGREGAR PRODUCTO</button>
+            </form>
+        </div>
     </main>
 
     <%- include ('../partials/footer') %>
