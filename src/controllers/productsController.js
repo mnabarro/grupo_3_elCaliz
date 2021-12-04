@@ -35,7 +35,7 @@ const categories = [
 
 const productsController = {
     index: (req, res) => {res.send( 'Lista todos los productos?');},
-    category: (req, res) => {res.render('products/category', {path : '/products/category'});},
+    category: (req, res) => {res.render('products/category', {cssa : 'category.css', title :'Categorías'});},
     search: (req, res) => {res.send(`Productos que coinciden con el criterio :${req.params.criterio}`);},
   
     addProductForm: (req, res) => {
