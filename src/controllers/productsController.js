@@ -50,7 +50,9 @@ const productsController = {
                 res.render('products/productDetail', {cssa: 'product-detail.css', title:"Detalle del producto"});
     },
 
-    editProduct: (req, res) => {res.send(`Editar producto :${req.params.id}`);},
+    editProduct: (req, res) => {
+        res.render('products/editProduct', {cssa: 'products-edit.css', "categories":categories, title:"Editar producto"});
+    },
     deleteProduct: (req, res) => {res.send(`Eliminar producto :${req.params.id}`);},
 
 };

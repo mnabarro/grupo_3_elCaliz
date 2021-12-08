@@ -230,6 +230,9 @@
   position:none;
 }
 
+.form-button {
+  max-width: 200px;
+}
 /*---END CATEGORY LIST OF PRODUCTS----*/
 }
     
