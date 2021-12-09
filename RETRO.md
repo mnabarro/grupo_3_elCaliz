@@ -1,3 +1,4 @@
+# Retrospectiva SPRINT 1
 
 * Comenzar a hacer: Decidimos realizar un estilo de Weekly Scrum, para exponer cada uno en cada reunión: que hicimos hasta el momento, si tuvimos alguna dificultad, y que vamos a hacer para la próxima reunión.
 

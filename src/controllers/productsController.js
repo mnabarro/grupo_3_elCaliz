@@ -2,11 +2,7 @@ const categories = [
     {
     label: 'Blancos',
     name: 'cat-blancos'
-    }, 
-    {
-    label: 'Chardonnay',
-    name: 'cat-chardonnay'
-    }, 
+    },  
     {
     label: 'Tintos',
     name: 'cat-tintos'
