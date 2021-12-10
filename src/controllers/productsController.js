@@ -1,3 +1,11 @@
+const fs = require('fs');
+const path = require('path');
+
+const productsFilePath = path.join(__dirname, '../data/products.json');
+let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."); 
+
 const categories = [
     {
     label: 'Blancos',
@@ -31,7 +39,7 @@ const categories = [
 
 const productsController = {
     index: (req, res) => {res.send( 'Lista todos los productos?');},
-    category: (req, res) => {res.render('products/category', {cssa : 'category.css', title :'Categorías'});},
+    category: (req, res) => {res.render('products/category', {products:products, cssa : 'category.css', title :'Categorías'});},
     search: (req, res) => {res.send(`Productos que coinciden con el criterio :${req.params.criterio}`);},
   
     addProductForm: (req, res) => {

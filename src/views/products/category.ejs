@@ -38,70 +38,16 @@
         <!--CODIGO DE GONZA-->
         <section class="featured">
             <article class="carrusel">
+                <% products.forEach((product)=>{ %>
                 <div class="articulos">
                     <div class="fondo"><img class="imagen-vino" src="/img/homeParte2/DanteRobinoChardonnay.png" alt="vinito"></div>
-                    <p class="nombre-vino">Vino Dante Robino<br>Reserva Malbec</p>
-                    <p class="precio-vino">$2000</p>
+                    <p class="nombre-vino"><%= product.name%><br>Reserva Malbec</p>
+                    <p class="precio-vino"><%= product.price%></p>
                     <span class="add-buttonn">
                         <button class="fas fa-cart-plus">AGREGAR</button> 
                     </span>
                 </div>
-                <div class="articulos">
-                    <div class="fondo"><img class="imagen-vino" src="/img/homeParte2/DanteRobinoExtraBrut.png" alt="vinito"></div>
-                    <p class="nombre-vino">Vino Dante Robino<br>Extra Brut</p>
-                    <p class="precio-vino">$2000</p>
-                    <span class="add-buttonn">
-                        <button class="fas fa-cart-plus">AGREGAR</button> 
-                    </span>
-                </div>
-                <div class="articulos">
-                    <div class="fondo"><img class="imagen-vino" src="/img/homeParte2/DRReservaMalbec.png" alt="vinito"></div>
-                    <p class="nombre-vino">Vino Dante Robino<br>Extra Brut</p>
-                    <p class="precio-vino">$2000</p>
-                    <span class="add-buttonn">
-                        <button class="fas fa-cart-plus">AGREGAR</button> 
-                    </span>
-                </div>
-                <div class="articulos">
-                    <div class="fondo"><img class="imagen-vino" src="/img/homeParte2/DRReservaMalbec.png" alt="vinito"></div>
-                    <p class="nombre-vino">Vino Dante Robino<br>Extra Brut</p>
-                    <p class="precio-vino">$2000</p>
-                    <span class="add-buttonn">
-                        <button class="fas fa-cart-plus">AGREGAR</button> 
-                    </span>
-                </div>
-                <div class="articulos">
-                    <div class="fondo"><img class="imagen-vino" src="/img/homeParte2/NovecentoRosado.png" alt="vinito"></div>
-                    <p class="nombre-vino">Vino Dante Robino<br>Reserva Malbec</p>
-                    <p class="precio-vino">$2000</p>
-                    <span class="add-buttonn">
-                        <button class="fas fa-cart-plus">AGREGAR</button> 
-                    </span>
-                </div>
-                <div class="articulos">
-                    <div class="fondo"><img class="imagen-vino" src="/img/homeParte2/DanteRobinoChardonnay.png" alt="vinito"></div>
-                    <p class="nombre-vino">Vino Dante Robino<br>Reserva Malbec</p>
-                    <p class="precio-vino">$2000</p>
-                    <span class="add-buttonn">
-                        <button class="fas fa-cart-plus">AGREGAR</button> 
-                    </span>
-                </div>
-                <div class="articulos">
-                    <div class="fondo"><img class="imagen-vino" src="/img/homeParte2/DanteRobinoExtraBrut.png" alt="vinito"></div>
-                    <p class="nombre-vino">Vino Dante Robino<br>Reserva Malbec</p>
-                    <p class="precio-vino">$2000</p>
-                    <span class="add-buttonn">
-                        <button class="fas fa-cart-plus">AGREGAR</button> 
-                    </span>
-                </div>
-                <div class="articulos">
-                    <div class="fondo"><img class="imagen-vino" src="/img/homeParte2/DRReservaMalbec.png" alt="vinito"></div>
-                    <p class="nombre-vino">Vino Dante Robino<br>Reserva Malbec</p>
-                    <p class="precio-vino">$2000</p>
-                    <span class="add-buttonn">
-                        <button class="fas fa-cart-plus">AGREGAR</button> 
-                    </span>
-                </div>    
+                <% }) %>
             </article>
         </section>
         <!--TERMINA CODIGO DE GONZA-->
