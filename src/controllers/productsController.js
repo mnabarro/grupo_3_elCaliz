@@ -42,7 +42,9 @@ const productsController = {
     category: (req, res) => {res.render('products/category', {products:products, cssa : 'category.css', title :'Categorías'});},
     search: (req, res) => {res.send(`Productos que coinciden con el criterio :${req.params.criterio}`);},
     productDetail: (req, res) => {
-                res.render('products/productDetail', {cssa: 'product-detail.css', title:"Detalle del producto"});
+        let id = req.params.id
+		let product = products.find(product => product.id == id)
+                res.render('products/productDetail', {product, cssa: 'product-detail.css', title:"Detalle del producto"});
     },
 
     editProduct: (req, res) => {
