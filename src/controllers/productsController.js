@@ -39,8 +39,11 @@ const categories = [
 
 const productsController = {
     index: (req, res) => {res.send( 'Lista todos los productos?');},
+    
     category: (req, res) => {res.render('products/category', {products:products, cssa : 'category.css', title :'Categorías'});},
+    
     search: (req, res) => {res.send(`Productos que coinciden con el criterio :${req.params.criterio}`);},
+    
     productDetail: (req, res) => {
         let id = req.params.id
 		let product = products.find(product => product.id == id)
@@ -48,7 +51,9 @@ const productsController = {
     },
 
     editProduct: (req, res) => {
-        res.render('products/editProduct', {cssa: 'products-edit.css', "categories":categories, title:"Editar producto"});
+        let id = req.params.id;
+		let product = products.find(product => product.id == id);
+        res.render('products/editProduct', {product,cssa: 'products-edit.css', "categories":categories, title:"Editar producto"});
     },
     deleteProduct: (req, res) => {res.send(`Eliminar producto :${req.params.id}`);
     },
