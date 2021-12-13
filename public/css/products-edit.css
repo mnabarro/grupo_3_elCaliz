@@ -60,6 +60,15 @@ main {
   padding: 5px;
   border-radius: 5px;
   outline: none;
+  width: 100%;
+}
+
+.form-element input[type="color"] {
+  font-size: 1rem;
+  padding: 0px;
+  width: 10%;
+  border-radius: 5px;
+  outline: none;
 }
 
 input[type="checkbox"]  {
@@ -97,9 +106,6 @@ input[type="checkbox"]  {
   flex-wrap: wrap;  
 }
 
-.form-element textarea, input[type="text"] {
-  width: 100%;
-}
 
 .form-element input:focus,
 textarea:focus {

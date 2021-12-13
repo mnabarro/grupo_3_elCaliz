@@ -10,10 +10,10 @@ router.get('/search/:criterio', productsController.search); //Ruta aun no solici
 
 router.get('/detail/:id', productsController.productDetail); //Detalles de un producto
 
-router.get('/edit/:id', productsController.editProduct); //Muestro el formulario para edición, con los datos del producto cargados
+router.get('/edit/:id', productsController.editProductForm); //Muestro el formulario para edición, con los datos del producto cargados
 router.put('/', productsController.editProduct); //Envío los datos para almacenar los cambios de la edición
 
-router.get('/delete/:id', productsController.deleteProduct);
+router.delete('/:id', productsController.deleteProduct);
 
 router.get('/create', productsController.createProduct); //Muestro el formulario de creación de producto
 router.post('/', productsController.newProduct); //Enviamos los datos para la creación de un nuevo item

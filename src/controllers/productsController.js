@@ -1,3 +1,4 @@
+const { redirect } = require('express/lib/response');
 const fs = require('fs');
 const path = require('path');
 
@@ -50,16 +51,52 @@ const productsController = {
                 res.render('products/productDetail', {product, cssa: 'product-detail.css', title:"Detalle del producto"});
     },
 
-    editProduct: (req, res) => {
+    editProductForm: (req, res) => {
         let id = req.params.id;
 		let product = products.find(product => product.id == id);
         res.render('products/editProduct', {product,cssa: 'products-edit.css', "categories":categories, title:"Editar producto"});
     },
-    deleteProduct: (req, res) => {res.send(`Eliminar producto :${req.params.id}`);
+
+    editProduct: (req, res) => {
+        let id = req.body.id;
+        let product = products.find(product => product.id == id);
+
+        product.sku = req.body.sku;
+        product.name = req.body.name;
+        product.description = req.body.description;
+        product.color = req.body.color;
+        product.price = req.body.price;
+        product.discount = req.body.discount;
+        //product.images = req.body["image-cover"];
+
+        fs.writeFileSync(productsFilePath, JSON.stringify(products,null,2));
+
+        res.redirect('/products');
     },
+    
+    deleteProduct: (req, res) => {
+
+        
+        let id = req.params.id;
+        let idxToDelete = products.findIndex(product => product.id == id);
+        
+        // res.send(`Eliminar producto:\nid :${id}\nindice en el array :${idxToDelete}`);
+        
+        //Si existe un producto con el id recibido como parámetro, lo borro
+        if(idxToDelete > 0) {
+            let productoBorrado = products.splice(idxToDelete, 1);
+            fs.writeFileSync(productsFilePath, JSON.stringify(products,null,2));            
+            
+            res.redirect('/products');
+        }
+
+
+    },
+
     createProduct: (req, res) => {
         res.render('products/createProduct', {cssa: 'products-add.css', "categories":categories, title:"Crear un nuevo producto"});
     },
+
     newProduct: (req, res) => {
         res.send(req.body);
     },
