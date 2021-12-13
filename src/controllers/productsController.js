@@ -51,9 +51,8 @@ const productsController = {
     deleteProduct: (req, res) => {res.send(`Eliminar producto :${req.params.id}`);
     },
     createProduct: (req, res) => {
-        res.render('products/createProduct', {css: 'products-add.css', "categories":categories, title:"Crear un nuevo producto"});
+        res.render('products/createProduct', {cssa: 'products-add.css', "categories":categories, title:"Crear un nuevo producto"});
     },
-
     newProduct: (req, res) => {
         res.send(req.body);
     },
