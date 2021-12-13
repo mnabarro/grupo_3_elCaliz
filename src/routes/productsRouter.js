@@ -8,7 +8,7 @@ router.get('/category/:category', productsController.category);
 
 router.get('/search/:criterio', productsController.search); //Ruta aun no solicitada, pensada para la caja de búsqueda.
 
-router.get('/detail/:id', productsController.productDetail); //Detalles de un producto
+router.get('/:id', productsController.productDetail); //Detalles de un producto
 
 router.get('/edit/:id', productsController.editProductForm); //Muestro el formulario para edición, con los datos del producto cargados
 router.put('/', productsController.editProduct); //Envío los datos para almacenar los cambios de la edición
