@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include('../partials/head',{title:'Editar producto'})%>
+<%- include('../partials/head',{title:"Editar producto"})%>
 
 <body>
 
@@ -9,7 +9,7 @@
 
     <main>
         <div class="products-edit-top">
-            <h2>EDITAR PRODUCTO</h2>
+            <h2>EDITAR PRODUCTO : <%= product.name %></h2>
         </div>
         <div class="products-edit-main">
             <div class="title-line"></div>
@@ -18,40 +18,41 @@
 
                 <div class="form-element">
                     <label for="name">Nombre:</label>
-                    <input type="text" name="name" id="name" placeholder="Ej: Reloj" required>
+                    <input type="text" name="name" id="name" placeholder="Ej: Reloj" required value="<%= product.name %>">
                 </div>
 
                 <div class="form-element">
                     <label for="description">Descripción:</label>
-                    <textarea name="description" id="description" placeholder="Ej:" required></textarea>
+                    <textarea name="description" id="description" placeholder="Ej:" required><%= product.description %>"</textarea>
                 </div>
 
                 <h4>IMÁGENES</h4>
 
                 <div class="form-element-group">
                     <div class="flex-group">
-                        <label for="image-cover">Principal</label>
-                        <input type="file" name="image-cover" accept="image/png, image/jpeg">
+                        <div>
+                            <img src="<%='/img/' + product.images %>" alt="imágen del producto" srcset="" height=150>
+                        </div>
                     </div>
-                    <div class="flex-group">
+                    <!-- <div class="flex-group">
                         <label for="images">Adicionales</label>
                         <input type="file" name="images" accept="image/png, image/jpeg" multiple>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="form-element">
                     <label for="sku">Código / SKU:</label>
-                    <input type="text" class="control" name="sku" id="sku">
+                    <input type="text" class="control" name="sku" id="sku" value="<%= product.sku %>">
                 </div>
 
                 <div class="form-element">
                     <label for="price">Precio:</label>
-                    <input type="number" name="price" id="price" value=0 required>
+                    <input type="number" name="price" id="price" required value="<%= product.price %>">
                 </div>
 
                 <div class="form-element">
                     <label for="discount">Descuento:</label>
-                    <input type="number" name="discount" id="discount" value=0>
+                    <input type="number" name="discount" id="discount" value="<%= product.discount %>">
                 </div>
 
                 <h4>CATEGORÍAS</h4>
