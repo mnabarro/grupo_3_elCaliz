@@ -38,7 +38,7 @@ const categories = [
 ];
 
 const productsController = {
-    index: (req, res) => {res.send( 'Lista todos los productos?');},
+    index: (req, res) => {res.render('products/category', {products:products, cssa : 'category.css', title :'Categorías'});},
     
     category: (req, res) => {res.render('products/category', {products:products, cssa : 'category.css', title :'Categorías'});},
     
