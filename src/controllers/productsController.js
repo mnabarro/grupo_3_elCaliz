@@ -54,7 +54,7 @@ const productsController = {
     editProductForm: (req, res) => {
         let id = req.params.id;
 		let product = products.find(product => product.id == id);
-        res.render('products/editProduct', {product,cssa: 'products-edit.css', "categories":categories, title:"Editar producto"});
+        res.render('products/editProduct', {product, cssa: 'products-edit.css',categories , title:"Editar producto"});
     },
 
     editProduct: (req, res) => {
@@ -80,7 +80,6 @@ const productsController = {
         let id = req.params.id;
         let idxToDelete = products.findIndex(product => product.id == id);
         
-        // res.send(`Eliminar producto:\nid :${id}\nindice en el array :${idxToDelete}`);
         
         //Si existe un producto con el id recibido como parámetro, lo borro
         if(idxToDelete > 0) {
