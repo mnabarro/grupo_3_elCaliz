@@ -1,6 +1,7 @@
 const { redirect } = require('express/lib/response');
 const fs = require('fs');
 const path = require('path');
+const { runInNewContext } = require('vm');
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -97,7 +98,26 @@ const productsController = {
     },
 
     newProduct: (req, res) => {
-        res.send(req.body);
+        let newProduct = {
+            id: products.length + 1,
+            sku: req.body.sku,
+            name: req.body.name,
+            description: req.body.description,
+            color: req.body.color,
+            price: req.body.price,
+            discount: req.body.discount, 
+            category: req.body.category,
+            subCategory: req.body.subcategory,
+            //images: req.body.images,
+        }
+        /*let productJson = JSON.stringify(newProduct);
+        fs.appendFileSync(productsFilePath, productJson);
+        res.redirect('/products'); Esta opcion no funciona porque lo agrega literalmente al final despues de la ], no entiendo entonces en que caso se usa ¿?*/
+        products.push(newProduct);
+
+        let productsJson = JSON.stringify(products);
+        fs.writeFileSync(productsFilePath, productsJson);
+        res.redirect('/products');
     },
     
 };
