@@ -20,7 +20,7 @@
 
 # Retrospectiva SPRINT 3
 
-* Comenzar a hacer: Dividir las tareas si o si al empezar el nuevo sprint, respetar los dias de las Weekly Scrum. 
+* Comenzar a hacer: Dividir las tareas si o si al empezar el nuevo sprint, respetar los días de las Weekly Scrum. 
 
 * Hacer más: acostumbrarnos a revisar la columna de Testear de Trello para verificar lo que termino cada uno.
 
@@ -30,12 +30,13 @@
 
 # Retrospectiva SPRINT 4
 
-* Comenzar a hacer: empezar a juntarnos los 3 para trabajar al mismo tiempo y sacarnos dudas, fuera de las Weekly. Empezaremos a cronometrar las tareas para ver cuanto tiempo tardamos en cada una, lo actualizaremos en la tarea en Trello.
+* Comenzar a hacer: empezar a juntarnos los 3 para trabajar al mismo tiempo y sacarnos dudas, fuera de las Weekly. Empezaremos a cronometrar las tareas para ver cuánto tiempo tardamos en cada una, lo actualizaremos en la tarea en Trello.
 
 * Hacer más: Al dividir las tareas, leerlas y revisar que es lo que tiene que hacer cada uno, si no se entiende bien y hay tiempo explicarlas entre nosotros, sino llegamos con el tiempo revisarlas nuevamente en la 1° Weekly scrum de ese sprint.
 
 * Continuar haciendo: Respetar las tareas de Trello, las Weekly Scrum, la fecha de entrega interna
 
 * Hacer menos: En los Weekly Scrum, dejar de desviarnos del tema que se está tratando.
+
 
 
