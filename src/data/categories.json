@@ -1,0 +1,67 @@
+[
+    {
+        "parent":"",
+        "category":"Blancos",
+        "value": "cat-blancos"
+    },
+    {
+        "parent":"Blancos",
+        "category":"Chardonnay",
+        "value": "blancos-chardonnay"
+    },
+    {
+        "parent":"Blancos",
+        "category":"Torrontés",
+        "value": "blancos-torrontes"
+    },
+    {
+        "parent":"Blancos",
+        "category":"Semillón",
+        "value": "blancos-semillon"
+    },
+    {
+        "parent":"",
+        "category":"Tintos",
+        "value": "cat-tintos"
+    },
+    {
+        "parent":"Tintos",
+        "category":"Malbec",
+        "value": "tintos-malbec"
+    },
+    {
+        "parent":"Tintos",
+        "category":"Pinot Noir",
+        "value": "tintos-pinot"
+    },
+    {
+        "parent":"Tintos",
+        "category":"Sirah",
+        "value": "tintos-sirah"
+    },
+    {
+        "parent":"",
+        "category":"Espumantes",
+        "value": "cat-espumantes"
+    },
+    {
+        "parent":"",
+        "category":"Cosecha Tardía",
+        "value": "cat-tardia"
+    },
+    {
+        "parent":"",
+        "category":"Especiales",
+        "value": "cat-especiales"
+    },
+    {
+        "parent":"",
+        "category":"Accesorios",
+        "value": "cat-accesorios"
+    },
+    {
+        "parent":"",
+        "category":"Ofertas",
+        "value": "cat-ofertas"
+    }
+]

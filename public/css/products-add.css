@@ -160,4 +160,11 @@ input::-webkit-file-upload-button:hover {
   box-shadow: 2px 2px 3px 0px rgba(68, 68, 68, 0.4);
 }
 
+.ts-control {
+  border: 1px solid #a4161a;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 5px;
+}
+
 /*------END MAIN------*/

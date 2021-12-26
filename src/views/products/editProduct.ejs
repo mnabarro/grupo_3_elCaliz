@@ -65,14 +65,15 @@
                     <input type="number" name="discount" id="discount" value="<%= product.discount %>">
                 </div>
 
-                <h4>CATEGORÍAS</h4>
+                <div class="form-element">
+                    <label for="categories"><h4>CATEGORÍAS</h4></label>
+                    <select id="select-state" name="categories" multiple autocomplete="off">
 
-                <div class="form-element-group">
-                    <% for (let category of categories) {%>
-                        <label for="<%=category.name%>"><input type="checkbox" name="<%=category.name%>">
-                            <%=category.label%>
-                        </label>
-                        <% } %>
+                        <% for (let category of categories) {%>
+                            <option value="<%=category.value%>"><%=category.category%></option>
+                            <% } %>
+    
+                    </select>                    
                 </div>
 
                 <div class="edit-buttons">
@@ -84,7 +85,17 @@
     </main>
 
     <%- include ('../partials/footer') %>
-
+    <script src="/js/tom-select.complete.js"></script>
+    <script>
+        new TomSelect("#select-state",{
+            plugins: {
+		remove_button:{
+			title:'Quitar este item',
+		}
+    },
+	maxItems: 5
+});
+    </script>
 </body>
 
 </html>

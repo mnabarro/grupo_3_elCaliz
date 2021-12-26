@@ -378,7 +378,7 @@ header {
 }
 /*END FOOTER ICONS BOTTOM*/
 /*Copyright and power by*/
-h5,
+.copyright h5,
 .powerby {
   text-align: center;
   width: 100vw;

@@ -60,26 +60,15 @@
                 </div>
 
                 <div class="form-element">
-                    <label for="categories">Categorías...</label>
+                    <label for="categories"><h4>CATEGORÍAS</h4></label>
                     <select id="select-state" name="categories" multiple autocomplete="off">
 
                         <% for (let category of categories) {%>
-                            <option value="<%=category.name%>"><%=category.label%></option>
+                            <option value="<%=category.value%>"><%=category.category%></option>
                             <% } %>
     
                     </select>                    
                 </div>
-
-                <h4>CATEGORÍAS</h4>
-
-                <div class="form-element-group">
-                    <% for (let category of categories) {%>
-                        <label for="<%=category.name%>"><input type="checkbox" name="<%=category.name%>">
-                            <%=category.label%>
-                        </label>
-                        <% } %>
-                </div>
-
 
                 <button type="submit" class="form-button form-button-primary">AGREGAR PRODUCTO</button>
             </form>
@@ -92,7 +81,7 @@
         new TomSelect("#select-state",{
             plugins: {
 		remove_button:{
-			title:'Remove this item',
+			title:'Quitar este item',
 		}
     },
 	maxItems: 5
