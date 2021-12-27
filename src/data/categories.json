@@ -16,8 +16,18 @@
     },
     {
         "parent":"Blancos",
-        "category":"Semillón",
-        "value": "blancos-semillon"
+        "category":"Suavignon Blanc",
+        "value": "blancos-suavignon-blanc"
+    },
+    {
+        "parent":"Blancos",
+        "category":"Cosecha Tardía",
+        "value": "blancos-cosecha-tardia"
+    },
+    {
+        "parent":"Blancos",
+        "category":"Chenin",
+        "value": "blancos-chenin"
     },
     {
         "parent":"",
@@ -31,13 +41,38 @@
     },
     {
         "parent":"Tintos",
-        "category":"Pinot Noir",
-        "value": "tintos-pinot"
+        "category":"Cabernet Suavignon",
+        "value": "tintos-cabernet-suavignon"
     },
     {
         "parent":"Tintos",
-        "category":"Sirah",
+        "category":"Merlot",
+        "value": "tintos-merlot"
+    },
+    {
+        "parent":"Tintos",
+        "category":"Pinot Noir",
+        "value": "tintos-pinot-noir"
+    },
+    {
+        "parent":"Tintos",
+        "category":"Syrah",
         "value": "tintos-sirah"
+    },
+    {
+        "parent":"",
+        "category":"Rosados",
+        "value": "cat-rosados"
+    },
+    {
+        "parent":"Rosados",
+        "category":"Pinot Rose",
+        "value": "tintos-pinot-rose"
+    },
+    {
+        "parent":"Rosados",
+        "category":"Cabernet Franc",
+        "value": "tintos-cabernet-franc"
     },
     {
         "parent":"",
@@ -45,14 +80,19 @@
         "value": "cat-espumantes"
     },
     {
-        "parent":"",
-        "category":"Cosecha Tardía",
-        "value": "cat-tardia"
+        "parent":"Espumantes",
+        "category":"Cava",
+        "value": "cat-cava"
     },
     {
-        "parent":"",
-        "category":"Especiales",
-        "value": "cat-especiales"
+        "parent":"Espumantes",
+        "category":"Prosecco",
+        "value": "cat-prosecco"
+    },
+    {
+        "parent":"Espumantes",
+        "category":"Champagne",
+        "value": "cat-champagne"
     },
     {
         "parent":"",
@@ -64,4 +104,5 @@
         "category":"Ofertas",
         "value": "cat-ofertas"
     }
+    
 ]
