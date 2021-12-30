@@ -6,27 +6,30 @@
       width: 20%;
       transition-duration: 500ms;
       }
+
+/*-----DESTACADOS-----*/
+      .articuloX{
+        width: 45%;
+    }
+    
+    .relevant{
+      height: 77vh;
+    }
+/*----FINAL DESTACADOS----*/
+
+
     }
     /*----TABLET----*/
     @media (min-width: 481px) {
-    .articulo3 {
-      display: block;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: #cccc;
-      padding: 12px 15px 12px 15px;
-      border-radius: 10px;
-      width: 180px;
-      border: solid 1px #bebebe;
-      box-shadow: 2px 2px 3px 0px rgb(68 68 68 / 40%);
-
-    }
     .mail-box {
       width: 70vw;
-
     }
-    
+/*-----DESTACADOS-----*/
+    .relevant{
+      height: 75vh;
+    }
+/*----FINAL DESTACADOS----*/
+
     /* Media query para suavizar el cambio de tamaño de la search-box */
       .navbar-right {
       width: 12%;
@@ -122,18 +125,7 @@
       .company {
         margin: 0rem;
       }
-      .articulo4 {
-        display: block;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #cccc;
-        padding: 12px 15px 12px 15px;
-        border-radius: 10px;
-        width: 180px;
-        border: solid 1px #bebebe;
-        box-shadow: 2px 2px 3px 0px rgb(68 68 68 / 40%);
-      }
+      
       .search-box {
         max-width: 250px;
       }
@@ -164,7 +156,19 @@
       .regret-button {
         margin-right: 2rem;
       }
-      /*---PRODUCT DETAIL MEDIA QUERIES---*/
+/*----DESTACADOS----*/
+
+.articuloX{
+  width: 20%;
+}
+
+.relevant{
+height: 20vh;
+}
+
+/*----FINAL DESTACADOS----*/
+
+/*---PRODUCT DETAIL MEDIA QUERIES---*/
 
 .articulo{
   display: flex;
