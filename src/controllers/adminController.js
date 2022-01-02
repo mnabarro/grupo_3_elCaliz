@@ -1,3 +1,4 @@
+// ************ Require's ************
 const { redirect } = require('express/lib/response');
 const fs = require('fs');
 const path = require('path');
@@ -9,6 +10,7 @@ let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const categoriesFilePath = path.join(__dirname, '../data/categories.json');
 let categories = JSON.parse(fs.readFileSync(categoriesFilePath, 'utf-8'));
 
+// ************ ADD . TU NUMBER LIKE 1.000 ************
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."); 
 
 // const categories = [
@@ -39,16 +41,18 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 // ];
 
 const adminController = {
+    // Root - Show all products
     index: (req, res) => {res.render('products/category', {products:products, cssa : 'category.css', title :'Categorías'});},
     
+    // Create - Form to create product
     createProduct: (req, res) => {
     
         res.render('products/createProduct', {cssa: 'products-add.css', "categories":categories, title:"Crear un nuevo producto"});
     },
 
+    // Create -  Method to store new product
     newProduct: (req, res) => {
 
-        res.send(req.body);
         let newProduct = {
             id: products.length + 1,
             sku: req.body.sku,
@@ -62,18 +66,20 @@ const adminController = {
             images: req.body.images,
         }
         products.push(newProduct);
-
         let productsJson = JSON.stringify(products);
         fs.writeFileSync(productsFilePath, productsJson);
+        res.send("El producto se ha creado correctamente");
         res.redirect('/products');
     },
-     
+    
+    // Update - Form to edit product
     editProductForm: (req, res) => {
         let id = req.params.id;
 		let product = products.find(product => product.id == id);
         res.render('products/editProduct', {product, cssa: 'products-edit.css',categories , title:"Editar producto"});
     },
 
+    // Update - Method to edit product
     editProduct: (req, res) => {
         let id = req.body.id;
         let product = products.find(product => product.id == id);
@@ -91,12 +97,10 @@ const adminController = {
         res.redirect('/products');
     },
     
+    // Delete - Delete one product from DB
     deleteProduct: (req, res) => {
-
-        
         let id = req.params.id;
         let idxToDelete = products.findIndex(product => product.id == id);
-        
         
         //Si existe un producto con el id recibido como parámetro, lo borro
         if(idxToDelete > 0) {

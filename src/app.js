@@ -1,30 +1,29 @@
+// ************ Require's ************
 const path = require ('path');
 const express = require('express');
+const methodOverride = require('method-override');
+const mainRouter = require('./routes/mainRouter');
+const usersRouter = require('./routes/usersRouter');
+const ordersRouter = require('./routes/ordersRouter');
+const productsRouter = require('./routes/productsRouter');
+const adminRouter = require('./routes/adminRouter');
 
-
+// ************ express() ************
 const app = express();
-app.set('view engine', 'ejs');
 
+// ************ Middlewares ************
 app.use(express.static('../public'));
 app.use(express.urlencoded({ extended: false }));
-
-const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
-
-const mainRouter = require('./routes/mainRouter');
 app.use('/', mainRouter);
-
-const usersRouter = require('./routes/usersRouter');
 app.use('/users', usersRouter);
-
-const ordersRouter = require('./routes/ordersRouter');
 app.use('/orders', ordersRouter);
-
-const productsRouter = require('./routes/productsRouter');
 app.use('/products', productsRouter);
-
-const adminRouter = require('./routes/adminRouter');
 app.use('/admin', adminRouter);
+
+// ************ Template Engine ************
+app.set('view engine', 'ejs');
+
 
 
 app.listen(3000, () => {

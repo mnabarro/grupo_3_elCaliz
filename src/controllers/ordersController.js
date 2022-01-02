@@ -1,6 +1,6 @@
 const ordersController = {
 
-    checkout: (req, res) => {res.send( 'Finalice su compra');},
+    checkout: (req, res) => {res.send( 'Finalice tu compra');},
     orders: (req, res) => {res.send( 'Historial de pedidos');},
 
     cart: (req, res) => {
