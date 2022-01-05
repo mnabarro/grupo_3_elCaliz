@@ -63,6 +63,19 @@
       border-radius: 10px;
       font-size: 1rem;
   }
+  .admin-button {
+    display: flex;
+    justify-content: center;
+}
+  .admin-button button {
+    padding: 0.5rem;
+    background-color: #a4161a;
+    color: white;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
   .account {
       text-align: center;
       margin-bottom: 1rem;
