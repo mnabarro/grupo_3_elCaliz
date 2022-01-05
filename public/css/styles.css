@@ -19,6 +19,17 @@ header {
   z-index: 10;
 }
 
+.up-banner {
+  background: #FB7267;
+  color: #fff;
+  font-size: .7222rem;
+  padding: 0.4444rem 0;
+}
+.up-banner h4 {
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+}
 
 /****** SIDE NAV ********/
 
@@ -71,10 +82,11 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 5px;
-  background-color: #a4161a;
+  background-color: white;
   color: white;
   height: 48px;
   font-size: 1.5rem;
+  
 }
 
 .navbar-left {
@@ -98,7 +110,7 @@ header {
 
 .logo-texto a {
   display: none;
-  color: white;
+  color: #595959;
   font-family: "Crete Round", serif;
   font-size: 1.6rem;
   text-decoration: none;
@@ -111,6 +123,7 @@ header {
 .logo img {
   padding: 10px, 0px;
   height: 1.6rem;
+  color: #595959;
 }
 
 .search-box-container {
@@ -124,13 +137,13 @@ header {
   justify-content: flex-end;
   border-radius: 10px;
   margin: 6px 5px;
-  padding: 5px 5px;
+  padding: 5px 15px;
   flex-grow: 1;
-  background-color: #f0f1f2;
+  background-color: #F5F6F9;
 }
 
 .search-box input {
-  background-color: #f0f1f2;
+  background-color: #F5F6F9;
   border: none;
   width: 100%;
   font-family: "Fira Sans Extra Condensed", serif;
@@ -147,7 +160,7 @@ header {
 }
 
 .search-box .button-search i {
-  color: #7c7c7c;
+  color: #FC6767;
   font-size: 1rem;
   cursor: pointer;
 }
@@ -174,7 +187,7 @@ header {
   height: 15px;
   color: #444444;
   background-color: white;
-  border: 1px solid #a4161a;
+  border: 1px solid #FC6767;
   border-radius: 50%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 12px;
@@ -190,7 +203,7 @@ header {
 }
 
 .navbar .fas {
-  color: white;
+  color: #595959;
 }
 
 .navbar .fas:hover {
@@ -205,10 +218,13 @@ header {
   display: none;
   padding: 5px;
   font-weight: 700;
-  background-color: #f0f1f2;
+  background-color: white;
+  border: 1px solid #595959;
+  margin-bottom: 20px;
   /* display: flex; */
   justify-content: space-around;
   list-style-type: none;
+  
 }
 
 .categories li a {
@@ -218,8 +234,8 @@ header {
 }
 
 .categories li a:hover {
-  color: #a4161a;
-  border-bottom: #a4161a 2px solid;
+  color: #FB7267;
+  border-bottom: #FB7267 2px solid;
   transition-duration: 0.1s;
 }
 

@@ -3,7 +3,7 @@
 
 .banner {
     height: auto;
-    background-color: #f0f1f2;
+    background-color: #fff;
 }
 
 /****** BANNER ********/
@@ -37,18 +37,18 @@
     margin-left: 1vw;
     font-family: "Fira Sans Condensed", serif;
     text-align: left;
-    color: #444444;
+    color: #595959;
     font-size: 1rem;
   }
   
   .featured-title {
-    color: #444444;
+    color: #595959;
     text-align: center;
   }
   
   .relevant{
     height: none;
-    background-color: #f0f1f2;
+    background-color: #fff;
     padding: 0px 0px 375px 0px;
   }
   
@@ -65,15 +65,15 @@
   .fondo{
     background-color: white;
     padding: 0px 25px 0px 25px;
-    border: 1px solid #bebebe;
     border-radius: 10px;
+    background-color: white;
   }
   
   .articuloX{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #cccc;
+    background-color: #fff;
     padding: 12px 15px 12px 15px;
     border-radius: 10px;
     border: solid 1px #bebebe;
@@ -89,7 +89,7 @@
   .nombre-vino{
     text-align: center;
     margin-top: 5px;
-    color: #444444;
+    color: #595959;
   }
   
   .precio-vino{
@@ -100,10 +100,11 @@
   .add-buttonn button{
     margin: 12px 0px 0px 0px;
     padding: 10px;
-    background-color: #a4161a;
+    background-color: #FB7267;
     color: white;
     border-radius: 10px;
     font-size: 1rem;
+    border: none;
   }
   
   .fa-arrow-circle-right,

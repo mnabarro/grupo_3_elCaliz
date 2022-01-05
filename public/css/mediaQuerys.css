@@ -73,6 +73,7 @@
     
       .logo-texto a {
         display: contents;
+        background-color:#595959;
       }
     
       .btn-menu {

@@ -6,7 +6,7 @@
     background-color: #f0f1f2;
     border-radius: 10px;
     text-align: center;
-    border: 1px solid #a4161a;
+    border: 1px solid #FB7267;
   }
   .cart-title {
     font-size: 1.2rem;
@@ -81,7 +81,7 @@
   .unit-price {
     padding: 5px 4px 4px 4px;
     background-color: white;
-    border: 1px solid #a4161a;
+    border: 1px solid #FB7267;
     border-radius: 5px;
     text-align: right;
     font-size: 1rem;
@@ -91,7 +91,7 @@
   .subtotal {
     padding: 6px 4px 4px 4px;
     background-color: white;
-    border: 1px solid #a4161a;
+    border: 1px solid #FB7267;
     border-radius: 5px;
     text-align: right;
     font-size: 1.1rem;
@@ -122,7 +122,7 @@
     align-items: center;
     color: black;
     font-size: 1.5rem;
-    color: #a4161a;
+    color: #FB7267;
   }
   .qty {
     font-size: 1.5rem;
@@ -131,7 +131,7 @@
     min-width: 2rem;
     text-align: center;
     margin: auto;
-    border: 1px solid #a4161a;
+    border: 1px solid #FB7267;
     border-radius: 5px;
   }
   
@@ -157,7 +157,7 @@
   
   .cart-total {
     font-weight: 700;
-    color: #a4161a;
+    color: #FB7267;
   }
   
   .cart-buttons {
@@ -189,14 +189,14 @@
   }
   
   .button-primary {
-    background-color: #a4161a;
+    background-color: #FB7267;
     color: white;
     outline: none;
   }
   
   .button-secondary {
     background-color: #f0f1f2;
-    color: #a4161a;
+    color: #FB7267;
     outline: none;
     font-weight: 700;
   }
