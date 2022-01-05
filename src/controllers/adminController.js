@@ -109,8 +109,9 @@ const adminController = {
             
             res.redirect('/products');
         }
-
-
+    },
+    login: (req, res) => {
+        res.render('users/login', {cssa: 'login.css',title:"Admin - Ingresar"});
     },
   
 };

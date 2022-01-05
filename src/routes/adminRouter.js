@@ -5,6 +5,7 @@ const adminController = require('../controllers/adminController.js');
 
 //ADMIN
 router.get('/products', adminController.index); //Lista todos los productos
+router.get('/login', adminController.login);
 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/products/create',adminController.createProduct); //Muestra el formulario de creación de producto
