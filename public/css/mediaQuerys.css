@@ -229,6 +229,10 @@ height: 20vh;
 .filter {
   margin-top: 1rem;
 }
+.add{
+  margin-top: -39px;
+}
+
 .articulos{
   width: 22%;
 }
