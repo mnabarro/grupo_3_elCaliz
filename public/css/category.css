@@ -61,7 +61,8 @@ body {
   }
 
   .add{
-    text-align: right;
+    display: flex;
+    justify-content: flex-start;
     margin: 0px 0px 10px 0px;
   }
 
