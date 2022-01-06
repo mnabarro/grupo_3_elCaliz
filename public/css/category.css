@@ -68,7 +68,6 @@ body {
     .fondo{
       background-color: white;
       padding: 0px 25px 0px 25px;
-      border: 1px solid #bebebe;
       border-radius: 10px;
     }
     
@@ -76,7 +75,7 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
-      background-color: #cccc;
+      background-color: #fff;
       padding: 12px 15px 12px 15px;
       border-radius: 10px;
       border: solid 1px #bebebe;
@@ -108,6 +107,7 @@ body {
       color: white;
       border-radius: 10px;
       font-size: 1rem;
+      border: none;
     }
     
     .fa-arrow-circle-right,
