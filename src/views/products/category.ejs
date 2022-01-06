@@ -38,24 +38,30 @@
             </div>
         </article>
         <!--CODIGO DE GONZA-->
+        
         <section class="featured">
+            
             <article class="carrusel">
+                <span class="add">
+                    <button>AGREGAR</button>
+                </span>
                 <% products.forEach((product)=>{ %>
                 <div class="articulos">
                     <div class="fondo"><img class="imagen-vino" src="/img/homeParte2/DanteRobinoChardonnay.png" alt="vinito"></div>
                     <p class="nombre-vino"><%= product.name%><br>Reserva Malbec</p>
                     <p class="precio-vino"><%= product.price%></p>
-                    <div class="add-buttonn">
+                    <span class="add-buttonn">
                         <button>
                         <i class="fa fa-pencil" aria-hidden="true"></i>
                         </button>
                         <button>
                         <i class="fa fa-trash" aria-hidden="true"></i>
                         </button>
-                    </div>
+                    </span>
                 </div>
                 <% }) %>
             </article>
+           
         </section>
         <!--TERMINA CODIGO DE GONZA-->
     </main>

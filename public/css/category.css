@@ -59,6 +59,21 @@ body {
     width: 90%;
 
   }
+
+  .add{
+    text-align: right;
+    margin: 0px 0px 10px 0px;
+  }
+
+  .add button {
+    padding: 10px;
+    background-color: #FB7267;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    border: none;
+  }
+
     .carrusel{
       display: flex;
       flex-direction: column;
