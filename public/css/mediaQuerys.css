@@ -53,14 +53,15 @@
       /*---CATEGORY LIST OF PRODUCTS----*/
 
       .carrusel{
-        display: flex;
+            display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: flex-start;
+            gap: 10px;
         }
         .articulos{
-          display: 50%;
+          width: 48%;
         }
 
       /*---END CATEGORY LIST OF PRODUCTS----*/
