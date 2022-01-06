@@ -238,6 +238,11 @@ height: 20vh;
 .form-button {
   max-width: 200px;
 }
+
+.add-buttonn{
+  display: flex;
+  gap: 5px;
+}
 /*---END CATEGORY LIST OF PRODUCTS----*/
 }
     
