@@ -45,10 +45,14 @@
                     <div class="fondo"><img class="imagen-vino" src="/img/homeParte2/DanteRobinoChardonnay.png" alt="vinito"></div>
                     <p class="nombre-vino"><%= product.name%><br>Reserva Malbec</p>
                     <p class="precio-vino"><%= product.price%></p>
-                    <span class="add-buttonn">
-                        <button>Editar</button> 
-                        <button>Eliminar</button> 
-                    </span>
+                    <div class="add-buttonn">
+                        <button>
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                        </button>
+                        <button>
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                        </button>
+                    </div>
                 </div>
                 <% }) %>
             </article>
