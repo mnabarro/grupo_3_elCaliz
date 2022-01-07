@@ -1,3 +1,5 @@
+const { validationResult } = require('express-validator');
+
 const usersController = {
 
     login: (req, res) => {
@@ -6,6 +8,19 @@ const usersController = {
 
     register: (req, res) => {
         res.render('users/register',{cssa: 'register.css', title:"El Cáliz - Registrarse"});
+    },
+
+    processRegister:(req, res)=>{
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0) {
+			return res.render('users/register', {
+				errors: resultValidation.mapped(),
+                oldData: req.body,
+                cssa: 'register.css', title:"El Cáliz - Registrarse"
+			});
+        }
+
+        return res.render('index', {cssa: 'index.css', title:"El Cáliz - Home"});
     },
 
     forgotPassword: (req, res) => {

@@ -15,26 +15,41 @@
                     <div class="line"></div>
                 </div>
             <div class="register-main">
-                <form action="/register" method="POST" class="create-form">
+                <form action="/users/register" method="POST" class="create-form" enctype="multipart/form-data">
                     <div class="control-form">
-                        <label for="name">Nombre:<input type="text" class="control" name="name" id="name" placeholder="Ej: Mariana" required></label>
+                        <label for="name">Nombre:<input type="text" class="control" name="name" id="name" placeholder="Ej: Mariana" value="<%= locals.oldData ? oldData.name : null %>"></label>
+                        <% if (locals.errors && errors.name) { %>
+                            <%= errors.name.msg %>
+                           <% } %>
                     </div>
                     <div class="control-form">
-                        <label for="last-name">Apellido:<input type="text" class="control" name="lastname" id="last-name" placeholder="Ej: Perez" required></label>
+                        <label for="last-name">Apellido:<input type="text" class="control" name="lastname" id="last-name" placeholder="Ej: Perez" value="<%= locals.oldData ? oldData.lastname : null %>"></label>
+                        <% if (locals.errors && errors.lastname) { %>
+                            <%= errors.lastname.msg %>
+                           <% } %>
                     </div>
                     <div class="control-form">
-                        <label for="e-mail">Email:<input type="email" class="control" name="email" id="e-mail" placeholder="Ej: hola@gmail.com" required></label>
+                        <label for="e-mail">Email:<input type="email" class="control" name="email" id="e-mail" placeholder="Ej: hola@gmail.com" value="<%= locals.oldData ? oldData.email : null %>"></label>
+                        <% if (locals.errors && errors.email) { %>
+                            <%= errors.email.msg %>
+                           <% } %>
                     </div>
                     <div class="control-form">
-                        <label for="password">Contraseña:<input  type="text" class="control" name="password" id="password" required><i class="fas fa-eye-slash"></i></label>
+                        <label for="password">Contraseña:<input  type="text" class="control" name="password" id="password"><i class="fas fa-eye-slash" value="<%= locals.oldData ? oldData.password : null %>"></i></label>
+                        <% if (locals.errors && errors.password) { %>
+                            <%= errors.password.msg %>
+                           <% } %>
                         <div class="remember-password">
                             <input type="checkbox">
                             <label>Recordar contraseña</label>
                         </div>
                     </div>
                     <div class="control-form">
-                        <label for="image-cover">Imagen de perfil:<input type="file" class="control" name="image-cover" accept="image/png, image/jpeg">
+                        <label for="image-cover">Imagen de perfil:<input type="file" class="control" name="imageCover" accept="image/png, image/jpeg">
                         </label>
+                        <% if (locals.errors && errors.imageCover) { %>
+                            <%= errors.imageCover.msg %>
+                           <% } %>
                     </div>
                     <img class="captcha" src="/img/png/captcha.png" alt="">
 
