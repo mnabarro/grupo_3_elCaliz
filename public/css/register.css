@@ -73,6 +73,11 @@ main {
     color: white;
     border-radius: 10px;
     font-size: 1rem;
+    border: none;
+}
+.danger{
+  color: rgb(214, 0, 0);
+  font-size: 12px;
 }
 .account {
     text-align: center;
