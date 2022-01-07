@@ -14,7 +14,7 @@
         <div class="products-edit-main">
             <div class="title-line"></div>
 
-            <form action="/admin/products?_method=PUT" method="POST" class="products-edit-form">
+            <form action="/admin/products?_method=PUT" method="POST" class="products-edit-form" enctype="multipart/form-data">
 
                 <div class="form-element">
                     <label for="name">Id:</label>
@@ -31,28 +31,20 @@
                     <textarea name="description" id="description" placeholder="Ej:" required><%= product.description %>"</textarea>
                 </div>
 
-                <h4>IMÁGENES</h4>
+                <h4>IMAGEN</h4>
 
                 <div class="form-element-group">
                     <div class="flex-group">
                         <div>
-                            <img src="<%='/img/' + product.images %>" alt="imágen del producto" srcset="" height=150>
-                        </div>
+                            <img src="<%='/img/products/' + product.image %>" alt="imágen del producto" srcset="" height=150>
+                                <input type="file" name="image" accept="image/png, image/jpeg">
+                            </div>
                     </div>
-                    <!-- <div class="flex-group">
-                        <label for="images">Adicionales</label>
-                        <input type="file" name="images" accept="image/png, image/jpeg" multiple>
-                    </div> -->
                 </div>
 
                 <div class="form-element">
                     <label for="sku">Código / SKU:</label>
                     <input type="text" class="control" name="sku" id="sku" value="<%= product.sku %>">
-                </div>
-
-                <div class="form-element">
-                    <label for="color">Color:</label>
-                    <input type="color" class="control" name="color" id="color" value="<%= product.color %>">
                 </div>
 
                 <div class="form-element">
@@ -76,9 +68,10 @@
                     </select>                    
                 </div>
 
-                <div class="edit-buttons">
+                    <div class="edit-buttons">
                     <button type="submit" class="form-button form-button-primary">GUARDAR</button>
-                    <button type="reset" class="form-button form-button-secondary">BORRAR</button>
+                    <button type="reset" class="form-button form-button-secondary">RESTABLECER</button>
+                    <a href="/admin/products" class="form-button form-button-secondary">CANCELAR</a>
                 </div>
             </form>
         </div>
@@ -86,16 +79,23 @@
 
     <%- include ('../partials/footer') %>
     <script src="/js/tom-select.complete.js"></script>
+        
     <script>
-        new TomSelect("#select-state",{
+        let categories = new TomSelect("#select-state",{
             plugins: {
-		remove_button:{
-			title:'Quitar este item',
-		}
+        remove_button:{
+            title:'Quitar este item',
+        }
     },
-	maxItems: 5
-});
+    maxItems: 5
+    });
+    
+    <% for (let cat of product.categories ) {%>
+        categories.addItem("<%=cat%>");
+    <%}%>
+
     </script>
+
 </body>
 
 </html>

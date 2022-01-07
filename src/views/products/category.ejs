@@ -41,12 +41,12 @@
         
         <section class="featured">
             <div class="add">
-                <button>AGREGAR</button>
+                <a href="/admin/products/create"><button class="form-button form-button-primary">AGREGAR</button></a>
             </div>
             <article class="carrusel">
                 <% products.forEach((product)=>{ %>
                 <div class="articulos">
-                    <div class="fondo"><img class="imagen-vino" src="/img/homeParte2/DanteRobinoChardonnay.png" alt="vinito"></div>
+                    <div class="fondo"><img class="imagen-vino" src="/img/products/img.jpg" alt="vinito"></div>
                     <p class="nombre-vino"><%= product.name%><br>Reserva Malbec</p>
                     <p class="precio-vino"><%= product.price%></p>
                     <span class="add-buttonn">

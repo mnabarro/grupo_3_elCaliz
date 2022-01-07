@@ -106,6 +106,12 @@ textarea:focus {
   border:#FB7267 2px solid;
 }
 
+.edit-buttons {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;  
+}
+
 .form-button {
   border: 1px solid #444444;
   border-radius: 10px;
@@ -115,6 +121,8 @@ textarea:focus {
   width: 100%;
   /* max-width: 200px; */
   margin: 10px auto;
+  text-align: center;
+  text-decoration: none;
 }
 
 .form-button:hover {

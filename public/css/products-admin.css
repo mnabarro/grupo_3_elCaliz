@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+.sub {
+    text-decoration: none;
+    color:#444;
+    padding-right: 15px;
+}
+.filter {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    padding: 10px;
+    width: 90vw;
+}
+
+/*-----LIST OF PRODUCTS------*/
+
+
+  .add{
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 25px;
+  }
+
+    .container{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items : flex-start;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 10px 0 20px 0;
+    }
+    
+    .fondo{
+      display: flex;
+      justify-content: center;
+      background-color: white;
+      padding: 10px;
+      border-radius: 10px;
+      width: 100%;
+    }
+    
+    .articulos{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 300px;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 10px;
+      border: solid 1px #bebebe;
+      box-shadow: 2px 2px 3px 0px rgb(68 68 68 / 40%);
+    }
+
+    .articulos:hover{
+      transform: scale(1.02);
+    }
+    
+    .imagen-vino {
+      height: 150px;
+      width: auto;
+    }
+    
+    .nombre-vino{
+      text-align: center;
+      margin-top: 5px;
+      color: #444444;
+    }
+    
+    .precio-vino{
+      margin-top: 5px;
+      font-weight: bold;
+    }
+    
+    .edit-buttons {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: nowrap;  
+      gap : 10px;
+    }
+    
+    .form-button {
+      border: 1px solid #444444;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      padding: 10px 13px;
+      cursor: pointer;
+      width: 100%;
+      /* max-width: 200px; */
+      margin: 10px auto;
+      text-decoration: none;
+    }
+    
+    .form-button:hover {
+      transform: scale(1.01);
+      box-shadow: 2px 2px 3px 0px rgba(68, 68, 68, 0.4);
+    }
+    
+    .form-button:active {
+      background-color: #444444;
+      color: #f0f1f2;
+    }
+    
+    .form-button-primary {
+      background-color: #FB7267;
+      color: white;
+      outline: none;
+    }
+    
+    .form-button-secondary {
+      background-color: #f0f1f2;
+      color: #FB7267;
+      outline: none;
+      font-weight: 700;
+    }
+
+/*-----END LIST OF PRODUCTS------*/

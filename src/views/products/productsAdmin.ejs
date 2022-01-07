@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('../partials/head')%>
+
+<body>
+    
+    <%- include('../partials/header')%>
+
+    <main>
+        
+        
+        <div class="add">
+            <a href="/admin/products/create"><button class="form-button form-button-primary">NUEVO PRODUCTO</button></a>
+        </div>
+
+        <section class="container">
+
+            <% products.forEach((product)=>{ %>
+                <div class="articulos">
+                    <div class="fondo"><img class="imagen-vino" src="/img/products/<%= product.image %>" alt="img-botella"></div>
+                    <p class="nombre-vino"><%= product.name%><br></p>
+                    <p class="precio-vino">$<%= product.price%></p>
+
+                    <div class="edit-buttons">
+                        <a href="products/edit/<%= product.id%>"><button title="Editar..." class="form-button form-button-secondary">
+                        <i class="fa fa-pen" aria-hidden="true"></i></button></a>
+                        
+                        <form action="/admin/products/<%= product.id %>?_method=DELETE" method="POST">
+                            <button title="Eliminar" type="submit" class="form-button form-button-primary">
+                            <i class="fa fa-trash" aria-hidden="true"></i></button></a>
+                        </form>
+                    </div>
+                </div>
+                <% }) %>
+
+            </section>
+        </main>
+
+    <%- include ('../partials/footer') %>
+
+</body>
+
+</html>

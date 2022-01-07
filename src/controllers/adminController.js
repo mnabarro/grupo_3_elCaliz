@@ -13,36 +13,11 @@ let categories = JSON.parse(fs.readFileSync(categoriesFilePath, 'utf-8'));
 // ************ ADD . TU NUMBER LIKE 1.000 ************
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."); 
 
-// const categories = [
-//     {
-//     label: 'Blancos',
-//     name: 'cat-blancos'
-//     },  
-//     {
-//     label: 'Tintos',
-//     name: 'cat-tintos'
-//     }, 
-//     {
-//     label: 'Espumantes',
-//     name: 'cat-espumantes'
-//     }, 
-//     {
-//     label: 'Rosados',
-//     name: 'cat-rosados'
-//     }, 
-//     {
-//     label: 'Accesorios',
-//     name: 'cat-accesorios'
-//     }, 
-//     {
-//     label: 'Ofertas',
-//     name: 'cat-ofertas'
-//     }, 
-// ];
-
 const adminController = {
+    index: (req, res) => {res.render('adminMain', {cssa: "admin-main.css",  title :'Panel de administración'});},
+    
     // Root - Show all products
-    index: (req, res) => {res.render('products/category', {products:products, cssa : 'category.css', title :'Categorías'});},
+    products: (req, res) => {res.render('products/productsAdmin', {products:products, cssa : 'products-admin.css', title :'Administración de productos'});},
     
     // Create - Form to create product
     createProduct: (req, res) => {
@@ -61,15 +36,14 @@ const adminController = {
             color: req.body.color,
             price: req.body.price,
             discount: req.body.discount, 
-            category: req.body.category,
-            subCategory: req.body.subcategory,
-            images: req.body.images,
+            categories: req.body.categories,
+            image: req.file.filename,
         }
+
         products.push(newProduct);
         let productsJson = JSON.stringify(products);
         fs.writeFileSync(productsFilePath, productsJson);
-        res.send("El producto se ha creado correctamente");
-        res.redirect('/products');
+        res.redirect('/admin/products');
     },
     
     // Update - Form to edit product
@@ -87,27 +61,36 @@ const adminController = {
         product.sku = req.body.sku;
         product.name = req.body.name;
         product.description = req.body.description;
-        product.color = req.body.color;
         product.price = req.body.price;
-        product.discount = req.body.discount;
-        //product.images = req.body["image-cover"];
+        product.discount = req.body.discount,
+        product.categories = req.body.categories,
+        product.image = req.file.filename;
 
         fs.writeFileSync(productsFilePath, JSON.stringify(products,null,2));
 
-        res.redirect('/products');
+        res.redirect('/admin/products');
     },
     
     // Delete - Delete one product from DB
     deleteProduct: (req, res) => {
         let id = req.params.id;
         let idxToDelete = products.findIndex(product => product.id == id);
-        
+        console.log(`ID = ${idxToDelete}`);
         //Si existe un producto con el id recibido como parámetro, lo borro
-        if(idxToDelete > 0) {
+        if(idxToDelete >= 0) {
             let productoBorrado = products.splice(idxToDelete, 1);
+
+            let imagePath = path.join(__dirname, '../../public/img/products/' + productoBorrado[0].image);
+            console.log(imagePath);
+            
             fs.writeFileSync(productsFilePath, JSON.stringify(products,null,2));            
             
-            res.redirect('/products');
+            if (fs.existsSync(imagePath)) {
+                fs.unlinkSync(imagePath)
+            }
+
+            res.redirect('/admin/products');
+    
         }
     },
     login: (req, res) => {

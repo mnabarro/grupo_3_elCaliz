@@ -12,36 +12,6 @@ let categories = JSON.parse(fs.readFileSync(categoriesFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."); 
 
-// const categories = [
-//     {
-//     label: 'Blancos',
-//     name: 'cat-blancos'
-//     },  
-//     {
-//     label: 'Tintos',
-//     name: 'cat-tintos'
-//     }, 
-//     {
-//     label: 'Espumantes',
-//     name: 'cat-espumantes'
-//     }, 
-//     {
-//     label: 'C. Tardía',
-//     name: 'cat-tardia'
-//     }, 
-//     {
-//     label: 'Especiales',
-//     name: 'cat-especiales'
-//     }, 
-//     {
-//     label: 'Accesorios',
-//     name: 'cat-accesorios'
-//     }, 
-//     {
-//     label: 'Ofertas',
-//     name: 'cat-ofertas'
-//     }, 
-// ];
 
 const productsController = {
     category: (req, res) => {res.render('products/category', {products:products, cssa : 'category.css', title :'Categorías'});},

@@ -14,16 +14,16 @@
         <div class="products-add-main">
             <div class="title-line"></div>
 
-            <form action="/admin/products" method="POST" class="products-add-form">
+            <form action="/admin/products" method="POST" class="products-add-form" enctype="multipart/form-data">
 
                 <div class="form-element">
                     <label for="name">Nombre:</label>
-                    <input type="text" name="name" id="name" placeholder="Ej: Reloj" required>
+                    <input type="text" name="name" id="name" placeholder="Luigi Bosca Malbec 750" required>
                 </div>
 
                 <div class="form-element">
                     <label for="description">Descripción:</label>
-                    <textarea name="description" id="description" placeholder="Ej:" required></textarea>
+                    <textarea name="description" id="description" placeholder="..." required></textarea>
                 </div>
 
                 <h4>IMÁGENES</h4>
@@ -31,7 +31,7 @@
                 <div class="form-element-group">
                     <div class="flex-group">
                         <label for="image-cover">Principal</label>
-                        <input type="file" name="image-cover" accept="image/png, image/jpeg">
+                        <input type="file" name="image" accept="image/png, image/jpeg">
                     </div>
                     <!-- <div class="flex-group">
                         <label for="images">Adicionales</label>
@@ -41,13 +41,13 @@
 
                 <div class="form-element">
                     <label for="sku">Código / SKU:</label>
-                    <input type="text" class="control" name="sku" id="sku">
+                    <input type="text" class="control" name="sku" id="sku" required>
                 </div>
 
-                <div class="form-element">
+                <!-- <div class="form-element">
                     <label for="color">Color:</label>
                     <input type="color" class="control" name="color" id="color">
-                </div>
+                </div> -->
 
                 <div class="form-element">
                     <label for="price">Precio:</label>
@@ -70,7 +70,11 @@
                     </select>                    
                 </div>
 
-                <button type="submit" class="form-button form-button-primary">AGREGAR PRODUCTO</button>
+                <div class="edit-buttons">
+                    <button type="submit" class="form-button form-button-primary">AGREGAR PRODUCTO</button>
+                <a href="/admin/products" class="form-button form-button-secondary">CANCELAR</a>
+                </div>
+
             </form>
         </div>
     </main>
