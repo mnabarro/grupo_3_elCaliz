@@ -20,7 +20,7 @@ const usersController = {
 			});
         }
 
-        return res.render('index', {cssa: 'index.css', title:"El Cáliz - Home"});
+        return res.redirect('/');
     },
 
     forgotPassword: (req, res) => {
