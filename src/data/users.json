@@ -1,4 +1,5 @@
-[{
+[
+ {
   "id": 1,
   "firstName": "Blinny",
   "lastName": "Simounet",
@@ -7,7 +8,8 @@
   "category": "user",
   "gender": "male",
   "image": "user_1.jpg"
-}, {
+ },
+ {
   "id": 2,
   "firstName": "Arvy",
   "lastName": "Raithmill",
@@ -16,7 +18,8 @@
   "category": "guest",
   "gender": "female",
   "image": "user_2.jpg"
-}, {
+ },
+ {
   "id": 3,
   "firstName": "Cindie",
   "lastName": "Braney",
@@ -25,7 +28,8 @@
   "category": "visitant",
   "gender": "male",
   "image": "user_3.jpg"
-}, {
+ },
+ {
   "id": 4,
   "firstName": "Constantina",
   "lastName": "Beaze",
@@ -34,7 +38,8 @@
   "category": "user",
   "gender": "female",
   "image": "user_4.jpg"
-}, {
+ },
+ {
   "id": 5,
   "firstName": "Rafaelia",
   "lastName": "Fahrenbacher",
@@ -43,7 +48,8 @@
   "category": "guest",
   "gender": "female",
   "image": "user_5.jpg"
-}, {
+ },
+ {
   "id": 6,
   "firstName": "Bevvy",
   "lastName": "Brameld",
@@ -52,7 +58,8 @@
   "category": "guest",
   "gender": "other",
   "image": "user_6.jpg"
-}, {
+ },
+ {
   "id": 7,
   "firstName": "Terri-jo",
   "lastName": "Withur",
@@ -61,7 +68,8 @@
   "category": "guest",
   "gender": "other",
   "image": "user_7.jpg"
-}, {
+ },
+ {
   "id": 8,
   "firstName": "Madelyn",
   "lastName": "Alfonsini",
@@ -70,7 +78,8 @@
   "category": "visitant",
   "gender": "female",
   "image": "user_8.jpg"
-}, {
+ },
+ {
   "id": 9,
   "firstName": "Winona",
   "lastName": "Klugel",
@@ -79,7 +88,8 @@
   "category": "guest",
   "gender": "male",
   "image": "user_9.jpg"
-}, {
+ },
+ {
   "id": 10,
   "firstName": "Tish",
   "lastName": "Ibotson",
@@ -88,7 +98,8 @@
   "category": "visitant",
   "gender": "female",
   "image": "user_10.jpg"
-}, {
+ },
+ {
   "id": 11,
   "firstName": "Zoe",
   "lastName": "Proffer",
@@ -97,7 +108,8 @@
   "category": "guest",
   "gender": "female",
   "image": "user_11.jpg"
-}, {
+ },
+ {
   "id": 12,
   "firstName": "Jeromy",
   "lastName": "Houlaghan",
@@ -106,7 +118,8 @@
   "category": "visitant",
   "gender": "male",
   "image": "user_12.jpg"
-}, {
+ },
+ {
   "id": 13,
   "firstName": "Claudia",
   "lastName": "Tackett",
@@ -115,7 +128,8 @@
   "category": "user",
   "gender": "other",
   "image": "user_13.jpg"
-}, {
+ },
+ {
   "id": 14,
   "firstName": "Filia",
   "lastName": "Arnott",
@@ -124,7 +138,8 @@
   "category": "visitant",
   "gender": "other",
   "image": "user_14.jpg"
-}, {
+ },
+ {
   "id": 15,
   "firstName": "Alexi",
   "lastName": "Atley",
@@ -133,7 +148,8 @@
   "category": "user",
   "gender": "female",
   "image": "user_15.jpg"
-}, {
+ },
+ {
   "id": 16,
   "firstName": "Sully",
   "lastName": "Parysiak",
@@ -142,7 +158,8 @@
   "category": "guest",
   "gender": "other",
   "image": "user_16.jpg"
-}, {
+ },
+ {
   "id": 17,
   "firstName": "Ruthi",
   "lastName": "Jimeno",
@@ -151,7 +168,8 @@
   "category": "user",
   "gender": "other",
   "image": "user_17.jpg"
-}, {
+ },
+ {
   "id": 18,
   "firstName": "Sully",
   "lastName": "Altoft",
@@ -160,7 +178,8 @@
   "category": "guest",
   "gender": "female",
   "image": "user_18.jpg"
-}, {
+ },
+ {
   "id": 19,
   "firstName": "Truda",
   "lastName": "Kenwright",
@@ -169,7 +188,8 @@
   "category": "visitant",
   "gender": "male",
   "image": "user_19.jpg"
-}, {
+ },
+ {
   "id": 20,
   "firstName": "Nichols",
   "lastName": "Gabrieli",
@@ -178,4 +198,21 @@
   "category": "user",
   "gender": "female",
   "image": "user_20.jpg"
-}]
+ },
+ {
+  "id": 21,
+  "name": "juli",
+  "lastname": "miguel",
+  "email": "hola@gmail.com",
+  "password": "$2a$10$Ybuz.vNXTa7UKniVnTtCFu1ZOMm96UveSUA7uL/JkyTEEGQ0F0IYi",
+  "imageCover": "1641669135536_img.jpg"
+ },
+ {
+  "id": 22,
+  "name": "Gonzalo",
+  "lastname": "de Curtis",
+  "email": "hola123@gmail.com",
+  "password": "$2a$10$aPIcKcu2cIkcb1nwHsFj3ORdP86yf/5ETbNwcOyWJM3jvuxJCkyou",
+  "imageCover": "1641669210541_img.jpg"
+ }
+]
