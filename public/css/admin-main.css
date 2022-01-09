@@ -6,6 +6,10 @@ main {
     height: 50vh;
     margin-top: 5rem;
 }
+.header-left {
+  display: flex;
+
+}
 .navbar {
   display: flex;
   flex-wrap: wrap;
@@ -18,6 +22,7 @@ main {
   border-radius: 10px;
   text-decoration: none;
   padding: 7px;
+  margin-left: 0.5rem;
 }
 .nav-right {
   color: #FB7267;

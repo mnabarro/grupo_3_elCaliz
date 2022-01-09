@@ -5,6 +5,32 @@ body {
     margin: 0;
     font-family: sans-serif;
 }
+.header-left {
+  display: flex;
+
+}
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.nav-left{
+  background-color: #FB7267;
+  color: white;
+  font-size: 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 7px;
+  margin-left: 0.5rem;
+}
+.nav-right {
+  color: #FB7267;
+  font-size: 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 7px;
+  
+}
 .sub {
     text-decoration: none;
     color:#444;
