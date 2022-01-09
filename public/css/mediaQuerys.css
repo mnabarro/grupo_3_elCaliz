@@ -188,33 +188,15 @@ height: 20vh;
   height: 473px;
 }
 
-.imagenes-chicas{
-  display: flex;
-  flex-direction: column;
-  order: -1;
-  align-items: flex-start;
-  margin-top: 50px;
-  
-}
 .vinitos{
   width: 121px;
 }
 
-.fa-arrow-circle-left{
-  transform: rotate(90deg);
-  margin: 0 auto;
-}
-
-.fa-arrow-circle-right{
-  transform: rotate(90deg);
-  margin: 0 auto;
-}
 
 .info-vino{
   display: flex;
   flex-direction: column;
   align-self: flex-start;
-  height: 438px;
 }
 
 .featured{
