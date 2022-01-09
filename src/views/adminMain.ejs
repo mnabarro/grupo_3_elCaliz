@@ -4,8 +4,14 @@
 <%- include('./partials/head', {title:'Panel de administradores'})%>
 
 <body>
-
-    <%- include('./partials/header')%>
+    <nav class="navbar">
+        <div>
+            <a href="/" class= "nav-left">Tienda</a>
+        </div>
+        <div>
+            <a class= "nav-right" href="">Hola, Maru</a>
+        </div>
+    </nav>
 
     <main>
     <h4>PANEL DE ADMINISTRACIÓN</h4>
@@ -13,7 +19,8 @@
 
         <a href="/admin/products" class="form-button form-button-primary">ADMINISTRAR PRODUCTOS</a>
         <a href="" class="form-button form-button-primary">ADMINISTRAR CATEGORÍAS</a>
-        <a href="" class="form-button form-button-primary">ADMINISTRAR USUARIOS</a>
+        <a href="" class="form-button form-button-primary">ADMINISTRAR USUARIOS DE LA TIENDA</a>
+        <a href="" class="form-button form-button-primary">ADMINISTRAR USUARIOS ADMIN</a>
 
     </div>
 </main>    
