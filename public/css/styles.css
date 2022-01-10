@@ -238,12 +238,12 @@ header {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: #595959;
   text-align: center;
-  border: 1px solid #595959;
+  border: 1px solid white;
 }
 .newsletter-text h2 {
-  color:#595959;
+  color:white;
   font-weight: lighter;
   text-align: center;
   margin: 1rem;
@@ -272,7 +272,7 @@ header {
 }
 
 .mail-button {
-  margin: 4px 0px 4px -75px;
+  margin: 6px 0px 6px -75px;
   padding: 2px 10px;
   background-color: #FB7267;
   border:none;
@@ -290,7 +290,7 @@ header {
   margin: 1rem;
 }
 .fab {
-  color: #595959;
+  color: white;
   padding: 0rem 0.3rem;
 }
 
@@ -299,12 +299,16 @@ header {
 .footer-line {
   height: 1px;
   width: 100%;
-  background-color: #FB7267;
+  color: white;
+  height: 0.5px;
 }
 /*END LINE*/
 /*WHATSAPP AND SCROLL UP*/
 .footer {
-  background-color:white;
+  background-color:#595959;
+}
+.footer-bottom {
+  background-color:#595959;
 }
 
 .footer-icons-top {
@@ -335,11 +339,11 @@ header {
 /*END WHATSAPP AND SCROLL UP*/
 /*FOOTER INFO*/
 .part h2 {
-  color: #595959;
-  font-weight: lighter;
+  color: white;
+  font-weight: bold;
 }
 .part-info h4 {
-  color:#595959;
+  color:white;
   opacity: 70%;
   font-weight: lighter;
   margin: 0.3rem 0;
@@ -371,6 +375,9 @@ header {
   font-size: 1rem;
   margin: 0.5rem 0 1.5rem 0;
 }
+.regret-button h4{
+  font-weight: lighter;
+}
 /*END FOOTER INFO*/
 /*FOOTER ICONS BOTTOM*/
 .footer-icons-bottom {
@@ -385,6 +392,7 @@ header {
 .ssl-icon i {
   padding: 0.2rem;
   margin-bottom: 1rem;
+  color:white;
 }
 /*END FOOTER ICONS BOTTOM*/
 /*Copyright and power by*/
@@ -392,7 +400,7 @@ header {
 .powerby {
   text-align: center;
   width: 100vw;
-  color: #595959;
+  color: white;
   opacity: 70%;
   font-weight: lighter;
   padding: 0.3rem;
