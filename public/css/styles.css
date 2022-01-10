@@ -17,9 +17,11 @@ header {
   position: sticky;
   top: 0;
   z-index: 10;
+  background-color: white;
 }
 
 .up-banner {
+  display: none;
   background: #FB7267;
   color: #fff;
   font-size: .7222rem;
@@ -34,32 +36,27 @@ header {
 /****** SIDE NAV ********/
 
 .sidenav {
-  height: 100%; 
-  width: 0; 
+  height: 55%;  
+  width: 0;
   position: fixed;
   top: 0; 
   left: 0;
-  background-color: #444444;
+  background-color: white;
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; 
+  padding-top: 40px; 
   transition: 0.3s; 
-  opacity: 90%;
+  opacity: 100%;
 }
 
 .sidenav a {
-  padding: 8px 8px 8px 32px;
+  padding: 5px 20px;
   text-decoration: none;
-  font-size: 1.5rem;
-  color: #f0f1f2;
+  font-size: 1rem;
+  color: #FB7267;
   display: block;
   transition: 0.3s;
 }
 
-.sidenav a:hover {
-  color: #a78a7f;
-  font-size: 1.6rem;
-  transition-duration: 0.1s;
-}
 
 .sidenav .closebtn:hover {
   color: #a78a7f;
@@ -70,9 +67,8 @@ header {
 .sidenav .closebtn {
   position: absolute;
   top: 0;
-  right: 25px;
-  font-size: 3rem;
-  margin-left: 50px;
+  right: 2px;
+  font-size: 2rem;
 }
 
 /****** SIDE NAV ********/
@@ -80,50 +76,45 @@ header {
 /****** NAVBAR ********/
 .navbar {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   padding: 5px;
   background-color: white;
   color: white;
-  height: 48px;
   font-size: 1.5rem;
+  margin: 0 0.6rem;
   
 }
 
 .navbar-left {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  width: 20%;
+  justify-content: space-between;
+  background-color: white;
+}
+.navbar-search {
+  display: flex;
+  background-color: white;
 }
 
-.navbar-right {
+.navbar-icons {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  width: 20%;
 }
 
 .btn-menu {
   text-align: center;
-  margin-right: 10px;
 }
-
-.logo-texto a {
-  display: none;
-  color: #595959;
-  font-family: "Crete Round", serif;
-  font-size: 1.6rem;
-  text-decoration: none;
-}
-
 .logo {
-  margin-right: 10px;
+  background-color: white;
+  margin: auto;
 }
 
 .logo img {
-  padding: 10px, 0px;
-  height: 1.6rem;
-  color: #595959;
+  max-width: 15rem;
+  max-height: 3rem;
+  margin:auto;
 }
 
 .search-box-container {

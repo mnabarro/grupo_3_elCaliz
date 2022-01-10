@@ -1,105 +1,36 @@
 [
     {
+        "id": 1,
         "parent":"",
         "category":"Blancos",
         "value": "cat-blancos"
     },
     {
-        "parent":"Blancos",
-        "category":"Chardonnay",
-        "value": "blancos-chardonnay"
-    },
-    {
-        "parent":"Blancos",
-        "category":"Torrontés",
-        "value": "blancos-torrontes"
-    },
-    {
-        "parent":"Blancos",
-        "category":"Suavignon Blanc",
-        "value": "blancos-suavignon-blanc"
-    },
-    {
-        "parent":"Blancos",
-        "category":"Cosecha Tardía",
-        "value": "blancos-cosecha-tardia"
-    },
-    {
-        "parent":"Blancos",
-        "category":"Chenin",
-        "value": "blancos-chenin"
-    },
-    {
+        "id": 2,
         "parent":"",
         "category":"Tintos",
         "value": "cat-tintos"
     },
     {
-        "parent":"Tintos",
-        "category":"Malbec",
-        "value": "tintos-malbec"
-    },
-    {
-        "parent":"Tintos",
-        "category":"Cabernet Suavignon",
-        "value": "tintos-cabernet-suavignon"
-    },
-    {
-        "parent":"Tintos",
-        "category":"Merlot",
-        "value": "tintos-merlot"
-    },
-    {
-        "parent":"Tintos",
-        "category":"Pinot Noir",
-        "value": "tintos-pinot-noir"
-    },
-    {
-        "parent":"Tintos",
-        "category":"Syrah",
-        "value": "tintos-sirah"
-    },
-    {
+        "id": 3,
         "parent":"",
         "category":"Rosados",
         "value": "cat-rosados"
     },
     {
-        "parent":"Rosados",
-        "category":"Pinot Rose",
-        "value": "tintos-pinot-rose"
-    },
-    {
-        "parent":"Rosados",
-        "category":"Cabernet Franc",
-        "value": "tintos-cabernet-franc"
-    },
-    {
+        "id": 4,
         "parent":"",
         "category":"Espumantes",
         "value": "cat-espumantes"
     },
     {
-        "parent":"Espumantes",
-        "category":"Cava",
-        "value": "cat-cava"
-    },
-    {
-        "parent":"Espumantes",
-        "category":"Prosecco",
-        "value": "cat-prosecco"
-    },
-    {
-        "parent":"Espumantes",
-        "category":"Champagne",
-        "value": "cat-champagne"
-    },
-    {
+        "id": 5,
         "parent":"",
         "category":"Accesorios",
         "value": "cat-accesorios"
     },
     {
+        "id": 6,
         "parent":"",
         "category":"Ofertas",
         "value": "cat-ofertas"

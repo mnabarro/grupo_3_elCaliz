@@ -69,12 +69,19 @@
     
     /*----DESKTOP----*/
     @media (min-width: 769px) {
+      .navbar {
+        flex-direction: row;
+      }
+
+      .navbar-search {
+        order:1;
+      }
       .categories {
         display: flex;
       }
     
-      .logo-texto a {
-        display: contents;
+      .logo a {
+        display:contents;
         background-color:#595959;
       }
     

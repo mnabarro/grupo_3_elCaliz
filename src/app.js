@@ -6,6 +6,7 @@ const mainRouter = require('./routes/mainRouter');
 const usersRouter = require('./routes/usersRouter');
 const ordersRouter = require('./routes/ordersRouter');
 const productsRouter = require('./routes/productsRouter');
+const categoriesRouter = require('./routes/categoriesRouter');
 const adminRouter = require('./routes/adminRouter');
 
 // ************ express() ************
@@ -19,6 +20,7 @@ app.use('/', mainRouter);
 app.use('/users', usersRouter);
 app.use('/orders', ordersRouter);
 app.use('/products', productsRouter);
+app.use('/category', categoriesRouter);
 app.use('/admin', adminRouter);
 
 // ************ Template Engine ************
