@@ -21,7 +21,7 @@ const productsController = {
     productDetail: (req, res) => {
         let id = req.params.id
 		let product = products.find(product => product.id == id)
-                res.render('products/productDetail', {product, cssa: 'product-detail.css', title:"Detalle del producto"});
+        res.render('products/productDetail', {product, cssa: 'product-detail.css', title:"Detalle del producto"});
     },
 };
 

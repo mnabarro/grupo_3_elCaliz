@@ -6,6 +6,9 @@
       width: 20%;
       transition-duration: 500ms;
       }
+      .filter-category {
+        max-width:40%;
+      }
 
 /*-----DESTACADOS-----*/
       .articuloX{
@@ -21,6 +24,9 @@
     }
     /*----TABLET----*/
     @media (min-width: 481px) {
+      .filter-category {
+        max-width:20%;
+      }
     .mail-box {
       width: 70vw;
     }
@@ -75,6 +81,12 @@
 
       .navbar-search {
         order:1;
+      }
+      .filter {
+        display:none;
+      }
+      .filter-category {
+        max-width:15%;
       }
       .categories {
         display: flex;
@@ -213,9 +225,6 @@ height: 20vh;
 
 
 /*---CATEGORY LIST OF PRODUCTS----*/
-.category-bar {
-  display:none;
-}
 .filter {
   margin-top: 1rem;
 }

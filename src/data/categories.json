@@ -2,37 +2,37 @@
     {
         "id": 1,
         "parent":"",
-        "category":"Blancos",
+        "name":"Blancos",
         "value": "cat-blancos"
     },
     {
         "id": 2,
         "parent":"",
-        "category":"Tintos",
+        "name":"Tintos",
         "value": "cat-tintos"
     },
     {
         "id": 3,
         "parent":"",
-        "category":"Rosados",
+        "name":"Rosados",
         "value": "cat-rosados"
     },
     {
         "id": 4,
         "parent":"",
-        "category":"Espumantes",
+        "name":"Espumantes",
         "value": "cat-espumantes"
     },
     {
         "id": 5,
         "parent":"",
-        "category":"Accesorios",
+        "name":"Accesorios",
         "value": "cat-accesorios"
     },
     {
         "id": 6,
         "parent":"",
-        "category":"Ofertas",
+        "name":"Ofertas",
         "value": "cat-ofertas"
     }
     

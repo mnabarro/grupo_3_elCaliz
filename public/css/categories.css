@@ -5,128 +5,93 @@ body {
     margin: 0;
     font-family: sans-serif;
 }
+main {
+  background-color: white;
+}
 /*-----CATEGORY BAR------*/
-.category {
-  position: fixed;
-}
-.category-one{
-    float: left;
-}
-.category-top{    
-    display: inline-block; 
-    padding: 18px 16px; 
-    text-transform: uppercase; 
-    font-size: 13px; 
-    border-bottom: 2px solid #FB7267; 
-    color: rgb(0, 0, 0); 
-    background-color: rgb(240, 240, 240);
-    text-decoration: none;
-    z-index: 1;
-}
-.subcategories {
-    display: inline-block; 
-    padding: 21px 16px; 
-    text-transform: uppercase; 
-    font-size: 13px; 
-    position: fixed; 
-    width: 100%; 
-    overflow-x: auto; /*barra deslizante*/
-    white-space: nowrap; /*buscar*/
-    background-color: white;
-}
-.sub {
-    text-decoration: none;
-    color:#444;
-    padding-right: 15px;
+.category-bar {
+  margin: 0 0 2rem 1rem;
 }
 .filter {
     display: flex;
     justify-content: space-between;
-    background-color: #f0f0f0;
-    padding: 10px;
-    width: 90vw;
+    position: relative;
+    background: #f0f0f0;
+    padding: 5px 3%;
+    border-top: 1px solid #595959;
+    border-bottom: 1px solid #595959;
+    margin-bottom: 1rem;
+
+}
+.qtyProducts {
+  display: flex;
 }
 .qtyProducts,
 .buttonFilter {
     padding: 5px;
 }
+.order-by {
+  text-decoration: none;
+  color: #595959;
+}
+h3{
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+.filter-category {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #595959;
+  max-width:40%;
+  padding: 10px;
+}
+.filter-category button {
+  font-size: 1rem;
+  padding: 5px;
+  background: #FB7267;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin: 10px 10px 0px 0;
+  width: 100%;
+}
+.title {
+  border-bottom: 1px solid #d7d7d7;
+  margin-bottom: 0.7rem;
+  margin-top: 0.2rem;
+}
+.list{
+  list-style: none;
+  padding-bottom: 5px;
+}
+.deslizante1{
+  overflow-y: auto;
+  max-height: 250px;
+}
+.deslizante2{
+  overflow-y:scroll;
+  max-height: 150px;
+}
+.line {
+  border: 2px solid #595959;
+  max-width: 70%;
+}
+.filter-price{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.price {
+  display:flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+.price h5 {
+  font-size: 1.5rem;
+}
+
 /*-----END CATEGORY BAR------*/
 
-/*-----LIST OF PRODUCTS------*/
-
-.featured{
-    margin: 7rem auto 0 auto;
-    width: 90%;
-
-  }
-
-  .add{
-    display: flex;
-    justify-content: flex-start;
-    margin: 0px 0px 10px 0px;
-  }
-
-  .add button {
-    padding: 15px;
-    background-color: #FB7267;
-    color: white;
-    border-radius: 10px;
-    font-size: 1.3rem;
-    border: none;
-  }
-
-    .carrusel{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items : flex-start;
-      gap: 10px;
-    }
-    
-    .fondo{
-      background-color: white;
-      padding: 0px 25px 0px 25px;
-      border-radius: 10px;
-    }
-    
-    .articulos{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 340px;
-      width: 100%;
-      background-color: #fff;
-      padding: 12px 15px 12px 15px;
-      border-radius: 10px;
-      border: solid 1px #bebebe;
-      box-shadow: 2px 2px 3px 0px rgb(68 68 68 / 40%);
-    }
-    
-    
-    .imagen-vino {
-      width: 80px;
-      height: 150px;
-    }
-    
-    .nombre-vino{
-      text-align: center;
-      margin-top: 5px;
-      color: #444444;
-    }
-    
-    .precio-vino{
-      margin-top: 5px;
-      font-weight: bold;
-    }
-    
-    .add-buttonn button {
-      margin: 12px 0px 0px 0px;
-      padding: 15px;
-      background-color: #FB7267;
-      color: white;
-      border-radius: 10px;
-      font-size: 1rem;
-      border: none;
-    }
-
-/*-----END LIST OF PRODUCTS------*/

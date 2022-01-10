@@ -7,13 +7,12 @@ const categoriesFilePath = path.join(__dirname, '../data/categories.json');
 let categories = JSON.parse(fs.readFileSync(categoriesFilePath, 'utf-8'));
 
 const categoriesController = {
-    index: (req, res) => {res.render('products/category', {categories:categories, cssa : 'category.css', title :'Categorías'});},
-    
-    category: (req, res) => {
-        let id = req.params.id
-		let category = categories.find(category => category.id == id)
-                res.render('products/category', {category, cssa: 'categories.css', title:"Categoría"});
+    index: (req, res) => {
+        let categoryName = req.params.name;
+		let category = categories.find(category => category.name == categoryName)
+        res.render('products/category', {category, cssa: 'categories.css', title:"Categoría"});
     },
 };
+
 
 module.exports = categoriesController;
