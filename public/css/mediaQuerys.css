@@ -34,6 +34,10 @@
     .relevant{
       height: 75vh;
     }
+
+    .articuloX{
+      width: 40%;
+  }
 /*----FINAL DESTACADOS----*/
 
     /* Media query para suavizar el cambio de tamaño de la search-box */
