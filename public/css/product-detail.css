@@ -1,3 +1,7 @@
+.main{
+    width: 90%;
+}
+
 .featured-title {
     color: #444444;
     text-align: center;
@@ -98,6 +102,13 @@
 
 .fa-square{
     margin: 0px 8px 0px 8px;
+    font-size: 40px;
+}
+
+.fa-minus-circle, .fa-plus-circle{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
 }
 
 .add-buttonn{
