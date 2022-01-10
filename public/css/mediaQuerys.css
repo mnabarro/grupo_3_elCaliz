@@ -11,13 +11,7 @@
       }
 
 /*-----DESTACADOS-----*/
-      .articuloX{
-        width: 45%;
-    }
     
-    .relevant{
-      height: 77vh;
-    }
 /*----FINAL DESTACADOS----*/
 
 
@@ -31,13 +25,13 @@
       width: 70vw;
     }
 /*-----DESTACADOS-----*/
-    .relevant{
-      height: 75vh;
+     .articuloX{
+        width: 45%;
     }
 
-    .articuloX{
-      width: 40%;
-  }
+     .carousel{
+        justify-content: center;
+    }
 /*----FINAL DESTACADOS----*/
 
     /* Media query para suavizar el cambio de tamaño de la search-box */
@@ -188,8 +182,12 @@
   width: 20%;
 }
 
+.carousel{
+  justify-content: center;
+}
+
 .relevant{
-height: 20vh;
+  width: 90%;
 }
 
 /*----FINAL DESTACADOS----*/
