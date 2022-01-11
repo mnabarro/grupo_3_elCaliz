@@ -9,11 +9,11 @@ main {
 .navbar {
   display: flex;
   flex-wrap: wrap;
+  background:#FB7267;
 
 }
 .nav-left{
-  background-color: #FB7267;
-  color: white;
+  color:white;
   font-size: 1rem;
   border-radius: 10px;
   text-decoration: none;
@@ -21,7 +21,7 @@ main {
   margin-left: 0.5rem;
 }
 .nav-right {
-  color: #FB7267;
+  color: white;
   font-size: 1rem;
   border-radius: 10px;
   text-decoration: none;
