@@ -41,8 +41,8 @@
 }
 
 .imagen-vino-portada{
-    width: 147px;
-    height: 290px;
+    height: 325px;
+    width: auto;
     display: flex;
     flex-direction: column;
 }
