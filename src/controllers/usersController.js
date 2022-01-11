@@ -1,4 +1,5 @@
 const { validationResult } = require('express-validator');
+const fs = require('fs');
 const User = require('../models/User');
 const bcryptjs = require('bcryptjs');
 
@@ -7,7 +8,36 @@ const usersController = {
     login: (req, res) => {
         res.render('users/login', {cssa: 'login.css',title:"El Cáliz - Ingresar"});
     },
+    processLogin: (req,res) => {
+        const errors = validationResult(req);
+        if(errors.isEmpty()) {
+            let usersJson = fs.readFileSync('users.json', 'utf-8');
+            let users;
+            if (usersJson == '') {
+                users = [];
+            } else {
+                users =JSON.parse(usersJson);
+            }
+            for (let i=0; i < users.length; i++) {
+                if (users[i] == req.body.email) {
+                    if (bcryptjs.hashSync(req.body.password, users[i].password)) {
+                        let userLogin = users[i];
+                        break;
+                    }
+                }
+            }
+            if (userLogin == undefined) {
+                return res.render('/users/login', {errors:[
+                    {msg: 'Ingreso invalido, usuario o contraseña erroneos'}
+                ]});
+            }
+            req.session.userLogin = userLogin;
 
+        } else {
+            return res.render('login', {errors:errors.errors});
+        }
+        return res.redirect('/');
+    },
     register: (req, res) => {
         res.render('users/register',{cssa: 'register.css', title:"El Cáliz - Registrarse"});
     },

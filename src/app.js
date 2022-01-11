@@ -8,6 +8,7 @@ const ordersRouter = require('./routes/ordersRouter');
 const productsRouter = require('./routes/productsRouter');
 const categoriesRouter = require('./routes/categoriesRouter');
 const adminRouter = require('./routes/adminRouter');
+const session = require('express-session');
 
 // ************ express() ************
 const app = express();
@@ -16,6 +17,7 @@ const app = express();
 app.use(express.static('../public'));
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
+
 app.use('/', mainRouter);
 app.use('/users', usersRouter);
 app.use('/orders', ordersRouter);

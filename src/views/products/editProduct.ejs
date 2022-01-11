@@ -5,7 +5,7 @@
 
 <body>
 
-    <%- include('./partials/header-admin')%>
+    <%- include('../partials/header-admin')%>
 
     <main>
         <div class="products-edit-top">
@@ -62,7 +62,7 @@
                     <select id="select-state" name="categories" multiple autocomplete="off">
 
                         <% for (let category of categories) {%>
-                            <option value="<%=category.value%>"><%=category.category%></option>
+                            <option value="<%=category.value%>"><%=category.name%></option>
                             <% } %>
     
                     </select>                    
