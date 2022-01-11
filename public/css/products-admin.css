@@ -50,7 +50,8 @@ body {
   .add{
     display: flex;
     justify-content: flex-start;
-    padding-top: 25px;
+    padding-top: 40px;
+    margin-left: 0.7rem;
   }
 
     .container{
@@ -112,7 +113,6 @@ body {
     }
     
     .form-button {
-      border: 1px solid #444444;
       border-radius: 10px;
       font-size: 1.2rem;
       padding: 10px 13px;
@@ -121,6 +121,7 @@ body {
       /* max-width: 200px; */
       margin: 10px auto;
       text-decoration: none;
+      border:none;
     }
     
     .form-button:hover {
