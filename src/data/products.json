@@ -24,19 +24,6 @@
   },
   {
     "id": 3,
-    "sku": "BE01944",
-    "name": "Norton Merlot 1999 750",
-    "description": "Se puede agregar una tarjeta dedicatoria y presentación de regalo. Ofrecemos entregas a varios destinos por compra, con nuestra propia logística siguiendo todas las normas de seguridad sanitaria. Tarjetas, Mercadopago y Transferencia Bancaria.",
-    "price": "6000",
-    "discount": "0",
-    "categories": [
-      "cat-tintos",
-      "tintos-merlot"
-    ],
-    "image": "1641556169722_img_.jpg"
-  },
-  {
-    "id": 5,
     "sku": "BE75884",
     "name": "Pascual Toso 125 Años 1500 Cofre",
     "description": "Se puede agregar una tarjeta dedicatoria y presentación de regalo. Envíos a CABA y GBA con nuestra propia flota, siguiendo todas las normas de seguridad sanitaria. Todas las formas de pago.",
@@ -46,7 +33,7 @@
     "image": "1641556692271_img_.jpg"
   },
   {
-    "id": 6,
+    "id": 4,
     "sku": "BE10192",
     "name": "Rutini Colección Cabernet Merlot 2010 750",
     "description": "Consulte por envoltorios, cajas y estuches de diseño para que este producto sea obsequio único. Envíos a CABA y GBA con nuestra propia flota, siguiendo todas las normas de seguridad sanitaria. Aceptamos Mercadopago, tarjetas de crédito y transferencia bancaria.\r\n\"",

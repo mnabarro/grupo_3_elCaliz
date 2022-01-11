@@ -68,10 +68,12 @@
   }
   
   .fondo{
+    display: flex;
+    justify-content: center;
     background-color: white;
-    padding: 0px 25px 0px 25px;
+    padding: 10px;
     border-radius: 10px;
-    background-color: white;
+    width: 100%;
   }
   
   .articuloX{
@@ -86,10 +88,14 @@
     box-shadow: 2px 2px 3px 0px rgb(68 68 68 / 40%);
 }
   
-  .imagen-vino{
-    width: 80px;
-    height: 150px;
-  }
+.articuloX:hover{
+  transform: scale(1.02);
+}
+
+.imagen-vino {
+  height: 150px;
+  width: auto;
+}
   
   .nombre-vino{
     text-align: center;
@@ -100,6 +106,12 @@
   .precio-vino{
     margin-top: 5px;
     font-weight: bold;
+    text-align: center;
+    color: black;
+  }
+
+  a{
+    text-decoration: none;
   }
   
   .add-buttonn button{
@@ -111,12 +123,11 @@
     font-size: 1rem;
     border: none;
   }
-  
-  .fa-arrow-circle-right,
-  .fa-arrow-circle-left{
-    font-size: 30px;
-    margin-top: 127px;
-    color: #a78a7f;
+
+  .add-buttonn button:hover {
+    transform: scale(1.01);
+    box-shadow: 2px 2px 3px 0px rgba(68, 68, 68, 0.4);
   }
   
+
   /*---FINAL DESTACADOS---*/
