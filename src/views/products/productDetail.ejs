@@ -16,11 +16,15 @@
                 <p class="codigo">Código SKU</p>
                 <p class="descripcion"><%= product.description %></p>
                 <p class="precio"><%= product.price %></p>
+
                 <div class="carrito">
-                    <i class="fas fa-minus-circle"></i><i class="far fa-square"></i><i class="fas fa-plus-circle"></i>
+                    <button class="minus">-</button>
+                    <input type="text" value="1" id="quantity">
+                    <button class="plus">+</button> 
                 </div>
+
                 <div class="add-buttonn">
-                    <button class="fas fa-cart-plus">AGREGAR</button></div>
+                    <a href="/orders/cart"><button class="fas fa-cart-plus">AGREGAR</button></a>
                 </div>
             </div>
     </article>
