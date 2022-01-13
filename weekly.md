@@ -63,3 +63,18 @@ Mati
 -	Que hizo ayer:  trabaje con la Formulario de edición de productos, Acción de edición (a donde se envía el formulario) y Acción de borrado.
 -	Si se encontró con algún impedimento: Ningún impedimento.
 -	Qué va a hacer hoy: Seguir mejorando el funcionamiento de ‘El Caliz’.
+
+Reunión del lunes 10/01 20:00 horas
+Maru
+-	Que hizo ayer: Estuve modificando el diseño del sitio. 
+-	Si se encontró con algún impedimento: Impedimentos realizando el proceso de login.
+-	Qué va a hacer hoy: Terminar mi tarea del sprint 5, proceso de login.
+Gon
+-	Que hizo ayer: 	Terminé con el proceso de registro y estuve mejorando el código de productos destacados
+-	Si se encontró con algún impedimento: me costó entender un poco lo que iba en los controladores, en el proceso de registro.
+-	Qué va a hacer hoy: Mejorar el diseño del producto detail y aplicar ejs en home destacados.
+Mati
+-	Que hizo ayer:  Trabaje con el listado de productos, mejorando las funciones de editar y eliminar un producto.
+-	Si se encontró con algún impedimento: Ningún impedimento.
+-	Qué va a hacer hoy: Implementar rutas de huéspedes y usuarios.
+
