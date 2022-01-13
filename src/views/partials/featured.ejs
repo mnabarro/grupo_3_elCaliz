@@ -6,7 +6,7 @@
         <% result.forEach((product)=>{ %> 
         
         <div class="articuloX">
-            <a href="../products/1">
+            <a href="../products/<%= product.id %>">
             <div class="fondo">
                 <img class="imagen-vino" src="img/products/<%= product.image %>" alt="vinito"></div>
             <p class="nombre-vino"><%= product.name %></p>

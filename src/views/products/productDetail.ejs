@@ -28,43 +28,28 @@
                 </div>
             </div>
     </article>
-    <section class="featured">
+    <section class="relevant">
         <h2 class="featured-title">PRODUCTOS RELACIONADOS</h2>
-        <article class="relations">
-            <div class="articulo1">
-                <div class="fondo"><img class="imagen-vino" src="/img/homeParte2/DanteRobinoChardonnay.png" alt="vinito"></div>
-                <p class="nombre-vino">Vino Dante Robino<br>Reserva Malbec</p>
-                <p class="precio-vino">$2000</p>
-                <span class="add-buttonn">
-                    <button class="fas fa-cart-plus">AGREGAR</button> 
-                </span>
+        
+        <article class="carousel">
+            
+            <% result.forEach((product)=>{ %> 
+            
+            <div class="articuloX">
+               
+                <div class="fondo">
+                    <img class="imagen-vino" src="img/products/<%= product.image %>" alt="vinito"></div>
+                <p class="nombre-vino"><%= product.name %></p>
+                <p class="precio-vino"><%= product.price %></p>
+                <a href="../orders/cart"><span class="add-buttonn">
+                    <button class="fas fa-cart-plus"> AGREGAR</button> 
+                </span></a>
             </div>
-            <div class="articulo1">
-                <div class="fondo"><img class="imagen-vino" src="/img/homeParte2/DanteRobinoExtraBrut.png" alt="vinito"></div>
-                <p class="nombre-vino">Vino Dante Robino<br>Extra Brut</p>
-                <p class="precio-vino">$2000</p>
-                <span class="add-buttonn">
-                    <button class="fas fa-cart-plus">AGREGAR</button> 
-                </span>
-            </div>
-            <div class="articulo1">
-                <div class="fondo"><img class="imagen-vino" src="/img/homeParte2/DRReservaMalbec.png" alt="vinito"></div>
-                <p class="nombre-vino">Vino Dante Robino<br>Extra Brut</p>
-                <p class="precio-vino">$2000</p>
-                <span class="add-buttonn">
-                    <button class="fas fa-cart-plus">AGREGAR</button> 
-                </span>
-            </div>
-            <div class="articulo1">
-                <div class="fondo"><img class="imagen-vino" src="/img/homeParte2/NovecentoRosado.png" alt="vinito"></div>
-                <p class="nombre-vino">Vino Dante Robino<br>Extra Brut</p>
-                <p class="precio-vino">$2000</p>
-                <span class="add-buttonn">
-                    <button class="fas fa-cart-plus">AGREGAR</button> 
-                </span>
-            </div>    
+            <% }) %>   
+          
         </article>
-    </section>    
+        
+    </section>
     </main>
 
     <%- include ('../partials/footer') %>

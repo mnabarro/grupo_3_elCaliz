@@ -147,50 +147,71 @@
 
 /*---P.RELACIONADO---*/
 
-.relations{
+.relevant{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+  
+  .carousel{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items : flex-start;
-    gap: 30px;
-}
-
-.fondo{
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10px 0 20px 0;
+  }
+  
+  .fondo{
+    display: flex;
+    justify-content: center;
     background-color: white;
-    padding: 0px 25px 0px 25px;
+    padding: 10px;
     border-radius: 10px;
-}
-
-.articulo1{
+    width: 100%;
+  }
+  
+  .articuloX{
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 340px;
+    min-height: 300px;
     width: 100%;
     background-color: #fff;
-    padding: 12px 15px 12px 15px;
     border-radius: 10px;
     border: solid 1px #bebebe;
     box-shadow: 2px 2px 3px 0px rgb(68 68 68 / 40%);
 }
-
-.imagen-vino{
-    width: 80px;
-    height: 150px;
+  
+.articuloX:hover{
+  transform: scale(1.02);
 }
 
-.nombre-vino{
+.imagen-vino {
+  height: 150px;
+  width: auto;
+}
+  
+  .nombre-vino{
     text-align: center;
     margin-top: 5px;
-    color: #444444;
-}
-
-.precio-vino{
+    color: #595959;
+  }
+  
+  .precio-vino{
     margin-top: 5px;
     font-weight: bold;
-}
+    text-align: center;
+    color: black;
+  }
 
-.add-buttonn button{
+  a{
+    text-decoration: none;
+  }
+  
+  .add-buttonn button{
     margin: 12px 0px 0px 0px;
     padding: 10px;
     background-color: #FB7267;
@@ -198,7 +219,12 @@
     border-radius: 10px;
     font-size: 1rem;
     border: none;
-}
+  }
 
+  .add-buttonn button:hover {
+    transform: scale(1.01);
+    box-shadow: 2px 2px 3px 0px rgba(68, 68, 68, 0.4);
+  }
+  
 
 /*---CIERRE P.RELACIONADO---*/
