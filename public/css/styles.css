@@ -19,7 +19,11 @@ header {
   z-index: 10;
   background-color: white;
 }
-
+.header-user-name {
+  font-size: 1rem;
+  color: #6b6b6b;
+  width: 100px;
+}
 .up-banner {
   display: none;
   background: #FB7267;
@@ -76,7 +80,8 @@ header {
 /****** NAVBAR ********/
 .navbar {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 5px;
   background-color: white;
@@ -405,6 +410,8 @@ header {
   font-weight: lighter;
   padding: 0.3rem;
 }
+
+
 /*------END FOOTER------*/
 
 

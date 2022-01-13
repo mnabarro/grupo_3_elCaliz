@@ -9,9 +9,21 @@ const productsRouter = require('./routes/productsRouter');
 const categoriesRouter = require('./routes/categoriesRouter');
 const adminRouter = require('./routes/adminRouter');
 const session = require('express-session');
+const cookies = require('cookie-parser');
+const userLoggedMiddleware = require ('./middlewares/userLoggedMiddleware');
 
 // ************ express() ************
 const app = express();
+
+app.use( session({
+    secret : "rfjqekldñjd",
+    resave : false,
+    saveUninitialized : false
+}));
+
+app.use(cookies());
+
+app.use(userLoggedMiddleware);
 
 // ************ Middlewares ************
 app.use(express.static('../public'));

@@ -94,4 +94,45 @@
     display: block;
     text-align: center;
  }
+
+ .danger{
+  color: rgb(214, 0, 0);
+  font-size: 12px;
+}
+
+.form-button {
+  border-radius: 10px;
+  font-size: 1.2rem;
+  padding: 10px 13px;
+  cursor: pointer;
+  width: 100%;
+  /* max-width: 200px; */
+  margin: 10px auto;
+  text-decoration: none;
+  border:none;
+}
+
+.form-button:hover {
+  transform: scale(1.01);
+  box-shadow: 2px 2px 3px 0px rgba(68, 68, 68, 0.4);
+}
+
+.form-button:active {
+  background-color: #444444;
+  color: #f0f1f2;
+}
+
+.form-button-primary {
+  background-color: #FB7267;
+  color: white;
+  outline: none;
+}
+
+.form-button-secondary {
+  background-color: #f0f1f2;
+  color: #FB7267;
+  outline: none;
+  font-weight: 700;
+}
+
 /*------END MAIN------*/

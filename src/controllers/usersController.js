@@ -6,65 +6,100 @@ const bcryptjs = require('bcryptjs');
 const usersController = {
 
     login: (req, res) => {
-        res.render('users/login', {cssa: 'login.css',title:"El Cáliz - Ingresar"});
+         res.render('users/login', {
+            cssa: 'login.css',
+            title: "El Cáliz - Ingresar"
+        });
     },
-    processLogin: (req,res) => {
-        const errors = validationResult(req);
-        if(errors.isEmpty()) {
-            let usersJson = fs.readFileSync('users.json', 'utf-8');
-            let users;
-            if (usersJson == '') {
-                users = [];
+    processLogin: (req, res) => {
+        let userToLogin = User.findByField('email', req.body.email);
+
+        if ( userToLogin ) {
+
+            let passwordOK = bcryptjs.compareSync(req.body.password, userToLogin.password);
+
+            if  (passwordOK ) {
+                delete userToLogin.password;
+
+                req.session.userLogged = userToLogin;
+
+                if (userToLogin.isAdmin) {
+
+                    delete userToLogin.isActive;
+                    delete userToLogin.isAdmin;
+                    
+                    return res.redirect('/admin');
+                
+                } else {
+                    
+                    delete userToLogin.isActive;
+                    delete userToLogin.isAdmin;
+                    
+                    return res.redirect('/users/profile');
+                }
+
             } else {
-                users =JSON.parse(usersJson);
-            }
-            for (let i=0; i < users.length; i++) {
-                if (users[i] == req.body.email) {
-                    if (bcryptjs.hashSync(req.body.password, users[i].password)) {
-                        let userLogin = users[i];
-                        break;
+
+                return res.render('users/login', {
+                    cssa: 'login.css',
+                    title: "El Cáliz - Ingresar",
+                    errors: {
+                        email: {
+                            msg: 'Las credenciales son inválidas.'
+                        }
                     }
+                });
+            }
+
+        }
+
+        return res.render('users/login', {
+            cssa: 'login.css',
+            title: "El Cáliz - Ingresar",
+            errors: {
+                email: {
+                    msg: 'Usuario no registrado.'
                 }
             }
-            if (userLogin == undefined) {
-                return res.render('/users/login', {errors:[
-                    {msg: 'Ingreso invalido, usuario o contraseña erroneos'}
-                ]});
-            }
-            req.session.userLogin = userLogin;
+        });
 
-        } else {
-            return res.render('login', {errors:errors.errors});
-        }
-        return res.redirect('/');
     },
+
     register: (req, res) => {
-        res.render('users/register',{cssa: 'register.css', title:"El Cáliz - Registrarse"});
+        res.cookie('testing', 'hola!', {maxAge : 1000 * 30 })
+        res.render('users/register', {
+            cssa: 'register.css',
+            title: "El Cáliz - Registrarse"
+        });
     },
 
-    processRegister:(req, res)=>{
+    processRegister: (req, res) => {
         const resultValidation = validationResult(req);
         if (resultValidation.errors.length > 0) {
-			return res.render('users/register', {
-				errors: resultValidation.mapped(),
+            return res.render('users/register', {
+                errors: resultValidation.mapped(),
                 oldData: req.body,
-                cssa: 'register.css', title:"El Cáliz - Registrarse"
-			});
+                cssa: 'register.css',
+                title: "El Cáliz - Registrarse"
+            });
         }
 
         let userInDB = User.findByField('email', req.body.email);
 
-        if(userInDB){
+        if (userInDB) {
             return res.render('users/register', {
                 errors: {
-                    email:{
-                        msg:'Este email ya esta registrado'
+                    email: {
+                        msg: 'Este email ya está registrado'
                     }
-                }, oldData: req.body, cssa: 'register.css', title:"El Cáliz - Registrarse"
+                },
+                oldData: req.body,
+                cssa: 'register.css',
+                title: "El Cáliz - Registrarse"
             });
         }
 
-        let userToCreate ={
+        let userToCreate = {
             ...req.body,
             password: bcryptjs.hashSync(req.body.password, 10),
             imageCover: req.file.filename,
@@ -78,11 +113,20 @@ const usersController = {
     },
 
     forgotPassword: (req, res) => {
-        res.send('Forgot Password!'); 
+        res.send('Forgot Password!');
     },
 
     profile: (req, res) => {
-        res.send(`Perfil del usuario ${req.params.userId}`); 
+        return res.render('users/profile', {
+            cssa: 'profile.css',
+            title: "El Cáliz - Perfil de usuario",
+        });
+
+    },
+
+    logout : (req, res ) => {
+        req.session.destroy();
+        return res.redirect('/');
     }
 };
 

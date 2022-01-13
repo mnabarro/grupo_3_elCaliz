@@ -9,15 +9,14 @@
 
     <main>
         <section>
-            <article>
             <div class="login-top">
                 <h2>INICIAR SESIÓN</h2>
                 <div class="line"></div>
             </div>
             <div class="login-main">
-                <form action="/login" method="POST" class="login-form">
+                <form action="/users/login" method="POST" class="login-form">
                     <div class="control-form">
-                        <label for="e-mail">E-mail:<input type="e-mail" class="control" name="mail" id="e-mail" placeholder="Ej: hola@gmail.com" required></label>
+                        <label for="email">E-mail:<input type="email" class="control" name="email" id="email" placeholder="Ej: hola@gmail.com" required></label>
                         <% if (locals.errors && errors.email) { %>
                             <div class="danger">
                             <%= errors.email.msg %>
@@ -32,8 +31,13 @@
                             </div>
                            <% } %>
                     </div>
+                    <!-- <div class="control-form">
+                        <label>Recordar usuario:</label>
+                        <input  type="checkbox" class="control" name="recordar" id="recordar" required>
+                    </div> -->
+
                     <div class="login-button">
-                        <button type="submit">INGRESAR</button> 
+                        <button type="submit" class="form-button form-button-primary">INGRESAR</button> 
                     </div>
                 </form>
                 <div class="login-end">
@@ -45,10 +49,6 @@
                     </div>
                 </div>
             </div>
-            <div class="admin-button">
-                <a href="/admin/login"><button type="submit">ADMIN LOGIN</button></a>
-            </div>
-            </article>
         </section>
     </main>
 

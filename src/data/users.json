@@ -214,5 +214,15 @@
   "email": "hola123@gmail.com",
   "password": "$2a$10$aPIcKcu2cIkcb1nwHsFj3ORdP86yf/5ETbNwcOyWJM3jvuxJCkyou",
   "imageCover": "1641669210541_img.jpg"
+ },
+ {
+  "id": 23,
+  "name": "Matias",
+  "lastname": "Nabarro",
+  "email": "matiasnabarro@gmail.com",
+  "password": "$2a$10$StyczOtQoqp9/OvHxqPfmOoTvbj19TleejxdxcDmyX2MXFVT4uMY6",
+  "imageCover": "1641949258330_img.jpg",
+  "isActive": true,
+  "isAdmin": false
  }
 ]

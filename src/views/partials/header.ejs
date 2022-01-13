@@ -3,20 +3,17 @@
         <h4>Hasta 3 cuotas sin interes!</h4>
     </div>
     <nav class="navbar">
-        <nav class="navbar-left">
-            <div><a onclick="openNav()" class="btn-menu" href="#"><i class="fas fa-bars"></i></a>
+        <div class="navbar-left">
+
+            <div>
+                <a onclick="openNav()" class="btn-menu" href="#"><i class="fas fa-bars"></i></a>
             </div>
+            
             <div class="logo">
-                <a href="/"><img src="/img/logo.png" alt=""></div>
+                <a href="/"><img src="/img/logo.png" alt="">
             </div>
-            <nav class="navbar-icons">
-                <div class="btn-user"><a href="/users/login"><i class="fas fa-user"></i></a></div>
-                <div class="btn-cart">
-                    <a href="/orders/cart"><i class="fas fa-shopping-cart"></i></a>
-                    <div class="cart-qty">8</div>
-                </div>
-            </nav>
-        </nav>
+        </div>
+
         <div class="navbar-search">
             <div class="search-box-container">
                 <div class="search-box">
@@ -26,6 +23,22 @@
             </div>
         </div>
   
+        <div class="navbar-right">
+            <div class="navbar-icons">
+                <div class="btn-user"><a href="/users/login"><i class="fas fa-user"></i></a></div>
+
+                <% if(locals.isLogged) {%> 
+                    <p class="header-user-name"><%= userLogged.name + ' ' + userLogged.lastname %> </p>
+                <div class="btn-logout"><a href="/users/logout"><i class="fas fa-sign-out-alt"></i></a></div>
+                <% } %> 
+
+                <div class="btn-cart">
+                    <a href="/orders/cart"><i class="fas fa-shopping-cart"></i></a>
+                    <div class="cart-qty">8</div>
+                </div>
+|            </div>
+        </div>
+
     </nav>
     <nav>
         <ul class="categories">
