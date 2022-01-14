@@ -21,7 +21,8 @@ const productsController = {
     productDetail: (req, res) => {
         let id = req.params.id
 		let product = products.find(product => product.id == id)
-        const result = products.filter(product => product.id <= 4);
+        //const result = products.filter(product => product.id <= 4);
+        let result = [products[0], products[6], products[12], products[13]];
         res.render('products/productDetail', {product, result, cssa: 'product-detail.css', title:"Detalle del producto"});
     },
 };

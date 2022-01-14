@@ -224,5 +224,15 @@
   "imageCover": "1641949258330_img.jpg",
   "isActive": true,
   "isAdmin": false
+ },
+ {
+  "id": 24,
+  "name": "Gonzalo",
+  "lastname": "de Curtis",
+  "email": "gon.dc98@gmail.com",
+  "password": "$2a$10$qnEs5OBhLoNHBr/H5NGIFewx7M9UOoJmzOSmPs4XmCg1YZGkdeXJ2",
+  "imageCover": "1642118599968_img.png",
+  "isActive": true,
+  "isAdmin": false
  }
 ]
