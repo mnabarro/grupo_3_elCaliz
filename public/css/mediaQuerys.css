@@ -42,7 +42,7 @@
       .line {
       width: 35vw;
       }
-      .control {
+      .control, .controls {
       width: 50vw;
       }
       .captcha {
@@ -156,7 +156,7 @@
       .line {
         width: 25vw;
       }
-      .control {
+      .control, .controls {
         width: 35vw;
       }
       .captcha {
@@ -262,7 +262,7 @@
     .line {
       width: 20vw;
     }
-    .control {
+    .control, .controls {
       width: 30vw;
     }
     .captcha {

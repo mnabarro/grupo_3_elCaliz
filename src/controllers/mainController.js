@@ -15,7 +15,7 @@ const mainController = {
         res.render( 'index', {result, cssa: 'index.css', title:"El Cáliz - Home"});
     },
 
-    regret: (req, res) => {res.send( 'Arrepentimiento');},
+    regret: (req, res) => {res.render('regret', {cssa: 'regret.css', title:"El Cáliz - Registrarse"});},
     faq: (req, res) => {res.send( 'Preguntas frecuentes');},
     siteMap: (req, res) => {res.send( 'Mapa del sitio');},
     suscribe: (req, res) => {res.send( 'Suscribir al newsletter');},

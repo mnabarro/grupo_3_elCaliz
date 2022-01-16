@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('partials/head')%>
+
+<body>
+    
+    <%- include('partials/header')%>
+    
+    <main>
+        <section>
+            <article>
+                <div class="register-top">
+                    <h2>Arrepentimiento de compra</h2>
+                    <div class="line"></div>
+                </div>
+                <div class="register-main">
+                    <form action="" class="create-form">
+
+                        <div class="control-form">
+                            <label for="">Nombre:</label>
+                            <input type="text" name="" id="" class="control">
+                        </div>
+
+                        <div class="control-form">
+                            <label for="">Correo Electrónico:</label>
+                            <input type="email" name="" id="" class="control">
+                        </div>
+
+                        <div class="control-form">
+                            <label for="">Teléfono:</label>
+                            <input type="number" name="" id="" class="control">
+                        </div>
+
+                        <div class="control-form">
+                            <label for="">Código de compra:</label>
+                            <input type="number" name="" id="" class="control">
+                        </div>
+
+                        <div class="control-form">
+                            <label for="">Motivo del arrepentimiento:</label>
+                            <textarea class="controls" name="comment" id="comment" cols="5" rows="3"></textarea>
+                        </div>
+
+                        <div class="create-account-button">
+                            <button type="submit">ENVIAR</button> 
+                        </div>
+                    </form>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <%- include ('partials/footer') %>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "55vw";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+</body>
+
+</html>
