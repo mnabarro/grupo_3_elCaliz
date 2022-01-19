@@ -234,5 +234,35 @@
   "imageCover": "1642118599968_img.png",
   "isActive": true,
   "isAdmin": false
+ },
+ {
+  "id": 25,
+  "name": "Gonzalo",
+  "lastname": "Perez",
+  "email": "fta@gmail.com",
+  "password": "$2a$10$/VKIy0ZpFtYisBd2hq4ImuAbw6lz57ZMpR2vdlEK3hfVuvaSlkn.2",
+  "imageCover": "1642555243175_img.jpg",
+  "isActive": true,
+  "isAdmin": false
+ },
+ {
+  "id": 26,
+  "name": "Gonzalo",
+  "lastname": "de Curtis",
+  "email": "dhsihish@gmail.com",
+  "password": "$2a$10$qaVolZoMpXRTU6FbxwuHRepBORztBWwTSVDgzS6lcNuvIwL8F8BFm",
+  "imageCover": "1642555577447_img.jpg",
+  "isActive": true,
+  "isAdmin": false
+ },
+ {
+  "id": 27,
+  "name": "Gonzalo",
+  "lastname": "de Curtis",
+  "email": "dnidshdsh@gmail.com",
+  "password": "$2a$10$pTUwm.abkU148iCi.zBHxujmWahm4meeOrpGfjHyL18QFNUybDlRS",
+  "imageCover": "1642556267512_img.jpg",
+  "isActive": true,
+  "isAdmin": false
  }
 ]

@@ -109,7 +109,7 @@ const usersController = {
 
         User.create(userToCreate);
 
-        return res.redirect('/');
+        return res.redirect('/users/login');
     },
 
     forgotPassword: (req, res) => {
