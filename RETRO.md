@@ -38,5 +38,15 @@
 
 * Hacer menos: En los Weekly Scrum, dejar de desviarnos del tema que se está tratando.
 
+# Retrospectiva SPRINT 5
+
+* Comenzar a hacer: empezar a juntarnos los 3 para trabajar al mismo tiempo y sacarnos dudas. Empezaremos a cronometrar las tareas para ver cuánto tiempo tardamos en cada una, lo actualizaremos en la tarea en Trello.
+
+* Hacer más: Cumplir con las reuniones pactadas. Tratar de darle más atención al proyecto.
+
+* Continuar haciendo: Respetar las tareas de Trello, las Weekly Scrum, la fecha de entrega interna
+
+* Hacer menos: Dejar de pasar los dias de las reuniones
+
 
 
