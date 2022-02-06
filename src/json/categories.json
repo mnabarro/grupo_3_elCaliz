@@ -1,0 +1,39 @@
+[
+    {
+        "id": 1,
+        "parent":"",
+        "name":"Blancos",
+        "value": "cat-blancos"
+    },
+    {
+        "id": 2,
+        "parent":"",
+        "name":"Tintos",
+        "value": "cat-tintos"
+    },
+    {
+        "id": 3,
+        "parent":"",
+        "name":"Rosados",
+        "value": "cat-rosados"
+    },
+    {
+        "id": 4,
+        "parent":"",
+        "name":"Espumantes",
+        "value": "cat-espumantes"
+    },
+    {
+        "id": 5,
+        "parent":"",
+        "name":"Accesorios",
+        "value": "cat-accesorios"
+    },
+    {
+        "id": 6,
+        "parent":"",
+        "name":"Ofertas",
+        "value": "cat-ofertas"
+    }
+    
+]
