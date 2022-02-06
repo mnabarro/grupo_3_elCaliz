@@ -190,7 +190,7 @@ CREATE TABLE IF NOT EXISTS `elcaliz_db`.`products_has_categories` (
   `productos_has_categorias_id(pk)` TINYINT(10) NOT NULL AUTO_INCREMENT,
   `product_id(pk)` TINYINT(10) NOT NULL,
   `category_id(pk)` TINYINT(10) NOT NULL,
-  PRIMARY KEY (`productos_has_categorias_id(pk)`, `product_id(pk)`, `category_id(pk)`),
+  PRIMARY KEY (`productos_has_categorias_id(pk)`),
   INDEX `fk_products_has_categories_products1_idx` (`product_id(pk)` ASC) ,
   INDEX `fk_products_has_categories_categories1_idx` (`category_id(pk)` ASC) ,
   CONSTRAINT `fk_products_has_categories_products1`
@@ -236,7 +236,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `elcaliz_db`.`products_has_orders` (
   `productos_has_pedidos_id(pk)` TINYINT(10) NOT NULL AUTO_INCREMENT,
   `id_pedido(fk)` TINYINT(10) NOT NULL,
-  `precio` DECIMAL(2) NULL,
+  `precio` DECIMAL(10,2) NULL,
   `cantidad` INT NULL,
   `product_id(pk)` TINYINT(10) NOT NULL,
   PRIMARY KEY (`productos_has_pedidos_id(pk)`),

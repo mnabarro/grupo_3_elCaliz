@@ -12,8 +12,8 @@ VALUES
 
 INSERT INTO categories (nombre, value)
 VALUES
-("Blancos", "cat-blancos"),
 ("Tintos", "cat-tintos"),
+("Blancos", "cat-blancos"),
 ("Rosados", "cat-rosados"),
 ("Espumantes", "cat-espumantes"),
 ("Accesorios", "cat-accesorios"),
@@ -103,21 +103,46 @@ INSERT INTO orders_has_orders_status (`fecha_estado`, `order_id(pk)`, `order_sta
 VALUES 
 ("2021-06-20",1,1),
 ("2021-06-20",1,2),
-("2021-06-20",1,3);
+("2021-06-20",1,3),
+("2021-06-20",2,1),
+("2021-06-20",2,2),
+("2021-06-20",2,3),
+("2021-06-20",3,1),
+("2021-06-20",3,2),
+("2021-06-20",3,3),
+("2021-06-20",4,1),
+("2021-06-20",4,2),
+("2021-06-20",4,3),
+("2021-06-20",5,1),
+("2021-06-20",5,2);
 
-/*FALTA REVISAR NO COORRE BIEN - TERMINO EL DOMINGO*/
+
 INSERT INTO products_has_orders (`id_pedido(fk)`, `precio`, `cantidad`, `product_id(pk)`)
 VALUES 
-(1,"471.00","1",13),
-(1,"2291.00","1",14),
-(2,"1031.00","1",1),
-(3,"4582.00","2",14),
-(4,"1223.00","1",12),
-(5,"8963.00","1",2);
+(1, 471.00, 1, 13),
+(1, 2291.00, 1, 14),
+(2, 1031.00, 1, 1),
+(3, 4582.00, 2, 14),
+(4, 1223.00, 1, 12),
+(5, 8963.00, 1, 2);
 
-/*FALTA REVISAR NO COORRE BIEN - TERMINO EL DOMINGO*/
-INSERT INTO products_has_categories ()
+INSERT INTO products_has_categories (`product_id(pk)`, `category_id(pk)`)
 VALUES 
-("2021-06-20",1,1),
-("2021-06-20",1,2),
-("2021-06-20",1,3);
+(1,1),
+(1,6),
+(2,1),
+(3,1),
+(4,1),
+(5,1),
+(6,1),
+(7,1),
+(8,3),
+(9,3),
+(10,3),
+(11,3),
+(12,3),
+(13,3),
+(14,3);
+
+
+
