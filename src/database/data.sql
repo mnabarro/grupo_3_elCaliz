@@ -1,16 +1,16 @@
-INSERT INTO genres (nombre)
+INSERT INTO genres (`nombre`)
 VALUES 
 ("Femenino"),
 ("Masculino"),
 ("Prefiero no decirlo");
 
-INSERT INTO groups (nombre)
+INSERT INTO groups (`nombre`)
 VALUES
 ("Visitante"),
 ("Invitado"),
 ("Cliente");
 
-INSERT INTO categories (nombre, value)
+INSERT INTO categories (`nombre`, `value`)
 VALUES
 ("Tintos", "cat-tintos"),
 ("Blancos", "cat-blancos"),
@@ -19,13 +19,13 @@ VALUES
 ("Accesorios", "cat-accesorios"),
 ("Ofertas", "cat-ffertas");
 
-INSERT INTO orders_status (nombre)
+INSERT INTO orders_status (`nombre`)
 VALUES
 ("En armado"),
 ("Enviado"),
 ("Entregado");
 
-INSERT INTO states (nombre)
+INSERT INTO states (`nombre`)
 VALUES
 ("Buenos Aires"),
 ("Ciudad Autónoma de Buenos Aires"),
@@ -52,7 +52,7 @@ VALUES
 ("Tierra Del Fuego"),
 ("Tucumán");
 
-INSERT INTO users (`nombre`, `apellido`, `dni`, `mail`, `password`, `fecha_registro`, `estado`, `image`, `group_id(pk)`,`genre_id(pk)`)
+INSERT INTO users (`nombre`, `apellido`, `dni`, `mail`, `password`, `fecha_registro`, `estado`, `image`, `group_id`,`genre_id`)
 VALUES
 ("Daniela", "Romero", "31968796", "bsnowling0@shop-pro.jp", "uwDphUPLy5g", "2021-02-20", 1, "https://source.unsplash.com/user/c_v_r/100x100", 2, 1),
 ("Ezequiel", "Pereyra", "29453698", "bhumpage1@ow.ly", "AwMOj4A", "2021-09-24", 1, "https://source.unsplash.com/user/c_v_r/100x100", 1, 2),
@@ -65,7 +65,7 @@ VALUES
 ("Marcela", "Perez", "29563487", "rvalenta8@usgs.gov", "fIznZvl6", "2021-04-22", 1, "https://source.unsplash.com/user/c_v_r/100x100", 3, 1),
 ("Horacio", "Silver", "31569325", "wwillison9@multiply.com", "1Ark4K9", "2020-08-01", 1, "https://source.unsplash.com/user/c_v_r/100x100", 2, 3);
 
-INSERT INTO adresses (`nombre`, `apellido`, `direccion`, `codigo_postal`, `localidad`, `telefono`, `state_id(pk)`, `user_id(pk)`)
+INSERT INTO adresses (`nombre`, `apellido`, `direccion`, `codigo_postal`, `localidad`, `telefono`, `state_id`, `user_id`)
 VALUES 
 ("Daniela", "Romero", "Av. Corrientes 4345", "1179", "Almagro", "1165408578", 2, 2),
 ("Ezequiel","Pereyra","Av. Corrientes 123", "2000", "Rosario", "1568938282", 21, 3),
@@ -91,7 +91,7 @@ VALUES
 ("BE75894", "Sottano Clasico Rosado 750", "Consulte por envoltorios, cajas y estuches de diseño para que este producto sea obsequio único. Entregas a varios domicilios por pedido con logística propia. Todas las normas sanitarias garantizadas. Tarjetas, Mercadopago y Transferencia Bancaria.","471","0",3),
 ("BE75895", "Susana Balbo Rose 750", "Consulte por envoltorios, cajas y estuches de diseño para que este producto sea obsequio único. Entregas a varios domicilios por pedido con logística propia. Todas las normas sanitarias garantizadas. Tarjetas, Mercadopago y Transferencia Bancaria.","2291","0",3);
 
-INSERT INTO orders (`referencia`, `total`, `metodo_pago`, `fecha`, `user_id(pk)`)
+INSERT INTO orders (`referencia`, `total`, `metodo_pago`, `fecha`, `user_id`)
 VALUES 
 ("DSASDFD", "2762", "Mercado Pago", "2021-06-21", 1),
 ("GSDGDSG", "1031", "Transferencia", "2021-06-21", 3),
@@ -99,7 +99,7 @@ VALUES
 ("TYRYRTY", "1493", "Transferencia", "2021-06-21", 5),
 ("KJHKHKH", "1624", "Mercado Pago", "2021-06-21", 9);
 
-INSERT INTO orders_has_orders_status (`fecha_estado`, `order_id(pk)`, `order_status_id(pk)`)
+INSERT INTO orders_has_orders_status (`fecha_estado`, `order_id`, `order_status_id`)
 VALUES 
 ("2021-06-20",1,1),
 ("2021-06-20",1,2),
@@ -116,8 +116,7 @@ VALUES
 ("2021-06-20",5,1),
 ("2021-06-20",5,2);
 
-
-INSERT INTO products_has_orders (`id_pedido(fk)`, `precio`, `cantidad`, `product_id(pk)`)
+INSERT INTO products_has_orders (`id_pedido`, `precio`, `cantidad`, `product_id`)
 VALUES 
 (1, 471.00, 1, 13),
 (1, 2291.00, 1, 14),
@@ -126,7 +125,7 @@ VALUES
 (4, 1223.00, 1, 12),
 (5, 8963.00, 1, 2);
 
-INSERT INTO products_has_categories (`product_id(pk)`, `category_id(pk)`)
+INSERT INTO products_has_categories (`product_id`, `category_id`)
 VALUES 
 (1,1),
 (1,6),
