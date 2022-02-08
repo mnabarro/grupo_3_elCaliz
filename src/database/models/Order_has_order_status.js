@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "PedidosEstados"; 
+    let alias = "OrdersStatus"; 
     let cols = {
         id: {
             type: dataTypes.TINYINT,
@@ -20,6 +20,6 @@ module.exports = (sequelize, dataTypes) => {
         tablename: "orders_has_orders_status",
         timestamps: false
     }
-    const PedidoEstado = sequelize.define(alias, cols, config); //(alias, columas de db, config)
-    return PedidoEstado;
+    const OrderStatus = sequelize.define(alias, cols, config); //(alias, columas de db, config)
+    return OrderStatus;
 }

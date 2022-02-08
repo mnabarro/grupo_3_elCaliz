@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Categorias"; 
+    let alias = "Categories"; 
     let cols = {
         id: {
             type: dataTypes.TINYINT,
@@ -17,10 +17,10 @@ module.exports = (sequelize, dataTypes) => {
         tablename: "categories",
         timestamps: false
     }
-    const Categoria = sequelize.define(alias, cols, config); //(alias, columas de db, config)
+    const Category = sequelize.define(alias, cols, config); //(alias, columas de db, config)
 
-    Categoria.associate = (models)=>{
-        Categoria.belongsToMany(models.Products, {
+    Category.associate = (models)=>{
+        Category.belongsToMany(models.Products, {
             as: 'products',
             through: 'products_has_categories',
             foreignKey: 'categories_id',
@@ -29,5 +29,5 @@ module.exports = (sequelize, dataTypes) => {
         });
     }
 
-    return Categoria;
+    return Category;
 }

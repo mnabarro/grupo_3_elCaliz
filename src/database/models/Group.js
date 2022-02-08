@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Grupos"; 
+    let alias = "Groups"; 
     let cols = {
         id: {
             type: dataTypes.TINYINT,
@@ -14,6 +14,6 @@ module.exports = (sequelize, dataTypes) => {
         tablename: "groups",
         timestamps: false
     }
-    const Grupo = sequelize.define(alias, cols, config); //(alias, columas de db, config)
-    return Grupo;
+    const Group = sequelize.define(alias, cols, config); 
+    return Group;
 }

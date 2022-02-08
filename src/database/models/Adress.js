@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Direcciones"; 
+    let alias = "Adresses"; 
     let cols = {
         id: {
             type: dataTypes.TINYINT,
@@ -36,6 +36,6 @@ module.exports = (sequelize, dataTypes) => {
         tablename: "adresses",
         timestamps: false
     }
-    const Direccion = sequelize.define(alias, cols, config); //(alias, columas de db, config)
-    return Direccion;
+    const Adress = sequelize.define(alias, cols, config); //(alias, columas de db, config)
+    return Adress;
 }

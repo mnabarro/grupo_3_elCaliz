@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "ProductosCategorias"; 
+    let alias = "ProductsCategories"; 
     let cols = {
         productos_has_categories_id: {
             type: dataTypes.TINYINT,
@@ -18,7 +18,7 @@ module.exports = (sequelize, dataTypes) => {
         tablename: "products_has_categories",
         timestamps: false
     }
-    const ProductoCategoria = sequelize.define(alias, cols, config); //(alias, columas de db, config)
+    const ProductCategory = sequelize.define(alias, cols, config); //(alias, columas de db, config)
 
-    return ProductoCategoria;
+    return ProductCategory;
 }

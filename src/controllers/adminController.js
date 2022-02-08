@@ -3,6 +3,7 @@ const { redirect } = require('express/lib/response');
 const fs = require('fs');
 const path = require('path');
 const { runInNewContext } = require('vm');
+const db = require ('../database/models')
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -17,7 +18,15 @@ const adminController = {
     index: (req, res) => {res.render('adminMain', {cssa: "admin-main.css",  title :'Panel de administración'});},
     
     // Root - Show all products
-    products: (req, res) => {res.render('products/productsAdmin', {products:products, cssa : 'products-admin.css', title :'Administración de productos'});},
+    products: (req, res) => {
+        db.products.findAll()
+            .then(function (products) {
+                res.render('products/productsAdmin', {products:products})
+            });
+        /*cssa : 'products-admin.css', 
+        title :'Administración de productos'*/
+    },
+    /*'products/productsAdmin', {products:products, cssa : 'products-admin.css', title :'Administración de productos'});*/
     
     // Create - Form to create product
     createProduct: (req, res) => {

@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Imagenes"; 
+    let alias = "Images"; 
     let cols = {
         id: {
             type: dataTypes.TINYINT,
@@ -17,6 +17,6 @@ module.exports = (sequelize, dataTypes) => {
         tablename: "images",
         timestamps: false
     }
-    const Imagen = sequelize.define(alias, cols, config); //(alias, columas de db, config)
-    return Imagen;
+    const Image = sequelize.define(alias, cols, config); //(alias, columas de db, config)
+    return Image;
 }

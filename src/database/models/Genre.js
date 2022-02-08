@@ -1,12 +1,21 @@
-//Otra forma de hacer un modelo segun Playground, ver si correc correctamente
+//Probar otra forma de hacerlo segun el Playground, ver si corre
 
-const Genero = sequelize.define('Generos',{
-    id: Sequelize.TINYINT, primaryKey: true, autoIncrement: true,
-    nombre: Sequelize.STRING,
-    password: Sequelize.STRING,
-},
-    {tablename: "genres",timestamps: false}
-
-);
-
-module.exports = Genero;
+module.exports = (sequelize, dataTypes)=>{
+    let alias = 'Genres';
+    let cols = {
+        id: {
+            type: dataTypes.TINYINT,
+            primaryKey: true,
+            autoIncrement: true
+        },
+        nombre: {
+            type: dataTypes.STRING
+        } ,
+    };
+    let config = {
+        tablename: "genres",
+        timestamps: false
+    }
+    const Genre = sequelize.define(alias, cols, config);
+    return Genre;
+}
