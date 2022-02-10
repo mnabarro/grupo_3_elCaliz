@@ -2,8 +2,41 @@ const { validationResult } = require('express-validator');
 const fs = require('fs');
 const User = require('../Database/User-M');
 const bcryptjs = require('bcryptjs');
+const db = require ('../database/models')
 
 const usersController = {
+
+    list: (req, res) => {
+
+        db.users.findAll()
+            .then(function (users) {
+                res.render('users/list',{
+                cssa : 'users-admin.css', 
+                title :'Administración de usuarios',
+                users: users
+            });
+
+    });
+        // db.users.findAll()
+        //     .then(function (users) {
+        //         res.send(users)
+        //     });
+
+    },
+
+    editForm: (req, res) => {
+        let id = req.params.id;
+
+        let user = db.users.findByPk(req.params.id)
+        .then(function (user) {
+                res.render('users/edit', {
+                    cssa : 'users-edit.css', 
+                    title :'Administración de usuarios',
+                    user: user
+                });
+            });
+
+    },
 
     login: (req, res) => {
          res.render('users/login', {

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('../partials/head',{title:"Editar usuario"})%>
+
+<body>
+
+    <%- include('../partials/header-admin')%>
+
+    <main>
+        <div class="products-edit-top">
+            <h2>EDITAR Usuario : <%= user.mail %></h2>
+        </div>
+        <div class="products-edit-main">
+            <div class="title-line"></div>
+
+            <form action="/admin/products?_method=PUT" method="POST" class="products-edit-form" enctype="multipart/form-data">
+
+                <div class="form-element">
+                    <label for="id">Id:</label>
+                    <input type="text" name="id" id="id" readonly value="<%= user.id %>">
+                </div>
+
+                <div class="form-element">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="apellido" required value="<%= user.nombre %>">
+                </div>
+
+                <div class="form-element">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" name="apellido" id="apellido"required value="<%= user.apellido %>">
+                </div>
+
+                <div class="form-element">
+                    <label for="dni">DNI:</label>
+                    <input type="text" name="dni" id="dni"required value="<%= user.dni %>">
+                </div>
+
+                <div class="form-element">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email"required value="<%= user.mail %>">
+                </div>
+
+                <div class="form-element">
+                    <label for="grupo">Grupo:</label>
+                    <input type="text" name="grupo" id="grupo"required value="<%= user.group_id %>">
+                </div>
+
+                <div class="form-element">
+                    <label for="grupo">Género:</label>
+                    <input type="text" name="genero" id="genero"required value="<%= user.genre_id %>">
+                </div>
+
+                <div class="form-element">
+                    <label for="grupo">Estado del usuario:</label>
+                    <input type="text" name="estado" id="estado"required value="<%= user.estado %>">
+                </div>
+
+
+                    <div class="edit-buttons">
+                    <button type="submit" class="form-button form-button-primary">GUARDAR</button>
+                    <button type="reset" class="form-button form-button-secondary">RESTABLECER</button>
+                    <a href="/users/list" class="form-button form-button-secondary">CANCELAR</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+
+</body>
+
+</html>
