@@ -1,3 +1,5 @@
+const { DataTypes } = require("sequelize");
+
 module.exports = (sequelize, dataTypes) => {
     let alias = "users"; 
     let cols = {
@@ -22,19 +24,24 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING
         },
         fecha_registro: {
-            type: dataTypes.DATE
+            type: dataTypes.DATE,
+            defaultValue : DataTypes.NOW
         } ,
         estado: {
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER,
+            defaultValue : 1
         },
         image: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING,
+            defaultValue : ''
         },
         group_id: {
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER,
+            defaultValue : 1
         },
         genre_id: {
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER,
+            defaultValue : 1
         },
     };
     let config = {
