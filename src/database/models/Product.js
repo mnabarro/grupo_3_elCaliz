@@ -50,7 +50,7 @@ module.exports = (sequelize, dataTypes)=>{
             otherKey: 'categories_id',
             timestamps: false
         });
-        Product.belongsTo(models.Images, {
+        Product.hasMany(models.Images, {
             as: 'images',
             foreignKey: 'products_id'
         });
