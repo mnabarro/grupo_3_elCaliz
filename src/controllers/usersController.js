@@ -132,7 +132,8 @@ const usersController = {
                         password: bcryptjs.hashSync(req.body.password, 10),
                         image: req.file.filename
                     });
-                    User.create(userToCreate);
+
+                    
                     return res.redirect('/users/login');
                 }
             });
