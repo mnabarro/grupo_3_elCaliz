@@ -28,7 +28,7 @@
                 <div class="btn-user"><a href="/users/login"><i class="fas fa-user"></i></a></div>
 
                 <% if(locals.isLogged) {%> 
-                    <p class="header-user-name"><%= userLogged.name + ' ' + userLogged.lastname %> </p>
+                    <p class="header-user-name"><%= userLogged.nombre + ' ' + userLogged.apellido %> </p>
                 <div class="btn-logout"><a href="/users/logout"><i class="fas fa-sign-out-alt"></i></a></div>
                 <% } %> 
 

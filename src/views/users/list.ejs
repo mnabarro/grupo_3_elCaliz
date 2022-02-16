@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('../partials/head')%>
+
+<body>
+
+    <%- include('../partials/header-admin')%>
+
+    <main>
+        <h2 class="titulo">Listado de usuarios</h2>
+        <section>
+            <table>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>DNI</th>
+                <th>Email</th>
+                <th>Fecha de registro</th>
+                <th>Grupo</th>
+                <th>Género</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+            <% users.forEach((user)=>{ %>
+                <tr>
+                    <td><%= user.id %> </td>
+                    <td><%= user.nombre %> </td>
+                    <td><%= user.apellido %> </td>
+                    <td><%= user.dni %> </td>
+                    <td><%= user.mail %> </td>
+                    <td><%= user.fecha_registro %> </td>
+                    <td><%= user.group_id %> </td>
+                    <td><%= user.genre_id %> </td>
+                    <td><%= user.estado %> </td>
+                    <td>
+                        <div class="edit-buttons">
+                            <a href="/users/edit/<%= user.id %>"><button title="Editar..." class="form-button form-button-secondary">
+                            <i class="fa fa-pen" aria-hidden="true"></i></button></a>
+                            
+                            <form action="/users/<%= user.id %>?_method=DELETE" method="POST">
+                                <button title="Eliminar" type="submit" class="form-button form-button-primary">
+                                <i class="fa fa-trash" aria-hidden="true"></i></button></a>
+                            </form>
+                        </div>
+                    </div>
+    
+                    </td> <!-- Acciones, iconos que llevan a otras vistas -->
+                </tr>
+            <% }) %>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>

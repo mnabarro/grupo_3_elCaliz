@@ -78,3 +78,47 @@ Mati
 -	Si se encontró con algún impedimento: Ningún impedimento.
 -	Qué va a hacer hoy: Implementar rutas de huéspedes y usuarios.
 
+SPRINT 6
+Reunión del lunes 23/01 20:00 horas
+Maru
+-	Que hizo ayer: Realice el diagrama de base de datos.
+-	Si se encontró con algún impedimento: Ningún impedimento.
+-	Qué va a hacer hoy: Continuar con las tareas asignadas del sprint 6.
+Gon
+-	Que hizo ayer: Estuve viendo nuevamente las clases en playground, específicamente la de base de datos, para refrescar el tema. Hice varios bocetos del diagrama de base de datos.
+-	Si se encontró con algún impedimento: Si, me mezcle con las relaciones entre las tablas. De uno a uno, de uno a muchos y de muchos a muchos.
+-	Qué va a hacer hoy: Continuar con mis tareas asignadas al sprint 6.
+Mati
+-	Que hizo ayer:  Realice el diagrama de base de datos.
+-	Si se encontró con algún impedimento: Ningún impedimento.
+-	Qué va a hacer hoy: Continuar con mis tareas asignadas al sprint 6.
+
+
+Reunión del lunes 30/01 20:00 horas
+Maru
+-	Que hizo ayer: Estuve trabajando con el script de base de datos.
+-	Si se encontró con algún impedimento: Ningún impedimento.
+-	Qué va a hacer hoy: Continuar con mis tareas en el sprint 6, mas que nada la creación de modelos.
+Gon
+-	Que hizo ayer: En una copia de nuestro proyecto estuve haciendo el modelo de productos para ya luego pasarlo directamente al proyecto original.
+-	Si se encontró con algún impedimento: Me falta adentrarme más en las especificaciones de cada columna en cada modelo.
+-	Qué va a hacer hoy: Seguir con mis próximas tareas del sprint 6, mas que nada terminar bien el modelo y comenzar con el CRUD de tablas secundarias.
+Mati
+-	Que hizo ayer:  En una copia del proyecto realicé la configuración de sequelize y luego comencé a maquetar el modelo de usuarios.
+-	Si se encontró con algún impedimento: Ningún impedimento.
+-	Qué va a hacer hoy: Empezar a realizar mi tarea próxima tarea, CRUD de usuarios.
+
+
+Reunión del lunes 6/02 20:00 horas
+Maru
+-	Que hizo ayer:  Realicé varias pruebas de la configuración de sequelize; e hice varios los modelos para poner conectar la base de datos con el CRUD. 
+-	Si se encontró con algún impedimento: Ningún impedimento.
+-	Qué va a hacer hoy: Terminar distintos detalles que quedaron colgados en el sitio.
+Gon
+-	Que hizo ayer: Estuve viendo los videos de CRUD para poder encarar la tarea opcional de CRUD tablas secundarias. 
+-	Si se encontró con algún impedimento: Ningún Impedimento.
+-	Qué va a hacer hoy: Llevar a cabo el CRUD de tablas secundarias y terminar con las relaciones del modelo de productos. Seguir mejorando el sitio.
+Mati
+-	Que hizo ayer:  Realice el CRUD de usuarios y conecte el registro con la base de datos.
+-	Si se encontró con algún impedimento: Ningún impedimento.
+-	Qué va a hacer hoy: Terminar lo que queda de mi tarea del sprint 6 (CRUD usuarios) y corregir imperfecciones en el sitio.

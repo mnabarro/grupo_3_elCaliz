@@ -1,72 +1,92 @@
-const { validationResult } = require('express-validator');
+const {
+    validationResult
+} = require('express-validator');
 const fs = require('fs');
 const User = require('../Database/User-M');
 const bcryptjs = require('bcryptjs');
+const db = require('../database/models')
 
 const usersController = {
 
+    list: (req, res) => {
+
+        db.users.findAll()
+            .then(function (users) {
+                res.render('users/list', {
+                    cssa: 'users-admin.css',
+                    title: 'Administración de usuarios',
+                    users: users
+                });
+
+            });
+    },
+
+    editForm: (req, res) => {
+        let id = req.params.id;
+
+        let user = db.users.findByPk(req.params.id)
+            .then(function (user) {
+                res.render('users/edit', {
+                    cssa: 'users-edit.css',
+                    title: 'Administración de usuarios',
+                    user: user
+                });
+            });
+
+    },
+
     login: (req, res) => {
-         res.render('users/login', {
+        res.render('users/login', {
             cssa: 'login.css',
             title: "El Cáliz - Ingresar"
         });
     },
     processLogin: (req, res) => {
-        let userToLogin = User.findByField('email', req.body.email);
+        db.users.findOne({
+            where: {
+                mail: req.body.email
+            }
+        })
+            .then((usr) => {
+                if (usr) {
+                    let passwordOK = bcryptjs.compareSync(req.body.password, usr.password);
 
-        if ( userToLogin ) {
+                    if (passwordOK) {
+                        req.session.userLogged = usr;
+                        console.log(usr);
+                        delete usr.password;
+                        return res.redirect('/users/profile');
+                    } else {
 
-            let passwordOK = bcryptjs.compareSync(req.body.password, userToLogin.password);
-
-            if  (passwordOK ) {
-                delete userToLogin.password;
-
-                req.session.userLogged = userToLogin;
-
-                if (userToLogin.isAdmin) {
-
-                    delete userToLogin.isActive;
-                    delete userToLogin.isAdmin;
-                    
-                    return res.redirect('/admin');
-                
-                } else {
-                    
-                    delete userToLogin.isActive;
-                    delete userToLogin.isAdmin;
-                    
-                    return res.redirect('/users/profile');
-                }
-
-            } else {
-
-                return res.render('users/login', {
-                    cssa: 'login.css',
-                    title: "El Cáliz - Ingresar",
-                    errors: {
-                        email: {
-                            msg: 'Las credenciales son inválidas.'
-                        }
+                        return res.render('users/login', {
+                            cssa: 'login.css',
+                            title: "El Cáliz - Ingresar",
+                            errors: {
+                                email: {
+                                    msg: 'Las credenciales son inválidas.'
+                                }
+                            }
+                        });
                     }
-                });
-            }
 
-        }
-
-        return res.render('users/login', {
-            cssa: 'login.css',
-            title: "El Cáliz - Ingresar",
-            errors: {
-                email: {
-                    msg: 'Usuario no registrado.'
+                } else {
+                    return res.render('users/login', {
+                        cssa: 'login.css',
+                        title: "El Cáliz - Ingresar",
+                        errors: {
+                            email: {
+                                msg: 'Usuario no registrado.'
+                            }
+                        }
+                    });
                 }
-            }
-        });
-
+            });
     },
 
     register: (req, res) => {
-        res.cookie('testing', 'hola!', {maxAge : 1000 * 30 })
+        res.cookie('testing', 'hola!', {
+            maxAge: 1000 * 30
+        })
         res.render('users/register', {
             cssa: 'register.css',
             title: "El Cáliz - Registrarse"
@@ -84,32 +104,38 @@ const usersController = {
             });
         }
 
-        let userInDB = User.findByField('email', req.body.email);
+        db.users.findOne({
+            where: {
+                mail: req.body.email
+            }
+        })
+            .then((usr) => {
+                if (usr) {
+                    console.log('EL MAIL YA ESTA REGISTRADO');
+                    return res.render('users/register', {
+                        errors: {
+                            email: {
+                                msg: 'Este email ya está registrado'
+                            }
+                        },
+                        oldData: req.body,
+                        cssa: 'register.css',
+                        title: "El Cáliz - Registrarse"
+                    });
+                } else {
 
-        if (userInDB) {
-            return res.render('users/register', {
-                errors: {
-                    email: {
-                        msg: 'Este email ya está registrado'
-                    }
-                },
-                oldData: req.body,
-                cssa: 'register.css',
-                title: "El Cáliz - Registrarse"
+                    db.users.create({
+                        nombre: req.body.name,
+                        apellido: req.body.lastname,
+                        mail: req.body.email,
+                        dni: req.body.dni,
+                        password: bcryptjs.hashSync(req.body.password, 10),
+                        image: req.file.filename
+                    });
+                    User.create(userToCreate);
+                    return res.redirect('/users/login');
+                }
             });
-        }
-
-        let userToCreate = {
-            ...req.body,
-            password: bcryptjs.hashSync(req.body.password, 10),
-            imageCover: req.file.filename,
-            isActive: true,
-            isAdmin: false
-        }
-
-        User.create(userToCreate);
-
-        return res.redirect('/users/login');
     },
 
     forgotPassword: (req, res) => {
@@ -124,7 +150,7 @@ const usersController = {
 
     },
 
-    logout : (req, res ) => {
+    logout: (req, res) => {
         req.session.destroy();
         return res.redirect('/');
     }

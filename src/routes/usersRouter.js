@@ -10,6 +10,9 @@ const guestMiddleware = require ('../middlewares/guestMiddleware');
 const authMiddleware = require ('../middlewares/authMiddleware');
 
 /*----REGISTER----*/
+router.get('/list', usersController.list);
+router.get('/edit/:id', usersController.editForm);
+
 router.get('/register', guestMiddleware, usersController.register);
 router.post('/register', uploadImage.single('imageCover'), validationsRegister, usersController.processRegister);
 
