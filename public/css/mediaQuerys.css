@@ -2,9 +2,14 @@
 /*----MOBILE----*/
 /* Media query para suavizar el cambio de tamaño de la search-box */
 @media (max-width: 480px) {
+  .navbar {
+    margin: 0 15px;
+  }
     .navbar-right {
       width: 20%;
       transition-duration: 500ms;
+      display: flex;
+      
       }
       .filter-category {
         max-width:40%;
@@ -18,6 +23,11 @@
     }
     /*----TABLET----*/
     @media (min-width: 481px) {
+      
+      .navbar-right {
+        width: 20%;
+        transition-duration: 500ms;
+        }
       .filter-category {
         max-width:20%;
       }
@@ -72,9 +82,17 @@
     }
     
     /*----DESKTOP----*/
-    @media (min-width: 769px) {
+    @media (min-width: 768px) {
+      main {
+        padding: 0 65px;
+      }
       .navbar {
         flex-direction: row;
+        align-items: center;
+      }
+      .navbar-right {
+        display: flex;
+        justify-content: space-around;
       }
 
       .navbar-search {

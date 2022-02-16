@@ -2,6 +2,7 @@
 const { redirect } = require('express/lib/response');
 const fs = require('fs');
 const path = require('path');
+const db = require ('../database/models')
 
 const categoriesFilePath = path.join(__dirname, '../data/categories.json');
 let categories = JSON.parse(fs.readFileSync(categoriesFilePath, 'utf-8'));

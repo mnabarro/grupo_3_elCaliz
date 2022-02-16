@@ -6,11 +6,11 @@
 }
 
 main {
-  /*width: 90%;*/
   margin: auto;
   display: flex;
   flex-direction: column;
   gap: 5px;
+  padding: 0 15px;
 }
 
 header {
@@ -80,7 +80,7 @@ header {
 /****** NAVBAR ********/
 .navbar {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 5px;
@@ -90,7 +90,10 @@ header {
   margin: 0 0.6rem;
   
 }
-
+.navbar-middle {
+  display: flex;
+  justify-content: space-between;
+}
 .navbar-left {
   display: flex;
   align-items: center;

@@ -1,3 +1,6 @@
+// ************ Require's ************
+const db = require ('../database/models')
+
 const ordersController = {
 
     checkout: (req, res) => {res.send( 'Finalice tu compra');},

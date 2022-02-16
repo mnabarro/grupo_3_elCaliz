@@ -19,12 +19,13 @@ const adminController = {
     
     // Root - Show all products
     products: (req, res) => {
-        db.products.findAll()
+        db.Products.findAll()
             .then(function (products) {
-                res.render('products/productsAdmin', {products:products})
-            });
-        /*cssa : 'products-admin.css', 
-        title :'Administración de productos'*/
+                res.render('products/productsAdmin', {products:products,
+                cssa : 'products-admin.css', 
+                title :'Administración de productos'
+                })
+            })
     },
     /*'products/productsAdmin', {products:products, cssa : 'products-admin.css', title :'Administración de productos'});*/
     
@@ -57,16 +58,47 @@ const adminController = {
     
     // Update - Form to edit product
     editProductForm: (req, res) => {
-        let id = req.params.id;
+        db.Products.findByPk({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(function(product){
+            res.render('products/editProduct', {product, cssa: 'products-edit.css',categories , title:"Editar producto"});
+        })
+        
+        /*let id = req.params.id;
 		let product = products.find(product => product.id == id);
-        res.render('products/editProduct', {product, cssa: 'products-edit.css',categories , title:"Editar producto"});
+        res.render('products/editProduct', {product, cssa: 'products-edit.css',categories , title:"Editar producto"});*/
     },
 
     // Update - Method to edit product
     editProduct: (req, res) => {
+        db.Products.findByPk({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(function(product){
+            product.sku = req.body.sku;
+            product.name = req.body.name;
+            product.description = req.body.description;
+            product.price = req.body.price;
+            product.discount = req.body.discount,
+            product.categories = req.body.categories,
+            product.image = req.file.filename;
+        })
+        .then(function(product){
+            fs.writeFileSync(productsFilePath, JSON.stringify(products,null,2));
+        })
+        .then(function(product){
+            res.redirect('/admin/products');
+        })
+
+
+        /*
         let id = req.body.id;
         let product = products.find(product => product.id == id);
-
         product.sku = req.body.sku;
         product.name = req.body.name;
         product.description = req.body.description;
@@ -74,10 +106,8 @@ const adminController = {
         product.discount = req.body.discount,
         product.categories = req.body.categories,
         product.image = req.file.filename;
-
         fs.writeFileSync(productsFilePath, JSON.stringify(products,null,2));
-
-        res.redirect('/admin/products');
+        res.redirect('/admin/products');*/
     },
     
     // Delete - Delete one product from DB
