@@ -21,18 +21,25 @@ const productsController = {
         db.Products.findAll({
             where: {
                 nombre: req.params.criterio
-            }
+            },
+            order: [
+                ['id','ASC'] 
+            ]
         })
-        .then (function(product) {
+
+        .then ((result) => {
             res.send(`Resultado de busqueda :${req.params.criterio}`)
-        }),
+        })
+        .catch(err => {
+            return res.send(err)
+         }),
     
     
     /*{res.send(`Productos que coinciden con el criterio :${req.params.criterio}`);},*/
     
     productDetail: (req, res) => {
         db.Products.findByPk(req.params.id)
-            .then(function(product){
+            .then((product) =>{
                 res.render('products/productDetail', {product:product, result, cssa: 'product-detail.css', title:"Detalle del producto"});
             })
         /*let id = req.params.id

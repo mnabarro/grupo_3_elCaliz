@@ -1,3 +1,7 @@
+'use strict';
+
+const sequelize = require ('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
     let alias = "Adresses"; 
     let cols = {

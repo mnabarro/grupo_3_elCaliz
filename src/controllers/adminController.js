@@ -26,6 +26,9 @@ const adminController = {
                 title :'Administración de productos'
                 })
             })
+            .catch(err => {
+                return res.send(err)
+             })
     },
     /*'products/productsAdmin', {products:products, cssa : 'products-admin.css', title :'Administración de productos'});*/
     
@@ -66,6 +69,9 @@ const adminController = {
         .then(function(product){
             res.render('products/editProduct', {product, cssa: 'products-edit.css',categories , title:"Editar producto"});
         })
+        .catch(err => {
+            return res.send(err)
+         })
         
         /*let id = req.params.id;
 		let product = products.find(product => product.id == id);
@@ -94,6 +100,9 @@ const adminController = {
         .then(function(product){
             res.redirect('/admin/products');
         })
+        .catch(err => {
+            return res.send(err)
+         })
 
 
         /*

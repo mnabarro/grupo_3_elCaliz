@@ -8,10 +8,10 @@ module.exports = (sequelize, DataTypes) => {
         },
         nombre: {
             type: DataTypes.STRING
-        } ,
+        },
         value: {
             type: DataTypes.STRING
-        } ,
+        },
     };
     let config = {
         tablename: "categories",

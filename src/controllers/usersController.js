@@ -18,7 +18,10 @@ const usersController = {
                     users: users
                 });
 
-            });
+            })
+            .catch(err => {
+                return res.send(err)
+             })
     },
 
     editForm: (req, res) => {
@@ -31,7 +34,10 @@ const usersController = {
                     title: 'Administración de usuarios',
                     user: user
                 });
-            });
+            })
+            .catch(err => {
+                return res.send(err)
+             })
 
     },
 
@@ -80,7 +86,10 @@ const usersController = {
                         }
                     });
                 }
-            });
+            })
+            .catch(err => {
+                return res.send(err)
+             })
     },
 
     register: (req, res) => {
@@ -136,7 +145,10 @@ const usersController = {
                     
                     return res.redirect('/users/login');
                 }
-            });
+            })
+            .catch(err => {
+                return res.send(err)
+             })
     },
 
     forgotPassword: (req, res) => {
