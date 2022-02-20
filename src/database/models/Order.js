@@ -1,25 +1,25 @@
-module.exports = (sequelize, dataTypes) => {
+module.exports = (sequelize, DataTypes) => {
     let alias = "Orders"; 
     let cols = {
         id: {
-            type: dataTypes.TINYINT,
+            type: DataTypes.TINYINT,
             primaryKey: true,
             autoIncrement: true
         },
         referencia: {
-            type: dataTypes.STRING
+            type: DataTypes.STRING
         },
         total: {
-            type: dataTypes.INTEGER
+            type: DataTypes.INTEGER
         },
         metodo_de_pago: {
-            type: dataTypes.STRING
+            type: DataTypes.STRING
         },
         fecha: {
-            type: dataTypes.DATE
+            type: DataTypes.DATE
         },
         usder_id: {
-            type: dataTypes.INTEGER
+            type: DataTypes.INTEGER
         },
     };
     let config = {

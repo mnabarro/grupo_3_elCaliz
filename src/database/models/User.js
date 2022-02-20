@@ -1,46 +1,44 @@
-const { DataTypes } = require("sequelize");
-
-module.exports = (sequelize, dataTypes) => {
+module.exports = (sequelize, DataTypes) => {
     let alias = "users"; 
     let cols = {
         id: {
-            type: dataTypes.TINYINT,
+            type: DataTypes.TINYINT,
             primaryKey: true,
             autoIncrement: true
         },
         nombre: {
-            type: dataTypes.STRING
+            type: DataTypes.STRING
         } ,
         apellido: {
-            type: dataTypes.STRING
+            type: DataTypes.STRING
         } ,
         dni: {
-            type: dataTypes.STRING
+            type: DataTypes.STRING
         } ,
         mail: {
-            type: dataTypes.STRING
+            type: DataTypes.STRING
         },
         password: {
-            type: dataTypes.STRING
+            type: DataTypes.STRING
         },
         fecha_registro: {
-            type: dataTypes.DATE,
+            type: DataTypes.DATE,
             defaultValue : DataTypes.NOW
         } ,
         estado: {
-            type: dataTypes.INTEGER,
+            type: DataTypes.INTEGER,
             defaultValue : 1
         },
         image: {
-            type: dataTypes.STRING,
+            type: DataTypes.STRING,
             defaultValue : ''
         },
         group_id: {
-            type: dataTypes.INTEGER,
+            type: DataTypes.INTEGER,
             defaultValue : 1
         },
         genre_id: {
-            type: dataTypes.INTEGER,
+            type: DataTypes.INTEGER,
             defaultValue : 1
         },
     };

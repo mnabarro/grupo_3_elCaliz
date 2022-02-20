@@ -1,13 +1,13 @@
-module.exports = (sequelize, dataTypes) => {
+module.exports = (sequelize, DataTypes) => {
     let alias = "Groups"; 
     let cols = {
         id: {
-            type: dataTypes.TINYINT,
+            type: DataTypes.TINYINT,
             primaryKey: true,
             autoIncrement: true
         },
         nombre: {
-            type: dataTypes.STRING
+            type: DataTypes.STRING
         } ,
     };
     let config = {

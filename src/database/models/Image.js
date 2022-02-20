@@ -1,16 +1,16 @@
-module.exports = (sequelize, dataTypes) => {
+module.exports = (sequelize, DataTypes) => {
     let alias = "Images"; 
     let cols = {
         id: {
-            type: dataTypes.TINYINT,
+            type: DataTypes.TINYINT,
             primaryKey: true,
             autoIncrement: true
         },
         url: {
-            type: dataTypes.STRING
+            type: DataTypes.STRING
         },
         product_id: {
-            type: dataTypes.INTEGER
+            type: DataTypes.INTEGER
         },
     };
     let config = {

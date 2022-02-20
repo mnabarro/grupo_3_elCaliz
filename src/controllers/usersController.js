@@ -10,7 +10,7 @@ const usersController = {
 
     list: (req, res) => {
 
-        db.users.findAll()
+        db.Users.findAll()
             .then(function (users) {
                 res.render('users/list', {
                     cssa: 'users-admin.css',
@@ -24,7 +24,7 @@ const usersController = {
     editForm: (req, res) => {
         let id = req.params.id;
 
-        let user = db.users.findByPk(req.params.id)
+        let user = db.Users.findByPk(req.params.id)
             .then(function (user) {
                 res.render('users/edit', {
                     cssa: 'users-edit.css',
@@ -42,7 +42,7 @@ const usersController = {
         });
     },
     processLogin: (req, res) => {
-        db.users.findOne({
+        db.Users.findOne({
             where: {
                 mail: req.body.email
             }
@@ -104,7 +104,7 @@ const usersController = {
             });
         }
 
-        db.users.findOne({
+        db.Users.findOne({
             where: {
                 mail: req.body.email
             }

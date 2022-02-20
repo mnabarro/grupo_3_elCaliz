@@ -1,22 +1,22 @@
-module.exports = (sequelize, dataTypes) => {
+module.exports = (sequelize, DataTypes) => {
     let alias = "ProductsOrders"; 
     let cols = {
         productos_has_pedidos_id: {
-            type: dataTypes.TINYINT,
+            type: DataTypes.TINYINT,
             primaryKey: true,
             autoIncrement: true
         },
         id_pedido: {
-            type: dataTypes.INTEGER
+            type: DataTypes.INTEGER
         },
         precio: {
-            type: dataTypes.DECIMAL
+            type: DataTypes.DECIMAL
         },
         cantidad: {
-            type: dataTypes.INTEGER
+            type: DataTypes.INTEGER
         },
         product_id: {
-            type: dataTypes.INTEGER
+            type: DataTypes.INTEGER
         },
     };
     let config = {

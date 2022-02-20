@@ -24,7 +24,7 @@ const productsController = {
             }
         })
         .then (function(product) {
-            res.send(`Productos que coinciden con el criterio :${req.params.criterio}`)
+            res.send(`Resultado de busqueda :${req.params.criterio}`)
         }),
     
     

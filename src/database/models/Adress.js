@@ -1,34 +1,34 @@
-module.exports = (sequelize, dataTypes) => {
+module.exports = (sequelize, DataTypes) => {
     let alias = "Adresses"; 
     let cols = {
         id: {
-            type: dataTypes.TINYINT,
+            type: DataTypes.TINYINT,
             primaryKey: true,
             autoIncrement: true
         },
         nombre: {
-            type: dataTypes.STRING
+            type: DataTypes.STRING
         } ,
         apellido: {
-            type: dataTypes.STRING
+            type: DataTypes.STRING
         } ,
         direccion: {
-            type: dataTypes.STRING
+            type: DataTypes.STRING
         } ,
         codigo_postal: {
-            type: dataTypes.STRING
+            type: DataTypes.STRING
         } ,
         localidad: {
-            type: dataTypes.STRING
+            type: DataTypes.STRING
         } ,
         telefono: {
-            type: dataTypes.INTEGER
+            type: DataTypes.INTEGER
         } ,
         state_id: {
-            type: dataTypes.INTEGER
+            type: DataTypes.INTEGER
         } ,
         user_id: {
-            type: dataTypes.INTEGER
+            type: DataTypes.INTEGER
         } ,
 
     };
@@ -36,6 +36,6 @@ module.exports = (sequelize, dataTypes) => {
         tablename: "adresses",
         timestamps: false
     }
-    const Adress = sequelize.define(alias, cols, config); //(alias, columas de db, config)
+    const Adress = sequelize.define(alias, cols, config);
     return Adress;
 }
