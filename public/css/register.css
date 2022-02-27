@@ -79,6 +79,9 @@ main {
   color: rgb(214, 0, 0);
   font-size: 12px;
 }
+.errores{
+  color: red;
+}
 .account {
     text-align: center;
     margin-bottom: 1rem;

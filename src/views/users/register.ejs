@@ -14,6 +14,9 @@
                     <h2>CREAR CUENTA</h2>
                     <div class="line"></div>
                 </div>
+                <div class="errores">
+                    <ul></ul>
+                </div>
             <div class="register-main">
                 <form action="/users/register" method="POST" class="create-form" enctype="multipart/form-data">
                     <div class="control-form">
@@ -57,7 +60,7 @@
                            <% } %>
                     </div>
                     <div class="control-form">
-                        <label for="image-cover">Imagen de perfil:<input type="file" class="control" name="imageCover" accept="image/png, image/jpeg">
+                        <label for="image-cover">Imagen de perfil:<input type="file" class="control" name="imageCover" id="images" accept="image/png, image/jpeg">
                         </label>
                         <% if (locals.errors && errors.imageCover) { %>
                             <div class="danger">
