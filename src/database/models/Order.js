@@ -1,31 +1,32 @@
+'use strict';
+
 module.exports = (sequelize, DataTypes) => {
-    let alias = "Orders"; 
-    let cols = {
+    const Order = sequelize.define('Orders', {
         id: {
-            type: DataTypes.TINYINT,
-            primaryKey: true,
-            autoIncrement: true
+            type: DataTypes.TINYINT(10).UNSIGNED,
+            autoIncrement: true,
+            primaryKey: true
         },
         referencia: {
-            type: DataTypes.STRING
+            type: DataTypes.VARCHAR(100)
+        },
+        created_at: {
+            type: DataTypes.DATE
+        },
+        updated_at: {
+            type: DataTypes.DATE
         },
         total: {
-            type: DataTypes.INTEGER
+            type: DataTypes.INTEGER(11)
         },
         metodo_de_pago: {
             type: DataTypes.STRING
         },
-        fecha: {
-            type: DataTypes.DATE
+        user_id: {
+            type: DataTypes.TINYINT(10)
         },
-        usder_id: {
-            type: DataTypes.INTEGER
-        },
-    };
-    let config = {
-        tablename: "orders",
-        timestamps: false
-    }
-    const Order = sequelize.define(alias, cols, config); //(alias, columas de db, config)
+    },{
+        tablename: "Pedidos",
+    });
     return Order;
 }

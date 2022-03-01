@@ -1,17 +1,22 @@
+'use strict';
+
 module.exports = (sequelize, DataTypes)=>{
-
-    let alias = 'Products';
-
-    let cols = {
+    const Product = sequelize.define('Products', {
         id:{
-            type: DataTypes.INTEGER,
-            primaryKey: true,
+            type: DataTypes.TINYINT(10).UNSIGNED,
             autoIncrement: true,
+            primaryKey: true,
             allowNull: false
         },
         sku:{
-            type: DataTypes.INTEGER,
+            type: DataTypes.VARCHAR(100),
             allowNull: false
+        },
+        created_at: {
+            type: DataTypes.TIMESTAMP
+        },
+        updated_at: {
+            type: DataTypes.TIMESTAMP
         },
         nombre:{
             type: DataTypes.STRING(100),
@@ -22,33 +27,26 @@ module.exports = (sequelize, DataTypes)=>{
             allowNull: false
         },
         precio:{
-            type: DataTypes.INTEGER,
+            type: DataTypes.INTEGER(11),
             allowNull: false
         },
         discount:{
-            type: DataTypes.INTEGER,
+            type: DataTypes.INTEGER(11),
             allowNull: false
         },
         estado:{
-            type: DataTypes.INTEGER,
+            type: DataTypes.INTEGER(11),
             allowNull: false
         },
-    };
-
-    let config = {
-        tableName: 'products',
-        timestamps: false
-    }
-
-    const Product = sequelize.define(alias, cols, config);
-
+    }, {
+        tableName: 'Productos',
+    })
     Product.associate = (models)=>{
         Product.belongsToMany(models.Categories, {
             as: 'categories',
             through: 'products_has_categories',
             foreignKey: 'products_id',
             otherKey: 'categories_id',
-            timestamps: false
         });
         Product.hasMany(models.Images, {
             as: 'images',

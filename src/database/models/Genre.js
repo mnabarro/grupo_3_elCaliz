@@ -1,19 +1,18 @@
-module.exports = (sequelize, DataTypes)=>{
-    let alias = 'Genres';
-    let cols = {
+'use strict';
+
+module.exports = (sequelize, DataTypes) => {
+    const Genre = sequelize.define('Genres', {
         id: {
-            type: DataTypes.TINYINT,
-            primaryKey: true,
-            autoIncrement: true
+            type: DataTypes.TINYINT(10).UNSIGNED,
+            autoIncrement: true,
+            primaryKey: true
         },
         nombre: {
-            type: DataTypes.STRING
-        } ,
-    };
-    let config = {
-        tablename: "genres",
+            type: DataTypes.STRING(100)
+        },
+    }, {
+        tablename: "Generos",
         timestamps: false
-    }
-    const Genre = sequelize.define(alias, cols, config);
+    });
     return Genre;
 }

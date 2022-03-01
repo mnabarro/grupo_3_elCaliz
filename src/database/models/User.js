@@ -1,32 +1,35 @@
+'use strict';
+
 module.exports = (sequelize, DataTypes) => {
-    let alias = "users"; 
-    let cols = {
+    const User = sequelize.define('Users', {
         id: {
-            type: DataTypes.TINYINT,
-            primaryKey: true,
-            autoIncrement: true
+            type: DataTypes.TINYINT(10).UNSIGNED,
+            autoIncrement: true,
+            primaryKey: true
+        },
+        created_at: {
+            type: DataTypes.DATE
+        },
+        updated_at: {
+            type: DataTypes.DATE
         },
         nombre: {
             type: DataTypes.STRING
-        } ,
+        },
         apellido: {
             type: DataTypes.STRING
-        } ,
+        },
         dni: {
-            type: DataTypes.STRING
-        } ,
+            type: DataTypes.INTEGER(8)
+        },
         mail: {
             type: DataTypes.STRING
         },
         password: {
-            type: DataTypes.STRING
+            type: DataTypes.VARCHAR(100)
         },
-        fecha_registro: {
-            type: DataTypes.DATE,
-            defaultValue : DataTypes.NOW
-        } ,
         estado: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.INTEGER(11),
             defaultValue : 1
         },
         image: {
@@ -34,18 +37,15 @@ module.exports = (sequelize, DataTypes) => {
             defaultValue : ''
         },
         group_id: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.TINYINY(10),
             defaultValue : 1
         },
         genre_id: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.TINYINT(10),
             defaultValue : 1
         },
-    };
-    let config = {
-        tablename: "users",
-        timestamps: false
-    }
-    const Usuario = sequelize.define(alias, cols, config); //(alias, columas de db, config)
+    }, {
+        tablename: "Usuarios",
+    })
     return Usuario;
 }

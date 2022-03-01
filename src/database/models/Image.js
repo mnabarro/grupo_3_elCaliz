@@ -1,24 +1,22 @@
+'use strict';
+
 module.exports = (sequelize, DataTypes) => {
-    let alias = "Images"; 
-    let cols = {
+    const Image = sequelize.define('Images', {
         id: {
-            type: DataTypes.TINYINT,
-            primaryKey: true,
-            autoIncrement: true
+            type: DataTypes.TINYINT(10).UNSIGNED,
+            autoIncrement: true,
+            primaryKey: true
         },
         url: {
-            type: DataTypes.STRING
+            type: DataTypes.VARCHAR(100)
         },
         product_id: {
-            type: DataTypes.INTEGER
+            type: DataTypes.TINYINT(10)
         },
-    };
-    let config = {
-        tablename: "images",
+    }, {
+        tablename: "Imagenes",
         timestamps: false
-    }
-    const Image = sequelize.define(alias, cols, config); //(alias, columas de db, config)
-
+    });
     Image.associate = function(models){
         Image.belongsTo(models.Products, {
             as: "products",

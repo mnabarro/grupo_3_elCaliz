@@ -1,24 +1,21 @@
+'use strict';
+
 module.exports = (sequelize, DataTypes) => {
-    let alias = "ProductsCategories"; 
-    let cols = {
+    const Product_has_category = sequelize.define('ProductsCategories', {
         productos_has_categories_id: {
-            type: DataTypes.TINYINT,
-            primaryKey: true,
-            autoIncrement: true
+            type: DataTypes.TINYINT(10).UNSIGNED,
+            autoIncrement: true,
+            primaryKey: true
         },
         product_id: {
-            type: DataTypes.INTEGER
+            type: DataTypes.TINYINT(10)
         },
         category_id: {
-            type: DataTypes.INTEGER
+            type: DataTypes.TINYINT(10)
         },
-
-    };
-    let config = {
+    }, {
         tablename: "products_has_categories",
-        timestamps: false
-    }
-    const ProductCategory = sequelize.define(alias, cols, config); //(alias, columas de db, config)
-
+        timestamps: false 
+    })
     return ProductCategory;
 }

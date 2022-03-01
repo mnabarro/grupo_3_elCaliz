@@ -1,13 +1,11 @@
+'use strict';
+
 module.exports = (sequelize, DataTypes) => {
-    let alias = "OrdersStatus"; 
-    let cols = {
+    const orders_has_orders_status = sequelize.define('OrdersStatus', {
         id: {
-            type: DataTypes.TINYINT,
-            primaryKey: true,
-            autoIncrement: true
-        },
-        fecha_estado: {
-            type: DataTypes.DATE
+            type: DataTypes.TINYINT(10).UNSIGNED,
+            autoIncrement: true,
+            primaryKey: true
         },
         order_id: {
             type: DataTypes.INTEGER
@@ -15,11 +13,15 @@ module.exports = (sequelize, DataTypes) => {
         order_status_id: {
             type: DataTypes.INTEGER
         },
-    };
-    let config = {
+        created_at: {
+            type: DataTypes.DATE
+        },
+        updated_at: {
+            type: DataTypes.DATE
+        },
+    }, {
         tablename: "orders_has_orders_status",
-        timestamps: false
-    }
-    const OrderStatus = sequelize.define(alias, cols, config); //(alias, columas de db, config)
+    })
+
     return OrderStatus;
 }

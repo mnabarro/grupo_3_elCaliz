@@ -1,24 +1,22 @@
+'use strict';
+
 module.exports = (sequelize, DataTypes) => {
-    let alias = "Categories"; 
-    let cols = {
+    const Category = sequelize.define("Categorie", {
         id: {
-            type: DataTypes.TINYINT,
-            primaryKey: true,
-            autoIncrement: true
+            type: DataTypes.TINYINT(10).UNSIGNED,
+            autoIncrement: true,
+            primaryKey: true
         },
         nombre: {
             type: DataTypes.STRING
         },
         value: {
             type: DataTypes.STRING
-        },
-    };
-    let config = {
-        tablename: "categories",
+        }
+    }, {
+        tablename: "Categorías",
         timestamps: false
-    }
-    const Category = sequelize.define(alias, cols, config); //(alias, columas de db, config)
-
+    });
     Category.associate = (models)=>{
         Category.belongsToMany(models.Products, {
             as: 'products',

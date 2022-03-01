@@ -1,19 +1,18 @@
+'use strict';
+
 module.exports = (sequelize, DataTypes) => {
-    let alias = "Groups"; 
-    let cols = {
+    const Group = sequelize.define('Groups', {
         id: {
-            type: DataTypes.TINYINT,
-            primaryKey: true,
-            autoIncrement: true
+            type: DataTypes.TINYINT(10).UNSIGNED,
+            autoIncrement: true,
+            primaryKey: true
         },
         nombre: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING(100)
         } ,
-    };
-    let config = {
-        tablename: "groups",
+    }, {
+        tablename: "Grupos",
         timestamps: false
-    }
-    const Group = sequelize.define(alias, cols, config); 
+    });
     return Group;
 }

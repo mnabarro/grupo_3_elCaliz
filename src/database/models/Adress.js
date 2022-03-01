@@ -1,45 +1,39 @@
 'use strict';
 
-const sequelize = require ('sequelize');
-
 module.exports = (sequelize, DataTypes) => {
-    let alias = "Adresses"; 
-    let cols = {
+    const Adress = sequelize.define("Adresses", {
         id: {
-            type: DataTypes.TINYINT,
-            primaryKey: true,
-            autoIncrement: true
+            type: DataTypes.TINYINT(10).UNSIGNED,
+            autoIncrement: true,
+            primaryKey: true
         },
         nombre: {
             type: DataTypes.STRING
-        } ,
+        },
         apellido: {
             type: DataTypes.STRING
-        } ,
+        },
         direccion: {
             type: DataTypes.STRING
-        } ,
+        },
         codigo_postal: {
-            type: DataTypes.STRING
-        } ,
+            type: DataTypes.INTEGER(4)
+        },
         localidad: {
-            type: DataTypes.STRING
-        } ,
+            type: DataTypes.VARCHAR(100)
+        },
         telefono: {
-            type: DataTypes.INTEGER
-        } ,
+            type: DataTypes.INTEGER(11)
+        },
         state_id: {
-            type: DataTypes.INTEGER
-        } ,
+            type: DataTypes.TINYINT(10)
+        },
         user_id: {
-            type: DataTypes.INTEGER
-        } ,
-
-    };
-    let config = {
-        tablename: "adresses",
-        timestamps: false
-    }
-    const Adress = sequelize.define(alias, cols, config);
+            type: DataTypes.TINYINT(10)
+        },
+    },  {
+            tablename: "Direcciones",
+            timestamps: false
+    });
     return Adress;
 }
