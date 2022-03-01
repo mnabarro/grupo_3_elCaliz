@@ -1,29 +1,29 @@
 'use strict';
 
-module.exports = (sequelize, DataTypes) => {
+module.exports = (sequelize, dataTypes) => {
     const Order = sequelize.define('Orders', {
         id: {
-            type: DataTypes.TINYINT(10).UNSIGNED,
+            type: dataTypes.TINYINT(10).UNSIGNED,
             autoIncrement: true,
             primaryKey: true
         },
         referencia: {
-            type: DataTypes.VARCHAR(100)
+            type: dataTypes.VARCHAR(100)
         },
         created_at: {
-            type: DataTypes.DATE
+            type: dataTypes.DATE
         },
         updated_at: {
-            type: DataTypes.DATE
+            type: dataTypes.DATE
         },
         total: {
-            type: DataTypes.INTEGER(11)
+            type: dataTypes.INTEGER(11)
         },
         metodo_de_pago: {
-            type: DataTypes.STRING
+            type: dataTypes.STRING
         },
         user_id: {
-            type: DataTypes.TINYINT(10)
+            type: dataTypes.TINYINT(10)
         },
     },{
         tablename: "Pedidos",

@@ -1,18 +1,18 @@
 'use strict';
 
-module.exports = (sequelize, DataTypes) => {
+module.exports = (sequelize, dataTypes) => {
     const Order_status = sequelize.define('OrderStatus', {
         id: {
-            type: DataTypes.TINYINT(10).UNSIGNED,
+            type: dataTypes.TINYINT(10).UNSIGNED,
             autoIncrement: true,
             primaryKey: true
         },
         nombre: {
-            type: DataTypes.STRING
+            type: dataTypes.STRING
         },
     }, {
         tablename: "order_status",
         timestamps: false
     });
-    return OrderStatus;
+    return Order_status;
 }

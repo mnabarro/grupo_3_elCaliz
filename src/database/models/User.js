@@ -1,51 +1,51 @@
 'use strict';
 
-module.exports = (sequelize, DataTypes) => {
+module.exports = (sequelize, dataTypes) => {
     const User = sequelize.define('Users', {
         id: {
-            type: DataTypes.TINYINT(10).UNSIGNED,
+            type: dataTypes.TINYINT(10).UNSIGNED,
             autoIncrement: true,
             primaryKey: true
         },
         created_at: {
-            type: DataTypes.DATE
+            type: dataTypes.DATE
         },
         updated_at: {
-            type: DataTypes.DATE
+            type: dataTypes.DATE
         },
         nombre: {
-            type: DataTypes.STRING
+            type: dataTypes.STRING
         },
         apellido: {
-            type: DataTypes.STRING
+            type: dataTypes.STRING
         },
         dni: {
-            type: DataTypes.INTEGER(8)
+            type: dataTypes.INTEGER(8)
         },
         mail: {
-            type: DataTypes.STRING
+            type: dataTypes.STRING
         },
         password: {
-            type: DataTypes.VARCHAR(100)
+            type: dataTypes.VARCHAR(100)
         },
         estado: {
-            type: DataTypes.INTEGER(11),
+            type: dataTypes.INTEGER(11),
             defaultValue : 1
         },
         image: {
-            type: DataTypes.STRING,
+            type: dataTypes.STRING,
             defaultValue : ''
         },
         group_id: {
-            type: DataTypes.TINYINY(10),
+            type: dataTypes.TINYINY(10),
             defaultValue : 1
         },
         genre_id: {
-            type: DataTypes.TINYINT(10),
+            type: dataTypes.TINYINT(10),
             defaultValue : 1
         },
     }, {
         tablename: "Usuarios",
     })
-    return Usuario;
+    return User;
 }

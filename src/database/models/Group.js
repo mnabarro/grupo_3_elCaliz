@@ -1,14 +1,14 @@
 'use strict';
 
-module.exports = (sequelize, DataTypes) => {
+module.exports = (sequelize, dataTypes) => {
     const Group = sequelize.define('Groups', {
         id: {
-            type: DataTypes.TINYINT(10).UNSIGNED,
+            type: dataTypes.TINYINT(10).UNSIGNED,
             autoIncrement: true,
             primaryKey: true
         },
         nombre: {
-            type: DataTypes.STRING(100)
+            type: dataTypes.STRING(100)
         } ,
     }, {
         tablename: "Grupos",

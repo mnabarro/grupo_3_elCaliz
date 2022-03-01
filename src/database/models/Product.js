@@ -1,41 +1,41 @@
 'use strict';
 
-module.exports = (sequelize, DataTypes)=>{
+module.exports = (sequelize, dataTypes)=>{
     const Product = sequelize.define('Products', {
         id:{
-            type: DataTypes.TINYINT(10).UNSIGNED,
+            type: dataTypes.TINYINT(10).UNSIGNED,
             autoIncrement: true,
             primaryKey: true,
             allowNull: false
         },
         sku:{
-            type: DataTypes.VARCHAR(100),
+            type: dataTypes.VARCHAR(100),
             allowNull: false
         },
         created_at: {
-            type: DataTypes.TIMESTAMP
+            type: dataTypes.TIMESTAMP
         },
         updated_at: {
-            type: DataTypes.TIMESTAMP
+            type: dataTypes.TIMESTAMP
         },
         nombre:{
-            type: DataTypes.STRING(100),
+            type: dataTypes.STRING(100),
             allowNull: false
         },
         descripcion:{
-            type: DataTypes.TEXT,
+            type: dataTypes.TEXT,
             allowNull: false
         },
         precio:{
-            type: DataTypes.INTEGER(11),
+            type: dataTypes.INTEGER(11),
             allowNull: false
         },
         discount:{
-            type: DataTypes.INTEGER(11),
+            type: dataTypes.INTEGER(11),
             allowNull: false
         },
         estado:{
-            type: DataTypes.INTEGER(11),
+            type: dataTypes.INTEGER(11),
             allowNull: false
         },
     }, {

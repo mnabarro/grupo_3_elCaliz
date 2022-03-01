@@ -1,27 +1,27 @@
 'use strict';
 
-module.exports = (sequelize, DataTypes) => {
+module.exports = (sequelize, dataTypes) => {
     const orders_has_orders_status = sequelize.define('OrdersStatus', {
         id: {
-            type: DataTypes.TINYINT(10).UNSIGNED,
+            type: dataTypes.TINYINT(10).UNSIGNED,
             autoIncrement: true,
             primaryKey: true
         },
         order_id: {
-            type: DataTypes.INTEGER
+            type: dataTypes.INTEGER
         },
         order_status_id: {
-            type: DataTypes.INTEGER
+            type: dataTypes.INTEGER
         },
         created_at: {
-            type: DataTypes.DATE
+            type: dataTypes.DATE
         },
         updated_at: {
-            type: DataTypes.DATE
+            type: dataTypes.DATE
         },
     }, {
         tablename: "orders_has_orders_status",
     })
 
-    return OrderStatus;
+    return orders_has_orders_status;
 }
