@@ -1,7 +1,6 @@
-'use strict';
-
 module.exports = (sequelize, dataTypes) => {
-    const Product_has_order = sequelize.define('ProductsOrders', {
+    let alias = 'Product_has_order';
+    let cols = {
         productos_has_pedidos_id: {
             type: dataTypes.TINYINT(10).UNSIGNED,
             autoIncrement: true,
@@ -19,9 +18,11 @@ module.exports = (sequelize, dataTypes) => {
         product_id: {
             type: dataTypes.TINYINT(10)
         },
-    }, {
+    };
+    let config = {
         tablename: "products_has_orders",
         timestamps: false
-    })
+    };
+    const Product_has_order = sequelize.define(alias, cols, config)
     return Product_has_order;
 }

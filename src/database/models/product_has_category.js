@@ -1,7 +1,6 @@
-'use strict';
-
 module.exports = (sequelize, dataTypes) => {
-    const Product_has_category = sequelize.define('ProductsCategories', {
+    let alias = 'Product_has_category';
+    let cols = {
         productos_has_categories_id: {
             type: dataTypes.TINYINT(10).UNSIGNED,
             autoIncrement: true,
@@ -13,9 +12,11 @@ module.exports = (sequelize, dataTypes) => {
         category_id: {
             type: dataTypes.TINYINT(10)
         },
-    }, {
+    };
+    let config = {
         tablename: "products_has_categories",
         timestamps: false 
-    })
+    };
+    const Product_has_category = sequelize.define(alias, cols, config)
     return Product_has_category;
 }

@@ -1,7 +1,6 @@
-'use strict';
-
 module.exports = (sequelize, dataTypes) => {
-    const Adress = sequelize.define("Adresses", {
+    let alias = 'Adress';
+    let cols = {
         id: {
             type: dataTypes.TINYINT(10).UNSIGNED,
             autoIncrement: true,
@@ -31,9 +30,11 @@ module.exports = (sequelize, dataTypes) => {
         user_id: {
             type: dataTypes.TINYINT(10)
         },
-    },  {
+    };
+    let config = {
             tablename: "Direcciones",
             timestamps: false
-    });
+    };
+    const Adress = sequelize.define(alias, cols, config)
     return Adress;
 }

@@ -7,21 +7,13 @@ const bcryptjs = require('bcryptjs');
 const db = require('../database/models')
 
 const usersController = {
-
     list: (req, res) => {
-
-        db.Users.findAll()
-            .then(function (users) {
-                res.render('users/list', {
-                    cssa: 'users-admin.css',
-                    title: 'Administración de usuarios',
-                    users: users
-                });
-
+        db.User.findAll()
+            .then(users => {
+                res.render('listUser.ejs', { users }, { cssa: 'users-admin.css' }, { title: 'Administración de usuarios' });
+            }).catch((error) => {
+                if (error) throw error;
             })
-            .catch(err => {
-                return res.send(err)
-             })
     },
 
     editForm: (req, res) => {
@@ -37,7 +29,7 @@ const usersController = {
             })
             .catch(err => {
                 return res.send(err)
-             })
+            })
 
     },
 
@@ -89,7 +81,7 @@ const usersController = {
             })
             .catch(err => {
                 return res.send(err)
-             })
+            })
     },
 
     register: (req, res) => {
@@ -142,13 +134,13 @@ const usersController = {
                         image: req.file.filename
                     });
 
-                    
+
                     return res.redirect('/users/login');
                 }
             })
             .catch(err => {
                 return res.send(err)
-             })
+            })
     },
 
     forgotPassword: (req, res) => {

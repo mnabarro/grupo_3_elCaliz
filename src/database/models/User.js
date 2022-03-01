@@ -1,7 +1,6 @@
-'use strict';
-
 module.exports = (sequelize, dataTypes) => {
-    const User = sequelize.define('Users', {
+    let alias = 'User';
+    let cols = {
         id: {
             type: dataTypes.TINYINT(10).UNSIGNED,
             autoIncrement: true,
@@ -44,8 +43,9 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.TINYINT(10),
             defaultValue : 1
         },
-    }, {
+    }; let config = {
         tablename: "Usuarios",
-    })
+    };
+    const User = sequelize.define(alias, cols, config)
     return User;
 }

@@ -1,7 +1,6 @@
-'use strict';
-
-module.exports = (sequelize, dataTypes)=>{
-    const Product = sequelize.define('Products', {
+module.exports = (sequelize, dataTypes) => {
+    let alias = 'Product';
+    let cols = {
         id:{
             type: dataTypes.TINYINT(10).UNSIGNED,
             autoIncrement: true,
@@ -38,9 +37,11 @@ module.exports = (sequelize, dataTypes)=>{
             type: dataTypes.INTEGER(11),
             allowNull: false
         },
-    }, {
+    };
+    let config = {
         tableName: 'Productos',
-    })
+    };
+    const Product = sequelize.define(alias, cols, config)
     Product.associate = (models)=>{
         Product.belongsToMany(models.Categories, {
             as: 'categories',
