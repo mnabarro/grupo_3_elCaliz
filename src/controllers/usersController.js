@@ -4,69 +4,57 @@ const {
 const fs = require('fs');
 const User = require('../Database/User-M');
 const bcryptjs = require('bcryptjs');
-const db = require('../database/models')
+const db = require('../database/models');
+const { ResultWithContext } = require('express-validator/src/chain');
 
 const usersController = {
-
     list: (req, res) => {
-
-        db.Users.findAll()
-            .then(function (users) {
-                res.render('users/list', {
-                    cssa: 'users-admin.css',
-                    title: 'Administración de usuarios',
-                    users: users
-                });
-
+        db.User.findAll()
+            .then(users => {
+                res.render('listUser.ejs', { users }, { cssa: 'users-admin.css' }, { title: 'Administración de usuarios' });
+            }).catch((error) => {
+                if (error) throw error;
             })
-            .catch(err => {
-                return res.send(err)
-             })
     },
 
     editForm: (req, res) => {
         let id = req.params.id;
-
-        let user = db.Users.findByPk(req.params.id)
+        let user = db.User.findByPk(req.params.id)
             .then(function (user) {
-                res.render('users/edit', {
-                    cssa: 'users-edit.css',
-                    title: 'Administración de usuarios',
-                    user: user
-                });
+                res.render('editUser.ejs', {user}, {cssa: 'users-edit.css'}, {title: 'Administración de usuarios'});
+            }).catch((error) => {
+                if (error) throw error;
             })
-            .catch(err => {
-                return res.send(err)
-             })
-
     },
 
     login: (req, res) => {
-        res.render('users/login', {
+        res.render('loginUser.ejs', {
             cssa: 'login.css',
             title: "El Cáliz - Ingresar"
         });
     },
     processLogin: (req, res) => {
-        db.Users.findOne({
+        db.User.findOne({
             where: {
                 mail: req.body.email
             }
-        })
-            .then((usr) => {
+        }).then(usr => {
                 if (usr) {
                     let passwordOK = bcryptjs.compareSync(req.body.password, usr.password);
 
                     if (passwordOK) {
                         req.session.userLogged = usr;
+
+                        if (req.body.recordar != undefined){
+                            res.cookie('recordar', userLogged.email, {maxAge: 1000*30})
+                        }
                         console.log(usr);
                         delete usr.password;
                         return res.redirect('/users/profile');
                     } else {
-
-                        return res.render('users/login', {
+                        return res.render('loginUser.ejs', {
                             cssa: 'login.css',
-                            title: "El Cáliz - Ingresar",
+                            title: "Ingresar",
                             errors: {
                                 email: {
                                     msg: 'Las credenciales son inválidas.'
@@ -74,9 +62,8 @@ const usersController = {
                             }
                         });
                     }
-
                 } else {
-                    return res.render('users/login', {
+                    return res.render('loginUser.ejs', {
                         cssa: 'login.css',
                         title: "El Cáliz - Ingresar",
                         errors: {
@@ -86,17 +73,16 @@ const usersController = {
                         }
                     });
                 }
+            }).catch((error) => {
+                if (error) throw error;
             })
-            .catch(err => {
-                return res.send(err)
-             })
     },
 
     register: (req, res) => {
         res.cookie('testing', 'hola!', {
             maxAge: 1000 * 30
         })
-        res.render('users/register', {
+        res.render('registerUser.ejs', {
             cssa: 'register.css',
             title: "El Cáliz - Registrarse"
         });
@@ -105,7 +91,7 @@ const usersController = {
     processRegister: (req, res) => {
         const resultValidation = validationResult(req);
         if (resultValidation.errors.length > 0) {
-            return res.render('users/register', {
+            return res.render('registerUser.ejs', {
                 errors: resultValidation.mapped(),
                 oldData: req.body,
                 cssa: 'register.css',
@@ -113,15 +99,14 @@ const usersController = {
             });
         }
 
-        db.Users.findOne({
+        db.User.findOne({
             where: {
                 mail: req.body.email
             }
-        })
-            .then((usr) => {
+        }).then(usr => {
                 if (usr) {
                     console.log('EL MAIL YA ESTA REGISTRADO');
-                    return res.render('users/register', {
+                    return res.render('registerUser.ejs', {
                         errors: {
                             email: {
                                 msg: 'Este email ya está registrado'
@@ -133,7 +118,7 @@ const usersController = {
                     });
                 } else {
 
-                    db.users.create({
+                    db.User.create({
                         nombre: req.body.name,
                         apellido: req.body.lastname,
                         mail: req.body.email,
@@ -142,13 +127,12 @@ const usersController = {
                         image: req.file.filename
                     });
 
-                    
+
                     return res.redirect('/users/login');
                 }
+            }).catch((error) => {
+                if (error) throw error;
             })
-            .catch(err => {
-                return res.send(err)
-             })
     },
 
     forgotPassword: (req, res) => {
@@ -156,7 +140,7 @@ const usersController = {
     },
 
     profile: (req, res) => {
-        return res.render('users/profile', {
+        return res.render('profileUser.ejs', {
             cssa: 'profile.css',
             title: "El Cáliz - Perfil de usuario",
         });

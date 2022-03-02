@@ -10,7 +10,11 @@ const categoriesRouter = require('./routes/categoriesRouter');
 const adminRouter = require('./routes/adminRouter');
 const session = require('express-session');
 const cookies = require('cookie-parser');
+
+// ************ Require's Middlewares ************
 const userLoggedMiddleware = require ('./middlewares/userLoggedMiddleware');
+const cookieAuthMiddleware = require('./middlewares/cookieAuthMiddleware')
+
 
 // ************ express() ************
 const app = express();
@@ -29,6 +33,7 @@ app.use(userLoggedMiddleware);
 app.use(express.static('../public'));
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
+app.use(cookieAuthMiddleware);
 
 app.use('/', mainRouter);
 app.use('/users', usersRouter);
@@ -42,7 +47,7 @@ app.set('view engine', 'ejs');
 
 
 
-app.listen(3005, () => {
+app.listen(3000, () => {
     console.log('Server listening on port 3000');
 });
 
