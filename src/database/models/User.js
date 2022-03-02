@@ -2,7 +2,7 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'User';
     let cols = {
         id: {
-            type: dataTypes.TINYINT(10).UNSIGNED,
+            type: dataTypes.INTEGER(10).UNSIGNED,
             autoIncrement: true,
             primaryKey: true
         },
@@ -25,7 +25,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING
         },
         password: {
-            type: dataTypes.VARCHAR(100)
+            type: dataTypes.STRING
         },
         estado: {
             type: dataTypes.INTEGER(11),
@@ -36,11 +36,11 @@ module.exports = (sequelize, dataTypes) => {
             defaultValue : ''
         },
         group_id: {
-            type: dataTypes.TINYINY(10),
+            type: dataTypes.INTEGER(10),
             defaultValue : 1
         },
         genre_id: {
-            type: dataTypes.TINYINT(10),
+            type: dataTypes.INTEGER(10),
             defaultValue : 1
         },
     }; let config = {

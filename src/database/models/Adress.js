@@ -2,7 +2,7 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'Adress';
     let cols = {
         id: {
-            type: dataTypes.TINYINT(10).UNSIGNED,
+            type: dataTypes.INTEGER(10).UNSIGNED,
             autoIncrement: true,
             primaryKey: true
         },
@@ -19,16 +19,16 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER(4)
         },
         localidad: {
-            type: dataTypes.VARCHAR(100)
+            type: dataTypes.STRING
         },
         telefono: {
             type: dataTypes.INTEGER(11)
         },
         state_id: {
-            type: dataTypes.TINYINT(10)
+            type: dataTypes.INTEGER(10)
         },
         user_id: {
-            type: dataTypes.TINYINT(10)
+            type: dataTypes.INTEGER(10)
         },
     };
     let config = {

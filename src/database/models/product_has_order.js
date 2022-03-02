@@ -2,12 +2,12 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'Product_has_order';
     let cols = {
         productos_has_pedidos_id: {
-            type: dataTypes.TINYINT(10).UNSIGNED,
+            type: dataTypes.INTEGER(10).UNSIGNED,
             autoIncrement: true,
             primaryKey: true
         },
         id_pedido: {
-            type: dataTypes.TINYINT(10)
+            type: dataTypes.INTEGER(10)
         },
         precio: {
             type: dataTypes.DECIMAL(10,2).UNSIGNED
@@ -16,7 +16,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER(11)
         },
         product_id: {
-            type: dataTypes.TINYINT(10)
+            type: dataTypes.INTEGER(10)
         },
     };
     let config = {

@@ -2,7 +2,7 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'Genre';
     let cols = {
         id: {
-            type: dataTypes.TINYINT(10).UNSIGNED,
+            type: dataTypes.INTEGER(10).UNSIGNED,
             autoIncrement: true,
             primaryKey: true
         },

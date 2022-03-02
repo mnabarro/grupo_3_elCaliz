@@ -2,20 +2,20 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'Product';
     let cols = {
         id:{
-            type: dataTypes.TINYINT(10).UNSIGNED,
+            type: dataTypes.INTEGER(10).UNSIGNED,
             autoIncrement: true,
             primaryKey: true,
             allowNull: false
         },
         sku:{
-            type: dataTypes.VARCHAR(100),
+            type: dataTypes.STRING,
             allowNull: false
         },
         created_at: {
-            type: dataTypes.TIMESTAMP
+            type: dataTypes.DATE
         },
         updated_at: {
-            type: dataTypes.TIMESTAMP
+            type: dataTypes.DATE
         },
         nombre:{
             type: dataTypes.STRING(100),
