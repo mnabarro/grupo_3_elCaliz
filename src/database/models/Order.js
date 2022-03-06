@@ -9,12 +9,6 @@ module.exports = (sequelize, dataTypes) => {
         referencia: {
             type: dataTypes.STRING
         },
-        created_at: {
-            type: dataTypes.DATE
-        },
-        updated_at: {
-            type: dataTypes.DATE
-        },
         total: {
             type: dataTypes.INTEGER(11)
         },
@@ -27,6 +21,7 @@ module.exports = (sequelize, dataTypes) => {
     };
     let config = {
         tablename: "Pedidos",
+        timestamps: false
     };
     const Order = sequelize.define(alias, cols, config)
     return Order;

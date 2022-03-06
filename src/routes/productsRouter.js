@@ -9,8 +9,8 @@ const productsController = require('../controllers/productsController.js');
 /*** GET ONE PRODUCT ***/ 
 router.get('/:id', productsController.productDetail); 
 
-/*** GET ALL PRODUCTS ***/ 
-/*router.get('/category/:category', productsController.category);*/
+/*** SHOw ALL PRODUCTS PER CATEGORY ***/ 
+router.get('/:category', productsController.category);
 
 router.get('/search/:criterio', productsController.search); //Ruta aun no solicitada, pensada para la caja de búsqueda
 

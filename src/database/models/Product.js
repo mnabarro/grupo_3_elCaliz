@@ -11,14 +11,8 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING,
             allowNull: false
         },
-        created_at: {
-            type: dataTypes.DATE
-        },
-        updated_at: {
-            type: dataTypes.DATE
-        },
         nombre:{
-            type: dataTypes.STRING(100),
+            type: dataTypes.STRING,
             allowNull: false
         },
         descripcion:{
@@ -39,7 +33,8 @@ module.exports = (sequelize, dataTypes) => {
         },
     };
     let config = {
-        tableName: 'Productos',
+        tableName: 'Products',
+        timestamps: false
     };
     const Product = sequelize.define(alias, cols, config)
     Product.associate = (models)=>{
