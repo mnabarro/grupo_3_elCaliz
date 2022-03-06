@@ -15,8 +15,7 @@ const cookies = require('cookie-parser');
 const userLoggedMiddleware = require ('./middlewares/userLoggedMiddleware');
 const cookieAuthMiddleware = require('./middlewares/cookieAuthMiddleware')
 
-
-// ************ express() ************
+// ************ Express() ************
 const app = express();
 
 app.use( session({
@@ -35,18 +34,17 @@ app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 app.use(cookieAuthMiddleware);
 
-app.use('/', mainRouter);
-app.use('/users', usersRouter);
-app.use('/orders', ordersRouter);
-app.use('/products', productsRouter);
-app.use('/category', categoriesRouter);
-app.use('/admin', adminRouter);
+app.use('/', mainRouter); //FRONT
+app.use('/users', usersRouter); //FRONT
+app.use('/orders', ordersRouter); //FRONT
+app.use('/products', productsRouter); //FRONT
+app.use('/admin', adminRouter); //BACK
 
 // ************ Template Engine ************
 app.set('view engine', 'ejs');
 
 
-
+// ************ Port ************
 app.listen(3000, () => {
     console.log('Server listening on port 3000');
 });
