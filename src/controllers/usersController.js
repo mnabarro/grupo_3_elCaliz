@@ -11,7 +11,7 @@ const usersController = {
     list: (req, res) => {
         db.User.findAll()
             .then(users => {
-                res.render('users/listUser.ejs', { users }, { cssa: 'users-admin.css' }, { title: 'Administración de usuarios' });
+                res.render('users/listUser.ejs', { user }, { cssa: 'users-admin.css' }, { title: 'Administración de usuarios' });
             }).catch((error) => {
                 if (error) throw error;
             })

@@ -34,7 +34,7 @@ module.exports = (sequelize, dataTypes) => {
     };
     let config = {
         tableName: 'Products',
-        timestams: false
+        timestamps: false
     };
     const Product = sequelize.define(alias, cols, config)
     Product.associate = (models)=>{

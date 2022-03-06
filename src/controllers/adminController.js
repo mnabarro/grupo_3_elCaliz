@@ -21,7 +21,7 @@ const adminController = {
     products: (req, res) => {
         db.Product.findAll()
             .then(function (products) {
-                res.render('products/productsAdmin', {products:products,
+                res.render('products/productsAdmin', {products,
                 cssa : 'products-admin.css', 
                 title :'Administración de productos'
                 })

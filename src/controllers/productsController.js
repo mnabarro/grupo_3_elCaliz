@@ -21,7 +21,7 @@ const productsController = {
         res.render('products/category', {category, cssa: 'categories.css', title:"Categoría"});
     },   
     search: (req, res) => {
-        db.Products.findAll({
+        db.Product.findAll({
             where: {
                 nombre: req.params.criterio
             },
@@ -40,7 +40,7 @@ const productsController = {
     /*{res.send(`Productos que coinciden con el criterio :${req.params.criterio}`);},*/
     
     productDetail: (req, res) => {
-        db.Products.findByPk(req.params.id)
+        db.Product.findByPk(req.params.id)
             .then((product) =>{
                 res.render('products/productDetail', {product:product, result, cssa: 'product-detail.css', title:"Detalle del producto"});
             })
