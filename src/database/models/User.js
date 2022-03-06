@@ -6,12 +6,6 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true,
             primaryKey: true
         },
-        created_at: {
-            type: dataTypes.DATE
-        },
-        updated_at: {
-            type: dataTypes.DATE
-        },
         nombre: {
             type: dataTypes.STRING
         },
@@ -45,6 +39,7 @@ module.exports = (sequelize, dataTypes) => {
         },
     }; let config = {
         tablename: "Usuarios",
+        timestams: false
     };
     const User = sequelize.define(alias, cols, config)
     return User;

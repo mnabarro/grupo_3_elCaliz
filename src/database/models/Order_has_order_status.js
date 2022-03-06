@@ -12,15 +12,10 @@ module.exports = (sequelize, dataTypes) => {
         order_status_id: {
             type: dataTypes.INTEGER
         },
-        created_at: {
-            type: dataTypes.DATE
-        },
-        updated_at: {
-            type: dataTypes.DATE
-        },
     }; 
     let config = {
         tablename: "orders_has_orders_status",
+        timestams: false
     };
     const Order_has_order_status = sequelize.define(alias, cols, config)
 
