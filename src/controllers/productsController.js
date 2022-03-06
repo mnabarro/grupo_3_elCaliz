@@ -30,12 +30,12 @@ const productsController = {
             ]
         })
 
-        .then ((result) => {
+        .then (result => {
             res.send(`Resultado de busqueda :${req.params.criterio}`)
         })
         .catch(err => {
             return res.send(err)
-         }),
+        })
     },
     /*{res.send(`Productos que coinciden con el criterio :${req.params.criterio}`);},*/
     
@@ -50,8 +50,7 @@ const productsController = {
         let result = [products[0], products[6], products[12], products[13]];
         res.render('products/productDetail', {product, result, cssa: 'product-detail.css', title:"Detalle del producto"});*/
     },
-};
-
+}
 module.exports = productsController;
 
 /* PROBANDO CONEXION CON BASE DE DATOS PARA CATEGORIAS

@@ -21,8 +21,8 @@ router.get('/products', adminController.products); //Lista todos los productos
 router.get('/login', adminController.login);
 
 /*** CREATE ONE PRODUCT ***/ 
-router.get('/products/create',adminController.createProduct); //Muestra el formulario de creación de producto
-router.post('/products', uploadFile.single('image'), adminController.newProduct); //Envía los datos para la creación de un nuevo producto
+router.get('/products/add',adminController.add); //Muestra el formulario de creación de producto
+router.post('/products/add', uploadFile.single('image'), adminController.create); //Envía los datos para la creación de un nuevo producto
 
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/products/edit/:id', adminController.editProductForm); //Muestra el formulario para edición del producto

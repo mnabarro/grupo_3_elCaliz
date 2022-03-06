@@ -33,13 +33,13 @@ const adminController = {
     /*'products/productsAdmin', {products:products, cssa : 'products-admin.css', title :'Administración de productos'});*/
     
     // Create - Form to create product
-    createProduct: (req, res) => {
+    add: (req, res) => {
     
         res.render('products/createProduct', {cssa: 'products-add.css', "categories":categories, title:"Crear un nuevo producto"});
     },
 
     // Create -  Method to store new product
-    newProduct: (req, res) => {
+    create: (req, res) => {
 
         let newProduct = {
             id: products.length + 1,

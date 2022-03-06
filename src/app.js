@@ -6,7 +6,6 @@ const mainRouter = require('./routes/mainRouter');
 const usersRouter = require('./routes/usersRouter');
 const ordersRouter = require('./routes/ordersRouter');
 const productsRouter = require('./routes/productsRouter');
-const categoriesRouter = require('./routes/categoriesRouter');
 const adminRouter = require('./routes/adminRouter');
 const session = require('express-session');
 const cookies = require('cookie-parser');
