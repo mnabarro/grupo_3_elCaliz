@@ -175,7 +175,7 @@ textarea:focus {
 }
 
 input::-webkit-file-upload-button {
-  background-color: #FB7267;
+  background-color: #444;
   color: #f0f1f2;
   outline: none;
   border: 1px solid #444444;

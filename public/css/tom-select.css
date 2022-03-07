@@ -168,7 +168,7 @@
   font-family: inherit;
   font-size: 13px;
   line-height: 18px;
-  font-smoothing: inherit;
+  /*font-smoothing: inherit;*/
 }
 
 .ts-control,
@@ -360,7 +360,7 @@
   overflow-y: auto;
   overflow-x: hidden;
   max-height: 200px;
-  overflow-scrolling: touch;
+  /*overflow-scrolling: touch;*/
   scroll-behavior: smooth;
 }
 

@@ -8,38 +8,43 @@
             <div>
                 <a onclick="openNav()" class="btn-menu" href="#"><i class="fas fa-bars"></i></a>
             </div>
-            
-            <div class="logo">
-                <a href="/"><img src="/img/logo.png" alt="">
-            </div>
+
+            <a href="/">
+                <div class="logo">
+                <img src="/img/logo.png" alt="">
+                </div>
+            </a>
         </div>
         <div class="navbar-middle">
-        <div class="navbar-search">
-            <div class="search-box-container">
-                <div class="search-box">
-                    <input type="input" name="" id="" placeholder="Buscar...">
-                    <button class="button-search"><i class="fas fa-search"></i></button>
+            <div class="navbar-search">
+                <div class="search-box-container">
+                    <div class="search-box">
+                        <input type="input" name="" id="" placeholder="Buscar...">
+                        <button class="button-search"><i class="fas fa-search"></i></button>
+                    </div>
                 </div>
             </div>
-        </div>
-  
-        <div class="navbar-right">
-            <div class="navbar-icons">
-                <div class="btn-user"><a href="/users/login"><i class="fas fa-user"></i></a></div>
 
-                <% if(locals.isLogged) {%> 
-                    <p class="header-user-name"><%= userLogged.nombre + ' ' + userLogged.apellido %> </p>
-                <div class="btn-logout"><a href="/users/logout"><i class="fas fa-sign-out-alt"></i></a></div>
-                <% } %> 
+            <div class="navbar-right">
+                <div class="navbar-icons">
+                    <div class="btn-user"><a href="/users/login"><i class="fas fa-user"></i></a></div>
 
-                <div class="btn-cart">
-                    <a href="/orders/cart"><i class="fas fa-shopping-cart"></i></a>
-                    <div class="cart-qty">8</div>
+                    <% if(locals.isLogged) {%>
+                        <p class="header-user-name">
+                            <%= userLogged.nombre + ' ' + userLogged.apellido %>
+                        </p>
+                        <div class="btn-logout"><a href="/users/logout"><i class="fas fa-sign-out-alt"></i></a></div>
+                        <% } %>
+
+                            <div class="btn-cart">
+                                <a href="/orders/cart"><i class="fas fa-shopping-cart"></i></a>
+                                <div class="cart-qty">8</div>
+                            </div>
+                            |
                 </div>
-|            </div>
+            </div>
+
         </div>
-                  
-    </div>
 
     </nav>
     <nav>
@@ -61,4 +66,4 @@
         <a href="/category/accerorios">ACCESORIOS</a>
         <a href="/category/ofertas">OFERTAS</a>
     </nav>
-    </header>
+</header>

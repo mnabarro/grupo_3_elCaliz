@@ -3,18 +3,23 @@
 
 <%- include('../partials/head')%>
 
-    <body>
+    <body> 
 
         <%- include('../partials/header-admin')%>
 
             <main>
-
-
-                <div class="add">
-                    <a href="/admin/products/create"><button class="form-button form-button-primary">NUEVO
-                            PRODUCTO</button></a>
+                <div>
+                    <H2 class="title-admin">TODOS LOS PRODUCTOS</H2>
                 </div>
-
+                <div class="title-top">
+                    <div class="add">
+                        <a href="/admin"><button class="form-button">VOLVER</button></a>
+                    </div>
+                    <div class="add">
+                        <a href="/admin/products/add"><button class="form-button">AGREGAR NUEVO
+                                PRODUCTO</button></a>
+                    </div>
+                </div>
                 <section class="container">
 
                     <% products.forEach((product)=>{ %>

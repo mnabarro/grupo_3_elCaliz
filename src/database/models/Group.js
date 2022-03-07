@@ -11,7 +11,7 @@ module.exports = (sequelize, dataTypes) => {
         } ,
     };
     let config = {
-        tablename: "Grupos",
+        tablename: "Grups",
         timestamps: false
     };
     const Group = sequelize.define(alias, cols, config)

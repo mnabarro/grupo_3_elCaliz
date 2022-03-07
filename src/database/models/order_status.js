@@ -11,7 +11,7 @@ module.exports = (sequelize, dataTypes) => {
         },
     };
     let config = {
-        tablename: "order_status",
+        tablename: "orders_status",
         timestamps: false
     };
     const Order_status = sequelize.define(alias, cols, config)

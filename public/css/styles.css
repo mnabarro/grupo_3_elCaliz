@@ -11,6 +11,7 @@ main {
   flex-direction: column;
   gap: 5px;
   padding: 0 15px;
+  width: 100%;
 }
 
 header {
@@ -19,6 +20,34 @@ header {
   z-index: 10;
   background-color: white;
 }
+/*----NAVBAR----*/
+.navbar-admin {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background:#FB7267;
+}
+.header-left {
+  display: flex;
+}
+
+.nav{
+  display:flex;
+  font-size: 1rem;
+  border-radius: 10px;
+  padding: 8px 15px;
+}
+.nav a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+.view {
+  margin-right: 0.5rem;
+  text-align: center;
+}
+/*----END NAVBAR----*/
+
 .header-user-name {
   font-size: 1rem;
   color: #6b6b6b;
@@ -94,6 +123,7 @@ header {
   display: flex;
   justify-content: space-between;
 }
+
 .navbar-left {
   display: flex;
   align-items: center;
@@ -241,6 +271,9 @@ header {
 /****** NAV CATEGORIES ********/
 
 /*------FOOTER------*/
+footer section {
+  background-color: #595959;
+}
 /*bloque newsletter*/
 .newsletter-box {
   width: 100vw;
@@ -263,6 +296,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 .mail-box { 
@@ -289,20 +323,6 @@ header {
   font-size: 0.5rem;
 }
 /*END bloque newsletter*/
-/*SOCIAL ICONS*/
-.social-icons {
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-  font-size: 1.5rem;
-  margin: 1rem;
-}
-.fab {
-  color: white;
-  padding: 0rem 0.3rem;
-}
-
-/*END SOCIAL ICONS*/
 /*LINE*/
 .footer-line {
   height: 1px;
@@ -312,9 +332,30 @@ header {
 }
 /*END LINE*/
 /*WHATSAPP AND SCROLL UP*/
-.footer {
-  background-color:#595959;
+.icons {
+  margin-right: 0.5rem;
+  display: block;
+  position: fixed;
+  bottom: 10px;
+  right: 5px;
+} 
+svg {
+  width: 30px;
+  height: 30px;
+  display:block;
+  fill: #999;
+  margin: 5px 0px;
 }
+.whatsapp {
+  fill: #0DC143;
+}
+.facebook {
+  fill: #0035BB;
+}
+.instagram {
+  fill: #E7605D;
+}
+
 .footer-bottom {
   background-color:#595959;
 }
@@ -323,25 +364,6 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-}
-
-.whatsapp-icon {
-  width: 40px;
-  height: 40px;
-  display: block;
-  position: fixed;
-  right: 20px;
-  bottom: 90px;
-}
-
-.scrollup-icon {
-  color: #FB7267;
-  font-size: 30px;
-  display: block;
-  text-align: center;
-  position: fixed;
-  right: 40px;
-  bottom: 110px;
 }
 
 /*END WHATSAPP AND SCROLL UP*/

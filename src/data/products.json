@@ -1,18 +1,5 @@
 [
   {
-    "id": 1,
-    "sku": "7791203001231",
-    "name": "Luigi Bosca Malbec 750",
-    "description": "Luigi Bosca Malbec es un tinto emblemático de la bodega, elaborado con uvas de viñedos propios situados en Luján de Cuyo y Valle de Uco, Mendoza.\r\n\r\nTiene un color rojo violáceo profundo y brillante. Sus aromas son intensos y equilibrados, con notas de frutas rojas algo maduras y especias. En boca es generoso, fluido y expresivo, con taninos incipientes. De paladar franco y paso refrescante, con buen cuerpo y carácter atractivo. Su final es profundo y nítido, con el roble totalmente integrado, y posee un buen potencial de guarda. Es un vino insignia de su variedad.\r\n",
-    "price": "1031",
-    "discount": "0",
-    "categories": [
-      "cat-tintos",
-      "tintos-malbec"
-    ],
-    "image": "1641555859008_img_.jpg"
-  },
-  {
     "id": 2,
     "sku": "7791250002922",
     "name": "Navarro Correas Juan De Dios Blend 750",

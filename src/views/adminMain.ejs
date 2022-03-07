@@ -6,14 +6,20 @@
 <body>
     <%- include('./partials/header-admin')%>
     <main>
-    <h4>PANEL DE ADMINISTRACIÓN</h4>
+    <h2 class="title-admin">PANEL DE ADMINISTRACIÓN</h2>
     <div class="form-element-group">
-
-        <a href="/admin/products" class="form-button form-button-primary">PRODUCTOS</a>
-        <a href="" class="form-button form-button-primary">CATEGORÍAS</a>
-        <a href="" class="form-button form-button-primary">USUARIOS</a>
-        <a href="" class="form-button form-button-primary">USUARIOS ADMIN</a>
-
+        <div class="form-button"> 
+            <a href="/admin/products">PRODUCTOS</a>
+        </div>
+        <div class="form-button">
+            <a href="">CATEGORÍAS</a>  
+        </div>
+        <div class="form-button">
+            <a class="user" href="">USUARIOS </a>
+        </div>
+        <div class="form-button">
+            <a class="user" href="">USUARIOS </a>
+        </div>
     </div>
 </main>    
 </body>
