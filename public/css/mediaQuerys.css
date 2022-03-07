@@ -79,6 +79,9 @@
         }
 
       /*---END CATEGORY LIST OF PRODUCTS----*/
+      .title-top {
+        margin-top: 2rem;
+      }
     }
     
     /*----DESKTOP----*/
@@ -263,10 +266,7 @@
   position:none;
 }
 
-.form-button {
-  max-width: 200px;
-  margin-top: 1.5rem;
-}
+
 
 .add-buttonn{
   display: flex;

@@ -5,31 +5,39 @@ body {
     margin: 0;
     font-family: sans-serif;
 }
+/*----NAVBAR----*/
+.navbar-admin {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background:#FB7267;
+}
 .header-left {
   display: flex;
-
 }
-.navbar {
-  display: flex;
-  flex-wrap: wrap;
-  background:#FB7267;
 
-}
-.nav-left{
-  color:white;
+.nav{
+  display:flex;
   font-size: 1rem;
   border-radius: 10px;
-  text-decoration: none;
-  padding: 7px;
-  margin-left: 0.5rem;
+  padding: 8px 15px;
 }
-.nav-right {
+.nav a {
+  text-decoration: none;
   color: white;
-  font-size: 1rem;
-  border-radius: 10px;
-  text-decoration: none;
-  padding: 7px;
-  
+  text-align: center;
+}
+.view {
+  margin-right: 0.5rem;
+  text-align: center;
+}
+/*----END NAVBAR----*/
+.title-admin {
+  margin-top: 2rem;
+  text-align: center;
+  border:rgb(131 130 130 / 51%) solid 0.5px;
+  border-radius: 5px;
+  padding: 5px;
 }
 .sub {
     text-decoration: none;
@@ -45,14 +53,6 @@ body {
 }
 
 /*-----LIST OF PRODUCTS------*/
-
-
-  .add{
-    display: flex;
-    justify-content: flex-start;
-    padding-top: 40px;
-    margin-left: 0.7rem;
-  }
 
     .container{
       display: flex;
@@ -111,40 +111,33 @@ body {
       flex-wrap: nowrap;  
       gap : 10px;
     }
+    .add {
+      text-align: center;
+    }
     
     .form-button {
-      border-radius: 10px;
-      font-size: 1.2rem;
-      padding: 10px 13px;
-      cursor: pointer;
-      width: 100%;
-      /* max-width: 200px; */
-      margin: 10px auto;
-      text-decoration: none;
-      border:none;
+      margin-top: 1rem;
+      text-align: center;
+      padding: 10px;
+      background-color: white;
+      color: #FB7267;
+      border:1px solid;
+      border-radius: 5px;
+      font-weight: bold;
     }
     
     .form-button:hover {
       transform: scale(1.01);
-      box-shadow: 2px 2px 3px 0px rgba(68, 68, 68, 0.4);
+      box-shadow: 2px 2px 3px 0px #000;
     }
     
     .form-button:active {
       background-color: #444444;
       color: #f0f1f2;
     }
-    
-    .form-button-primary {
-      background-color: #FB7267;
-      color: white;
-      outline: none;
-    }
-    
-    .form-button-secondary {
-      background-color: #f0f1f2;
-      color: #FB7267;
-      outline: none;
-      font-weight: 700;
-    }
+.title-top {
+  display: flex;
+  justify-content: space-between;
+}
 
 /*-----END LIST OF PRODUCTS------*/
