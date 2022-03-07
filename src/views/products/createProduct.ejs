@@ -14,16 +14,20 @@
         <div class="products-add-main">
             <div class="title-line"></div>
 
+            <div class="errores">
+                <ul></ul>
+            </div>
+
             <form action="/admin/products" method="POST" class="products-add-form" enctype="multipart/form-data">
 
                 <div class="form-element">
                     <label for="name">Nombre:</label>
-                    <input type="text" name="name" id="name" placeholder="Luigi Bosca Malbec 750" required>
+                    <input type="text" name="name" id="name" class="name" placeholder="Luigi Bosca Malbec 750">
                 </div>
 
                 <div class="form-element">
                     <label for="description">Descripción:</label>
-                    <textarea name="description" id="description" placeholder="..." required></textarea>
+                    <textarea name="description" id="description" placeholder="..."></textarea>
                 </div>
 
                 <h4>IMÁGENES</h4>
@@ -41,7 +45,7 @@
 
                 <div class="form-element">
                     <label for="sku">Código / SKU:</label>
-                    <input type="text" class="control" name="sku" id="sku" required>
+                    <input type="text" class="control" name="sku" id="sku">
                 </div>
 
                 <!-- <div class="form-element">
@@ -51,7 +55,7 @@
 
                 <div class="form-element">
                     <label for="price">Precio:</label>
-                    <input type="number" name="price" id="price" value=0 required>
+                    <input type="number" name="price" id="price" value=0>
                 </div>
 
                 <div class="form-element">
@@ -80,6 +84,7 @@
     </main>
 
     <%- include ('../partials/footer') %>
+    <script src="/js/productFormValidation.js"></script>
     <script src="/js/tom-select.complete.js"></script>
     <script>
         new TomSelect("#select-state",{
