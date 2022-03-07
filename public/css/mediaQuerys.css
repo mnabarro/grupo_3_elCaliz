@@ -197,6 +197,10 @@
       .regret-button {
         margin-right: 2rem;
       }
+      .navbar-middle {
+        flex-direction: row-reverse;
+      }
+
 /*----DESTACADOS----*/
 
 .articuloX{
