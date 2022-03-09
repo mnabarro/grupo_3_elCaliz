@@ -30,7 +30,7 @@ module.exports = (sequelize, dataTypes) => {
         estado:{
             type: dataTypes.INTEGER(11),
             allowNull: false
-        },
+        }
     };
     let config = {
         tableName: 'Products',

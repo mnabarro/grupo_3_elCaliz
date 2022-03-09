@@ -26,7 +26,7 @@ router.post('/products/add', uploadFile.single('image'), adminController.create)
 
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/products/edit/:id', adminController.editProductForm); //Muestra el formulario para edición del producto
-router.put('/products',uploadFile.single('image'), adminController.editProduct); //Envía los datos para almacenar los cambios de la edición
+router.post('/products/edit/:id',uploadFile.single('image'), adminController.editProduct); //Envía los datos para almacenar los cambios de la edición
 
 /*** DELETE ONE PRODUCT ***/ 
 router.delete('/products/:id', adminController.deleteProduct);

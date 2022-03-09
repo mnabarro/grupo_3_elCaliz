@@ -9,47 +9,34 @@
 
     <main>
         <div class="products-edit-top">
-            <h2>EDITAR PRODUCTO : <%= product.name %></h2>
+            <h2>EDITAR PRODUCTO : <%= product.nombre %></h2>
         </div>
         <div class="products-edit-main">
             <div class="title-line"></div>
 
-            <form action="/admin/products?_method=PUT" method="POST" class="products-edit-form" enctype="multipart/form-data">
+            <form action="/products/edit/<%=pelicula.id%>" method="POST" class="products-edit-form" enctype="multipart/form-data">
 
                 <div class="form-element">
                     <label for="name">Id:</label>
                     <input type="text" name="id" id="id" readonly value="<%= product.id %>">
                 </div>
-
-                <div class="form-element">
-                    <label for="name">Nombre:</label>
-                    <input type="text" name="name" id="name" placeholder="Ej: Reloj" required value="<%= product.name %>">
-                </div>
-
-                <div class="form-element">
-                    <label for="description">Descripción:</label>
-                    <textarea name="description" id="description" placeholder="Ej:" required><%= product.description %>"</textarea>
-                </div>
-
-                <h4>IMAGEN</h4>
-
-                <div class="form-element-group">
-                    <div class="flex-group">
-                        <div>
-                            <img src="<%='/img/products/' + product.image %>" alt="imágen del producto" srcset="" height=150>
-                                <input type="file" name="image" accept="image/png, image/jpeg">
-                            </div>
-                    </div>
-                </div>
-
                 <div class="form-element">
                     <label for="sku">Código / SKU:</label>
                     <input type="text" class="control" name="sku" id="sku" value="<%= product.sku %>">
                 </div>
+                <div class="form-element">
+                    <label for="name">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Ej: Reloj" required value="<%= product.nombre %>">
+                </div>
 
                 <div class="form-element">
-                    <label for="price">Precio:</label>
-                    <input type="number" name="price" id="price" required value="<%= product.price %>">
+                    <label for="description">Descripción:</label>
+                    <textarea name="description" id="description" placeholder="Este producto es..." required><%= product.descripcion %>"</textarea>
+                </div>
+
+                <div class="form-element">
+                    <label for="precio">Precio:</label>
+                    <input type="number" name="precio" id="precio" required value="<%= product.precio %>">
                 </div>
 
                 <div class="form-element">
@@ -68,6 +55,16 @@
                     </select>                    
                 </div>
 
+                <h4>IMAGEN</h4>
+
+                <div class="form-element-group">
+                    <div class="flex-group">
+                        <div>
+                            <img src="<%='/img/products/' + product.image %>" alt="imágen del producto" srcset="" height=150>
+                                <input type="file" name="image" accept="image/png, image/jpeg">
+                            </div>
+                    </div>
+                </div>
                     <div class="edit-buttons">
                     <button type="submit" class="form-button form-button-primary">GUARDAR</button>
                     <button type="reset" class="form-button form-button-secondary">RESTABLECER</button>

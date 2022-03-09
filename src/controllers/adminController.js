@@ -34,13 +34,21 @@ const adminController = {
     
     // Create - Form to create product
     add: (req, res) => {
-    
-        res.render('products/createProduct', {cssa: 'products-add.css', "categories":categories, title:"Crear un nuevo producto"});
+        res.render('products/createProduct', {cssa: 'products-add.css', category, title:"Crear un nuevo producto"});
     },
 
     // Create -  Method to store new product
     create: (req, res) => {
-
+        db.Product.create({
+            id: product.length + 1,
+            sku: req.body.sku,
+            nombre: req.body.nombre,
+            descripcion: req.body.descripcion,
+            precio: req.body.precio,
+            discount: req.body.discount,
+            estado: req.body.estado
+        })
+        /*CONEXION CON EL JSON
         let newProduct = {
             id: products.length + 1,
             sku: req.body.sku,
@@ -55,19 +63,21 @@ const adminController = {
 
         products.push(newProduct);
         let productsJson = JSON.stringify(products);
-        fs.writeFileSync(productsFilePath, productsJson);
-        res.redirect('/admin/products');
+        fs.writeFileSync(productsFilePath, productsJson);*/
+        .then(function(product){
+            res.redirect('/admin/products');
+        })
+        .catch(err => {
+            return res.send(err)
+         })
+      
     },
     
     // Update - Form to edit product
     editProductForm: (req, res) => {
-        db.Products.findByPk({
-            where: {
-                id: req.params.id
-            }
-        })
-        .then(function(product){
-            res.render('products/editProduct', {product, cssa: 'products-edit.css',categories , title:"Editar producto"});
+        db.Product.findByPk(req.params.id)
+            .then(function(product){
+                res.render('products/editProduct', {product:product, cssa: 'products-edit.css', title:"Editar producto"});
         })
         .catch(err => {
             return res.send(err)
@@ -80,43 +90,24 @@ const adminController = {
 
     // Update - Method to edit product
     editProduct: (req, res) => {
-        db.Products.findByPk({
+        db.Product.update({
+                sku: req.body.sku,
+                nombre: req.body.nombre,
+                descripcion: req.body.descripcion,
+                precio: req.body.precio,
+                discount: req.body.discount,
+                estado: req.body.estado
+        }, {
             where: {
                 id: req.params.id
             }
         })
         .then(function(product){
-            product.sku = req.body.sku;
-            product.name = req.body.name;
-            product.description = req.body.description;
-            product.price = req.body.price;
-            product.discount = req.body.discount,
-            product.categories = req.body.categories,
-            product.image = req.file.filename;
-        })
-        .then(function(product){
-            fs.writeFileSync(productsFilePath, JSON.stringify(products,null,2));
-        })
-        .then(function(product){
-            res.redirect('/admin/products');
+            res.redirect('/products/edit' + req.params.id);
         })
         .catch(err => {
             return res.send(err)
          })
-
-
-        /*
-        let id = req.body.id;
-        let product = products.find(product => product.id == id);
-        product.sku = req.body.sku;
-        product.name = req.body.name;
-        product.description = req.body.description;
-        product.price = req.body.price;
-        product.discount = req.body.discount,
-        product.categories = req.body.categories,
-        product.image = req.file.filename;
-        fs.writeFileSync(productsFilePath, JSON.stringify(products,null,2));
-        res.redirect('/admin/products');*/
     },
     
     // Delete - Delete one product from DB
