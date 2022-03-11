@@ -41,6 +41,20 @@ module.exports = (sequelize, dataTypes) => {
         tablename: "Users",
         timestamps: false
     };
-    const User = sequelize.define(alias, cols, config)
+    const User = sequelize.define(alias, cols, config);
+    User.associate = (models) => {
+        User.belongsTo(models.Group, {
+            as: "Grupo",
+            foreignKey: "group_id"
+        }),
+        User.belongsTo(models.Genre, {
+            as: "Genero",
+            foreignKey: "genre_id"
+        })
+        User.hasmany(models.Order, {
+            as: "Order",
+            foreignKey: "user_id"
+        })
+    }
     return User;
 }

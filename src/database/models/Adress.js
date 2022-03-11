@@ -35,6 +35,18 @@ module.exports = (sequelize, dataTypes) => {
             tablename: "Adresses",
             timestamps: false
     };
-    const Adress = sequelize.define(alias, cols, config)
+    const Adress = sequelize.define(alias, cols, config);
+
+    Adress.associate = (models) => {
+        Adress.belongsTo(models.State, {
+            as: "Provincias",
+            foreignKey: "state_id"
+        }),
+        Adress.belongsTo(models.User, {
+            as: "User",
+            foreignKey: "user_id"
+        })
+
+    }
     return Adress;
 }

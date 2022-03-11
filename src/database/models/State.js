@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Group';
+    let alias = 'States';
     let cols = {
         id: {
             type: dataTypes.INTEGER(10).UNSIGNED,
@@ -8,18 +8,19 @@ module.exports = (sequelize, dataTypes) => {
         },
         nombre: {
             type: dataTypes.STRING(100)
-        } ,
+        },
     };
     let config = {
-        tablename: "Grups",
+        tablename: "States",
         timestamps: false
-    };
-    const Group = sequelize.define(alias, cols, config)
-    Group.associate = (models) => {
-        Group.belongsTo(models.User, {
-            as: "User",
-            foreignKey: "group_id"
-        })
     }
-    return Group;
+    const State = sequelize.define(alias, cols, config)
+    State.associate = (models) => {
+        State.hasMany(models.Adress, {
+            as: "Adress",
+            foreignKey: "state_id"
+        })
+ 
+    }
+    return State;
 }
