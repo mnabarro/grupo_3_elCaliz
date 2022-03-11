@@ -12,10 +12,11 @@
             <div class="articulo">
                 <div class="fondo-imagen"><img class="imagen-vino-portada" src="/img/products/<%= product.image %>" alt="vinito"></div>
                 <div class="info-vino">
-                <p class="nombre"><%= product.name %></p>
-                <p class="codigo">Código SKU</p>
-                <p class="descripcion"><%= product.description %></p>
-                <p class="precio"><%= product.price %></p>
+                <p class="sku"><%= product.sku %></p>
+                <p class="nombre"><%= product.nombre %></p>
+                <p class="descripcion"><%= product.descripcion %></p>
+                <p class="precio"><%= product.precio %></p>
+                <p class="discount"><%= product.discount %></p>
 
                 <div class="carrito">
                     <button class="minus">-</button>
@@ -39,8 +40,8 @@
                
                 <div class="fondo">
                     <img class="imagen-vino" src="img/products/<%= product.image %>" alt="vinito"></div>
-                <p class="nombre-vino"><%= product.name %></p>
-                <p class="precio-vino"><%= product.price %></p>
+                <p class="nombre-vino"><%= product.nombre %></p>
+                <p class="precio-vino"><%= product.precio %></p>
                 <a href="../orders/cart"><span class="add-buttonn">
                     <button class="fas fa-cart-plus"> AGREGAR</button> 
                 </span></a>

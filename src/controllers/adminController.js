@@ -1,4 +1,5 @@
 // ************ Require's ************
+const { ResultWithContext } = require('express-validator/src/chain');
 const { redirect } = require('express/lib/response');
 const fs = require('fs');
 const path = require('path');
@@ -112,11 +113,19 @@ const adminController = {
     
     // Delete - Delete one product from DB
     deleteProduct: (req, res) => {
-        let id = req.params.id;
+        db.Product.destroy ({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(function(product){
+            res.redirect('/admin/products' + req.params.id);
+        })
+        /*let id = req.params.id;
         let idxToDelete = products.findIndex(product => product.id == id);
-        console.log(`ID = ${idxToDelete}`);
+        console.log(`ID = ${idxToDelete}`);*/
         //Si existe un producto con el id recibido como parámetro, lo borro
-        if(idxToDelete >= 0) {
+        /*if(idxToDelete >= 0) {
             let productoBorrado = products.splice(idxToDelete, 1);
 
             let imagePath = path.join(__dirname, '../../public/img/products/' + productoBorrado[0].image);
@@ -127,10 +136,8 @@ const adminController = {
             if (fs.existsSync(imagePath)) {
                 fs.unlinkSync(imagePath)
             }
-
-            res.redirect('/admin/products');
     
-        }
+        }*/
     },
     login: (req, res) => {
         res.render('users/login', {cssa: 'login.css',title:"Admin - Ingresar"});
