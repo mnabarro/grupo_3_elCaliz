@@ -37,7 +37,7 @@ module.exports = (sequelize, dataTypes) => {
     };
     const Adress = sequelize.define(alias, cols, config);
 
-    Adress.associate = (models) => {
+    /*Adress.associate = (models) => {
         Adress.belongsTo(models.State, {
             as: "Provincias",
             foreignKey: "state_id"
@@ -47,6 +47,6 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: "user_id"
         })
 
-    }
+    }*/
     return Adress;
 }

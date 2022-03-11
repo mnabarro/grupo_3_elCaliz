@@ -15,11 +15,11 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     };
     const Group = sequelize.define(alias, cols, config)
-    Group.associate = (models) => {
+    /*Group.associate = (models) => {
         Group.belongsTo(models.User, {
             as: "User",
             foreignKey: "group_id"
         })
-    }
+    }*/
     return Group;
 }

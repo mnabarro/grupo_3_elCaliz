@@ -15,11 +15,11 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     }
     const Genre = sequelize.define(alias, cols, config)
-    Genre.associate = (models) => {
+    /*Genre.associate = (models) => {
         Genre.belongsTo(models.User, {
             as: "User",
             foreignKey: "genre_id"
         })
-    }
+    }*/
     return Genre;
 }
