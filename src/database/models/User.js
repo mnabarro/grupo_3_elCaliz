@@ -42,7 +42,7 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     };
     const User = sequelize.define(alias, cols, config);
-    /*User.associate = (models) => {
+    User.associate = (models) => {
         User.belongsTo(models.Group, {
             as: "Grupo",
             foreignKey: "group_id"
@@ -55,6 +55,6 @@ module.exports = (sequelize, dataTypes) => {
             as: "Order",
             foreignKey: "user_id"
         })
-    }*/
+    }
     return User;
 }

@@ -15,12 +15,12 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     }
     const State = sequelize.define(alias, cols, config)
-    /*State.associate = (models) => {
+    State.associate = (models) => {
         State.hasMany(models.Adress, {
             as: "Adress",
             foreignKey: "state_id"
         })
  
-    }*/
+    }
     return State;
 }

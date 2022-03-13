@@ -37,18 +37,26 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     };
     const Product = sequelize.define(alias, cols, config)
-    /*Product.associate = (models)=>{
+    Product.associate = (models)=>{
         Product.belongsToMany(models.Category, {
-            as: 'categories',
+            as: 'category',
             through: 'products_has_categories',
-            foreignKey: 'products_id',
-            otherKey: 'categories_id',
+            foreignKey: 'product_id',
+            otherKey: 'category_id',
+            timestamps: false
         });
         Product.hasMany(models.Image, {
             as: 'images',
-            foreignKey: 'products_id'
+            foreignKey: 'product_id'
         });
-    }*/
+        Product.belongsToMany(models.Order, {
+            as: "order",
+            through: "products_has_orders", //a traves de que tabla intermedia se conectan
+            foreignKey: "product_id",
+            otherKey: "id_pedido",
+            timestamps: false,
+        })
+    }
 
     return Product;
 }

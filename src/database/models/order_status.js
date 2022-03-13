@@ -15,5 +15,15 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     };
     const Order_status = sequelize.define(alias, cols, config)
+    Order_status.associate = (models) => {
+        Order_status.belongsToMany(models.Order, {
+            as: "order",
+            through: "order_has_orders_status", //a traves de que tabla intermedia
+            foreignKey: "order_status_id",
+            otherKey: "order_id",
+            timestamps: false,
+        })
+
+    }
     return Order_status;
 }

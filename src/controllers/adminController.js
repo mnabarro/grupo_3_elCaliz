@@ -21,8 +21,7 @@ const adminController = {
     // Root - Show all products
     products: (req, res) => {
         db.Product.findAll({
-            include: [{association: "categories"}],
-            include: [{association: "images"}],
+            include: [{association: "products"}],
         })
             .then(function (products) {
                 res.render('products/productsAdmin', {products,
@@ -106,7 +105,7 @@ const adminController = {
                 id: req.params.id
             }
         })
-        .then(function(product){
+        .then(function(){
             res.redirect('/products/edit' + req.params.id);
         })
         .catch(err => {
