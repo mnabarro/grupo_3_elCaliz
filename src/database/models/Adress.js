@@ -37,17 +37,17 @@ module.exports = (sequelize, dataTypes) => {
     };
     const Adress = sequelize.define(alias, cols, config);
 
-    Adress.associate = (models) => {
-        Adress.belongsTo(models.State, {
-            as: "state",
-            foreignKey: "state_id"
-        }),
+    // Adress.associate = (models) => {
+    //     Adress.belongsTo(models.State, {
+    //         as: "State",
+    //         foreignKey: "state_id"
+    //     }),
     
-        Adress.belongsTo(models.User, {
-            as: "user",
-            foreignKey: "user_id"
-        })
+    //     Adress.belongsTo(models.User, {
+    //         as: "User",
+    //         foreignKey: "user_id"
+    //     })
 
-    }
+    // }
     return Adress;
 }

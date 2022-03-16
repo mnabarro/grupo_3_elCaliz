@@ -11,7 +11,10 @@ const usersController = {
     list: (req, res) => {
         db.User.findAll()
             .then(users => {
-                res.render('users/listUser.ejs', { users }, { cssa: 'users-admin.css' }, { title: 'Administración de usuarios' });
+                res.render('users/listUser.ejs', 
+                    { users , 
+                      cssa: 'users-admin.css',
+                      title: 'Administración de usuarios' });
             }).catch((error) => {
                 if (error) throw error;
             })
@@ -21,7 +24,10 @@ const usersController = {
         let id = req.params.id;
         let user = db.User.findByPk(req.params.id)
             .then(function (user) {
-                res.render('users/editUser.ejs', {user}, {cssa: 'users-edit.css'}, {title: 'Administración de usuarios'});
+                res.render('users/editUser.ejs', 
+                {user, 
+                 cssa: 'users-edit.css',
+                 title: 'Administración de usuarios'});
             }).catch((error) => {
                 if (error) throw error;
             })
@@ -46,11 +52,11 @@ const usersController = {
                         req.session.userLogged = usr;
 
                         if (req.body.recordar != undefined){
-                            res.cookie('recordar', userLogged.email, {maxAge: 1000*30})
+                            res.cookie('recordar', usr.email, {maxAge: 1000*30})
                         }
                         console.log(usr);
                         delete usr.password;
-                        return res.redirect('users/profile');
+                        return res.redirect('/users/profile');
                     } else {
                         return res.render('users/loginUser.ejs', {
                             cssa: 'login.css',

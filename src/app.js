@@ -42,11 +42,10 @@ app.use('/admin', adminRouter); //BACK
 // ************ Template Engine ************
 app.set('view engine', 'ejs');
 
-
 // ************ Port ************
-app.listen(process.env.PORT) || 3000, function () {
+app.listen( (process.env.PORT || 3000), function () {
     console.log("Server listening on port 3000");
-}
+});
 
 /*app.listen(3000, () => {
     console.log('Server listening on port 3000');
