@@ -5,14 +5,13 @@ window.addEventListener('load', function(){
 
         let errores = [];
 
+        let emailValid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         let nombre = document.getElementById('name');
         let apellido = document.getElementById('last-name');
-        let email = document.getElementById('e-mail');
+        let email = document.getElementById('email');
         let dni = document.getElementById('dni');
         let contraseña = document.getElementById('password');
         let imagen = document.getElementById('images');
-
-        let emailValid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
         if(nombre.value == ''){
             errores.push('El campo de nombre tiene que estar completo');
@@ -27,11 +26,12 @@ window.addEventListener('load', function(){
             errores.push('El campo de apellido debe tener al menos 2 caracteres');
         }
 
-        // if(emailValid.text(email)){
-        //     return true;
-        // } else{
-        //     errores.push('El campo de email tiene que estar completo');
-        // }
+        if(email.value == ''){
+            errores.push('El campo de email tiene que estar completo');
+            
+        } else if (!email.value.match(emailValid)){
+            errores.push('Tiene que ser en formato mail');   
+        }
 
         if(dni.value == ''){
             errores.push('El campo de dni tiene que estar completo');
@@ -40,18 +40,19 @@ window.addEventListener('load', function(){
         }
 
         if(contraseña.value == ''){
-            errores.push('El campo de contraseña tiene que estar completo');
-        } else if (contraseña.value.length < 8){
-            errores.push('El campo de contraseña debe tener al menos 8 caracteres');
+            errores.push('El campo de contraseña tiene que estar completo');   
         }
 
         if(errores.length > 0){
             e.preventDefault();
 
-            let ulErrores = document.querySelector('div.errores ul')
+            let ulErrores = document.querySelector('.errores');
+            ulErrores.classList.add('alert-warning');
             for (let i = 0; i < errores.length; i++) {
-                ulErrores.innerHTML += '<li>' + errores[i] + '</li>'
-            }
+                ulErrores.innerHTML += '<li>' + errores[i] + '</li>';
+            };
+        } else{
+            formulario.submit();
         }
 
     }); 

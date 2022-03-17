@@ -132,5 +132,9 @@ main {
   font-weight: 700;
 }
 
+.errores{
+  color: red;
+  font-size: small;
+}
 
 /*------END MAIN------*/

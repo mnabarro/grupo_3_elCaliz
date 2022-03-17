@@ -14,11 +14,11 @@
                     <h2>CREAR CUENTA</h2>
                     <div class="line"></div>
                 </div>
-                <div class="errores">
-                    <ul></ul>
-                </div>
             <div class="register-main">
                 <form action="/users/register" method="POST" class="create-form" enctype="multipart/form-data">
+                    <div class="errores">
+                        <ul></ul>
+                    </div>
                     <div class="control-form">
                         <label for="name">Nombre:<input type="text" class="control" name="name" id="name" placeholder="Ej: Mariana" value="<%= locals.oldData ? oldData.name : null %>"></label>
                         <% if (locals.errors && errors.name) { %>
@@ -36,7 +36,7 @@
                            <% } %>
                     </div>
                     <div class="control-form">
-                        <label for="e-mail">Email:<input type="email" class="control" name="email" id="e-mail" placeholder="Ej: hola@gmail.com" value="<%= locals.oldData ? oldData.email : null %>"></label>
+                        <label for="e-mail">Email:<input type="email" class="control" name="email" id="email" placeholder="Ej: hola@gmail.com" value="<%= locals.oldData ? oldData.email : null %>"></label>
                         <% if (locals.errors && errors.email) { %>
                             <div class="danger">
                             <%= errors.email.msg %>

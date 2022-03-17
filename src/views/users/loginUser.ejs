@@ -13,10 +13,10 @@
                 <h2>INICIAR SESIÓN</h2>
                 <div class="line"></div>
             </div>
-            <div class="errores">
-                <ul></ul>
-            </div>
             <div class="login-main">
+                <div class="errores">
+                    <ul></ul>
+                </div>
                 <form action="/users/login" method="POST" class="login-form">
                     <div class="control-form">
                         <label for="email">E-mail:<input type="email" class="control" name="email" id="email" placeholder="Ej: hola@gmail.com"></label>
@@ -56,7 +56,7 @@
     </main>
 
     <%- include ('../partials/footer') %>
-
+    <script src="/js/loginValidation.js"></script>
 </body>
 
 </html>
