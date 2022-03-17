@@ -19,7 +19,7 @@
                 </div>
                 <form action="/users/login" method="POST" class="login-form">
                     <div class="control-form">
-                        <label for="email">E-mail:<input type="email" class="control" name="email" id="email" placeholder="Ej: hola@gmail.com"></label>
+                        <label for="email">E-mail:<input type="text" class="control" name="email" id="email" placeholder="Ej: hola@gmail.com"></label>
                         <% if (locals.errors && errors.email) { %>
                             <div class="danger">
                             <%= errors.email.msg %>

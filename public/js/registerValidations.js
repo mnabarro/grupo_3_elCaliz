@@ -6,6 +6,7 @@ window.addEventListener('load', function(){
         let errores = [];
 
         let emailValid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        let fileValid = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
         let nombre = document.getElementById('name');
         let apellido = document.getElementById('last-name');
         let email = document.getElementById('email');
@@ -41,6 +42,15 @@ window.addEventListener('load', function(){
 
         if(contraseña.value == ''){
             errores.push('El campo de contraseña tiene que estar completo');   
+        }else if (contraseña.value.length < 8){
+            errores.push('El campo de contraseña debe tener al menos 8 caracteres');
+        }
+
+        if(imagen.value == ''){
+            errores.push('El campo de imagen tiene que estar completo');
+            
+        } else if (!imagen.value.match(fileValid)){
+            errores.push('Tiene que ser en un formato compatible');   
         }
 
         if(errores.length > 0){
