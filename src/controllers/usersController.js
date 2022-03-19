@@ -134,7 +134,7 @@ const usersController = {
                     });
 
 
-                    return res.redirect('users/login');
+                    return res.redirect('/users/login');
                 }
             }).catch((error) => {
                 if (error) throw error;
