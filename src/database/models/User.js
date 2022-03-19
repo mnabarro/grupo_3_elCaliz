@@ -6,24 +6,26 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true,
             primaryKey: true
         },
-        nombre: {
+        name: {
             type: dataTypes.STRING
         },
-        apellido: {
+        lastname: {
             type: dataTypes.STRING
         },
         dni: {
             type: dataTypes.INTEGER(8)
         },
-        mail: {
+        address: {
+            type: dataTypes.STRING(45)
+        },
+        phone: {
+            type: dataTypes.STRING(45)
+        },
+        email: {
             type: dataTypes.STRING
         },
         password: {
             type: dataTypes.STRING
-        },
-        estado: {
-            type: dataTypes.INTEGER(11),
-            defaultValue : 1
         },
         image: {
             type: dataTypes.STRING,
@@ -33,27 +35,15 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER(10),
             defaultValue : 1
         },
-        genre_id: {
-            type: dataTypes.INTEGER(10),
-            defaultValue : 1
-        },
     }; let config = {
-        tablename: "Users",
+        tablename: "user",
         timestamps: false
     };
     const User = sequelize.define(alias, cols, config);
     User.associate = (models) => {
         User.belongsTo(models.Group, {
-            as: "Grupo",
+            as: "group",
             foreignKey: "group_id"
-        }),
-        User.belongsTo(models.Genre, {
-            as: "Genero",
-            foreignKey: "genre_id"
-        })
-        User.hasMany(models.Order, {
-            as: "Order",
-            foreignKey: "user_id"
         })
     }
     return User;

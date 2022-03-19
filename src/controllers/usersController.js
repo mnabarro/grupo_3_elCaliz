@@ -2,7 +2,6 @@ const {
     validationResult
 } = require('express-validator');
 const fs = require('fs');
-const User = require('../Database/User-M');
 const bcryptjs = require('bcryptjs');
 const db = require('../database/models');
 const { ResultWithContext } = require('express-validator/src/chain');

@@ -25,21 +25,21 @@
 >>>>>>> 3b0b8adab50346abe9da899ff81fae5ada4a724e
             <form action="/admin/products" method="POST" class="products-add-form" enctype="multipart/form-data">
                 <div class="form-element">
-                    <label for="sku">Código / SKU:</label>
+                    <label for="sku">SKU:</label>
                     <input type="text" class="control" name="sku" id="sku">
                 </div>
                 <div class="form-element">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" name="nombre" id="nombre" class="nombre" placeholder="Luigi Bosca Malbec 750">
+                    <label for="name">Nombre:</label>
+                    <input type="text" name="name" id="name" class="name" placeholder="Luigi Bosca Malbec 750">
                 </div>
 
                 <div class="form-element">
-                    <label for="descripcion">Descripción:</label>
-                    <textarea name="descripcion" id="descripcion" placeholder="..."></textarea>
+                    <label for="description">Descripción:</label>
+                    <textarea name="description" id="description" placeholder="..."></textarea>
                 </div>
                 <div class="form-element">
-                    <label for="precio">Precio:</label>
-                    <input type="number" name="precio" id="precio" value=0>
+                    <label for="price">Precio:</label>
+                    <input type="number" name="price" id="price" value=0>
                 </div>
 
                 <div class="form-element">
@@ -47,11 +47,11 @@
                     <input type="number" name="discount" id="discount" value=0>
                 </div>
                 <div class="form-element">
-                    <label for="categories"><h4>CATEGORÍAS</h4></label>
-                    <select id="select-state" name="categories" multiple autocomplete="off">
+                    <label for="category"><h4>CATEGORÍAS</h4></label>
+                    <select id="select-state" name="category" multiple autocomplete="off">
 
-                        <% for (let category of categories) {%>
-                            <option value="<%=category.value%>"><%=category.name%></option>
+                        <% for (let category of category) {%>
+                            <option value="<%=category.name%>"><%=category.name%></option>
                             <% } %>
     
                     </select>                    

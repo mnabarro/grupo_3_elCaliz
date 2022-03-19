@@ -6,18 +6,18 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true,
             primaryKey: true
         },
-        nombre: {
+        name: {
             type: dataTypes.STRING(100)
         } ,
     };
     let config = {
-        tablename: "Grups",
+        tablename: "group",
         timestamps: false
     };
     const Group = sequelize.define(alias, cols, config)
     Group.associate = (models) => {
-        Group.belongsTo(models.User, {
-            as: "User",
+        Group.hasMany(models.User, {
+            as: "user",
             foreignKey: "group_id"
         })
     }

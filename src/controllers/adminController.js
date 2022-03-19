@@ -45,11 +45,10 @@ const adminController = {
         db.Product.create({
             id: product.length + 1,
             sku: req.body.sku,
-            nombre: req.body.nombre,
-            descripcion: req.body.descripcion,
-            precio: req.body.precio,
+            nombre: req.body.name,
+            descripcion: req.body.description,
+            precio: req.body.price,
             discount: req.body.discount,
-            estado: req.body.estado
         })
         /*CONEXION CON EL JSON
         let newProduct = {
@@ -95,11 +94,10 @@ const adminController = {
     editProduct: (req, res) => {
         db.Product.update({
                 sku: req.body.sku,
-                nombre: req.body.nombre,
-                descripcion: req.body.descripcion,
-                precio: req.body.precio,
+                nombre: req.body.name,
+                descripcion: req.body.description,
+                precio: req.body.price,
                 discount: req.body.discount,
-                estado: req.body.estado
         }, {
             where: {
                 id: req.params.id

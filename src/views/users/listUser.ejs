@@ -16,24 +16,23 @@
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>DNI</th>
+                <th>Dirección</th>
+                <th>Teléfono</th>
                 <th>Email</th>
-                <th>Fecha de registro</th>
+                <th>Contraseña</th>
+                <th>Imagen</th>
                 <th>Grupo</th>
-                <th>Género</th>
-                <th>Estado</th>
-                <th>Acciones</th>
             </tr>
             <% users.forEach((user)=>{ %>
                 <tr>
                     <td><%= user.id %> </td>
-                    <td><%= user.nombre %> </td>
-                    <td><%= user.apellido %> </td>
+                    <td><%= user.name %> </td>
+                    <td><%= user.lastname %> </td>
                     <td><%= user.dni %> </td>
-                    <td><%= user.mail %> </td>
-                    <td><%= user.fecha_registro %> </td>
+                    <td><%= user.address %> </td>
+                    <td><%= user.phone %> </td>
+                    <td><%= user.email %> </td>
                     <td><%= user.group_id %> </td>
-                    <td><%= user.genre_id %> </td>
-                    <td><%= user.estado %> </td>
                     <td>
                         <div class="edit-buttons">
                             <a href="/users/edit/<%= user.id %>"><button title="Editar..." class="form-button form-button-secondary">
