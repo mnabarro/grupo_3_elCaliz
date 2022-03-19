@@ -16,10 +16,43 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productsController = {
     category: (req, res) => {
+        db.Category.findOne({
+            where: {
+                nombre: req.params.name
+            }
+        })
+            .then((result) => {
+                db.products_has_category.findAll({
+                    where: {
+                        category_id: result
+                    }
+                })
+            })
+            .then((result) => {
+                db.Product.findAll({
+                    where: {
+                        id: result.product_id
+                    },
+                    order: [
+                        ['id', 'ASC']
+                    ],
+                    limit: 10
+                })
+            })
+            .then((result) => {
+                res.render('products/category', {products, cssa: 'categories.css', title: "Categoría" });
+            })
+            .catch(err => {
+                return res.send(err)
+            })
+    },
+
+    /*
+    category: (req, res) => {
         let categoryName = req.params.name;
-        let category = categories.find(category => category.name == categoryName)
+        let category = category.find(category => category.name == categoryName)
         res.render('products/category', {category, cssa: 'categories.css', title:"Categoría"});
-    },   
+    },   */
     search: (req, res) => {
         db.Product.findAll({
             where: {
