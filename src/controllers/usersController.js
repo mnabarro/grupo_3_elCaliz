@@ -41,7 +41,7 @@ const usersController = {
     processLogin: (req, res) => {
         db.User.findOne({
             where: {
-                mail: req.body.email
+                email: req.body.email
             }
         }).then(usr => {
                 if (usr) {
@@ -78,9 +78,9 @@ const usersController = {
                         }
                     });
                 }
-            }).catch((error) => {
-                if (error) throw error;
-            })
+            }).catch(err => {
+                return res.send(err)
+             })
     },
 
     register: (req, res) => {
@@ -106,7 +106,7 @@ const usersController = {
 
         db.User.findOne({
             where: {
-                mail: req.body.email
+                email: req.body.email
             }
         }).then(usr => {
                 if (usr) {
@@ -129,7 +129,7 @@ const usersController = {
                         dni: req.body.dni,
                         direccion: req.body.address,
                         telefono: req.body.phone,
-                        mail: req.body.email,
+                        email: req.body.email,
                         password: bcryptjs.hashSync(req.body.password, 10),
                         image: req.file.filename,
                         grupo: req.body.group_id
