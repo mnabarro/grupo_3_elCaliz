@@ -126,10 +126,13 @@ const usersController = {
                     db.User.create({
                         nombre: req.body.name,
                         apellido: req.body.lastname,
-                        mail: req.body.email,
                         dni: req.body.dni,
+                        direccion: req.body.address,
+                        telefono: req.body.phone,
+                        mail: req.body.email,
                         password: bcryptjs.hashSync(req.body.password, 10),
-                        image: req.file.filename
+                        image: req.file.filename,
+                        grupo: req.body.group_id
                     });
 
 
