@@ -6,7 +6,7 @@ module.exports = [
     body('lastname').notEmpty().withMessage('Ecribe tu Apellido'),
     body('email').notEmpty().withMessage('Ecribe tu Email').bail().isEmail().withMessage('Tiene que ser un formato de email válido'),
     body('password').notEmpty().withMessage('Ecribe una contraseña'),
-    body('imageCover').custom((value, {req})=>{
+    body('image').custom((value, {req})=>{
         let file = req.file;
         let acceptedExtensions = ['.jpg', '.png', '.gif'];
 
