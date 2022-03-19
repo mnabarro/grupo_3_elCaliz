@@ -20,11 +20,9 @@ const adminController = {
     
     // Root - Show all products
     products: (req, res) => {
-        db.Product.findAll({
-            include: [{association: "products"}],
-        })
-            .then(function (products) {
-                res.render('products/productsAdmin', {products,
+        db.Product.findAll()
+            .then(products => {
+                res.render('products/productsAdmin', {products:products,
                 cssa : 'products-admin.css', 
                 title :'Administración de productos'
                 })

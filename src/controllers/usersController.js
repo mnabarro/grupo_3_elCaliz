@@ -1,10 +1,10 @@
-const {
-    validationResult
-} = require('express-validator');
+const { validationResult } = require('express-validator');
 const fs = require('fs');
 const bcryptjs = require('bcryptjs');
 const db = require('../database/models');
 const { ResultWithContext } = require('express-validator/src/chain');
+const { Op } = require("sequelize");
+const sequelize = db.sequelize;
 
 const usersController = {
     list: (req, res) => {
@@ -41,7 +41,7 @@ const usersController = {
     processLogin: (req, res) => {
         db.User.findOne({
             where: {
-                email: req.body.email
+                email: { [Op.like]: req.body.email }
             }
         }).then(usr => {
                 if (usr) {
@@ -51,7 +51,7 @@ const usersController = {
                         req.session.userLogged = usr;
 
                         if (req.body.recordar != undefined){
-                            res.cookie('recordar', usr.email, {maxAge: 1000*30})
+                            res.cookie('recordar', req.body.email, {maxAge: 1000*30})
                         }
                         console.log(usr);
                         delete usr.password;
@@ -70,7 +70,7 @@ const usersController = {
                 } else {
                     return res.render('users/loginUser.ejs', {
                         cssa: 'login.css',
-                        title: "El Cáliz - Ingresar",
+                        title: "Ingresar",
                         errors: {
                             email: {
                                 msg: 'Usuario no registrado.'
@@ -106,7 +106,7 @@ const usersController = {
 
         db.User.findOne({
             where: {
-                email: req.body.email
+                email: { [Op.like]: req.body.email }
             }
         }).then(usr => {
                 if (usr) {
@@ -119,7 +119,7 @@ const usersController = {
                         },
                         oldData: req.body,
                         cssa: 'register.css',
-                        title: "El Cáliz - Registrarse"
+                        title: "Registrarse"
                     });
                 } else {
 
