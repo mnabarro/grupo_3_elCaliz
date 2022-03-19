@@ -38,12 +38,25 @@ main {
   display: block;
   position: relative;
 }
+.control-form-users {
+  display: flex;
+  justify-content: center;
+}
+.control-form-users input {
+  padding: 2px;
+}
+
 .control {
   width: 70vw;
   display: block;
   padding: 5px;
-  border: #FB7267 1px solid;
+  border: #444 1px solid;
   border-radius: 5px;
+}
+.group {
+  width: 10vw;
+  display: inline-block;
+  padding-bottom: 20px;
 }
 .fa-eye-slash {
   position: absolute;

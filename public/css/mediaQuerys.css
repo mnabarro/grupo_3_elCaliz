@@ -200,6 +200,9 @@
       .navbar-middle {
         flex-direction: row-reverse;
       }
+      .control-form-users input {
+        margin: -20px;
+    }
 
 /*----DESTACADOS----*/
 
@@ -290,6 +293,8 @@
     .captcha {
       width: 20vw;
     }
-
+    .control-form-users input {
+      margin: -20px;
+  }
     }
     /*-----END MEDIAS QUERIES----*/

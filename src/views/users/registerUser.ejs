@@ -84,13 +84,14 @@
                             </div>
                            <% } %>
                     </div>
-                    <div class="control-form">
-                        <label for="group">Grupo:<input type="text" class="control" name="group" id="group" value="<%= locals.oldData ? oldData.group : null %>"></label>
-                        <% if (locals.errors && errors.group) { %>
-                            <div class="danger">
-                            <%= errors.group.msg %>
-                            </div>
-                           <% } %>
+                    <div class="control-form-users">
+                        <div>
+                            <label for="user">Cliente<input type="radio" class="group"name="typeUser" value="Usuario" checked></label>
+                        </div>
+                        <div>
+                            <label for="admin" >Administrador<input type="radio" class="group"name="typeUser" value="Administrador">
+                            </label> 
+                        </div>
                     </div>
                     <!-- <img class="captcha" src="/img/png/captcha.png" alt=""> -->
 
