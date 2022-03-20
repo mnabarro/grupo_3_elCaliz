@@ -9,7 +9,7 @@
 
     <main>
         <div class="products-edit-top">
-            <h2>EDITAR PRODUCTO : <%= product.nombre %></h2>
+            <h2>EDITAR PRODUCTO : <%= product.name %></h2>
         </div>
         <div class="products-edit-main">
             <div class="title-line"></div>
@@ -26,17 +26,17 @@
                 </div>
                 <div class="form-element">
                     <label for="name">Nombre:</label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Ej: Reloj" required value="<%= product.nombre %>">
+                    <input type="text" name="nombre" id="nombre" placeholder="Ej: Reloj" required value="<%= product.name %>">
                 </div>
 
                 <div class="form-element">
                     <label for="description">Descripción:</label>
-                    <textarea name="description" id="description" placeholder="Este producto es..." required><%= product.descripcion %>"</textarea>
+                    <textarea name="description" id="description" placeholder="Este producto es..." required><%= product.description %>"</textarea>
                 </div>
 
                 <div class="form-element">
                     <label for="precio">Precio:</label>
-                    <input type="number" name="precio" id="precio" required value="<%= product.precio %>">
+                    <input type="number" name="precio" id="precio" required value="<%= product.price %>">
                 </div>
 
                 <div class="form-element">
@@ -48,7 +48,7 @@
                     <label for="categories"><h4>CATEGORÍAS</h4></label>
                     <select id="select-state" name="categories" multiple autocomplete="off">
 
-                        <% for (let category of categories) {%>
+                        <% for (let category of category) {%>
                             <option value="<%=category.value%>"><%=category.name%></option>
                             <% } %>
     
@@ -78,7 +78,7 @@
     <script src="/js/tom-select.complete.js"></script>
         
     <script>
-        let categories = new TomSelect("#select-state",{
+        let category = new TomSelect("#select-state",{
             plugins: {
         remove_button:{
             title:'Quitar este item',
@@ -87,8 +87,8 @@
     maxItems: 5
     });
     
-    <% for (let cat of product.categories ) {%>
-        categories.addItem("<%=cat%>");
+    <% for (let cat of product.category ) {%>
+        category.addItem("<%=cat%>");
     <%}%>
 
     </script>

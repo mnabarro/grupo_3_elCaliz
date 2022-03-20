@@ -13,9 +13,9 @@
                 <div class="fondo-imagen"><img class="imagen-vino-portada" src="/img/products/<%= product.image %>" alt="vinito"></div>
                 <div class="info-vino">
                 <p class="sku"><%= product.sku %></p>
-                <p class="nombre"><%= product.nombre %></p>
-                <p class="descripcion"><%= product.descripcion %></p>
-                <p class="precio"><%= product.precio %></p>
+                <p class="nombre"><%= product.name %></p>
+                <p class="descripcion"><%= product.description %></p>
+                <p class="precio"><%= product.price %></p>
                 <p class="discount"><%= product.discount %></p>
 
                 <div class="carrito">
@@ -25,7 +25,7 @@
                 </div>
 
                 <div class="add-buttonn">
-                    <a href="/orders/cart"><button class="fas fa-cart-plus">AGREGAR</button></a>
+                    <a href="/cart"><button class="fas fa-cart-plus">AGREGAR</button></a>
                 </div>
             </div>
     </article>
@@ -40,9 +40,9 @@
                
                 <div class="fondo">
                     <img class="imagen-vino" src="img/products/<%= product.image %>" alt="vinito"></div>
-                <p class="nombre-vino"><%= product.nombre %></p>
-                <p class="precio-vino"><%= product.precio %></p>
-                <a href="../orders/cart"><span class="add-buttonn">
+                <p class="nombre-vino"><%= product.name %></p>
+                <p class="precio-vino"><%= product.price %></p>
+                <a href="../cart"><span class="add-buttonn">
                     <button class="fas fa-cart-plus"> AGREGAR</button> 
                 </span></a>
             </div>
