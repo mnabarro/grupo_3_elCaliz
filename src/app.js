@@ -4,7 +4,6 @@ const express = require('express');
 const methodOverride = require('method-override');
 const mainRouter = require('./routes/mainRouter');
 const usersRouter = require('./routes/usersRouter');
-const ordersRouter = require('./routes/ordersRouter');
 const productsRouter = require('./routes/productsRouter');
 const adminRouter = require('./routes/adminRouter');
 const session = require('express-session');
@@ -35,7 +34,6 @@ app.use(cookieAuthMiddleware);
 
 app.use('/', mainRouter); //FRONT
 app.use('/users', usersRouter); //FRONT
-app.use('/orders', ordersRouter); //FRONT
 app.use('/products', productsRouter); //FRONT
 app.use('/admin', adminRouter); //BACK
 

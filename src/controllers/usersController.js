@@ -7,31 +7,6 @@ const { Op } = require("sequelize");
 const sequelize = db.sequelize;
 
 const usersController = {
-    list: (req, res) => {
-        db.User.findAll()
-            .then(users => {
-                res.render('users/listUser.ejs', 
-                    { users , 
-                      cssa: 'users-admin.css',
-                      title: 'Administración de usuarios' });
-            }).catch((error) => {
-                if (error) throw error;
-            })
-    },
-
-    editForm: (req, res) => {
-        let id = req.params.id;
-        let user = db.User.findByPk(req.params.id)
-            .then(function (user) {
-                res.render('users/editUser.ejs', 
-                {user, 
-                 cssa: 'users-edit.css',
-                 title: 'Administración de usuarios'});
-            }).catch((error) => {
-                if (error) throw error;
-            })
-    },
-
     login: (req, res) => {
         res.render('users/loginUser.ejs', {
             cssa: 'login.css',
@@ -150,7 +125,7 @@ const usersController = {
     profile: (req, res) => {
         return res.render('users/profileUser.ejs', {
             cssa: 'profile.css',
-            title: "El Cáliz - Perfil de usuario",
+            title: "Perfil de usuario",
         });
 
     },

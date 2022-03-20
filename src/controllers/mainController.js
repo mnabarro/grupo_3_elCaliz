@@ -16,6 +16,9 @@ const mainController = {
         const result = products.filter(product => product.id <= 4);
         res.render( 'index', {result, cssa: 'index.css', title:"El Cáliz - Home"});
     },
+    cart: (req, res) => {
+        res.render('products/productCart', {cssa: 'products-cart.css', title:"El Cáliz - Carrito"});
+    },
 
     regret: (req, res) => {res.render('regret', {cssa: 'regret.css', title:"El Cáliz - Registrarse"});},
     faq: (req, res) => {res.send( 'Preguntas frecuentes');},

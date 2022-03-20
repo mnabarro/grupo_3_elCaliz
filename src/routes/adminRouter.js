@@ -17,8 +17,17 @@ const storage = multer.diskStorage({
 const uploadFile = multer({ storage });
 //ADMIN
 router.get('/', adminController.index);
-router.get('/products', adminController.products); //Lista todos los productos
+router.get('/products/list', adminController.listProducts); //Lista todos los productos
 router.get('/login', adminController.login);
+
+/*** LIST ALL USERS ***/ 
+router.get('/users/list', adminController.listUser);
+/*** EDIT ALL USERS ***/ 
+router.get('/users/edit/:id', adminController.editUser);
+/*** DELETE ALL USERS ***/ 
+router.delete('/users/:id', adminController.deleteUser);
+
+
 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/products/add',adminController.add); //Muestra el formulario de creación de producto
