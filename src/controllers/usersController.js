@@ -97,17 +97,18 @@ const usersController = {
                         title: "Registrarse"
                     });
                 } else {
-
+                    
+                    console.log(req.body);
                     db.User.create({
-                        nombre: req.body.name,
-                        apellido: req.body.lastname,
+                        name: req.body.name,
+                        lastname: req.body.lastname,
                         dni: req.body.dni,
-                        direccion: req.body.address,
-                        telefono: req.body.phone,
+                        address: req.body.address,
+                        phone: req.body.phone,
                         email: req.body.email,
                         password: bcryptjs.hashSync(req.body.password, 10),
                         image: req.file.filename,
-                        grupo: req.body.group_id
+                        group_id: req.body.group_id
                     });
 
 

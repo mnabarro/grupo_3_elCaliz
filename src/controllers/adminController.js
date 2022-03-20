@@ -39,9 +39,9 @@ const adminController = {
                  cssa: 'users-edit.css',
                  title: 'Editar usuarios'});
             })
-            .then(function(){
-                res.redirect('/users/listUser');
-            })
+            // .then(function(){
+            //     res.redirect('/users/listUser');
+            // })
             .catch((error) => {
                 if (error) throw error;
             })
