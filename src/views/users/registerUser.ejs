@@ -43,24 +43,9 @@
                             </div>
                            <% } %>
                     </div>
+                    
                     <div class="control-form">
-                        <label for="address">Dirección:<input type="text" class="control" name="address" id="address" placeholder="Ej: Calle 123" value="<%= locals.oldData ? oldData.address : null %>"></label>
-                        <% if (locals.errors && errors.address) { %>
-                            <div class="danger">
-                            <%= errors.address.msg %>
-                            </div>
-                           <% } %>
-                    </div>
-                    <div class="control-form">
-                        <label for="phone">Teléfono:<input type="text" class="control" name="phone" id="phone" placeholder="Ej: 1165408578" value="<%= locals.oldData ? oldData.phone : null %>"></label>
-                        <% if (locals.errors && errors.phone) { %>
-                            <div class="danger">
-                            <%= errors.phone.msg %>
-                            </div>
-                           <% } %>
-                    </div>
-                    <div class="control-form">
-                        <label for="e-mail">Email:<input type="email" class="control" name="email" id="email" placeholder="Ej: hola@gmail.com" value="<%= locals.oldData ? oldData.email : null %>"></label>
+                        <label for="e-mail">Email:<input type="text" class="control" name="email" id="email" placeholder="Ej: hola@gmail.com" value="<%= locals.oldData ? oldData.email : null %>"></label>
                         <% if (locals.errors && errors.email) { %>
                             <div class="danger">
                             <%= errors.email.msg %>
