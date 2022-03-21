@@ -3,6 +3,8 @@ const path = require('path');
 const router = express.Router();
 const multer = require('multer');
 
+const validations = require('../middlewares/formProductValidation');
+
 const adminController = require('../controllers/adminController.js');
 
 const storage = multer.diskStorage({
@@ -31,7 +33,7 @@ router.delete('/users/:id', adminController.deleteUser);
 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/products/add',adminController.add); //Muestra el formulario de creación de producto
-router.post('/products/add', uploadFile.single('image'), adminController.create); //Envía los datos para la creación de un nuevo producto
+router.post('/products/add', uploadFile.single('image'), validations, adminController.create); //Envía los datos para la creación de un nuevo producto
 
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/products/edit/:id', adminController.editProductForm); //Muestra el formulario para edición del producto

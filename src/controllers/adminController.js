@@ -5,6 +5,7 @@ const fs = require('fs');
 const path = require('path');
 const { runInNewContext } = require('vm');
 const db = require ('../database/models')
+const { validationResult } = require('express-validator');
 
 
 /*const productsFilePath = path.join(__dirname, '../data/products.json');
@@ -95,29 +96,35 @@ const adminController = {
     create: async (req, res) => {
         const resultProductsValidation = validationResult(req);
         
-        if(!resultProductsValidation.errors.length){
-        db.Product.create({
-            id: products.length + 1,
-            sku: req.body.sku,
-            name: req.body.name,
-            description: req.body.description,
-            price: req.body.price,
-            discount: req.body.discount,
-        }).then(function(product){
-                res.redirect('/admin/products');
+        if(resultProductsValidation.errors.length > 0){
+            return res.render('products/createProduct', {
+                errors: resultProductsValidation.mapped()
             })
-            .catch(err => {
-                return res.send(err)
-             })
-            } else {
-                let category = await db.Category.findAll();
+        }
+        
+        // if(!resultProductsValidation.errors.length){
+        // db.Product.create({
+        //     id: products.length + 1,
+        //     sku: req.body.sku,
+        //     name: req.body.name,
+        //     description: req.body.description,
+        //     price: req.body.price,
+        //     discount: req.body.discount,
+        // }).then(function(product){
+        //         res.redirect('/admin/products');
+        //     })
+        //     .catch(err => {
+        //         return res.send(err)
+        //      })
+        //     } else {
+        //         let category = await db.Category.findAll();
              
-                return res.render('products/createProduct', {
-                    errors: resultProductsValidation.mapped(),
-                    oldData: req.body,
-                    category:category,
-                });
-            }
+        //         return res.render('products/createProduct', {
+        //             errors: resultProductsValidation.mapped(),
+        //             oldData: req.body,
+        //             category:category,
+        //         });
+        //     }
         },
         /*CONEXION CON EL JSON
         let newProduct = {

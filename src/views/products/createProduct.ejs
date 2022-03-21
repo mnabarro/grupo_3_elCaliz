@@ -18,24 +18,49 @@
                 <div class="form-element">
                     <label for="sku">SKU:</label>
                     <input type="text" class="control" name="sku" id="sku">
+                    <% if (locals.errors && errors.sku) { %>
+                        <div class="danger">
+                        <%= errors.sku.msg %>
+                        </div>
+                       <% } %>
                 </div>
                 <div class="form-element">
                     <label for="name">Nombre:</label>
                     <input type="text" name="name" id="name" class="name" placeholder="Luigi Bosca Malbec 750">
+                    <% if (locals.errors && errors.name) { %>
+                        <div class="danger">
+                        <%= errors.name.msg %>
+                        </div>
+                       <% } %>
                 </div>
 
                 <div class="form-element">
                     <label for="description">Descripción:</label>
                     <textarea name="description" id="description" placeholder="..."></textarea>
+                    <% if (locals.errors && errors.description) { %>
+                        <div class="danger">
+                        <%= errors.description.msg %>
+                        </div>
+                       <% } %>
                 </div>
                 <div class="form-element">
                     <label for="price">Precio:</label>
-                    <input type="number" name="price" id="price" value=0>
+                    <input type="text" name="price" id="price" value=0>
+                    <% if (locals.errors && errors.price) { %>
+                        <div class="danger">
+                        <%= errors.price.msg %>
+                        </div>
+                       <% } %>
                 </div>
 
                 <div class="form-element">
                     <label for="discount">Descuento:</label>
-                    <input type="number" name="discount" id="discount" value=0>
+                    <input type="text" name="discount" id="discount" value=0>
+                    <% if (locals.errors && errors.discount) { %>
+                        <div class="danger">
+                        <%= errors.discount.msg %>
+                        </div>
+                       <% } %>
                 </div>
                 <div class="form-element">
                     <label for="category"><h4>CATEGORÍAS</h4></label>
