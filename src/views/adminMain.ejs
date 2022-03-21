@@ -3,19 +3,19 @@
 
 <%- include('./partials/head', {title:'Panel de administradores'})%>
 
-<body>
+<body class="admin">
     <%- include('./partials/header-admin')%>
     <main>
-    <h2 class="title-admin">PANEL DE ADMINISTRACIÓN</h2>
-    <div class="form-element-group">
-        <div class="form-button"> 
-            <a href="/admin/products/list">PRODUCTOS</a>
+        <h2 class="title-admin">PANEL DE ADMINISTRACIÓN</h2>
+        <div class="form-element-group">
+            <div class="form-button"> 
+                <a href="/admin/products/list">PRODUCTOS</a>
+            </div>
+            <div class="form-button">
+                <a href="/admin/users/list">USUARIOS</a>  
+            </div>
         </div>
-        <div class="form-button">
-            <a href="/admin/users/list">USUARIOS</a>  
-        </div>
-    </div>
-</main>    
+    </main>    
 </body>
 
 </html>

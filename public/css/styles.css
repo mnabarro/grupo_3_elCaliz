@@ -30,6 +30,11 @@ header {
 .header-left {
   display: flex;
 }
+.navbar-right {
+  transition-duration: 500ms;
+  display: flex;
+}
+
 
 .nav{
   display:flex;
@@ -47,11 +52,17 @@ header {
   text-align: center;
 }
 /*----END NAVBAR----*/
-
+.admin {
+  background-color: #eee;
+}
+.title-admin{
+  background-color: white;
+  color: rgba(0,0,0,.9);
+}
 .header-user-name {
   font-size: 1rem;
   color: #6b6b6b;
-  width: 100px;
+  width: 50px;
 }
 .up-banner {
   display: none;
@@ -112,16 +123,15 @@ header {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 5px;
+  padding: 5px 0px;
   background-color: white;
   color: white;
-  font-size: 1.5rem;
-  margin: 0 0.6rem;
-  
-}
+  font-size: 1.5rem
+  }
 .navbar-middle {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .navbar-left {
@@ -274,6 +284,9 @@ header {
 footer section {
   background-color: #595959;
 }
+.newsletter {
+  border: 1px solid white;
+}
 /*bloque newsletter*/
 .newsletter-box {
   width: 100vw;
@@ -281,7 +294,6 @@ footer section {
   flex-direction: column;
   background-color: #595959;
   text-align: center;
-  border: 1px solid white;
 }
 .newsletter-text h2 {
   color:white;
@@ -324,12 +336,6 @@ footer section {
 }
 /*END bloque newsletter*/
 /*LINE*/
-.footer-line {
-  height: 1px;
-  width: 100%;
-  color: white;
-  height: 0.5px;
-}
 /*END LINE*/
 /*WHATSAPP AND SCROLL UP*/
 .icons {
@@ -345,6 +351,7 @@ svg {
   display:block;
   fill: #999;
   margin: 5px 0px;
+  background-color: #F5F6F9;
 }
 .whatsapp {
   fill: #0DC143;
@@ -356,9 +363,6 @@ svg {
   fill: #E7605D;
 }
 
-.footer-bottom {
-  background-color:#595959;
-}
 
 .footer-icons-top {
   display: flex;
@@ -368,9 +372,9 @@ svg {
 
 /*END WHATSAPP AND SCROLL UP*/
 /*FOOTER INFO*/
-.part h2 {
+.part h3 {
   color: white;
-  font-weight: bold;
+  font-weight: lighter;
 }
 .part-info h4 {
   color:white;
@@ -395,15 +399,22 @@ svg {
   text-decoration: none;
   list-style: none;
 }
-
+.footer-final {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .regret-button {
   background-color: #FB7267;
   border:none;
-  color: white;
+  color: #595959;
   padding: 5px;
-  border-radius: 10px;
+  border-radius: 5px;
   font-size: 1rem;
-  margin: 0.5rem 0 1.5rem 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
 }
 .regret-button h4{
   font-weight: lighter;
@@ -414,14 +425,12 @@ svg {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color:white;
-  margin-top: 1.5rem;
 }
 .qr-icon i,
 .ssl-icon i {
   padding: 0.2rem;
-  margin-bottom: 1rem;
   color:white;
 }
 /*END FOOTER ICONS BOTTOM*/
