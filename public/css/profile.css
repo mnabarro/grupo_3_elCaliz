@@ -1,0 +1,25 @@
+.section-profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin: 15px 0px;
+    
+}
+
+.fonts{
+    font-weight: 100;
+}
+
+.circular--landscape{
+    display: inline-block; 
+    position: relative;
+    width: 200px; 
+    height: 200px; 
+    overflow: hidden; 
+    border-radius: 50%;
+}
+.circular--landscape img{ 
+    width: auto; height: 100%; 
+    margin-left: -50px;
+}
