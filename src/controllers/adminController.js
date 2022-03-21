@@ -75,8 +75,20 @@ const adminController = {
     /*'products/productsAdmin', {products:products, cssa : 'products-admin.css', title :'Administración de productos'});*/
     
     // Create - Form to create product
-    add: (req, res) => {
-        res.render('products/createProduct', {category, cssa: 'products-add.css', title:"Crear un nuevo producto"});
+    add: async (req, res) => {
+
+        db.Category.findAll()
+        .then(category => {
+            res.render('products/createProduct', 
+            {category, 
+            cssa: 'products-add.css', 
+            title:"Crear un nuevo producto"});
+
+    }).catch(err => {
+        return res.send(err)
+     });
+        
+       
     },
 
     // Create -  Method to store new product

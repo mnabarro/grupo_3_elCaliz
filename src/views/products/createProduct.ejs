@@ -14,16 +14,7 @@
             <h2>AGREGAR PRODUCTO</h2>
         </div>
         <div class="products-add-main">
-<<<<<<< HEAD
-            <div class="title-line"></div>
-
-            <div class="errores">
-                <ul></ul>
-            </div>
-
-=======
->>>>>>> 3b0b8adab50346abe9da899ff81fae5ada4a724e
-            <form action="/admin/products" method="POST" class="products-add-form" enctype="multipart/form-data">
+            <form action="/admin/products/add" method="POST" class="products-add-form" enctype="multipart/form-data">
                 <div class="form-element">
                     <label for="sku">SKU:</label>
                     <input type="text" class="control" name="sku" id="sku">
@@ -50,8 +41,8 @@
                     <label for="category"><h4>CATEGORÍAS</h4></label>
                     <select id="select-state" name="category" multiple autocomplete="off">
 
-                        <% for (let category of category) {%>
-                            <option value="<%=category.name%>"><%=category.name%></option>
+                        <% for (let cat of category) {%>
+                            <option value="<%=cat.name%>"><%=cat.name%></option>
                             <% } %>
     
                     </select>                    
@@ -63,19 +54,13 @@
                         <label for="image-cover">Principal</label>
                         <input type="file" name="image" accept="image/png, image/jpeg">
                     </div>
-                    <!-- <div class="flex-group">
-                        <label for="images">Adicionales</label>
-                        <input type="file" name="images" accept="image/png, image/jpeg" multiple>
-                    </div> -->
+
                 </div>
 
-                <!-- <div class="form-element">
-                    <label for="color">Color:</label>
-                    <input type="color" class="control" name="color" id="color">
-                </div> -->
+
                 <div class="edit-buttons">
                     <button type="submit" class="form-button form-button-primary">AGREGAR PRODUCTO</button>
-                <a href="/admin/products" class="form-button form-button-secondary">CANCELAR</a>
+                <a href="/admin/products/list" class="form-button form-button-secondary">CANCELAR</a>
                 </div>
 
             </form>
@@ -83,7 +68,7 @@
     </main>
 
     <%- include ('../partials/footer') %>
-    <script src="/js/productFormValidation.js"></script>
+    <!-- script src="/js/productFormValidation.js"></script -->
     <script src="/js/tom-select.complete.js"></script>
     <script>
         new TomSelect("#select-state",{
