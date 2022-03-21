@@ -5,15 +5,10 @@
   .navbar {
     margin: 0 15px;
   }
-    .navbar-right {
-      width: 20%;
-      transition-duration: 500ms;
-      display: flex;
-      
-      }
       .filter-category {
         max-width:40%;
       }
+
 
 /*-----DESTACADOS-----*/
     
@@ -23,11 +18,7 @@
     }
     /*----TABLET----*/
     @media (min-width: 481px) {
-      
-      .navbar-right {
-        width: 20%;
-        transition-duration: 500ms;
-        }
+
       .filter-category {
         max-width:20%;
       }
@@ -45,10 +36,7 @@
 /*----FINAL DESTACADOS----*/
 
     /* Media query para suavizar el cambio de tamaño de la search-box */
-      .navbar-right {
-      width: 12%;
-      transition-duration: 500ms;
-      }
+
       .line {
       width: 35vw;
       }
@@ -82,6 +70,9 @@
       .title-top {
         margin-top: 2rem;
       }
+      .navbar {
+        margin: 0 15px;
+      }
     }
     
     /*----DESKTOP----*/
@@ -92,12 +83,9 @@
       .navbar {
         flex-direction: row;
         align-items: center;
-      }
-      .navbar-right {
-        display: flex;
-        justify-content: space-around;
-      }
-
+        margin: 0 30px;
+        }
+      
       .navbar-search {
         order:1;
       }
@@ -189,13 +177,12 @@
       .newsletter-box {
         flex-direction: row;
         justify-content: space-around;
+        width:95%;
       }
       .footer-parts {
         display: flex;
         justify-content: space-between;
-      }
-      .regret-button {
-        margin-right: 2rem;
+        width: 93%;
       }
       .navbar-middle {
         flex-direction: row-reverse;
@@ -280,7 +267,12 @@
   gap: 5px;
 }
 /*---END CATEGORY LIST OF PRODUCTS----*/
+.newsletter-form {
+  margin-bottom: 0.1rem;
+  margin-right: 1rem;
 }
+}
+
     
     /*----LARGE DESKTOP----*/
     @media (min-width: 1200px) {
@@ -295,6 +287,9 @@
     }
     .control-form-users input {
       margin: -20px;
-  }
+    }
+    .navbar {
+      margin: 0 62px;
+    }
     }
     /*-----END MEDIAS QUERIES----*/
