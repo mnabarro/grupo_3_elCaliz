@@ -9,6 +9,9 @@ main {
   display: flex;
   align-items: center;
 }
+header {
+  background-color: #FB7267;
+}
 .header-left {
   display: flex;
 
@@ -112,6 +115,19 @@ main {
       border: 1px solid #444444
     }
     .titulo {
-      padding-top: 20px;
+          margin-top: 2rem;
+        text-align: center;
+        border-radius: 5px;
+        padding: 5px;
+        width: 100%;
+        background: #fff;
+        color: #7e7e7e;
+        border-top: 3px solid #FB7267;
+        cursor: pointer;
+        padding: 5px;
+        position: relative;
+        -webkit-transition: background .4s;
+        transition: background .4s;
+        box-shadow: 0px 0px 5px 1px rgb(121, 121, 121);
     }
 /*-----END LIST OF PRODUCTS------*/

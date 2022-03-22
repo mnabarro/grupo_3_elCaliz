@@ -80,6 +80,12 @@
       main {
         padding: 0 65px;
       }
+      .navbar-admin {
+        margin: 0rem 3rem;
+      }
+      .title-admin {
+        width: 80%;
+      }
       .navbar {
         flex-direction: row;
         align-items: center;
@@ -288,8 +294,11 @@
     .control-form-users input {
       margin: -20px;
     }
+    .title-admin {
+      width: 60%;
+    }
     .navbar {
       margin: 0 62px;
     }
-    }
+   }
     /*-----END MEDIAS QUERIES----*/

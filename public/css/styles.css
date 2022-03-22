@@ -25,16 +25,11 @@ header {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  background:#FB7267;
+  align-items: center;
 }
 .header-left {
   display: flex;
 }
-.navbar-right {
-  transition-duration: 500ms;
-  display: flex;
-}
-
 
 .nav{
   display:flex;
@@ -48,8 +43,10 @@ header {
   text-align: center;
 }
 .view {
-  margin-right: 0.5rem;
+  margin-right: 1rem;
   text-align: center;
+  border-right: #EEEEEE 1px solid;
+  padding: 2px 15px 2px 0px;
 }
 /*----END NAVBAR----*/
 .admin {

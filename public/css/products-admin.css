@@ -5,12 +5,18 @@ body {
     margin: 0;
     font-family: sans-serif;
 }
+header {
+  background-color: #FB7267;
+}
+.admin {
+  background-color: #eee;
+}
 /*----NAVBAR----*/
 .navbar-admin {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  background:#FB7267;
+  align-items: center;
 }
 .header-left {
   display: flex;
@@ -28,16 +34,28 @@ body {
   text-align: center;
 }
 .view {
-  margin-right: 0.5rem;
+  margin-right: 1rem;
   text-align: center;
+  border-right: #EEEEEE 1px solid;
+  padding: 2px 15px 2px 0px;
 }
 /*----END NAVBAR----*/
 .title-admin {
-  margin-top: 2rem;
-  text-align: center;
-  border:rgb(131 130 130 / 51%) solid 0.5px;
-  border-radius: 5px;
-  padding: 5px;
+    margin-top: 2rem;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+    background: #fff;
+    color: #7e7e7e;
+    border-top: 3px solid #FB7267;
+    cursor: pointer;
+    padding: 5px;
+    position: relative;
+    -webkit-transition: background .4s;
+    transition: background .4s;
+    box-shadow: 0px 0px 5px 1px rgb(121 121 121);
+
 }
 .sub {
     text-decoration: none;
