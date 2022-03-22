@@ -112,13 +112,23 @@ const adminController = {
 
     // Create -  Method to store new product
     create: async (req, res) => {
-        const resultProductsValidation = validationResult(req);
-        
-        if(resultProductsValidation.errors.length > 0){
-            return res.render('products/createProduct', {
-                errors: resultProductsValidation.mapped()
-            })
+        // const resultProductsValidation = validationResult(req);
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0) {
+            return res.render('products/createProduct.ejs', {
+                errors: resultValidation.mapped(),
+                oldData: req.body,
+                cssa: 'products-add.css',
+                title: "El Cáliz - Creacion"
+            });
         }
+
+        
+        // if(resultProductsValidation.errors.length > 0){
+        //     return res.render('products/createProduct', {
+        //         errors: resultProductsValidation.mapped()
+        //     })
+        // }
         
         // if(!resultProductsValidation.errors.length){
         // db.Product.create({

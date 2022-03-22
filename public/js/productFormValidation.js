@@ -11,7 +11,7 @@
 //         let codigo = document.getElementById('sku');
 //         let precio = document.getElementById('price');
 //         let descuento = document.getElementById('discount');
-//         let categorias = document.getElementsByClassName('categories');
+//         let categorias = document.getElementsByName('category');
 
 //         if(nombre.value == ''){
 //             errores.push('El campo de nombre tiene que estar completo');
@@ -33,7 +33,7 @@
 
 //         if(precio.value == ''){
 //             errores.push('El campo de precio tiene que estar completo');
-//         } 
+//         }
 
 //         if(categorias.value == ''){
 //             errores.push('El campo de categorias tiene que estar completo');   

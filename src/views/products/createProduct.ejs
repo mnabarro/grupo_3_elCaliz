@@ -15,6 +15,9 @@
         </div>
         <div class="products-add-main">
             <form action="/admin/products/add" method="POST" class="products-add-form" enctype="multipart/form-data">
+                <div class="errores">
+                    <ul></ul>
+                </div>
                 <div class="form-element">
                     <label for="sku">SKU:</label>
                     <input type="text" class="control" name="sku" id="sku">
@@ -45,7 +48,7 @@
                 </div>
                 <div class="form-element">
                     <label for="price">Precio:</label>
-                    <input type="text" name="price" id="price" value=0>
+                    <input type="text" name="price" id="price">
                     <% if (locals.errors && errors.price) { %>
                         <div class="danger">
                         <%= errors.price.msg %>
@@ -55,7 +58,7 @@
 
                 <div class="form-element">
                     <label for="discount">Descuento:</label>
-                    <input type="text" name="discount" id="discount" value=0>
+                    <input type="text" name="discount" id="discount">
                     <% if (locals.errors && errors.discount) { %>
                         <div class="danger">
                         <%= errors.discount.msg %>
@@ -77,10 +80,14 @@
                 <div class="form-element-group">
                     <div class="flex-group">
                         <label for="image-cover">Principal</label>
-                        <input type="file" name="image" accept="image/png, image/jpeg">
+                        <input type="file" name="image" id="image" accept="image/png, image/jpeg">
                     </div>
-
                 </div>
+                <% if (locals.errors && errors.image) { %>
+                    <div class="danger">
+                    <%= errors.image.msg %>
+                    </div>
+                   <% } %>
 
 
                 <div class="edit-buttons">
@@ -93,7 +100,7 @@
     </main>
 
     <%- include ('../partials/footer') %>
-    <!-- script src="/js/productFormValidation.js"></script -->
+    <script src="/js/productFormValidation.js"></script>
     <script src="/js/tom-select.complete.js"></script>
     <script>
         new TomSelect("#select-state",{

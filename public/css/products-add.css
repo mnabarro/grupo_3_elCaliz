@@ -200,5 +200,14 @@ input::-webkit-file-upload-button:hover {
   font-size: 1rem;
   padding: 5px;
 }
+.errores{
+  color: red;
+  font-size: small;
+}
+.danger{
+  color: rgb(214, 0, 0);
+  font-size: 12px;
+}
+
 
 /*------END MAIN------*/
