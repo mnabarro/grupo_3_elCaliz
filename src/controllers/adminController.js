@@ -47,6 +47,23 @@ const adminController = {
                 if (error) throw error;
             })
     },
+    updateUser: function (req, res) {
+        db.User.update({
+            name: req.body.name,
+            lastName: req.body.lastname,
+            dni: req.body.dni,
+            address: req.body.address,
+            phone: req.body.phone,
+            email: req.body.email,
+        },{
+            where: {id: req.params.id}
+        })
+        .then( function() {
+            res.redirect('/admin/users/list');
+
+        });
+    },
+
     deleteUser: (req,res) => {
         db.User.destroy ({
             where: {
@@ -58,6 +75,7 @@ const adminController = {
         })
 
     },
+
     // Root - Show all products
     listProducts: (req, res) => {
         db.Product.findAll()
@@ -145,9 +163,13 @@ const adminController = {
     
     // Update - Form to edit product
     editProductForm: (req, res) => {
-        db.Product.findByPk(req.params.id)
+        db.Product.findAll({
+            include: 'category',
+            where: {id:req.params.id}
+        })
             .then(function(product){
-                res.render('products/editProduct', {products:product, cssa: 'products-edit.css', title:"Editar producto"});
+                console.log(product.category);
+                res.render('products/editProduct', {product:product, cssa: 'products-edit.css', title:"Editar producto"});
         })
         .catch(err => {
             return res.send(err)

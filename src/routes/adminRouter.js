@@ -23,11 +23,12 @@ router.get('/products/list', adminController.listProducts); //Lista todos los pr
 router.get('/login', adminController.login);
 
 /*** LIST ALL USERS ***/ 
+router.delete('/users/:id', adminController.deleteUser);
 router.get('/users/list', adminController.listUser);
 /*** EDIT ALL USERS ***/ 
 router.get('/users/edit/:id', adminController.editUser);
+router.post('/users/edit/:id', adminController.updateUser);
 /*** DELETE ALL USERS ***/ 
-router.delete('/users/:id', adminController.deleteUser);
 
 
 

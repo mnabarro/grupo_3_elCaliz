@@ -98,7 +98,6 @@ const usersController = {
                     });
                 } else {
                     
-                    console.log(req.body);
                     db.User.create({
                         name: req.body.name,
                         lastname: req.body.lastname,

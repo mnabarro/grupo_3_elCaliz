@@ -3,8 +3,25 @@
 
 <%- include('../partials/head',{title:"Editar producto"})%>
 
-<body>
 
+
+<body>
+    <script>
+        let category = new TomSelect("#select-state",{
+            plugins: {
+        remove_button:{
+            title:'Quitar este item',
+        }
+    },
+    maxItems: 5
+    });
+    
+    <% for (let cat of product.category ) {%>
+        category.addItem("<%=cat%>");
+    <%}%>
+    
+    </script>
+    
     <%- include('../partials/header-admin')%>
 
     <main>
@@ -48,8 +65,8 @@
                     <label for="categories"><h4>CATEGORÍAS</h4></label>
                     <select id="select-state" name="categories" multiple autocomplete="off">
 
-                        <% for (let category of category) {%>
-                            <option value="<%=category.value%>"><%=category.name%></option>
+                        <% for (let cat of category) {%>
+                            <option value="<%=cat.value%>"><%=cat.name%></option>
                             <% } %>
     
                     </select>                    
@@ -77,22 +94,6 @@
     <%- include ('../partials/footer') %>
     <script src="/js/tom-select.complete.js"></script>
         
-    <script>
-        let category = new TomSelect("#select-state",{
-            plugins: {
-        remove_button:{
-            title:'Quitar este item',
-        }
-    },
-    maxItems: 5
-    });
-    
-    <% for (let cat of product.category ) {%>
-        category.addItem("<%=cat%>");
-    <%}%>
-
-    </script>
-
 </body>
 
 </html>

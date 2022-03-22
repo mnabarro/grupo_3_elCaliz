@@ -8,14 +8,12 @@ const productsRouter = require('./routes/productsRouter');
 const adminRouter = require('./routes/adminRouter');
 const session = require('express-session');
 const cookies = require('cookie-parser');
-
 // ************ Require's Middlewares ************
 const userLoggedMiddleware = require ('./middlewares/userLoggedMiddleware');
 const cookieAuthMiddleware = require('./middlewares/cookieAuthMiddleware')
 
 // ************ Express() ************
 const app = express();
-
 app.use( session({
     secret : "rfjqekldñjd",
     resave : false,

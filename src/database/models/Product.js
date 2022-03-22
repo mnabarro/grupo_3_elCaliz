@@ -32,7 +32,7 @@ module.exports = (sequelize, dataTypes) => {
         tableName: 'products',
         timestamps: false
     };
-    const Product = sequelize.define(alias, cols, config)
+    let  Product = sequelize.define(alias, cols, config)
     Product.associate = (models)=>{
         Product.belongsToMany(models.Category, {
             as: 'category',

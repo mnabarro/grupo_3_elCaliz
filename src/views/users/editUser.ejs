@@ -14,7 +14,7 @@
         <div class="products-edit-main">
             <div class="title-line"></div>
 
-            <form action="/admin/products?_method=PUT" method="POST" class="products-edit-form" enctype="multipart/form-data">
+            <form action="/admin/users/edit/<%=user.id%>" method="POST" class="products-edit-form">   <!--enctype="multipart/form-data"-->
 
                 <div class="form-element">
                     <label for="id">Id:</label>
@@ -54,7 +54,7 @@
                 </div>
                 <div class="form-element">
                     <label for="image">Imagen:</label>
-                    <input type="image" name="image" id="image"required value="<%= user.image %>">
+                    <input type="image" name="image" id="image"required value="/img/users/<%= user.image %>">
                 </div>
 
                 <div class="form-element">
