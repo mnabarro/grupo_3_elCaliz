@@ -74,8 +74,9 @@ const productsController = {
     
     productDetail: (req, res) => {
         db.Product.findByPk(req.params.id)
-            .then(product =>{
-                res.render('products/productDetail', {productDetail:product, toThousand, cssa: 'product-detail.css', title:"Detalle del producto"});
+            .then(response=>{
+                
+                res.render('products/productDetail', {productDetail:response, toThousand, cssa: 'product-detail.css', title:"Detalle del producto"});
             })
             .catch(err => {
                 return res.send(err)
