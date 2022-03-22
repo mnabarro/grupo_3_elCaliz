@@ -113,13 +113,26 @@ const adminController = {
     // Create -  Method to store new product
     create: async (req, res) => {
         const resultProductsValidation = validationResult(req);
-        
-        if(resultProductsValidation.errors.length > 0){
+
+        if (resultProductsValidation.errors.length > 0) {
             return res.render('products/createProduct', {
                 errors: resultProductsValidation.mapped()
             })
         }
-        
+
+        // if(!resultProductsValidation.errors.length){
+        db.Product.create({
+            sku: req.body.sku,
+            name: req.body.name,
+            description: req.body.description,
+            price: req.body.price,
+            discount: req.body.discount,
+        }).then(function (product) {
+            res.redirect('/admin/products/list');
+        }).catch(err => {
+            return res.send(err)
+        })
+    },
         // if(!resultProductsValidation.errors.length){
         // db.Product.create({
         //     id: products.length + 1,
@@ -143,7 +156,7 @@ const adminController = {
         //             category:category,
         //         });
         //     }
-        },
+        //},
         /*CONEXION CON EL JSON
         let newProduct = {
             id: products.length + 1,

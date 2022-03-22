@@ -2,6 +2,9 @@
 main {
   z-index: 1;
 }
+.admin {
+  background-color: #eee;
+}
 .header-left {
   display: flex;
 

@@ -80,12 +80,12 @@
       main {
         padding: 0 65px;
       }
-      .navbar {
-        flex-direction: row;
-        align-items: center;
-        margin: 0 30px;
-        }
-      
+      .navbar-admin {
+        margin: 0rem 3rem;
+      }
+      .title-admin {
+        width: 80%;
+      }
       .navbar-search {
         order:1;
       }
@@ -291,5 +291,9 @@
     .navbar {
       margin: 0 62px;
     }
+    .title-admin {
+      width: 60%;
     }
+    }
+    
     /*-----END MEDIAS QUERIES----*/
