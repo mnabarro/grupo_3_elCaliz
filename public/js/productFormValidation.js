@@ -12,7 +12,7 @@ window.addEventListener('load', function(){
         let codigo = document.getElementById('sku');
         let precio = document.getElementById('price');
         let descuento = document.getElementById('discount');
-        let categorias = document.getElementsByName('category');
+        let categorias = document.getElementById('select-state');
 
 
         if(codigo.value == ''){
