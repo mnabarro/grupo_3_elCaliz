@@ -9,6 +9,10 @@
         max-width:40%;
       }
 
+      .cart-item-inner{
+        flex-direction: column;
+        gap: 8px;
+      }
 
 /*-----DESTACADOS-----*/
     
@@ -18,6 +22,11 @@
     }
     /*----TABLET----*/
     @media (min-width: 481px) {
+
+      .cart-item-inner{
+        flex-direction: column;
+        gap: 8px;
+      }
 
       .filter-category {
         max-width:20%;
@@ -125,10 +134,13 @@
         width: 40%;
       }
     
-      .unit-price,
+      /* .unit-price,
       .qty-subtotal {
         margin: auto;
-      }
+      } */
+     .cart-item-inner{
+      flex-direction: row;
+    }
       .qty-selector {
         order: -1;
         justify-content: space-between;
