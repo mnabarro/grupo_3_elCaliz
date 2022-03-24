@@ -22,3 +22,11 @@
 .circular--landscape img{ 
     width: auto; height: 100%; 
 }
+
+.editUsers button{
+    padding: 8px 10px;
+    background-color: #FB7267;
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
