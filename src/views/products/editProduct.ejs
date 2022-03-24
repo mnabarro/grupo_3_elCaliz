@@ -21,24 +21,49 @@
                 <div class="form-element">
                     <label for="id">Id:</label>
                     <input type="text" name="id" id="id" readonly value="<%= product.id %>">
+                    <% if (locals.errors && errors.id) { %>
+                        <div class="danger">
+                        <%= errors.id.msg %>
+                        </div>
+                       <% } %>
                 </div>
                 <div class="form-element">
                     <label for="sku">Código / SKU:</label>
                     <input type="text" class="control" name="sku" id="sku" value="<%= product.sku %>">
+                    <% if (locals.errors && errors.sku) { %>
+                        <div class="danger">
+                        <%= errors.sku.msg %>
+                        </div>
+                       <% } %>
                 </div>
                 <div class="form-element">
                     <label for="name">Nombre:</label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Ej: Nicasia Red Blend 75cl" required value="<%= product.name %>">
+                    <input type="text" name="nombre" id="nombre" placeholder="Ej: Nicasia Red Blend 75cl" value="<%= product.name %>">
+                    <% if (locals.errors && errors.nombre) { %>
+                        <div class="danger">
+                        <%= errors.nombre.msg %>
+                        </div>
+                       <% } %>
                 </div>
 
                 <div class="form-element">
                     <label for="description">Descripción:</label>
-                    <textarea name="description" id="description" placeholder="Este producto es..." required><%= product.description %>"</textarea>
+                    <textarea name="description" id="description" placeholder="Este producto es..."><%= product.description %>"</textarea>
+                    <% if (locals.errors && errors.description) { %>
+                        <div class="danger">
+                        <%= errors.description.msg %>
+                        </div>
+                       <% } %>
                 </div>
 
                 <div class="form-element">
                     <label for="price">Precio:</label>
-                    <input type="number" name="price" id="price" required value="<%= product.price %>">
+                    <input type="number" name="price" id="price" value="<%= product.price %>">
+                    <% if (locals.errors && errors.price) { %>
+                        <div class="danger">
+                        <%= errors.price.msg %>
+                        </div>
+                       <% } %>
                 </div>
 
                 <div class="form-element">
@@ -67,10 +92,15 @@
                     <div class="flex-group">
                         <div>
                             <img src="<%='/img/products/' + product.image %>" alt="imágen del producto" srcset="" height=150>
-                                <input type="file" name="image" accept="image/png, image/jpeg">
+                                <input type="file" name="image" id="image" accept="image/png, image/jpeg">
                             </div>
                     </div>
                 </div>
+                <% if (locals.errors && errors.image) { %>
+                    <div class="danger">
+                    <%= errors.image.msg %>
+                    </div>
+                   <% } %>
                     <div class="edit-buttons">
                     <button type="submit" class="form-button form-button-primary">GUARDAR</button>
                     <button type="reset" class="form-button form-button-secondary">RESTABLECER</button>

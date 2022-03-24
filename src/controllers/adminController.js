@@ -196,6 +196,16 @@ const adminController = {
     },    // Update - Method to edit product
     editProduct: (req, res) => {
 
+        // const resultValidation = validationResult(req);
+        // if (resultValidation.errors.length > 0) {
+        //     return res.render('products/editProduct.ejs', {
+        //         errors: resultValidation.mapped(),
+        //         oldData: req.body,
+        //         cssa: 'products-edit.css',
+        //         title: "El Cáliz - Edit product"
+        //     });
+        // }
+
         db.Product.update({
                 sku: req.body.sku,
                 name: req.body.name,
