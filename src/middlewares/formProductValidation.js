@@ -9,7 +9,7 @@ module.exports = [
 	.isLength({min:20}).withMessage('Debe tener al menos 20 caracteres'),
     body('price').notEmpty().withMessage('El campo no puede estar vacío'),
     // body('discount').notEmpty().withMessage('El campo no puede estar vacío'),
-    // body('category_id').notEmpty().withMessage('El campo no puede estar vacío'),
+    body('category_id').notEmpty().withMessage('El campo no puede estar vacío'),
     body('image').custom((value, {req})=>{
         let file = req.file;
         let acceptedExtensions = ['.jpg', '.png', '.gif'];

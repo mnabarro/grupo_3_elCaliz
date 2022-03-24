@@ -70,6 +70,11 @@
                             <option value="<%=cat.name%>"><%=cat.name%></option>
                             <% } %>    
                     </select>
+                    <% if (locals.errors && errors.category_id) { %>
+                        <div class="danger">
+                        <%= errors.category_id.msg %>
+                        </div>
+                       <% } %>
                 </div>
 
                 <h4>IMÁGENES</h4>
