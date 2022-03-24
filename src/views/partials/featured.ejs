@@ -11,9 +11,11 @@
                 <img class="imagen-vino" src="img/products/<%= product.image %>" alt="vinito"></div>
             <p class="nombre-vino"><%= product.name %></p>
             <p class="precio-vino"><%= product.price %></p>
-            <a href="../orders/cart"><span class="add-buttonn">
-                <button class="fas fa-cart-plus"> AGREGAR</button> 
-            </span></a>
+            <div class="edit-buttons">
+                <a href="/products/<%= product.id%>"><button title="Detalles..."
+                        class="form-button form-button-secondary">
+                        <i class="fa fa-eye"></i></button></a>
+            </div>
            </a>
         </div>
         <% }) %>   

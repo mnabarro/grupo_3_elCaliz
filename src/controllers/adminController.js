@@ -4,7 +4,8 @@ const { redirect } = require('express/lib/response');
 const fs = require('fs');
 const path = require('path');
 const { runInNewContext } = require('vm');
-const db = require ('../database/models')
+const db = require ('../database/models');
+const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 
 
@@ -273,7 +274,7 @@ const adminController = {
         });
     },
     processLogin: (req, res) => {
-        /*const resultValidation = validationResult(req);
+        const resultValidation = validationResult(req);
         if (resultValidation.errors.length > 0) {
             return res.render('users/loginUserAdmin.ejs', {
                 errors: resultValidation.mapped(),
@@ -281,7 +282,7 @@ const adminController = {
                 cssa: 'login.css',
                 title: "Iniciar Sesión Admin"
             });
-        }*/
+        }
         db.User.findOne({
             where: {
                 email: { [Op.like]: req.body.email }

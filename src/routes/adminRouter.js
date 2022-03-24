@@ -5,6 +5,7 @@ const multer = require('multer');
 
 const validations = require('../middlewares/formProductValidation');
 const validationsEdit = require('../middlewares/editFormProductValidation');
+const validationsLogin = require('../middlewares/validateLoginMiddleware');
 
 const adminController = require('../controllers/adminController.js');
 
@@ -22,7 +23,7 @@ const uploadFile = multer({ storage });
 router.get('/', adminController.index);
 router.get('/products/list', adminController.listProducts); //Lista todos los productos
 router.get('/login', adminController.login);
-router.post('/login', adminController.processLogin);
+router.post('/login', validationsLogin, adminController.processLogin);
 
 /*** LIST ALL USERS ***/ 
 router.delete('/users/:id', adminController.deleteUser);

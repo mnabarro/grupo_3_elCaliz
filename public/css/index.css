@@ -129,5 +129,22 @@
     box-shadow: 2px 2px 3px 0px rgba(68, 68, 68, 0.4);
   }
   
+  .edit-buttons{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+
+  .form-button{
+    margin-top: 1rem;
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    color: #FB7267;
+    border: 1px solid;
+    border-radius: 5px;
+    font-weight: bold;
+  }
 
   /*---FINAL DESTACADOS---*/
