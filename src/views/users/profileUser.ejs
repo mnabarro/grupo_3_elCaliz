@@ -19,12 +19,13 @@
             <h4 class="fonts">Dirección: <%= locals.userLogged.address %> </h2>
             <h4 class="fonts">Télefono: <%= locals.userLogged.phone %> </h2>
             <h4 class="fonts">Email: <%= locals.userLogged.email %> </h2>
+                <div class="editUsers">
+                    <a href="/users/profile/edit/<%=locals.userLogged.id%>"><button class="form-button">EDITAR USUARIO</button></a>
+                </div>
         </section>
-        <section>
-            <div class="add">
-                <a href="/users/profile/edit/<%=locals.userLogged.id%>"><button class="form-button">EDITAR USUARIO</button></a>
-            </div>
-        </section>
+       
+          
+        
     </main>
 
     <%- include ('../partials/footer') %>
