@@ -10,8 +10,8 @@
     <%- include('../partials/header-admin')%>
 
     <main>
-        <div class="products-edit-top">
-            <h2>EDITAR PRODUCTO : <%= product.name %></h2>
+        <div class="title-admin">
+            <h2 >EDITAR PRODUCTO: <%= product.name %></h2>
         </div>
         <div class="products-edit-main">
             <div class="title-line"></div>
@@ -101,13 +101,18 @@
                     <%= errors.image.msg %>
                     </div>
                    <% } %>
-                    <div class="edit-buttons">
-                    <button type="submit" class="form-button form-button-primary">GUARDAR</button>
-                    <button type="reset" class="form-button form-button-secondary">RESTABLECER</button>
-                    <a href="/admin/products/list" class="form-button form-button-secondary">CANCELAR</a>
-                </div>
-            </form>
-        </div>
+               </form>
+         </div>
+         <div class="edit-buttons">
+            <div>
+                <a href="/admin/products/list" class=" form-button-secondary">CANCELAR</a>
+            </div>
+            <div>
+                <button type="reset" class="form-button-secondary">RESTABLECER</<button>
+            </div>
+            <div>
+                <button type="submit" class="form-button-primary">GUARDAR</button>
+            </div>
     </main>
 
     <%- include ('../partials/footer') %>
