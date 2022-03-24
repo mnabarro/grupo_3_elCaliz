@@ -1,22 +1,23 @@
 /*maru */
 window.onload = function () {
     const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-    if (typeof localStorage.cart == "undefined" || typeof localStorage.cart == "[]"
+    
+    if (typeof localStorage.carrito == "undefined" || typeof localStorage.carrito == "[]"
     ) {
       let div = document.getElementById("vacio");
       div.innerHTML += "<h2>Tu carrito esta vacío </h2>";
     } else {
-      let cart = JSON.parse(localStorage.cart);
-      for (let i = 0; i < cart.length; i++) {
-        let product = cart[i];
+      let carrito = JSON.parse(localStorage.carrito);
+      for (let i = 0; i < carrito.length; i++) {
+        let product = carrito[i];
         let div = document.querySelector(".vacio");
         let content = 
         `<section class="cart">
           <article class="cart-item">
-            <div class="cart-product-name">${product.name}</div>
+            <div class="cart-product-name">${product.tituloProd}</div>
             <div class="cart-item-inner">
-              <div class="cart-product-img"><a href="/"><img src=${product.image} alt=""> </div>
-              <div class="unit-price class="price">$ ${toThousand(product.price)}</div>
+              <div class="cart-product-img"><a href="/"><img src="${product.imagen}" alt=""> </div>
+              <div class="unit-price class="price">$ ${toThousand(product.precio)}</div>
         </article>
         <article class="qty-selector>
             <div class="qty-minus"><i class="fas fa-minus-circle"></i></div>
@@ -38,12 +39,12 @@ window.onload = function () {
     }
   
     let h3 = document.querySelector("#precioTotal")
-    let totalCart = localStorage.totalCart
-    if(typeof localStorage.totalCart == 'undefined'){
+    let totalCarrito = localStorage.totalCarrito
+    if(typeof localStorage.totalCarrito == 'undefined'){
       let content2 = `0`
       h3.innerHTML += content2
     } else {
-      let content2 = `${toThousand(totalCart)}`
+      let content2 = `${toThousand(totalCarrito)}`
       h3.innerHTML += content2
     }
   

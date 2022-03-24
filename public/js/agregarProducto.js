@@ -23,6 +23,9 @@ window.onload = function() {
             descuento: parseFloat(descuento),
             inputCantidad: parseFloat(inputCantidad)
         }
+
+        console.log(producto);
+        
         if(localStorage.length == 0) {
             let carrito = []
             carrito.push(producto)

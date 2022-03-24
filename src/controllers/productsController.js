@@ -71,17 +71,19 @@ const productsController = {
         })
     },
     allProductsList: (req, res) => {
-        db.Product.findAll()
-        .then(products => {
-            res.render('products/listAll', 
-            {
-                products,
-                toThousand, 
-                cssa: 'products-list.css', 
-                title :'Todos los productos'})
-    }).catch(err => {
-        return res.send(err)
-     })
+        if (!req.params.category) {
+            db.Product.findAll()
+            .then(products => {
+                res.render('products/listAll', 
+                {
+                    products,
+                    toThousand, 
+                    cssa: 'products-list.css', 
+                    title :'Todos los productos'})
+        }).catch(err => {
+            return res.send(err)
+         })
+        }
     },
     /*{res.send(`Productos que coinciden con el criterio :${req.params.criterio}`);},*/
     
