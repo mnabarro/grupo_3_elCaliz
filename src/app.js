@@ -6,14 +6,18 @@ const mainRouter = require('./routes/mainRouter');
 const usersRouter = require('./routes/usersRouter');
 const productsRouter = require('./routes/productsRouter');
 const adminRouter = require('./routes/adminRouter');
+const apiRouter = require('./routes/apiRouter');
 const session = require('express-session');
 const cookies = require('cookie-parser');
 // ************ Require's Middlewares ************
 const userLoggedMiddleware = require ('./middlewares/userLoggedMiddleware');
 const cookieAuthMiddleware = require('./middlewares/cookieAuthMiddleware')
+const cors = require('cors');
 
 // ************ Express() ************
 const app = express();
+app.use(cors());
+
 app.use( session({
     secret : "rfjqekldñjd",
     resave : false,
@@ -31,6 +35,7 @@ app.use(methodOverride('_method'));
 app.use(cookieAuthMiddleware);
 
 app.use('/', mainRouter); //FRONT
+app.use('/api',apiRouter);
 app.use('/users', usersRouter); //FRONT
 app.use('/products', productsRouter); //FRONT
 app.use('/admin', adminRouter); //BACK

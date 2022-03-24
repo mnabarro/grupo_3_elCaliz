@@ -16,31 +16,21 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productsController = {
     category: (req, res) => {
-        db.Category.findOne({
-            where: {
-                nombre: req.params.name
-            }
+        db.Category.findOne({where: {name: req.params.id}
         })
-            .then((result) => {
-                db.products_has_category.findAll({
-                    where: {
-                        category_id: result
-                    }
-                })
-            })
-            .then((result) => {
-                db.Product.findAll({
-                    where: {
-                        id: result.product_id
-                    },
-                    order: [
-                        ['id', 'ASC']
-                    ],
-                    limit: 10
-                })
-            })
-            .then((result) => {
-                res.render('products/category', {products, cssa: 'categories.css', title: "Categoría" });
+        .then ((categoria) =>{
+            console.log(categoria.id);
+            db.Product.findAll({where: {category_id: categoria.id}})
+
+        })
+        .then((products) => {
+            console.log(products);
+            res.render('products/listAll', 
+                {
+                    products,
+                    toThousand, 
+                    cssa: 'products-list.css', 
+                    title :'Todos los productos'})
             })
             .catch(err => {
                 return res.send(err)

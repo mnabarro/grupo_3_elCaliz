@@ -11,8 +11,8 @@ router.get('/', productsController.allProductsList);
 router.get('/:id', productsController.productDetail); 
 
 /*** SHOw ALL PRODUCTS PER CATEGORY ***/ 
-router.get('/category/:id', productsController.category);
+//router.get('/category/:id', productsController.category);
 
-router.get('/search/:criterio', productsController.search); //Ruta aun no solicitada, pensada para la caja de búsqueda
+//router.get('/search/:criterio', productsController.search); //Ruta aun no solicitada, pensada para la caja de búsqueda
 
 module.exports = router;
