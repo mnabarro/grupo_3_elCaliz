@@ -4,6 +4,7 @@
 body {
     margin: 0;
     font-family: sans-serif;
+    background-color: #eeee;
 }
 main {
   display: flex;
@@ -11,6 +12,9 @@ main {
 }
 header {
   background-color: #FB7267;
+}
+tbody {
+  background-color: white;
 }
 .header-left {
   display: flex;
