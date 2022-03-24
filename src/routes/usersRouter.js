@@ -21,7 +21,7 @@ router.get('/forgot-password', usersController.forgotPassword);
 router.get('/profile', authMiddleware, usersController.profile);
 
 /*** EDIT ALL USERS FRONT ***/ 
-router.post('/profile/edit/:id', /*authMiddleware,*/ usersController.editUserProfile);
+router.get('/profile/edit/:id', /*authMiddleware,*/ usersController.editUserProfile);
 router.post('/profile/edit/:id', /*authMiddleware,*/ usersController.updateUserProfile);
 
 router.get('/logout', usersController.logout);

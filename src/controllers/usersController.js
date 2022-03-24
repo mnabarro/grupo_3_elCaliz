@@ -140,8 +140,9 @@ const usersController = {
     },
     editUserProfile: (req, res) => {
         res.render('users/profileUserEdit', {
-            user: req.session.userLogged
-        })
+            user: req.session.userLogged,
+            cssa: 'users-edit.css',
+            title: 'Editar usuarios'});
     },
 
     updateUserProfile: (req, res) => {
