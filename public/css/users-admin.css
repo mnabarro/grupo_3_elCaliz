@@ -115,7 +115,7 @@ header {
       border: 1px solid #444444
     }
     .titulo {
-          margin-top: 2rem;
+        margin-top: 2rem;
         text-align: center;
         border-radius: 5px;
         padding: 5px;
@@ -130,4 +130,5 @@ header {
         transition: background .4s;
         box-shadow: 0px 0px 5px 1px rgb(121, 121, 121);
     }
+
 /*-----END LIST OF PRODUCTS------*/

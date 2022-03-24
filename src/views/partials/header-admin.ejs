@@ -8,13 +8,17 @@
                 <a href="/admin">Admin board</a>
             </div>
         </div>
-        <div class="nav"><i class="fas fa-user"></i></a></div>
+        <div class="login">
+            
+            <div class="nav"><i class="fas fa-user"></i></a></div>
 
-        <% if(locals.isLogged) {%>
-            <p class="nav">
-                <%= userLogged.name%>
-            </p>
-            <div class="btn-logout"><a href="/users/logout"><i class="fas fa-sign-out-alt"></i></a></div>
-            <% } %>
+            <% if(locals.isLogged) {%>
+                <p class= "view-login" class="nav">
+                    <%= userLogged.name%>
+                </p>
+                <div class= "view-login" class="nav"><a href="/users/logout"><i class="fas fa-sign-out-alt"></i></a></div>
+                <% } %>
+        </div>
+
     </nav>
 </header>

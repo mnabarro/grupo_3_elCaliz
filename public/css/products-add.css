@@ -152,6 +152,7 @@ textarea:focus {
 
 .edit-buttons {
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: nowrap;  
   margin: 1rem;

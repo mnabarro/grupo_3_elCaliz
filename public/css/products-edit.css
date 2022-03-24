@@ -161,10 +161,11 @@ input[type="checkbox"]  {
 
 .edit-buttons {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 1rem;
+  gap: 5px;
 }
 
 
@@ -228,6 +229,7 @@ h4 {
   padding: 1rem;
   border-radius: 5px;
   border: #FB7267 1px solid;
+
 }
 
 input::-webkit-file-upload-button {

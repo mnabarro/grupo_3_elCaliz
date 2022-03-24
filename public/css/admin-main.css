@@ -28,11 +28,28 @@ header {
   color: white;
   text-align: center;
 }
+.nav i {
+  color: #eee;
+}
+.fa-sign-out-alt{
+  color: black;
+}
 .view {
   margin-right: 1rem;
   text-align: center;
   border-right: #EEEEEE 1px solid;
   padding: 2px 15px 2px 0px;
+  color: #eee;
+}
+.view-login {
+  margin-right: 1rem;
+  text-align: center;
+  color: #eee;
+}
+.login {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 /*----END NAVBAR----*/
