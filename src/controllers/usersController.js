@@ -146,6 +146,15 @@ const usersController = {
     },
 
     updateUserProfile: (req, res) => {
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0) {
+            return res.render('users/profileUserEdit.ejs', {
+                errors: resultValidation.mapped(),
+                oldData: req.body,
+                cssa: 'users-edit.css',
+                title: "El Cáliz - Editar usuarios"
+            });
+        }
         db.User.findByPk(req.session.userLogged.id)
         .then(function (user) {
             user.update({

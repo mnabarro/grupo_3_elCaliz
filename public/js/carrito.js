@@ -23,7 +23,7 @@ window.onload = function () {
             <div class="qty-minus"><i class="fas fa-minus-circle"></i></div>
             <form action="#" method="GET">
                 <label for="cantidad"></label>
-                <input id="count" value=${product.inputCantidad} type="text">
+                <input id="quantity" value=${product.inputCantidad} type="text">
             </form>
             <div class="qty-plus"><i class="fas fa-plus-circle"></i></div>
             <form action="#" method="GET">

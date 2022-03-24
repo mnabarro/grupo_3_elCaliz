@@ -19,16 +19,31 @@
                <div class="form-element">
                     <label for="name">Nombre:</label>
                     <input type="text" name="name" id="apellido" value="<%= locals.oldData ? oldData.name : user.name %>">
+                    <% if (locals.errors && errors.name) { %>
+                        <div class="danger">
+                        <%= errors.name.msg %>
+                        </div>
+                       <% } %>
                 </div>
 
                 <div class="form-element">
                     <label for="lastname">Apellido:</label>
                     <input type="text" name="lastname" id="lastname" value="<%= locals.oldData ? oldData.lastname : user.lastname %>">
+                    <% if (locals.errors && errors.lastname) { %>
+                        <div class="danger">
+                        <%= errors.lastname.msg %>
+                        </div>
+                       <% } %>
                 </div>
 
                 <div class="form-element">
                     <label for="dni">DNI:</label>
                     <input type="text" name="dni" id="dni" value="<%= locals.oldData ? oldData.dni : user.dni %>">
+                    <% if (locals.errors && errors.dni) { %>
+                        <div class="danger">
+                        <%= errors.dni.msg %>
+                        </div>
+                       <% } %>
                 </div>
                 <div class="form-element">
                     <label for="address">Dirección:</label>
@@ -42,14 +57,29 @@
                 <div class="form-element">
                     <label for="email">Email:</label>
                     <input type="email" name="email" id="email" value="<%= locals.oldData ? oldData.email : user.email %>">
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="danger">
+                        <%= errors.email.msg %>
+                        </div>
+                       <% } %>
                 </div>
                 <div class="form-element">
                     <label for="password">Contraseña:</label>
                     <input type="password" name="password" id="password" value="<%= locals.oldData ? oldData.password : user.password %>">
+                    <% if (locals.errors && errors.password) { %>
+                        <div class="danger">
+                        <%= errors.password.msg %>
+                        </div>
+                       <% } %>
                 </div>
                 <div class="form-element">
                     <label for="image">Imagen:</label>
                     <input type="image" name="image" id="image" value="/img/users/<%= user.image %>">
+                    <% if (locals.errors && errors.image) { %>
+                        <div class="danger">
+                        <%= errors.image.msg %>
+                        </div>
+                       <% } %>
                 </div>
                     <div class="edit-buttons">
                         <a href="/users/profile/" class="form-button form-button-secondary">CANCELAR</a>
