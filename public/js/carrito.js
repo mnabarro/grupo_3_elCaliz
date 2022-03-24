@@ -9,55 +9,54 @@ window.onload = function () {
     } else {
       let carrito = JSON.parse(localStorage.carrito);
       for (let i = 0; i < carrito.length; i++) {
-        let product = carrito[i];
+        let producto = carrito[i];
         let div = document.querySelector(".vacio");
-        let content = 
+        let contenido = 
         `<section class="cart">
           <article class="cart-item">
-            <div class="cart-product-name">${product.tituloProd}</div>
+            <div class="cart-product-name">${producto.tituloProd}</div>
             <div class="cart-item-inner">
-              <div class="cart-product-img"><a href="/"><img src="${product.imagen}" alt=""> </div>
-              <div class="unit-price class="price">$ ${toThousand(product.precio)}</div>
-        </article>
-        <article class="qty-selector>
-            <div class="qty-minus"><i class="fas fa-minus-circle"></i></div>
-            <form action="#" method="GET">
-                <label for="cantidad"></label>
-                <input id="quantity" value=${product.inputCantidad} type="text">
-            </form>
-            <div class="qty-plus"><i class="fas fa-plus-circle"></i></div>
-            <form action="#" method="GET">
-              <button class="trash" type="button">
-                  <i onclick="borrarItem(${i})" class="fas fa-trash></i>
-              </button>
-            </form>
-        </article>
+              <div class="cart-product-img"><img src="${producto.imagen}" > </div>
+              <div class="unit-price class="price">Precio ${toThousand(producto.precio)}</div>
+              <div class="carrito">
+                <button class="minus" onclick="menos()">-</button>
+                <input type="text" value=${producto.inputCantidad} id="quantity">
+                <button class="plus" onclick="mas()">+</button> 
+              </div>
+              <div class="unit-price class="price">Subtotal ${toThousand(producto.precio*producto.inputCantidad)}</div>
+              <form method="GET">
+                  <button  type="button">
+                      <i onclick="borrarItem(${i})" class="fas fa-trash-alt"></i>
+                  </button>
+              </form>
+          </div>
+          </article>
     </section>`;
   
-        div.innerHTML += content;
+        div.innerHTML += contenido;
       }
     }
   
     let h3 = document.querySelector("#precioTotal")
     let totalCarrito = localStorage.totalCarrito
     if(typeof localStorage.totalCarrito == 'undefined'){
-      let content2 = `0`
-      h3.innerHTML += content2
+      let contenido2 = `0`
+      h3.innerHTML += contenido2
     } else {
-      let content2 = `${toThousand(totalCarrito)}`
-      h3.innerHTML += content2
+      let contenido2 = `${toThousand(totalCarrito)}`
+      h3.innerHTML += contenido2
     }
   
     
   };
   
   function borrarItem(id) {
-    let cart = JSON.parse(localStorage.cart);
-    cart = cart.filter((product, i) => {
+    let carrito = JSON.parse(localStorage.carrito);
+    carrito = carrito.filter((producto, i) => {
       return i !== id;
     });
   
-    localStorage.setItem("cart", JSON.stringify(cart));
+    localStorage.setItem("carrito", JSON.stringify(carrito));
     location.reload();
   }
      
