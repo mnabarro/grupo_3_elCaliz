@@ -7,6 +7,7 @@ const { runInNewContext } = require('vm');
 const db = require ('../database/models');
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
+const { Op } = require("sequelize");
 
 
 /*const productsFilePath = path.join(__dirname, '../data/products.json');
