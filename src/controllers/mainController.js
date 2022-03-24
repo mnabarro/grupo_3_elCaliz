@@ -12,9 +12,15 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const mainController = {
 
     index: (req, res) => {
-        let id = req.params.id
-        const result = products.filter(product => product.id <= 4);
-        res.render( 'index', {result, cssa: 'index.css', title:"El Cáliz - Home"});
+        db.Product.findAll()
+        .then(response => {
+         res.render('', {product:response, cssa: 'index.css'});
+        }).catch(err => {
+            return res.send(err)
+        })
+        // let id = req.params.id
+        // const result = products.filter(product => product.id <= 4);
+        // res.render( 'index', {result, cssa: 'index.css', title:"El Cáliz - Home"});
     },
     /*cart: (req, res) => {
         res.render('products/productCart', {cssa: 'products-cart.css', title:"El Cáliz - Carrito"});
