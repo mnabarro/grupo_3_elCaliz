@@ -155,8 +155,8 @@ const usersController = {
                 address: req.body.address,
                 phone: req.body.phone,
                 email: req.body.email,
-                password: bcryptjs.hashSync(req.body.password, 12),
-                image: req.files[0].filename,
+                password: bcryptjs.hashSync(req.body.password, 10),
+                image: req.file.filename,
             }).then(user => {
                 req.session.userLogged = user;
                 res.redirect("/users/profile")

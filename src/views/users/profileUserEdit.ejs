@@ -14,38 +14,38 @@
         <div class="products-edit-main">
             <div class="title-line"></div>
 
-            <form action="/users/edit?_method=PUT" method="POST" class="products-edit-form">   <!--enctype="multipart/form-data"-->
+            <form action="/users/profile/edit/<%=user.id%>" method="POST" class="products-edit-form">   
 
                <div class="form-element">
                     <label for="name">Nombre:</label>
-                    <input type="text" name="name" id="apellido" value="<%= locals.oldData ? oldData.fullName : user.name %>">
+                    <input type="text" name="name" id="apellido" value="<%= locals.oldData ? oldData.name : user.name %>">
                 </div>
 
                 <div class="form-element">
                     <label for="lastname">Apellido:</label>
-                    <input type="text" name="lastname" id="lastname" value="<%= locals.oldData ? oldData.fullName : user.lastname %>">
+                    <input type="text" name="lastname" id="lastname" value="<%= locals.oldData ? oldData.lastname : user.lastname %>">
                 </div>
 
                 <div class="form-element">
                     <label for="dni">DNI:</label>
-                    <input type="text" name="dni" id="dni" value="<%= locals.oldData ? oldData.fullName : user.dni %>">
+                    <input type="text" name="dni" id="dni" value="<%= locals.oldData ? oldData.dni : user.dni %>">
                 </div>
                 <div class="form-element">
                     <label for="address">Dirección:</label>
-                    <input type="text" name="address" id="address" value="<%= locals.oldData ? oldData.fullName : user.address %>">
+                    <input type="text" name="address" id="address" value="<%= locals.oldData ? oldData.address : user.address %>">
                 </div>
                 <div class="form-element">
                     <label for="phone">Teléfono:</label>
-                    <input type="text" name="phone" id="phone" value="<%= locals.oldData ? oldData.fullName : user.phone %>">
+                    <input type="text" name="phone" id="phone" value="<%= locals.oldData ? oldData.phone : user.phone %>">
                 </div>
 
                 <div class="form-element">
                     <label for="email">Email:</label>
-                    <input type="email" name="email" id="email" value="<%= locals.oldData ? oldData.fullName : user.email %>">
+                    <input type="email" name="email" id="email" value="<%= locals.oldData ? oldData.email : user.email %>">
                 </div>
                 <div class="form-element">
                     <label for="password">Contraseña:</label>
-                    <input type="password" name="password" id="password" value="<%= locals.oldData ? oldData.fullName : user.password %>">
+                    <input type="password" name="password" id="password" value="<%= locals.oldData ? oldData.password : user.password %>">
                 </div>
                 <div class="form-element">
                     <label for="image">Imagen:</label>
