@@ -22,6 +22,7 @@ const uploadFile = multer({ storage });
 router.get('/', adminController.index);
 router.get('/products/list', adminController.listProducts); //Lista todos los productos
 router.get('/login', adminController.login);
+router.post('/login', adminController.processLogin);
 
 /*** LIST ALL USERS ***/ 
 router.delete('/users/:id', adminController.deleteUser);

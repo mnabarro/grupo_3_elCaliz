@@ -139,10 +139,19 @@ const usersController = {
 
     },
     editUserProfile: (req, res) => {
-        res.render('users/profileUserEdit', {
-            user: req.session.userLogged,
-            cssa: 'users-edit.css',
-            title: 'Editar usuarios'});
+        let user = db.User.findByPk(req.params.id)
+        .then(function (user) {
+            res.render('users/profileUserEdit.ejs', 
+            {user: req.session.userLogged,
+                cssa: 'users-editFront.css',
+                title: 'Editar usuarios'});
+        })
+        // .then(function(){
+        //     res.redirect('/users/listUser');
+        // })
+        .catch((error) => {
+            if (error) throw error;
+        });
     },
 
     updateUserProfile: (req, res) => {

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('../partials/head')%>
+
+<body>
+
+    <%- include('../partials/header')%>
+
+    <main>
+        <section>
+            <div class="login-top">
+                <h2>INICIAR SESIÓN ADMIN</h2>
+                <div class="line"></div>
+            </div>
+            <div class="login-main">
+                <div class="errores">
+                    <ul></ul>
+                </div>
+                <form action="/admin" class="login-form">
+                    <div class="control-form">
+                        <label for="email">E-mail:<input type="text" class="control" name="email" id="email" placeholder="Ej: hola@gmail.com"></label>
+                        <% if (locals.errors && errors.email) { %>
+                            <div class="danger">
+                            <%= errors.email.msg %>
+                            </div>
+                           <% } %>
+                    </div>
+                    <div class="control-form">
+                        <label>Contraseña:<input  type="password" class="control" name="password" id="password"></label>
+                        <% if (locals.errors && errors.password) { %>
+                            <div class="danger">
+                            <%= errors.password.msg %>
+                            </div>
+                           <% } %>
+                    </div>
+                    <div>
+                        <label>Recordar usuario</label>
+                        <input type="checkbox" name="recordar" id="recordar">
+                    </div>
+
+                    <div class="login-button">
+                        <button type="submit" class="form-button form-button-primary">INGRESAR</button> 
+                    </div>
+                </form>
+                <div class="login-end">
+                   <!-- <div class="end">
+                        <a href="/users/forgot-password">OLVIDE MI CONTRASEÑA </a>
+                    </div>
+                    -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <%- include ('../partials/footer') %>
+</body>
+
+</html>

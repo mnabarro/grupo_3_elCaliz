@@ -267,8 +267,64 @@ const adminController = {
         }*/
     },
     login: (req, res) => {
-        res.render('users/login', {cssa: 'login.css',title:"Admin - Ingresar"});
+        res.render('users/loginUserAdmin.ejs', {
+            cssa: 'login.css',
+            title: "Admin - Ingresar"
+        });
     },
+    processLogin: (req, res) => {
+        /*const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0) {
+            return res.render('users/loginUserAdmin.ejs', {
+                errors: resultValidation.mapped(),
+                oldData: req.body,
+                cssa: 'login.css',
+                title: "Iniciar Sesión Admin"
+            });
+        }*/
+        db.User.findOne({
+            where: {
+                email: { [Op.like]: req.body.email }
+            }
+        }).then(usr => {
+                if (usr) {
+                    let passwordOK = bcryptjs.compareSync(req.body.password, usr.password);
+
+                    if (passwordOK) {
+                        req.session.userLogged = usr;
+
+                        if (req.body.recordar != undefined){
+                            res.cookie('recordar', req.body.email, {maxAge: 1000*30})
+                        }
+                        console.log(usr);
+                        delete usr.password;
+                        return res.redirect('/admin');
+                    } else {
+                        return res.render('users/loginUserAdmin.ejs', {
+                            cssa: 'login.css',
+                            title: "Ingresar",
+                            errors: {
+                                email: {
+                                    msg: 'Las credenciales son inválidas.'
+                                }
+                            }
+                        });
+                    }
+                } else {
+                    return res.render('users/loginUserAdmin.ejs', {
+                        cssa: 'login.css',
+                        title: "Ingresar",
+                        errors: {
+                            email: {
+                                msg: 'Usuario no registrado.'
+                            }
+                        }
+                    });
+                }
+            }).catch(err => {
+                return res.send(err)
+             })
+    }
   
 };
 
