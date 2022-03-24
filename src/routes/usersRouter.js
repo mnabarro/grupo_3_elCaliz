@@ -22,7 +22,7 @@ router.get('/profile', authMiddleware, usersController.profile);
 
 /*** EDIT ALL USERS FRONT ***/ 
 router.get('/profile/edit/:id', /*authMiddleware,*/ usersController.editUserProfile);
-router.post('/profile/edit/:id', /*authMiddleware,*/ usersController.updateUserProfile);
+router.post('/profile/edit/:id', /*authMiddleware,*/ validationsRegister, usersController.updateUserProfile);
 
 router.get('/logout', usersController.logout);
 
