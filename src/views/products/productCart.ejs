@@ -10,94 +10,36 @@
     <main>
 
         <section class="cart-header">
-            <p class="cart-title">TU COMPRA</p>
-        </section>
-
-        <section class="cart">
-
-            <article class="cart-item">
-                <div class="cart-product-name"><a href="#">SAURUS ESTATE MERLOT - 750CL</a></div>
-                <div class="cart-item-inner">
-                    <div class="cart-product-img"><a href="#"><img src="/img/homeParte2/DanteRobinoChardonnay.png" alt=""></a></div>
-                    <div class="price-qty">
-                        <div class="unit-price"><p class="price">$1000</p></div>
-                        <div class="qty-selector">
-                            <div class="qty-minus"><i class="fas fa-minus-circle"></i></div>
-                            <div class="qty">44</div>
-                            <div class="qty-plus"><i class="fas fa-plus-circle"></i></div>
-                        </div>
-                        <div class="qty-subtotal"><p class="subtotal">$2000</p></div>
-                    </div>
-                    <div class="trash"><i class="fas fa-trash"></i></div>
-                </div>
-            </article>
-
-            <article class="cart-item">
-                <div class="cart-product-name"><a href="#">SAURUS ESTATE MERLOT - 750CL</a></div>
-                <div class="cart-item-inner">
-                    <div class="cart-product-img"><a href="#"><img src="/img/homeParte2/DanteRobinoExtraBrut.png" alt=""></a></div>
-                    <div class="price-qty">
-                        <div class="unit-price"><p class="price">$1000</p></div>
-                        <div class="qty-selector">
-                            <div class="qty-minus"><i class="fas fa-minus-circle"></i></div>
-                            <div class="qty">1</div>
-                            <div class="qty-plus"><i class="fas fa-plus-circle"></i></div>
-                        </div>
-                        <div class="qty-subtotal"><p class="subtotal">$2000</p></div>
-                    </div>
-                    <div class="trash"><i class="fas fa-trash"></i></div>
-                </div>
-            </article>
-            <article class="cart-item">
-                <div class="cart-product-name"><a href="#">SAURUS ESTATE MERLOT - 750CL</a></div>
-                <div class="cart-item-inner">
-                    <div class="cart-product-img"><a href="#"><img src="/img/homeParte2/DRReservaMalbec.png" alt=""></a></div>
-                    <div class="price-qty">
-                        <div class="unit-price"><p class="price">$1000</p></div>
-                        <div class="qty-selector">
-                            <div class="qty-minus"><i class="fas fa-minus-circle"></i></div>
-                            <div class="qty">1</div>
-                            <div class="qty-plus"><i class="fas fa-plus-circle"></i></div>
-                        </div>
-                        <div class="qty-subtotal"><p class="subtotal">$2000</p></div>
-                    </div>
-                    <div class="trash"><i class="fas fa-trash"></i></div>
-                </div>
-            </article>
-            <article class="cart-item">
-                <div class="cart-product-name"><a href="#">SAURUS ESTATE MERLOT - 750CL</a></div>
-                <div class="cart-item-inner">
-                    <div class="cart-product-img"><a href="#"><img src="/img/homeParte2/NovecentoRosado.png" alt=""></a></div>
-                    <div class="price-qty">
-                        <div class="unit-price"><p class="price">$1000</p></div>
-                        <div class="qty-selector">
-                            <div class="qty-minus"><i class="fas fa-minus-circle"></i></div>
-                            <div class="qty">1</div>
-                            <div class="qty-plus"><i class="fas fa-plus-circle"></i></div>
-                        </div>
-                        <div class="qty-subtotal"><p class="subtotal">$2000</p></div>
-                    </div>
-                    <div class="trash"><i class="fas fa-trash"></i></div>
-                </div>
-            </article>
+            <h4 class="cart-title">TU CARRITO</h4>
+            
+            <!--<div id="vacio" class="vacio"></div>-->
         </section>
 
         <section class="cart-footer">
-        <div class="cart-footer-total">
-            <p>TOTAL : </p>
-            <p class="cart-total">$5802,32</p>
-        </div>
-        <div class="cart-buttons">
-            <button type="button" class="cart-button btn-finish button button-primary">INICIAR COMPRA</button>
-            <button type="button" class="cart-button btn-back button button-secondary">SEGUIR COMPRANDO</button>
-        </div>
-    </section>
-
+            <div class="cart-footer-total" id="precioTotal">
+                <h3>TOTAL: $</h3>
+            </div>
+            <div class="cart-buttons">
+                <div>
+                    <a href="/">
+                        <button type="submit" class="button">SEGUIR COMPRANDO</button>
+                    </a>
+                </div>
+                <div>
+                    <button class="button" id="botonBorrar" type="button" onclick="">VACIAR CARRITO</button> 
+                </div>
+                <div>
+                    <form action="#" method="GET">
+                        <button class="button" type="submit" id="purchase">INICIAR COMPRA</button>
+                    </form> 
+                </div>
+            </div>
+        </section>
     </main>
 
     <%- include ('../partials/footer') %>
-
-    <script>
+    
+     <script src="/js/carrito.js">
         /* Set the width of the side navigation to 250px */
         function openNav() {
             document.getElementById("mySidenav").style.width = "55vw";

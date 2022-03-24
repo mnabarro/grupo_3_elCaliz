@@ -1,19 +1,29 @@
 /****** PRODUCT CART ********/
+main {
+  padding: 0 45px;
+}
 .cart-header {
-    width: 100%;
-    padding: 5px 0px 5px 0px;
-    margin: 10px auto 10px auto;
-    background-color: #f0f1f2;
-    border-radius: 10px;
-    text-align: center;
-    border: 1px solid #FB7267;
+  margin: 1rem 0rem;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  width: 100%;
+  background: #fff;
+  color: #7e7e7e;
+  border-top: 3px solid #FB7267;
+  cursor: pointer;
+  padding: 5px;
+  position: relative;
+  -webkit-transition: background .4s;
+  transition: background .4s;
+  box-shadow: 0px 0px 5px 1px rgb(121 121 121);
   }
   .cart-title {
     font-size: 1.2rem;
     font-weight: 700;
     color: #444444;
+    
   }
-  
   .cart {
     display: flex;
     flex-direction: column;
@@ -29,6 +39,9 @@
     border: solid 1px #bebebe;
     border-radius: 10px;
     box-shadow: 2px 2px 3px 0px rgba(68, 68, 68, 0.4);
+  }
+  .cart-item:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
   }
   
   .cart-item-inner {
@@ -140,19 +153,18 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-  
     margin: 10px auto 10px auto;
     gap: 10px;
     font-size: 1.5rem;
   }
   
   .cart-footer-total {
-    /* border: 1px solid rgb(0, 255, 128); */
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     gap: 10px;
     padding-right: 2%;
+    font-size: 1rem;
   }
   
   .cart-total {
@@ -161,44 +173,33 @@
   }
   
   .cart-buttons {
-    /* border: 1px solid rgb(0, 255, 128); */
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
     margin-top: 5px;
     gap: 10px;
   }
   
-  .cart-button {
-    border: 1px solid #444444;
-    border-radius: 10px;
-    font-size: 1.2rem;
-    margin: 0 2% 0 2%;
-    padding: 10px 0 10px 0;
-    cursor: pointer;
-  }
-  
-  .cart-button:hover {
-    transform: scale(1.01);
-    box-shadow: 2px 2px 3px 0px rgba(68, 68, 68, 0.4);
-  }
-  
-  .cart-button:active {
-    background-color: #444444;
-    color: #f0f1f2;
-  }
-  
-  .button-primary {
+
+  .button {
     background-color: #FB7267;
     color: white;
     outline: none;
+    font-size: 0.7rem;
+    padding: 5px;
+    border-radius: 5px;
+    max-width: 5rem; 
+    cursor: pointer;
+    border:none;
   }
-  
-  .button-secondary {
-    background-color: #f0f1f2;
-    color: #FB7267;
-    outline: none;
-    font-weight: 700;
+  .button:hover {
+    transform: scale(1.01);
+    box-shadow: 2px 2px 3px 0px rgba(68, 68, 68, 0.4);
   }
+  .button:active {
+    background-color: #444444;
+    color: #f0f1f2;
+  }
+
   
 /****** PRODUCT CART ********/

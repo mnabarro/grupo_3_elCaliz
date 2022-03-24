@@ -16,8 +16,16 @@ const mainController = {
         const result = products.filter(product => product.id <= 4);
         res.render( 'index', {result, cssa: 'index.css', title:"El Cáliz - Home"});
     },
-    cart: (req, res) => {
+    /*cart: (req, res) => {
         res.render('products/productCart', {cssa: 'products-cart.css', title:"El Cáliz - Carrito"});
+    },*/
+    cart: (req, res) => {
+        db.Product.findAll()
+        .then(response => {
+         res.render('products/productCart', {productCart:response, cssa: 'products-cart.css',toThousand});
+        }).catch(err => {
+            return res.send(err)
+        })
     },
 
     regret: (req, res) => {res.render('regret', {cssa: 'regret.css', title:"El Cáliz - Registrarse"});},
