@@ -24,7 +24,7 @@
 
                     <% products.forEach((product)=>{ %>
                         <div class="articulos">
-                            <div class="fondo"><img class="imagen-vino" src="/img/products/<%= product.image %>"
+                            <div class="fondo"><img class="imagen-vino" src="/img/products/<%= product.image ? product.image : 'img-botella.png'  %>"
                                     alt="img-botella"></div>
                             <p class="nombre-vino">
                                 <%= product.name%><br>
@@ -37,7 +37,7 @@
                                         class="form-button form-button-secondary">
                                         <i class="fa fa-pen" aria-hidden="true"></i></button></a>
 
-                                <form action="/admin/products/list<%= product.id %>?_method=DELETE" method="POST">
+                                <form action="/admin/products/<%= product.id %>?_method=DELETE" method="POST">
                                     <button title="Eliminar" type="submit" class="form-button form-button-primary">
                                         <i class="fa fa-trash" aria-hidden="true"></i></button></a>
                                 </form>

@@ -80,7 +80,7 @@ main {
   color: #444444;
 }
 
-.form-element input[type="text"], input[type="number"], textarea {
+.form-element input[type="text"], input[type="number"], select , textarea {
   font-size: 1rem;
   border:#FB7267 1px solid;
   padding: 5px;

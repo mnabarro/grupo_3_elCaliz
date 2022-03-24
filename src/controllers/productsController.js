@@ -70,6 +70,19 @@ const productsController = {
             return res.send(err)
         })
     },
+    allProductsList: (req, res) => {
+        db.Product.findAll()
+        .then(products => {
+            res.render('products/listAll', 
+            {
+                products,
+                toThousand, 
+                cssa: 'products-list.css', 
+                title :'Todos los productos'})
+    }).catch(err => {
+        return res.send(err)
+     })
+    },
     /*{res.send(`Productos que coinciden con el criterio :${req.params.criterio}`);},*/
     
     productDetail: (req, res) => {

@@ -6,22 +6,7 @@
 
 
 <body>
-    <script>
-        let category = new TomSelect("#select-state",{
-            plugins: {
-        remove_button:{
-            title:'Quitar este item',
-        }
-    },
-    maxItems: 5
-    });
-    
-    <% for (let cat of product.category ) {%>
-        category.addItem("<%=cat%>");
-    <%}%>
-    
-    </script>
-    
+
     <%- include('../partials/header-admin')%>
 
     <main>
@@ -31,10 +16,10 @@
         <div class="products-edit-main">
             <div class="title-line"></div>
 
-            <form action="/products/edit/<%=product.id%>" method="POST" class="products-edit-form" enctype="multipart/form-data">
+            <form action="/admin/products/edit/<%=product.id%>" method="POST" class="products-edit-form" enctype="multipart/form-data">
 
                 <div class="form-element">
-                    <label for="name">Id:</label>
+                    <label for="id">Id:</label>
                     <input type="text" name="id" id="id" readonly value="<%= product.id %>">
                 </div>
                 <div class="form-element">
@@ -43,7 +28,7 @@
                 </div>
                 <div class="form-element">
                     <label for="name">Nombre:</label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Ej: Reloj" required value="<%= product.name %>">
+                    <input type="text" name="nombre" id="nombre" placeholder="Ej: Nicasia Red Blend 75cl" required value="<%= product.name %>">
                 </div>
 
                 <div class="form-element">
@@ -52,8 +37,8 @@
                 </div>
 
                 <div class="form-element">
-                    <label for="precio">Precio:</label>
-                    <input type="number" name="precio" id="precio" required value="<%= product.price %>">
+                    <label for="price">Precio:</label>
+                    <input type="number" name="price" id="price" required value="<%= product.price %>">
                 </div>
 
                 <div class="form-element">
@@ -62,13 +47,17 @@
                 </div>
 
                 <div class="form-element">
-                    <label for="categories"><h4>CATEGORÍAS</h4></label>
-                    <select id="select-state" name="categories" multiple autocomplete="off">
+                    <label for="category_id"><h4>CATEGORÍAS</h4></label>
+                    <select id="category_id" name="category_id" autocomplete="off">
 
-                        <% for (let cat of category) {%>
-                            <option value="<%=cat.value%>"><%=cat.name%></option>
+                            <% for( let i = 0; i < category.length; i++ ) { %>
+                                <% if (category[i].name == product.category_id) { %>             
+                                    <option value="<%=category[i].id%>" selected><%=category[i].name%></option>            
+                                <% } else { %>
+                                    <option value="<%=category[i].id%>"><%=category[i].name%></option>            
+                                <% } %>
                             <% } %>
-    
+                        
                     </select>                    
                 </div>
 
@@ -85,14 +74,13 @@
                     <div class="edit-buttons">
                     <button type="submit" class="form-button form-button-primary">GUARDAR</button>
                     <button type="reset" class="form-button form-button-secondary">RESTABLECER</button>
-                    <a href="/admin/products" class="form-button form-button-secondary">CANCELAR</a>
+                    <a href="/admin/products/list" class="form-button form-button-secondary">CANCELAR</a>
                 </div>
             </form>
         </div>
     </main>
 
     <%- include ('../partials/footer') %>
-    <script src="/js/tom-select.complete.js"></script>
         
 </body>
 

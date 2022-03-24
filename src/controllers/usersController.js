@@ -14,15 +14,15 @@ const usersController = {
         });
     },
     processLogin: (req, res) => {
-        // const resultValidation = validationResult(req);
-        // if (resultValidation.errors.length > 0) {
-        //     return res.render('users/loginUser.ejs', {
-        //         errors: resultValidation.mapped(),
-        //         oldData: req.body,
-        //         cssa: 'login.css',
-        //         title: "El Cáliz - Log in"
-        //     });
-        // }
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0) {
+            return res.render('users/loginUser.ejs', {
+                errors: resultValidation.mapped(),
+                oldData: req.body,
+                cssa: 'login.css',
+                title: "El Cáliz - Log in"
+            });
+        }
         db.User.findOne({
             where: {
                 email: { [Op.like]: req.body.email }

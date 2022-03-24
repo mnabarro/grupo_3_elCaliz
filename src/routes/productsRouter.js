@@ -7,6 +7,7 @@ const productsController = require('../controllers/productsController.js');
 
 /*** FRONT! ***/ 
 /*** GET ONE PRODUCT ***/ 
+router.get('/', productsController.allProductsList); 
 router.get('/:id', productsController.productDetail); 
 
 /*** SHOw ALL PRODUCTS PER CATEGORY ***/ 

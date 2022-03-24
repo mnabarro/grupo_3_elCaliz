@@ -9,7 +9,8 @@ module.exports = (sequelize, dataTypes) => {
         },
         sku:{
             type: dataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            defaultValue : 'A002'
         },
         name:{
             type: dataTypes.STRING,
@@ -17,15 +18,26 @@ module.exports = (sequelize, dataTypes) => {
         },
         description:{
             type: dataTypes.TEXT,
+            allowNull: false,
+            defaultValue : 'Producto en edición'
+        },
+        category_id:{
+            type: dataTypes.TEXT,
             allowNull: false
         },
         price:{
             type: dataTypes.INTEGER(11),
-            allowNull: false
+            allowNull: false,
+            defaultValue : 10
         },
         discount:{
             type: dataTypes.INTEGER(11),
-            allowNull: false
+            allowNull: false,
+            defaultValue : 0
+        },
+        image:{
+            type: dataTypes.TEXT,
+            allowNull: true
         },
     };
     let config = {
@@ -33,13 +45,11 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     };
     let  Product = sequelize.define(alias, cols, config)
+
     Product.associate = (models)=>{
-        Product.belongsToMany(models.Category, {
-            as: 'category',
-            through: 'products_has_category',
-            foreignKey: 'products_id',
-            otherKey: 'category_id',
-            timestamps: false
+        Product.belongsTo(models.Category, {
+            as: 'categoria',
+            foreignKey: 'category_id',
         })
     }
 

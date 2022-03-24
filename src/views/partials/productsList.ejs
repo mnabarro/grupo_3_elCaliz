@@ -1,0 +1,25 @@
+
+                <div>
+                    <H2 class="title">TODOS LOS PRODUCTOS</H2>
+                </div>
+                <section class="container">
+
+                    <% products.forEach((product)=>{ %>
+                        <div class="articulos">
+                            <div class="fondo"><img class="imagen-vino" src="/img/products/<%= product.image ? product.image : 'img-botella.png'  %>"
+                                    alt="img-botella"></div>
+                            <p class="nombre-vino">
+                                <%= product.name%><br>
+                            </p>
+                            <p class="precio-vino">$<%= product.price%>
+                            </p>
+
+                            <div class="edit-buttons">
+                                <a href="/products/<%= product.id%>"><button title="Detalles..."
+                                        class="form-button form-button-secondary">
+                                        <i class="fa fa-eye"></i></button></a>
+                            </div>
+                        </div>
+                    <% }) %>
+
+                </section>

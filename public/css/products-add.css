@@ -77,7 +77,7 @@ main {
   color: #444444;
 }
 
-.form-element input[type="text"], input[type="number"], textarea {
+.form-element input[type="text"], input[type="number"], select, textarea {
   font-size: 1rem;
   border: 1px #444444 solid;
   padding: 5px;

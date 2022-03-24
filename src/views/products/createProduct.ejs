@@ -7,9 +7,7 @@
 
     <%- include('../partials/header-admin')%>
 
-    <main>
-        
-        
+    <main>        
         <div class="title-admin">
             <h2>AGREGAR PRODUCTO</h2>
         </div>
@@ -66,20 +64,20 @@
                        <% } %>
                 </div>
                 <div class="form-element">
-                    <label for="category"><h4>CATEGORÍAS</h4></label>
-                    <select id="select-state" name="category" multiple autocomplete="off">
+                    <label for="category_id"><h4>CATEGORÍAS</h4></label>
+                    <select  name="category_id" autocomplete="off">
 
                         <% for (let cat of category) {%>
                             <option value="<%=cat.name%>"><%=cat.name%></option>
-                            <% } %>
-    
+                            <% } %>    
+
                     </select>                    
                 </div>
                 <h4>IMÁGENES</h4>
 
                 <div class="form-element-group">
                     <div class="flex-group">
-                        <label for="image-cover">Principal</label>
+                        <label for="image">Principal</label>
                         <input type="file" name="image" id="image" accept="image/png, image/jpeg">
                     </div>
                 </div>
@@ -101,17 +99,7 @@
 
     <%- include ('../partials/footer') %>
     <script src="/js/productFormValidation.js"></script>
-    <script src="/js/tom-select.complete.js"></script>
-    <script>
-        new TomSelect("#select-state",{
-            plugins: {
-		remove_button:{
-			title:'Quitar este item',
-		}
-    },
-	maxItems: 5
-});
-    </script>
+
 </body>
 
 </html>

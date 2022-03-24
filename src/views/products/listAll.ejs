@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('../partials/head')%>
+
+<body>
+    
+    <%- include('../partials/header')%>
+    
+    <main>
+        <%- include('../partials/productsList')%>
+    </main>
+
+    <%- include ('../partials/footer') %>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "55vw";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+</body>

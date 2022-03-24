@@ -94,10 +94,11 @@ const adminController = {
     /*'products/productsAdmin', {products:products, cssa : 'products-admin.css', title :'Administración de productos'});*/
     
     // Create - Form to create product
-    add: async (req, res) => {
+    add:  (req, res) => {
 
         db.Category.findAll()
         .then(category => {
+
             res.render('products/createProduct', 
             {category, 
             cssa: 'products-add.css', 
@@ -111,48 +112,50 @@ const adminController = {
     },
 
     // Create -  Method to store new product
-    create: async (req, res) => {
+    create: (req, res) => {
         // const resultProductsValidation = validationResult(req);
+        let category = db.Category.findAll();
+        
         const resultValidation = validationResult(req);
+        
+        console.log(resultValidation);
+
         if (resultValidation.errors.length > 0) {
-            return res.render('products/createProduct.ejs', {
+                res.render('products/createProduct.ejs', {
                 errors: resultValidation.mapped(),
                 oldData: req.body,
+                category,
                 cssa: 'products-add.css',
                 title: "El Cáliz - Creacion"
             });
         }
+        
+        if(!resultValidation.errors.length){
+            console.log(req.body);
 
-        
-        // if(resultProductsValidation.errors.length > 0){
-        //     return res.render('products/createProduct', {
-        //         errors: resultProductsValidation.mapped()
-        //     })
-        // }
-        
-        // if(!resultProductsValidation.errors.length){
-        // db.Product.create({
-        //     id: products.length + 1,
-        //     sku: req.body.sku,
-        //     name: req.body.name,
-        //     description: req.body.description,
-        //     price: req.body.price,
-        //     discount: req.body.discount,
-        // }).then(function(product){
-        //         res.redirect('/admin/products');
-        //     })
-        //     .catch(err => {
-        //         return res.send(err)
-        //      })
-        //     } else {
-        //         let category = await db.Category.findAll();
-             
-        //         return res.render('products/createProduct', {
-        //             errors: resultProductsValidation.mapped(),
-        //             oldData: req.body,
-        //             category:category,
-        //         });
-        //     }
+        db.Product.create({
+            sku: req.body.sku,
+            name: req.body.name,
+            description: req.body.description,
+            category_id: req.body.category_id,
+            price: req.body.price,
+            discount: req.body.discount,
+            image: req.file.filename
+
+        }).then(function(product){
+                res.redirect('/admin/products/list');
+            })
+            .catch(err => {
+                return res.send(err)
+             })
+            } else {
+              
+                return res.render('products/createProduct', {
+                    errors: resultProductsValidation.mapped(),
+                    oldData: req.body,
+                    category,
+                });
+            }
         },
         /*CONEXION CON EL JSON
         let newProduct = {
@@ -173,13 +176,15 @@ const adminController = {
     
     // Update - Form to edit product
     editProductForm: (req, res) => {
-        db.Product.findAll({
-            include: 'category',
-            where: {id:req.params.id}
-        })
-            .then(function(product){
-                console.log(product.category);
-                res.render('products/editProduct', {product:product, cssa: 'products-edit.css', title:"Editar producto"});
+
+        let productToEdit = db.Product.findByPk(req.params.id);
+
+        let category = db.Category.findAll();
+
+        Promise.all([productToEdit, category])
+        
+            .then( function ([product, category]) {
+                res.render('products/editProduct', {product, category, cssa: 'products-edit.css', title:"Editar producto"});
         })
         .catch(err => {
             return res.send(err)
@@ -190,19 +195,22 @@ const adminController = {
         res.render('products/editProduct', {product, cssa: 'products-edit.css',categories , title:"Editar producto"});*/
     },    // Update - Method to edit product
     editProduct: (req, res) => {
+
         db.Product.update({
                 sku: req.body.sku,
                 name: req.body.name,
                 description: req.body.description,
+                category_id :req.body.category_id,
                 price: req.body.price,
                 discount: req.body.discount,
+                image: req.file.filename,
         }, {
             where: {
                 id: req.params.id
             }
         })
         .then(function(){
-            res.redirect('/products/editProduct' + req.params.id);
+            res.redirect('/admin/products/list');
         })
         .catch(err => {
             return res.send(err)
@@ -210,14 +218,25 @@ const adminController = {
     },
     
     // Delete - Delete one product from DB
-    deleteProduct: (req, res) => {
+    deleteProduct: async (req, res) => {
+        prodToDelete = await db.Product.findByPk(req.params.id);
+
+        console.log(prodToDelete);
+
+        let imagePath = path.join(__dirname, '../../public/img/products/') + prodToDelete.image;
+        console.log(imagePath);
+
+        if (fs.existsSync(imagePath)) {
+            fs.unlinkSync(imagePath)
+        }
+        
         db.Product.destroy ({
             where: {
                 id: req.params.id
             }
         })
         .then(function(product){
-            res.redirect('/admin/products' + req.params.id);
+            res.redirect('/admin/products/list');
         })
         /*let id = req.params.id;
         let idxToDelete = products.findIndex(product => product.id == id);
