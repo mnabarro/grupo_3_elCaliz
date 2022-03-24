@@ -138,7 +138,32 @@ const usersController = {
         });
 
     },
+    editUserProfile: (req, res) => {
+        res.render('users/profileUserEdit', {
+            user: req.session.userLogged
+        })
+    },
 
+    updateUserProfile: (req, res) => {
+        db.User.findByPk(req.session.userLogged.id)
+        .then(function (user) {
+            user.update({
+                name: req.body.name,
+                lastname: req.body.lastname,
+                dni: req.body.dni,
+                address: req.body.address,
+                phone: req.body.phone,
+                email: req.body.email,
+                password: bcryptjs.hashSync(req.body.password, 12),
+                image: req.files[0].filename,
+            }).then(user => {
+                req.session.userLogged = user;
+                res.redirect("/users/profile")
+            }).catch((error) => {
+                if (error) throw error;
+            })
+        })
+    },
     logout: (req, res) => {
         req.session.destroy();
         return res.redirect('/');

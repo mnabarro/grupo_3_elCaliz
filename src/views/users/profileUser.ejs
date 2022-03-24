@@ -13,10 +13,14 @@
             <div class="circular--landscape">
                 <img src="/img/users/<%= locals.userLogged.image %> " alt="">
             </div>
-            <h3 class="fonts">Perfil del usuario : <%= locals.userLogged.name %> <%= locals.userLogged.lastname %> </h2>
-            <h4 class="fonts">Email registrado : <%= locals.userLogged.email %> </h2>
-
-            
+            <h3>Perfil de Usuario</h3>
+            <h3 class="fonts">Nombre y apellido: <%= locals.userLogged.name %> <%= locals.userLogged.lastname %> </h2>
+            <h4 class="fonts">Email: <%= locals.userLogged.email %> </h2>
+        </section>
+        <section>
+            <div class="add">
+                <a href="/users/profile/edit/<%=locals.userLogged.id%>"><button class="form-button">EDITAR USUARIO</button></a>
+            </div>
         </section>
     </main>
 
