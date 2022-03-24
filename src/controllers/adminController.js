@@ -120,8 +120,6 @@ const adminController = {
         
         const resultValidation = validationResult(req);
         
-        console.log(resultValidation);
-
         if (resultValidation.errors.length > 0) {
                 res.render('products/createProduct.ejs', {
                 errors: resultValidation.mapped(),
@@ -133,8 +131,7 @@ const adminController = {
         }
         
         if(!resultValidation.errors.length){
-            console.log(req.body);
-
+           
         db.Product.create({
             sku: req.body.sku,
             name: req.body.name,
@@ -150,14 +147,15 @@ const adminController = {
             .catch(err => {
                 return res.send(err)
              })
-            } else {
+            } 
+            // else {
               
-                return res.render('products/createProduct', {
-                    errors: resultProductsValidation.mapped(),
-                    oldData: req.body,
-                    category,
-                });
-            }
+            //     return res.render('products/createProduct', {
+            //         errors: resultProductsValidation.mapped(),
+            //         oldData: req.body,
+            //         category,
+            //     });
+            // }
         },
         /*CONEXION CON EL JSON
         let newProduct = {
