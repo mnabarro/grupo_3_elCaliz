@@ -1,5 +1,5 @@
 window.onload = function() {
-    let botonAgregar = document.querySelector('.boton-formulario-shop');
+    let botonAgregar = document.getElementById('agregar');
     
     botonAgregar.addEventListener('click', function(e){
         e.preventDefault();
@@ -7,12 +7,13 @@ window.onload = function() {
         let url = window.location.href.split("/");
         
         let id = url [url.length -1]
+
         
-        let imagen = document.querySelector('.producto img').getAttribute("src")
-        let tituloProd = document.querySelector('h1').innerText
-        let precio = document.querySelector('.precio').innerText
-        let descuento = document.querySelector('.descuento').innerText
-        let inputCantidad = document.querySelector('#count').value
+        let imagen = document.querySelector('.fondo-imagen img').getAttribute("src")
+        let tituloProd = document.getElementById('nombre').innerText
+        let precio = document.getElementById('precio').innerText
+        let descuento = document.getElementById('discount').innerText
+        let inputCantidad = document.getElementById('quantity').value
 
         let producto = {
             idProducto: id, 
@@ -22,7 +23,6 @@ window.onload = function() {
             descuento: parseFloat(descuento),
             inputCantidad: parseFloat(inputCantidad)
         }
-
         if(localStorage.length == 0) {
             let carrito = []
             carrito.push(producto)

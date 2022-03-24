@@ -13,19 +13,19 @@
                 <div class="fondo-imagen"><img class="imagen-vino-portada" src="/img/products/<%= productDetail.image %>" alt="vinito"></div>
                 <div class="info-vino">
                 <p class="sku"><%= productDetail.sku %></p>
-                <p class="nombre"><%= productDetail.name %></p>
-                <p class="descripcion"><%= productDetail.description %></p>
-                <p class="precio"><%= productDetail.price %></p>
-                <p class="discount"><%= productDetail.discount %></p>
+                <p class="nombre" id="nombre"><%= productDetail.name %></p>
+                <p class="descripcion" id="descripcion"><%= productDetail.description %></p>
+                <p class="precio" id="precio"><%= productDetail.price %></p>
+                <p class="discount" id="discount"><%= productDetail.discount %></p>
 
                 <div class="carrito">
-                    <button class="minus">-</button>
+                    <button class="minus" onclick="menos()">-</button>
                     <input type="text" value="1" id="quantity">
-                    <button class="plus">+</button> 
+                    <button class="plus" onclick="mas()">+</button> 
                 </div>
 
                 <div class="add-buttonn">
-                    <a href="/cart"><button class="fas fa-cart-plus">AGREGAR</button></a>
+                    <a href="/cart"><button type="submit" class="fas fa-cart-plus" id="agregar">AGREGAR</button></a>
                 </div>
             </div>
     </article>
@@ -46,7 +46,8 @@
             document.getElementById("mySidenav").style.width = "0";
         }
     </script>
-
+<script src="/js/contador.js"></script>
+<script src="/js/agregarProducto.js"></script>
 </body>
 
 </html>
